@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords"
+content="Fabrizio Montesi
+	Choreographies
+	Jolie
+	Chor
+	Global types
+	Protocols
+	Global descriptions
+	Personal
+	Website
+	Web
+	Site
+	Home
+	Page
+	Homepage
+	Service Oriented Computing
+	Service-Oriented Computing
+	Service Oriented Architectures
+	Service-Oriented Architectures
+	Communication-Centred Programming
+	Process Calculi
+	Process Calculus
+	Process-Calculi
+	Process-Calculus
+	Pi-Calculus
+	Pi-Calculi
+	Pi Calculus
+	Pi Calculi
+	Picalculus
+	Picalculi
+	Transitions
+	Reductions
+	WS-BPEL
+	UDDI
+	SOAP
+	ACM
+	SAC
+	Conference
+	Distributed Systems
+	Computer Science
+	Formal Models
+	Informatics" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" 
+    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"/>
+
+<script src="/bower_components/platform/platform.js"></script>
+
+<link rel="import" href="/fm_components/fm-page/fm-page.html" />
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<script type="text/javascript" src="/lib/jquery.js"></script>
+<script type="text/javascript" src="/lib/alist.js"></script>
+<script type="text/javascript" src="/lib/fuse.js"></script>
+<title>Fabrizio Montesi</title>
+
+</head>
+
+<body fullbleed layout vertical unresolved>
+
+<fm-page>
+
+<div class="grid_24" id="body">
+
+<h2 class="SectionTitle">DBLP - Get Author Bibtex</h2>
+<p>This is a small, and unsupported, tool for fetching the bibtex of all the publications registered in <a href="http://dblp.uni-trier.de">DBLP</a> for a given author.
+You have to provide the author's initial and name key in DBLP in the form below. My data is used as default values to provide an example.
+</p>
+    <p><strong>How to find your initial and name key:</strong> find your page in DBLP and look at the URL. For example, mine is <code>http://www.informatik.uni-trier.de/~ley/pers/hd/m/Montesi:Fabrizio</code>. The last part, <code>Montesi:Fabrizio</code>, is the name key and the second-last part, <code>m</code>, is the initial. Sometimes the name key is weird, e.g., if you have middle names. Remember to include everything from the last part in your name key, even symbols such as _ and = (but not the .html extension, if there is one).</p>
+<p>
+<strong>Note:</strong> unfortunately DBLP has a habit of breaking APIs, so the tool may stop working or have unexpected problems.
+</p>
+<p>
+Curious about how this works? It is a simple <a href="http://www.jolie-lang.org/">Jolie</a> program. If you want to run it yourself, you can download a similar script <a href="/files/dblp/dblp_fetchBibtex.ol">here</a> (pass the arguments using the command line). If you do not have Jolie installed, I have uploaded a static binary distribution <a href="/files/dblp/dblp-static.zip">here</a>.
+</p>
+    
+<div class="grid_24">
+<h2 class="SectionTitle">Author Info (Input)</h2>
+<form method="post">
+    <p>Initial: <input type="text" id="initial" value="m"/></p>
+    <p>Name key: <input type="text" id="nameKey" value="Montesi:Fabrizio"/></p>
+    <p><input type="button" id="getAuthorBibtex" value="Go!" /></p>
+</form>
+<h2 class="SectionTitle">Result (Output)</h2>
+<input type="button" id="selectResult" value="Select result (to copy/paste)" />
+<input type="button" id="saveResult" value="Save as file" />
+<p><pre id="result" style="overflow:auto;">No result yet. Insert your data and click Go!</pre></p>
+</div>
+
+</div>
+
+<script type="text/javascript">
+jQuery.fn.selectText = function(){
+   var doc = document;
+   var element = this[0];
+   console.log(this, element);
+   if (doc.body.createTextRange) {
+       var range = document.body.createTextRange();
+       range.moveToElementText(element);
+       range.select();
+   } else if (window.getSelection) {
+       var selection = window.getSelection();        
+       var range = document.createRange();
+       range.selectNodeContents(element);
+       selection.removeAllRanges();
+       selection.addRange(range);
+   }
+};
+    
+function displayResult( html )
+{
+    $("#result").html( html );
+}
+    
+$(document).ready( function() {
+$("#getAuthorBibtex").click( function() {
+    displayResult( "Loading..." );
+    $.ajax({
+        url: '/getAuthorBibtex',
+        dataType: 'json',
+        type: 'POST',
+        contentType: 'application/json',
+        success: function(response) { displayResult( response.$ ) },
+        error: function( xhr, textStatus, errorThrown ) { displayResult( textStatus + " " + errorThrown ); },
+        data: JSON.stringify( { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() } )
+    })
+});
+    
+$("#selectResult").click( function() {
+    $("#result").selectText();
+});
+
+$("#saveResult").click( function() {
+    var blob = new Blob( [$("#result").html()], {type: "text/plain;charset=utf-8"} );
+    saveAs( blob, $("#nameKey").val() + ".bib" );
+});
+
+});
+</script>
+ 
+</fm-page>
+</body>
+</html>

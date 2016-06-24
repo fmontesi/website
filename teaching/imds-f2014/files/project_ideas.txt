@@ -1,0 +1,54 @@
+=== Web Programming
+
+= Online parser for Jolie
+- Jolie interpreter in a browser, to try out code.
+- Should be informative about what went wrong.
+:-)
+
+
+= Trading service
+- Den blaa avis on steroids.
+- Matches offer with demand and vice versa, automatically!
+:-))
+
+
+= News aggregator (RSS)
+- News/Blog aggregator to display news in websites from external sources.
+
+
+= Dispenser
+- dispenser.tf
+- Parse the content and provide some search functionalities
+- Buy lots of Steam keys!
+
+
+=== Jolie Language (modify the interpreter)
+= Session programming
+- provide until primitive for looping of operation inputs.
+
+
+= Types
+- Regular expressions in types, instead of string.
+
+
+= Implementation of new protocols
+- Websockets
+:-))
+
+=== Jolie Libraries
+= Jolie Standard Library
+- Templates for transforming strings
+- Java Server Pages on steroids.
+- Put Jolie code inside of HTML! (Template systems)
+:-))~
+
+ x = "<div>${id}</div>";
+ x.id = 5;
+
+
+= Jolie APIs
+- Jolie Library for Slideshare, other famous websites (Google, Facebook, Twitter, Pirate Bay, ...)
+:-))~
+
+
+

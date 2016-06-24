@@ -1,0 +1,32 @@
+program simple;
+
+protocol SimpleProtocol {
+	// C and S are called "roles"
+	C -> S: hi(string)
+}
+
+public PublicSimple : SimpleProtocol
+
+public SimpleTwo : SimpleProtocol
+
+main
+{
+	/*
+	 * Process "client" starts process "server",
+	 * by contacting the service at "PublicSimple",
+	 * and finally creating session "k".
+	 */ 
+	client[C] start server[S] : PublicSimple( k );
+	
+	/*
+	 * client sends "Hello!" to server,
+	 * which stores it in variable x,
+	 * through operation hi, over session k
+	 */
+	client."Hello from client1" -> server.x : hi( k );
+	
+	/*
+	 * server displays the value of x
+	 */
+	show@server( x )
+}

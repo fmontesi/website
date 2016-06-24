@@ -1,0 +1,5 @@
+Modify main.ol in db.zip such that:
+- main.ol offers a new operation, query, for running arbitrary SQL queries on the database. The operation should check
+that the client has valid credentials according to the database, and return the result of the query to the client.
+- Add an HTML form that the client can use to send invocations for the query operation (look at the example on HTML forms from the previous lecture).
+

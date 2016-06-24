@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta name="keywords"
+content="Fabrizio Montesi
+	Nobuko Yoshida
+	Jolie
+	JOLIE
+	Chor
+	Composition
+	Compositionality
+	Composable
+	Progress
+	Asynchrony
+	Asynchronous
+	Multiparty
+	Session types
+	Sessions
+	Deadlock
+	Deadlock Freedom
+	Concurrency
+	Choreography
+	Choreographies
+	Global Programming
+	Global Description
+	Communication-Centred Programming
+	Process Calculi
+	Process Calculus
+	Process-Calculi
+	Process-Calculus
+	Pi-Calculus
+	Pi-Calculi
+	Pi Calculus
+	Pi Calculi
+	Picalculus
+	Picalculi
+	Service-oriented Computing
+	Service-oriented
+	Service oriented
+	Transitions
+	Reductions
+	WS-CDL
+	Distributed Systems
+	Computer Science
+	Formal Models
+	Informatics" />
+
+<title>Compositional Choreographies</title>
+</head>
+<body>
+<center>
+<h2>Compositional Choreographies</h2>
+Fabrizio Montesi and Nobuko Yoshida
+<br/><br/><br/>
+</center>
+
+<center>
+<strong>Abstract</strong>
+<div align="justify" style="border: 1px solid black; margin: 5px; width: 800px; padding: 10px">
+  Choreography-based programming is a powerful paradigm for designing
+  communicating systems, where the flow of communications between
+  peers (endpoints) is specified with a <emph>global description</emph>.
+  Due to their global nature, current choreography models can specify
+  only the behaviour of closed systems, i.e., systems where the
+  behaviour of all endpoints is known at design time.  This limitation
+  prevents the usage of choreographies in real-world
+  distributed scenarios where the ability to compose different systems
+  whose implementation details are unknown (as "black boxes") can be
+  crucial. This paper proposes a new model that supports
+  a compositionality of choreographies. The key of our approach is
+  the introduction of partial choreographies, which can mix global
+  descriptions with communications among external peers.  
+We prove that if two choreographies are composable, then the endpoints
+independently generated from each choreography
+are also composable, preserving their typability and deadlock-freedom.
+The usability of our framework is demonstrated by modelling an industrial use 
+case implemented in a framework for Web Services, Jolie.
+</div>
+</center>
+<br/>
+<ul>
+<li>Link to the <a href="compchor_paper.pdf">paper</a>, accepted at CONCUR 2013.</li>
+<li>Link to the <a href="compchor_example.zip">implementation</a> of the use case with the Jolie language.</li>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53616744-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

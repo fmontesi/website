@@ -1,0 +1,12 @@
+Write a Chor program where:
+
+Exercise 1:
+- A process "user" authenticates to a process "proxy" using the OpenID protocol from openid.cho (use "ip" for the identity provider process name); if authentication is successful, the following should happen:
+- the proxy opens a new session, called "stream", with a streaming server, called "streamer";
+- the proxy delegates session stream to the user;
+- streamer sends a stream to user, similarly to how it is done in stream.cho
+
+Exercise 2:
+- Compile the choreography from exercise 1, if you have completed it, or from stream.cho otherwise.
+- Modify the Jolie code of the streamer such that instead of asking for input from the user, it reads the content of a text file "content.txt" and uses this content for the packets in the stream.
+

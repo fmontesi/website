@@ -1,0 +1,23 @@
+Preparation
+- Install Eclipse
+- Install Chor from the Eclipse Marketplace
+
+Exercise 1
+
+Modify the simple.cho example:
+- add a new process to session k, logger;
+- after the server receives the message from client, make the server send the received message
+to logger instead of printing it on screen;
+- make logger print the message on screen.
+
+
+Exercise 2:
+
+- Compile your modified version of simple.cho;
+- go in the code of the logger;
+- instead of printing the message received from the server on screen,
+have the logger append it to a file called "log.txt".
+(Suggestion: use the writeFile@File operation that you can include from "file.iol"
+in the Jolie standard library).
+
+

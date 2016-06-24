@@ -1,0 +1,62 @@
+# Guidelines for the final report - Integrated and Mobile Distributed Systems 2014
+
+
+## Packaging
+
+You have to hand in a single zip file on Blackboard, containing:
+
+- a PDF file with your report (call it "<your_name>-report-imds2014.pdf", where <your_name> should be
+replaced by your name);
+- a subdirectory named "code" containing the source code for your project.
+
+Either in the report (Section "Technical Description", described below), or in a separate README
+file pointed , include instructions for running
+
+
+## Format
+
+The report must not exceed 10 pages, all included.
+Use 1.5 line spacing and ensure that the page margins are at least of 2cm (in all directions).
+For the body text, use Times new roman as family and 12pt as font size.
+
+The first page of the report must include a title, your name, your SDU e-mail address, the name of the course and the date.
+
+Tip: if you use Latex, you can use the following command (adapt the margins to your liking, but respect the minimal specifications).
+\usepackage[a4paper,top=2.1cm,bottom=2.1cm,left=2.4cm,right=2.4cm]{geometry}
+
+## Structure
+
+All reports should have the same main structure. Feel free to insert subsections as you see fit.
+The main sections are given in the following list.
+
+1 - Introduction.
+This section gives an overview of the motivations and results of what you have done.
+Describe the challenge that you want to address, motivating why it is relevant.
+
+2 - Preliminaries.
+Give a brief overview of the background knowledge needed to understand your report.
+Provide references to what you have used and report the main concepts that your work is based on.
+
+3 - Technical Description.
+Here you explain the technical work you have carried out.
+You may include code snippets where relevant, and refer to source code in the project files.
+
+You should report on the structure of communications used in your work, and document them
+appropriately. You may use any of the formalisms or languages seen in the lectures for describing
+communication protocol structures (e.g., any variant of session types or the protocols in Chor).
+
+This section must contain instructions for running the project. You can include them directly here
+or point to a separate README file in the zip package that you hand in.
+
+4 - Related Work and Discussion.
+In this section you review the relevant state of the art. This may include alternative solutions to the
+same challenge you have tried to address in your project, or alternative methodologies that you may
+have followed (e.g., choice of other technologies for implementing the project).
+Provide a discussion on the implications of your choices in the design of your work and the technologies/techniques
+that you have used.
+
+- References (or Bibliography)
+This section should contain references to the articles/websites/resources/etc. cited in your report.
+
+For citing scientific papers, you can find the relative Bibtex entries in DBLP. Look on google for “DBLP <name of the author>” and Export record as Bibtex in the hover menu for the second icon beside the entry you are interested in.
+

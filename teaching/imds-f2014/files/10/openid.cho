@@ -1,0 +1,28 @@
+/**
+ * A protocol inspired by OpenID, a standard distributed
+ * authentication protocol.
+ * 
+ * - U (for User) is a user that wants to access a service offered by RP.
+ * - RP (for Relying Party) is a server that offers a service, given that
+ *   the requesting user is able to authenticate through IP.
+ * - IP (for Identity Provider) is another service offering the possibility
+ *   to authenticate some user credentials.
+ * 
+ */
+
+protocol OpenID {
+	U -> RP: username( string );		// User sends her username to the Relying Party
+	RP -> IP: username( string );	// Relying Party sends the username to the Identity Provider
+	U -> IP: password( string );		// User sends her password to the Identity Provider
+	IP -> RP: {						// Identity Provider informs the Relying Party on whether...
+	ok( void );						// ...the authentication is successful
+		RP -> U: ok( void ),
+	fail(string); 					// ...or the authentication failed
+		RP -> U: fail( string )
+	}
+}
+
+
+// ask@ip( "Is this OK" + username + " " + password , decision );
+
+

@@ -1,0 +1,30 @@
+program conditional;
+
+protocol MyProtocol
+{
+	Client -> Broker: {
+		yes(void);
+			Broker -> Bank: pay(void),
+		no(void);
+			Broker -> Bank: cancel(void)
+	}
+}
+
+public a:MyProtocol
+
+main
+{
+	client[Client] start broker[Broker], bank[Bank] : a(k);
+	
+	ask@client(
+		"Would you like to send a message?",
+		decision
+	);
+	if( decision == "yes" )@client {
+		client -> broker: yes(k);
+		broker -> bank: pay(k)
+	} else {
+		client -> broker: no(k);
+		broker -> bank: cancel(k)
+	}
+}

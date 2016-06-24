@@ -1,0 +1,58 @@
+/***************************************************************************
+ *   Copyright (C) 2012 by Fabrizio Montesi <famontesi@gmail.com>          *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *                                                                         *
+ *   For details about the authors of this software, see the AUTHORS file. *
+ ***************************************************************************/
+
+program stream;
+
+protocol StreamingProtocol {
+	S -> C: packet( string );
+	S -> C: {
+		again( void ); StreamingProtocol
+		,
+		end( void )
+	}
+}
+
+public a : StreamingProtocol
+
+define doStreaming( c, s )( stream[StreamingProtocol: c[C], s[S]] )
+{
+	ask@s( "[s] Give me some data to send for packet number " + i, data );
+
+	s.data -> c.data: packet( stream );
+	local@c( result = result + data );
+	local@s( i = i + 1 );
+	if ( i < nPackets )@s {
+		s -> c: again( stream );
+		doStreaming( c, s )( stream )
+	} else {
+		s -> c: end( stream );
+		show@c( "[c] Received data: " + result )
+	}
+}
+
+main
+{
+	c[C] start s[S]: a( k );
+	ask@s( "[s] How many packets do you want to send?", nPackets );
+	local@s( i = 0 );
+	
+	doStreaming( c, s )( k )
+}

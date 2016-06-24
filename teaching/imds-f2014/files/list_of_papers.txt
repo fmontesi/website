@@ -1,0 +1,31 @@
+**NEW (22 October 2014)**
+Process-aware Web Programming with Jolie: http://arxiv.org/abs/1410.3712
+Any paper from here: http://www.informatik.uni-trier.de/~ley/pers/hd/g/Giallorenzo:Saverio
+
+
+Theory:
+
+Choreographies, Logically 
+Compositional Choreographies 
+Deadlock-freedom-by-design: Multiparty Asynchronous Global Programming 
+Workflow patterns
+Multiparty asynchronous session types
+Language Primitives and Type Discipline for Structured Communication-Based Programming
+
+
+Practice:
+
+Web Services Foundations (any chapter)
+Service-Oriented Architectures: From Design to Production Exploiting Workflow Patterns 
+A Framework for Rule-Based Dynamic Adaptation
+Service-Oriented Programming with Jolie
+Pict: A Programming Language Based on the Pi-Calculus
+Session-Based Distributed Programming in Java
+Scribbling Interactions with a Formal Foundation
+Multiparty Session C: Safe Parallel Programming with Message Optimisation
+SPY: Local Verification of Global Protocols
+Planning and Monitoring Web Service Composition
+Hop, a Language for Programming the Web 2.0
+S: a scripting language for high-performance RESTful web services
+
+

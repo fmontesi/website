@@ -1,0 +1,63 @@
+program openid;
+
+/**
+ * A protocol inspired by OpenID, a standard distributed
+ * authentication protocol.
+ * 
+ * - U (for User) is a user that wants to access a service offered by RP.
+ * - RP (for Relying Party) is a server that offers a service, given that
+ *   the requesting user is able to authenticate through IP.
+ * - IP (for Identity Provider) is another service offering the possibility
+ *   to authenticate some user credentials.
+ * 
+ */
+
+protocol OpenID {
+	U -> RP: username( string );		// User sends her username to the Relying Party
+	RP -> IP: username( string );	// Relying Party sends the username to the Identity Provider
+	U -> IP: password( string );		// User sends her password to the Identity Provider
+	IP -> RP: {						// Identity Provider informs the Relying Party on whether...
+	ok( void );						// ...the authentication is successful
+		RP -> U: ok( void ),
+	fail(string); 					// ...or the authentication failed
+		RP -> U: fail( string )
+	}
+}
+
+protocol Logging {
+	IP -> L: result( string )
+}
+
+public a : OpenID
+public b : Logging
+
+main
+{
+	user[U] start server[RP], authenticator[IP]: a( k );
+	ask@user( "[user] Username?", username );
+	ask@user( "[user] Password?", pwd );
+	user.username -> server.username : username( k );
+	server.username -> authenticator.username : username( k );
+	user.pwd -> authenticator.pwd : password( k );
+	ask@authenticator(
+		"Is " + username + "/" +
+		pwd + " correct?",
+		answer
+	);
+	authenticator[IP] start logger[L] : b( s );
+	if( answer == "yes" )@authenticator {
+		authenticator.(username + " success") -> logger.msg : result( s );
+		show@logger( "[logger] " + msg );
+		authenticator -> server : ok( k );
+		server -> user : ok( k );
+		show@user( "[user] Ok!" )
+	} else {
+		authenticator.(username + " fail") -> logger.msg : result( s );
+		show@logger( "[logger] " + msg );
+		authenticator."You messed up!" -> server.msg : fail( k );
+		server.msg -> user.msg : fail( k );
+		show@user( "[user] " + msg )
+	}
+}
+
+

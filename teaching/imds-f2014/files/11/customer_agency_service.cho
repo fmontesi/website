@@ -1,0 +1,49 @@
+program customer_agency_service;
+
+protocol CustomerAgency {
+	C -> A: getPrice( string );
+	A -> C: price( int );
+	C -> A: {
+		accept( void );
+			A -> C: delegate( ClientService@Client ),
+		again( void ); CustomerAgency,
+		reject( void )
+	}	
+}
+
+protocol ClientService {
+	Client -> Srv: address( string );
+	Srv -> Client: date( string )
+}
+
+public a : CustomerAgency
+public b : ClientService
+
+define myProc
+	( customer, agency ) // Processes
+	( k[CustomerAgency: customer[C], agency[A]] ) // Sessions
+{
+	ask@customer( "[customer] What should we ask?", destination );
+	customer.destination -> agency.destination: getPrice( k );
+	ask@agency( "[agency] Price for " + destination + "?", price );
+	agency.price -> customer.price: price( k );
+	ask@customer( "[customer] Decide! Price: " + price, decision );
+	if ( decision == "accept" )@customer {
+		customer -> agency: accept( k );
+		agency[Client] start service[Srv]: b( s );
+		agency -> customer: delegate( k( s ) );
+		customer."MyAddress" -> service.addr: address( s );
+		service."YourDate" -> customer.date: date( s )
+	} else if ( decision == "reject" )@customer {
+		customer -> agency: reject( k )
+	} else {
+		customer -> agency: again( k );
+		myProc( customer, agency )( k )
+	}
+}
+
+main
+{
+	customer[C] start agency[A]: a( k );
+	myProc( customer, agency )( k )
+}

@@ -1,0 +1,11 @@
+Modify the example in web_1.zip:
+
+- Add an HTML form that invokes an operation "getBibtex" on server.ol passing the value of an input field called "dblpkey".
+- Add an operation, getBibtex, in server.ol that, when invoked, uses the code from dblp_client.ol (feel free to copy what you need from there) to get the Bibtex entry
+of a paper with the appropriate dblpkey.
+
+Examples of valid dblpkeys:
+
+books/ph/KernighanR78
+books/sp/wsf14/MontesiGZ14
+

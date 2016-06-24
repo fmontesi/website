@@ -1,0 +1,21 @@
+
+You can find material on the syntax of Chor in Chapter 7 of: http://fabriziomontesi.com/files/m13_phdthesis.pdf
+
+# Exercise 1
+- Download openid.cho.
+- Write a choreography (in the main procedure) that implements the protocol OpenID.
+
+## Tip 1: Use ask and show to get username and password from the user, and to ask at the identity provider
+whether the username/password combination is correct, e.g.,
+ask@ip( "Is the username/password combination correct? " + username + "/" + password, decision )
+
+## Tip 2: Use the conditional construct if-then-else at the identity provider, e.g.,
+if ( decision == "yes" )@ip { ... } else { ... }
+
+
+# Exercise 2
+Modify the program you obtain from exercise 1 such that:
+- the identity provider opens another session with a logger;
+- the identity provider sends to the logger a message on whether the user was successfully authenticated or not.
+- [optional] reuse the logger code from the exercises of the previous lecture to write logs in a file.
+
