@@ -1,154 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="keywords"
-content="Fabrizio Montesi
-	Choreographies
-	Jolie
-	Chor
-	Global types
-	Protocols
-	Global descriptions
-	Personal
-	Website
-	Web
-	Site
-	Home
-	Page
-	Homepage
-	Service Oriented Computing
-	Service-Oriented Computing
-	Service Oriented Architectures
-	Service-Oriented Architectures
-	Communication-Centred Programming
-	Process Calculi
-	Process Calculus
-	Process-Calculi
-	Process-Calculus
-	Pi-Calculus
-	Pi-Calculi
-	Pi Calculus
-	Pi Calculi
-	Picalculus
-	Picalculi
-	Transitions
-	Reductions
-	WS-BPEL
-	UDDI
-	SOAP
-	ACM
-	SAC
-	Conference
-	Distributed Systems
-	Computer Science
-	Formal Models
-	Informatics" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport"
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="/css/style.css" />
+    <meta name="keywords"
+    content="Fabrizio Montesi
+    	Choreographies
+    	Jolie
+    	Chor
+    	Global types
+    	Protocols
+    	Global descriptions
+    	Personal
+    	Website
+    	Web
+    	Site
+    	Home
+    	Page
+    	Homepage
+    	Service Oriented Computing
+    	Service-Oriented Computing
+    	Service Oriented Architectures
+    	Service-Oriented Architectures
+    	Communication-Centred Programming
+    	Process Calculi
+    	Process Calculus
+    	Process-Calculi
+    	Process-Calculus
+    	Pi-Calculus
+    	Pi-Calculi
+    	Pi Calculus
+    	Pi Calculi
+    	Picalculus
+    	Picalculi
+    	Transitions
+    	Reductions
+    	WS-BPEL
+    	UDDI
+    	SOAP
+    	ACM
+    	SAC
+    	Conference
+    	Distributed Systems
+    	Computer Science
+    	Formal Models
+      Microservices
+    	Informatics" />
 
-<script type="text/javascript" src="/lib/jquery.js"></script>
-<script type="text/javascript" src="/lib/alist.js"></script>
-<script type="text/javascript" src="/lib/fuse.js"></script>
-<style>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fabrizio Montesi</title>
 
-#nav a::before,
-#nav a::after {
-	position: relative;
-}
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/alist.js"></script>
+    <script type="text/javascript" src="lib/fuse.js"></script>
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Fabrizio Montesi <small>Choreographic Programming, Concurrency, Jolie, Microservices, ...</small></h1>
+    </div>
 
-#nav {
-margin: 0;
-padding: 7px 6px 0;
-line-height: 100%;
-border-radius: 2em;
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Fabrizio Montesi</a> -->
+        </div>
 
--webkit-border-radius: 2em;
--moz-border-radius: 2em;
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/research.html">Research/Pubs</a></li>
+            <li><a href="/teaching.html">Teaching</a></li>
+            <li><a href="http://fmontesi.github.io" target="_new">Blog</a></li>
+            <li><a href="/crc.html">The CRC Project</a></li>
+            <li><a href="/dblp/index.html">DBLP Tool</a></li>
+            <li><a href="http://www.jolie-lang.org/" target="_new">Jolie Language</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <!-- <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form> -->
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
--webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
--moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    <!-- <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol> -->
 
-background: #8b8b8b; /* for non-css3 browsers */
-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9a9a9', endColorstr='#7a7a7a');
-background: -webkit-gradient(linear, left top, left bottom, from(#a9a9a9), to(#7a7a7a));
-background: -moz-linear-gradient(top,  #a9a9a9,  #7a7a7a);
-font-family: sans-serif;
-border: solid 1px #6d6d6d;
-}
-
-#nav li {
-margin: 0 5px;
-padding: 0 0 8px;
-float: left;
-position: relative;
-list-style: none;
-}
-
-/* main level link */
-#nav a {
-font-weight: bold;
-color: #e7e5e5;
-text-decoration: none;
-display: block;
-padding:  8px 20px;
-margin: 0;
--webkit-border-radius: 1.6em;
--moz-border-radius: 1.6em;
-text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-}
-
-/* main level link hover */
-#nav .current, #nav li:hover > a {
-background: #d1d1d1; /* for non-css3 browsers */
-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#a1a1a1'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#a1a1a1)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #ebebeb,  #a1a1a1); /* for firefox 3.6+ */
-
-color: #444;
-border-top: solid 0px #f8f8f8;
--webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
--moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-}
-
-/* clearfix */
-#nav:after {
-content: ".";
-display: block;
-clear: both;
-visibility: hidden;
-line-height: 0;
-height: 0;
-}
-</style>
-<title>Fabrizio Montesi</title>
-
-</head>
-
-<body fullbleed layout vertical unresolved>
-	<div class="container_24">
-
-	<h2 class="HeaderTitle">
-	Fabrizio Montesi
-	</h2>
-
-	<div id="menu" class="grid_24">
-		<ul id="nav">
-		<li><a href="/index.html">Home</a></li>
-		<li><a href="/research.html">Research/Pubs</a></li>
-		<li><a href="/teaching.html">Teaching</a></li>
-		<li><a href="http://fmontesi.github.io" target="_new">Blog</a></li>
-		<li><a href="/crc.html">The CRC Project</a></li>
-		<li><a href="/dblp/index.html">DBLP Tool</a></li>
-		<li><a href="http://www.jolie-lang.org/" target="_new">Jolie Language</a></li>
-		</ul>
-	</div>
-
-	<div class="grid_24">
+    <div class="container page-content">
+    <div id="page-col" class="row col-xs-12">
