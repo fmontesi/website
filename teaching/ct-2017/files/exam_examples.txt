@@ -1,0 +1,259 @@
+Legend:
+
+- The triangle is |>
+- \sigma is just \sigma
+- The reduction arrow is --->   p->q;0 ---> 0
+- The downarrow evaluation operator is \eval
+- Structural precongruence is <=
+- Structural equivalence is ===
+- The oplus is either \oplus or +
+- Reductum: the right-hand side of a reduction. For example, in C -> C', C' is the reductum.
+
+---
+
+p -> q; r -> s; 0   --->   p -> q; 0
+
+                                          ----------------------------------- Com
+p -> q; r -> s; 0 <= r -> s; p -> q; 0    r -> s; p -> q; 0  --->   p -> q; 0    p -> q; 0 <= p -> q; 0
+----------------------------------------------------------------------------------------------------------- Struct
+p -> q; r -> s; 0   --->   0
+
+---
+
+Write a (projectable) choreography for:
+- p sends a product name to q;
+- q replies with the price for the product;
+- p decides whether the price is ok:
+  * if the price is ok:
+    - p sends some money (corresponding to the price) to b;
+    - q sends the product to p.
+  * if the prices is not ok:
+    - nothing happens.
+
+You are free to insert selections as necessary to make the choreography projectable. You don't need to define the functions used by processes
+in interactions.
+
+p.prod -> q.x;
+q.price(x) -> p.y;
+if p.ok(y) then
+  p -> b[ok];
+  p -> q[ok];
+  p.money(y) -> b.m;
+  q.prod(x) -> p.yahoo;
+  0
+else
+  p -> b[ko];
+  p -> q[ko];
+  0
+
+---
+
+Write a proceduce Buy(p,q,b) that implements the following:
+- p sends a product name to q;
+- q replies with the price for the product;
+- p decides whether the price is ok:
+  * if the price is ok:
+    - p sends some money (corresponding to the price) to b;
+    - q sends the product to p.
+  * if the prices is not ok:
+    - p locally computes a new product it may wish to buy
+    - we invoke procedure Buy again.
+
+You are free to insert selections as necessary to make the choreography projectable. You don't need to define the functions used by processes
+in interactions.
+
+Buy(p,q,b) =
+
+p.prod -> q.x;
+q.price(x) -> p.y;
+if p.ok(y) then
+  p -> b[ok];
+  p -> q[ok];
+  p.money(y) -> b.m;
+  q.prod(x) -> p.yahoo;
+  0
+else
+  p -> b[ko];
+  p -> q[ko];
+  p.anotherProduct;
+  Buy(p,q,b)
+
+---
+
+Show all reduction chains for the configuration <C,\sigma>, where
+
+C =
+p.f -> q.x;
+if q.x then
+  q.g;
+  0
+else
+  0
+
+and \sigma is such that f(\sigma(p)) = true.
+
+<C,\sigma>
+->
+<
+if q.x then
+  q.g;
+  0
+else
+  0
+,
+\sigma'
+>
+->
+<q.g;0,\sigma'>
+->
+<0,\sigma''>
+
+where
+
+\sigma' = \sigma[q |-> h']  and \sigma(q) = h and h'=h[x|->true]
+\sigma'' = \sigma'[q |-> v] and g(\sigma'(q)) \eval v
+
+---
+
+Write the EPP of:
+
+r -> s; s -> p; q -> b; 0
+
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+---
+
+Is this choreography
+
+r -> s; s -> p; q -> b; 0
+
+operationally correspondent to this network
+
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+?
+
+Yes, because:
+
+(Completeness)
+
+Choreography reduction:
+r -> s; s -> p; q -> b; 0
+--->
+s -> p; q -> b; 0
+
+corresponds to:
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+--->
+s |> p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+which is the EPP of the reductum of the choreography.
+
+
+Choreography reduction:
+r -> s; s -> p; q -> b; 0
+--->
+r -> s; s -> p; 0
+
+corresponds to:
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+--->
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0
+
+which is the EPP of the reductum of the choreography.
+
+
+(Soundness)
+
+Network reduction:
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+--->
+s |> p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+Corresponding choreography reduction:
+r -> s; s -> p; q -> b; 0
+--->
+s -> p; q -> b; 0
+
+And the reductum of the network is the EPP of the reductum of the choreography.
+
+Network reduction:
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+--->
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0
+
+Corresponding choreography reduction:
+r -> s; s -> p; q -> b; 0
+--->
+r -> s; s -> p; 0
+
+And the reductum of the network is the EPP of the reductum of the choreography.
+
+
+---
+
+Is this choreography
+
+r -> s; s -> p; 0
+
+operationally correspondent to this network
+
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+?
+
+No, because there is a network reduction that the choreography cannot match.
+
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+--->
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0
+
+---
+
+Does procedure Buy, defined below, terminate?
+
+Buy(p,q,b) =
+
+p.prod -> q.x;
+q.price(x) -> p.y;
+if p.ok(y) then
+  p -> b[ok];
+  p -> q[ok];
+  p.money(y) -> b.m;
+  q.prod(x) -> p.yahoo;
+  0
+else
+  p -> b[ko];
+  p -> q[ko];
+  p.anotherProduct;
+  Buy(p,q,b)
+
+Yes, given that the price is eventually ok.
+
+---
+
+Is this network deadlock-free?
+
+r |> s!;0  |  s |> r?; p!;0  |  p|> s?;0  |  q |> b!;0  |  b |> q?;0
+
+Yes, because we can write a choreography whose EPP is exactly this network.
+
+r -> s; s -> p; q -> b; 0
+
+---
+
+Does the following hold?
+
+r -> s; p -> q; t -> w; 0 <= t -> w; p -> q; r -> s; 0
+
+Yes, because
+
+r -> s; p -> q; t -> w; 0
+<=
+r -> s; t -> w; p -> q; 0
+<=
+t -> w; r -> s; p -> q; 0
+<=
+t -> w; p -> q; r -> s; 0
+
+and by transitivity of <=.
