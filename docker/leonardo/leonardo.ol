@@ -23,6 +23,7 @@ include "console.iol"
 include "file.iol"
 include "string_utils.iol"
 include "protocols/http.iol"
+include "dblp/dblp_utils.iol"
 
 include "config.iol"
 include "virtual_hosts.iol"
@@ -45,6 +46,10 @@ RequestResponse:
 	default(DefaultOperationHttpRequest)(undefined)
 }
 
+outputPort DBLPUtils {
+Interfaces: DBLPUtilsInterface
+}
+
 inputPort HTTPInput {
 Protocol: http {
 	.keepAlive = true;
@@ -61,6 +66,7 @@ Protocol: http {
 }
 Location: Location_Leonardo
 Interfaces: HTTPInterface
+Aggregates: DBLPUtils
 }
 
 // inputPort AdminInput {
@@ -68,6 +74,10 @@ Interfaces: HTTPInterface
 // Protocol: sodep
 // Interfaces: AdminInterface
 // }
+
+embedded {
+Jolie: "dblp/dblp_utils.ol" in DBLPUtils
+}
 
 init
 {
@@ -179,7 +189,30 @@ main
 				applyTheme
 			}
 		}
-	} ] { nullProcess }
+	} ] {
+		endsWith@StringUtils( file.filename { .suffix = ".pdf" } )( isPdf );
+		if ( isPdf ) {
+			contains@StringUtils( file.filename { .substring = "files" } )( isPub );
+			contains@StringUtils( file.filename { .substring = "teaching" } )( isTeaching );
+			if ( isTeaching ) {
+				ec = "Teaching"
+			} else if ( isPub ) {
+				ec = "Publications"
+			} else {
+				ec = "Others"
+			};
+			split@StringUtils( file.filename { .regex = "/" } )( result );
+			collect@GoogleAnalytics( {
+				.v = 1,
+				.tid = "UA-53616744-1",
+				.cid = 555,
+				.t = "event",
+				.ec = ec,
+				.ea = "Download",
+				.el = result.result[ #result.result - 1 ]
+				} )()
+			}
+		}
 
 	// [ shutdown()() { nullProcess } ] { exit }
 }
