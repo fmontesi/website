@@ -11,4 +11,3 @@ RUN rm -rf /www/.git && rm -rf /www/docker
 FROM jolielang/leonardo
 COPY --from=Build /www /var/lib/leonardo/www
 COPY hooks/* /server/leonardo/hooks/
-COPY r2.html /var/lib/leonardo/www/
