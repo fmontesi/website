@@ -10,5 +10,5 @@ RUN rm -rf /www/.git && rm -rf /www/docker
 # Start from scratch, copy the installer, install, remove the installer.
 FROM jolielang/leonardo
 COPY --from=Build /www /var/lib/leonardo/www
-COPY hooks/pre_response.iol /server/leonardo/hooks/pre_response.iol
-COPY hooks/post_response.iol /server/leonardo/hooks/post_response.iol
+COPY hooks/* /server/leonardo/hooks/
+COPY r2.html /var/lib/leonardo/www/
