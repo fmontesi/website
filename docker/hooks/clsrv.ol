@@ -38,14 +38,14 @@ define buildPublicationsList {
 			for( paper in collection.paper ) {
 				html += "<li><p>" + paper.content;
 				html += "<br/>";
-				html += "<a data-toggle=\"collapse\" data-target=\"#bibItem-" + paperId + "\">Bibtex</a>";
+				html += "<a class=\"text-primary\" data-toggle=\"collapse\" data-target=\"#bibItem-" + paperId + "\">Bibtex</a>";
 				i = 0;
 				for( link in paper.link ) {
 					if ( string(link.name) == "" ) {
 						link.name = "PDF"
 					};
 					if ( i++ > 0 ) { html += " " };
-					html += " | <a href=\"" + link.link + "\">" + link.name + "</a>"
+					html += " | <a  class=\"text-primary\" href=\"" + link.link + "\">" + link.name + "</a>"
 				};
 				html += "<div id=\"bibItem-" + paperId + "\" class=\"collapse panel panel-default\">"
 					+ "<div class=\"panel-body\"><pre>" + paper.bibitem + "</pre></div></div>";

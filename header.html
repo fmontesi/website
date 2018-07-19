@@ -55,6 +55,7 @@
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <script src="/lib/jquery.js"></script>
+		<script src="/lib/popper.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="/lib/alist.js"></script>
     <script type="text/javascript" src="/lib/fuse.js"></script>
@@ -69,37 +70,57 @@
 			.paper-title {
 				font-weight: bold;
 			}
+
+			.SectionTitle {
+				margin-top: 1rem;
+			}
 		</style>
   </head>
   <body>
-    <div class="page-header" style="padding-left:1em">
-      <h1>Fabrizio Montesi <small>Choreographic Programming, Concurrency, Jolie, Microservices, ...</small></h1>
-    </div>
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fm-main-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- <a class="navbar-brand" href="#">Fabrizio Montesi</a> -->
-        </div>
+    <!-- <span class="page-header" style="padding:1rem">
+			<a href="https://imada.sdu.dk/" target="_new">IMADA</a>
+			&gt;
+			<a href="https://concurrency.sdu.dk/" target="_new">Concurrency and Logic</a>
+			&gt;
+			<strong>Fabrizio Montesi</strong>
+			<small>Choreographic Programming, Concurrency, Jolie, Microservices, ...</small>
+    </span> -->
+    <nav class="navbar navbar-expand-md navbar-static-top navbar-light bg-light py-0 py-md-0">
+			<div class="navbar-brand">
+				<small>
+				<span class="d-inline">
+					<a href="https://imada.sdu.dk/" class="navbar-text py-0">IMADA</a>
+				</span>
+				<span class="d-inline" class="text-muted py-0"> > </span>
+				<a href="https://concurrency.sdu.dk/" class="navbar-text py-0">
+					<span class="d-inline d-xl-none">CL</span>
+					<span class="d-none d-xl-inline">Concurrency and Logic</span>
+				</a>
+				<span class="d-inline" class="text-muted py-0"> > </span>
+				<a href="/" class="navbar-text py-0">
+					<strong class="d-none d-xl-inline">Fabrizio Montesi</strong>
+					<strong class="d-inline d-xl-none">Fabrizio</strong>
+				</a>
+				</small>
+				<p class="py-0 my-0"><small><small><span class="text-muted">Choreographic Programming, Concurrency, Jolie, Microservices, ...</span></small></small></p>
+    	</div>
+      <div class="ml-auto">
+				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#fm-main-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="clear-fix"></div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="fm-main-navbar">
-          <ul class="nav navbar-nav">
+					<ul class="navbar-nav mr-auto">
             <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/research.html">Research/Pubs</a></li>
-            <li><a href="/teaching.html">Teaching</a></li>
-            <li><a href="http://fmontesi.github.io" target="_new">Blog</a></li>
+            <li class="nav-item"><a href="/index.html" class="nav-link py-0">Home</a></li>
+            <li class="nav-item"><a href="/research.html" class="nav-link py-0">Research/Pubs</a></li>
+            <li class="nav-item"><a href="/teaching.html" class="nav-link py-0">Teaching</a></li>
+            <li class="nav-item"><a href="http://fmontesi.github.io" class="nav-link py-0" target="_new">Blog</a></li>
             <!-- <li><a href="/crc.html">The CRC Project</a></li> -->
             <!-- <li><a href="/dblp/index.html">DBLP Tool</a></li> -->
-            <li><a href="http://www.jolie-lang.org/" target="_new">Jolie Language</a></li>
+            <li class="nav-item"><a href="https://www.jolie-lang.org/" class="nav-link py-0" target="_new">Jolie Language</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -142,5 +163,5 @@
       <li class="active">Data</li>
     </ol> -->
 
-    <div class="container page-content">
+    <div class="container page-content" style="margin-top: 1rem">
     <div id="page-col" class="row col-xs-12">

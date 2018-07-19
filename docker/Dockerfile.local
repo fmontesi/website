@@ -1,0 +1,3 @@
+FROM jolielang/leonardo
+COPY . /var/lib/leonardo/www
+COPY docker/hooks/* /server/leonardo/hooks/
