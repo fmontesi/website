@@ -9,5 +9,5 @@ RUN rm -rf /www/.git && rm -rf /www/docker
 
 # Start from scratch, copy the installer, install, remove the installer.
 FROM jolielang/leonardo
-COPY --from=Build /www /var/lib/leonardo/www
+COPY --from=Build /www/web /var/lib/leonardo/www
 COPY hooks/* /server/leonardo/hooks/
