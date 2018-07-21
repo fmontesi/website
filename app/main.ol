@@ -6,7 +6,7 @@ include "internal/leonardo/ports/LeonardoAdmin.iol"
 
 embedded {
 Jolie:
-	"-C Standalone=false internal/leonardo/leonardo.ol" in LeonardoAdmin
+	"-C Standalone=false internal/leonardo/cmd/leonardo/main.ol" in LeonardoAdmin
 }
 
 main
