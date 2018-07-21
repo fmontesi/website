@@ -1,4 +1,6 @@
-include "hooks_types.iol"
+include "../leonardo/types/PreResponseHookIface.iol"
+include "string_utils.iol"
+include "file.iol"
 
 constants {
 	PublicationsListToken = "<!--PublicationsList-->"
@@ -9,7 +11,7 @@ RequestResponse: getPublicationsList(void)(string)
 }
 
 embedded {
-Jolie: "hooks/clsrv.ol" in CLSrv
+Jolie: "internal/hooks/clsrv.ol" in CLSrv
 }
 
 service PreResponseHook {

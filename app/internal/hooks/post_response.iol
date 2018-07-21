@@ -1,4 +1,4 @@
-include "hooks_types.iol"
+include "../leonardo/types/PostResponseHookIface.iol"
 
 interface GoogleAnalyticsIface {
 RequestResponse: collect

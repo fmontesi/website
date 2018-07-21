@@ -1,7 +1,9 @@
 #!/bin/sh
 
 docker run -it --rm \
-	-v "$(pwd)"/web:/var/lib/leonardo/www \
-	-v "$(pwd)"/docker/hooks:/server/leonardo/hooks \
+	-v "$(pwd)"/web:/web \
+	-v "$(pwd)"/app:/app \
+	-w /app \
 	-p 8080:8080 \
-	jolielang/leonardo
+	jolielang/jolie \
+	jolie main.ol
