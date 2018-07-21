@@ -4,7 +4,7 @@ WORKDIR /
 
 RUN apk update && \
 		apk add git
-RUN git clone --depth=1 https://github.com/fmontesi/website.git /git
+RUN git clone --depth=1 --recurse-submodules https://github.com/fmontesi/website.git /git
 # RUN rm -rf /www/.git && rm -rf /www/docker
 
 # Start from scratch, copy the installer, install, remove the installer.
