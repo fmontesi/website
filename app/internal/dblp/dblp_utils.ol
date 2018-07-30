@@ -53,17 +53,17 @@ main
 		getPersonPublications@DBLPServer( request )( response );
 
 		format = "html";
-		for( i = k = 0, i < #response.dblpkey, i++ ) {
-			if ( !is_defined( response.dblpkey[i].(Attrs) ) ) {
+		for( dblpkey in response.dblpkey ) {
+			if ( !is_defined( dblpkey.(Attrs) ) ) {
 				// It's a publication key
-				getBibtex@DBLPServer( response.dblpkey[i] )( bibtex );
+				getBibtex@DBLPServer( dblpkey )( bibtex );
 				result += bibtex
 			}
 		};
-		println@Console( "[DBLP:getAuthorBibtex] Request served for " + request.nameKey )();
 		if( !(result instanceof string) ) {
 			undef( result );
 			result = "[Error] Something went wrong. Please check your parameters."
 		}
-	}
+	};
+	println@Console( "[DBLP:getAuthorBibtex] Request served for " + request.nameKey )();
 }
