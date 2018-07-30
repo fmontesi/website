@@ -65,5 +65,5 @@ main
 			result = "[Error] Something went wrong. Please check your parameters."
 		}
 	};
-	println@Console( "[DBLP:getAuthorBibtex] Request served for " + request.nameKey )();
+	println@Console( "[DBLP:getAuthorBibtex] Request served for " + request.nameKey )()
 }
