@@ -22,10 +22,12 @@ RequestResponse:
 }
 
 outputPort DBLPServer {
-Location: "socket://dblp.uni-trier.de:80/"
-Protocol: http {
+Location: "socket://dblp.uni-trier.de:443/"
+Protocol: https {
 	.osc.getPersonPublications.alias = "pers/xk/%{initial}/%{nameKey}.xml";
 	.osc.getBibtex.alias = "rec/bib2/%!{$}.bib";
+	.addHeader.header[0] << "Accept-Charset" { .value = "utf-8, iso-8859-1;q=0.5" };
+	.debug = .debug.showContent = true;
 	.format -> format;
 	.method -> method;
 	.keepAlive = false // DBLP does not like reusing connections

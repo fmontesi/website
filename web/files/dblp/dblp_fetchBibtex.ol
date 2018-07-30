@@ -20,8 +20,8 @@ RequestResponse:
 }
 
 outputPort DBLPServer {
-Location: "socket://dblp.uni-trier.de:80/"
-Protocol: http {
+Location: "socket://dblp.uni-trier.de:443/"
+Protocol: https {
 	.osc.getPersonPublications.alias = "pers/xk/%{initial}/%{nameKey}.xml";
 	.osc.getBibtex.alias = "rec/bib2/%!{$}.bib";
 	.format -> format;
@@ -40,13 +40,13 @@ main
 
 	format = "xml";
 	method = "get";
-	
+
 	request.initial = args[0];
 	request.nameKey = args[1];
 
 	println@Console( "Requesting list of publications for " + request.nameKey )();
 	getPersonPublications@DBLPServer( request )( response );
-	
+
 	format = "html";
 	for( i = k = 0, i < #response.dblpkey, i++ ) {
 		if ( !is_defined( response.dblpkey[i].(Attrs) ) ) {

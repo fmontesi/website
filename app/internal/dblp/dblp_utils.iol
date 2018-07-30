@@ -6,5 +6,5 @@ type GetAuthorBibtexRequest:void {
 interface DBLPUtilsInterface {
 RequestResponse:
 	getAuthorBibtex( GetAuthorBibtexRequest )( string )
+		throws IOException
 }
-
