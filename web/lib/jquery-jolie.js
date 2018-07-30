@@ -7,12 +7,12 @@ var Jolie = {
 		params.contentType = 'application/json';
 		params.data = JSON.stringify( params.data );
 
-		if ( typeof params.method === undefined ) {
+		if ( typeof params.method === 'undefined' ) {
 			params.method = 'POST';
 		}
 
 		params.headers = {
-			'X-Jolie-ServicePath': (typeof params.service === undefined) ? '/' : params.service
+			'X-Jolie-ServicePath': (typeof params.service === 'undefined') ? '/' : params.service
 		};
 
 		$.ajax( params );
