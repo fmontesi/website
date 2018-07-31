@@ -24,6 +24,10 @@ main
 		with( .redirection[0] ) {
 			.name = "dblp";
 			.binding.location = DBLP.location
+		};
+		with( .redirection[1] ) {
+			.name = "StringUtils";
+			.binding.location = StringUtils.location
 		}
 	};
 	config@LeonardoAdmin( config )();

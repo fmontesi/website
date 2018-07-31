@@ -1,0 +1,50 @@
+<!--Themed-->
+<div>
+<p>A simple tool for testing regular expressions. You can use capturing groups, and they will be displayed if you do.</p>
+<p>
+<h2>Input</h2>
+<form method="post">
+    <p>Regular expression: <input type="text" id="regex"/></p>
+    <p>Test string: <input type="text" id="testString"/></p>
+    <p><input type="button" id="runRegex" class="btn btn-primary" value="Run!"/></p>
+</form>
+</p>
+<h2 class="SectionTitle">Output</h2>
+<p><pre id="result" style="overflow:auto;">No result yet. Insert your data and click Run!</pre></p>
+</div>
+
+
+<script type="text/javascript">
+function displayResult( html )
+{
+    $("#result").html( html );
+}
+
+$(document).ready( function() {
+$("#runRegex").click( function() {
+    displayResult( "Waiting for response..." );
+    Jolie.call({
+        operation: 'match',
+				service: '/StringUtils',
+				method: 'GET',
+        success: function(response) {
+					if ( response.$ == 1 ) {
+						result = "It's a match!";
+					} else {
+						result = "No match";
+					}
+					if( Array.isArray( response.group ) ) {
+						for( var i = 0; i < response.group.length; i++ ) {
+							result += "\n" + "Group " + i + ": " + response.group[i];
+						}
+					}
+					displayResult( result );
+				},
+        error: function( xhr, textStatus, errorThrown ) {
+					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
+				},
+        data: { "$": $("#testString").val(), "regex": $("#regex").val() }
+    })
+});
+});
+</script>
