@@ -2,7 +2,11 @@
 var Jolie = {
 	// Calls an operation at the originating server using JSON
 	call: function( params ) {
-		params.url = '/' + params.operation;
+		if ( typeof params.service === 'undefined' ) {
+			params.url = '/' + params.operation;
+		} else {
+			params.url = '/!' + params.service + '!/' + params.operation;
+		}
 		params.dataType = 'json';
 		params.contentType = 'application/json';
 		params.data = JSON.stringify( params.data );
@@ -10,10 +14,6 @@ var Jolie = {
 		if ( typeof params.method === 'undefined' ) {
 			params.method = 'POST';
 		}
-
-		params.headers = {
-			'X-Jolie-ServicePath': (typeof params.service === 'undefined') ? '/' : params.service
-		};
 
 		$.ajax( params );
 	}
