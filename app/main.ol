@@ -9,10 +9,15 @@ outputPort DBLP {
 Interfaces: DBLPUtilsInterface
 }
 
+outputPort StringUtilsSrv {
+Interfaces: StringUtilsInterface
+}
+
 embedded {
 Jolie:
 	"-C Standalone=false internal/leonardo/cmd/leonardo/main.ol" in LeonardoAdmin,
-	"internal/dblp/dblp_utils.ol" in DBLP
+	"internal/dblp/dblp_utils.ol" in DBLP,
+	"internal/string_utils/main.ol" in StringUtilsSrv
 }
 
 main
@@ -27,7 +32,7 @@ main
 		};
 		with( .redirection[1] ) {
 			.name = "StringUtils";
-			.binding.location = StringUtils.location
+			.binding.location = StringUtilsSrv.location
 		}
 	};
 	config@LeonardoAdmin( config )();

@@ -1,6 +1,7 @@
 include "console.iol"
 include "string_utils.iol"
 include "dblp_utils.iol"
+include "../ganalytics/GoogleAnalytics.iol"
 
 execution { concurrent }
 
@@ -49,7 +50,6 @@ init
 main
 {
 	getAuthorBibtex( request )( result ) {
-		println@Console( "[DBLP:getAuthorBibtex] Requesting publications for " + request.nameKey )();
 		getPersonPublications@DBLPServer( request )( response );
 
 		format = "html";
@@ -65,5 +65,13 @@ main
 			result = "[Error] Something went wrong. Please check your parameters."
 		}
 	};
-	println@Console( "[DBLP:getAuthorBibtex] Request served for " + request.nameKey )()
+	collect@GoogleAnalytics( {
+		.v = 1,
+		.tid = "UA-53616744-1",
+		.cid = 555,
+		.t = "event",
+		.ec = "service",
+		.ea = "dblp",
+		.el = "getAuthorBibtex(" + request.nameKey + ")"
+	} )()
 }
