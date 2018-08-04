@@ -1,0 +1,92 @@
+<!--Themed-->
+<div>
+<p>
+<h2>Convert data from JSON into XML</h2>
+</p>
+<p>
+<h2>Input</h2>
+<form method="post">
+	<p><textarea id="json">{ "example" : "Some text" }</textarea></p>
+	<div class="form-group">
+    <label for="xmlParams-rootNodeName">Root node name</label>
+    <input type="text" class="form-control" id="xmlParams-rootNodeName" placeholder="json">
+    <small class="form-text text-muted">The name for the root node of the XML document.</small>
+  </div>
+	<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="xmlParams-indent" checked />
+    <label class="form-check-label" for="indent">Indent the XML document (pretty print).</label>
+  </div>
+	<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="xmlParams-isXmlStore" />
+    <label class="form-check-label" for="isXmlStore">Insert Jolie type annotations</label>
+  </div>
+	<p><input type="button" id="run-jsonToXml" class="btn btn-primary" value="Run!"/></p>
+</form>
+</p>
+<p>
+	<h2>Output</h2>
+	<input type="button" class="btn" id="selectResult" value="Select result (to copy/paste)" />
+	<input type="button" class="btn" id="saveResult" value="Save as file" />
+	<pre id="result" style="overflow:auto;">No result yet. Insert your data and click Run!</pre>
+</p>
+</div>
+
+<script type="text/javascript" src="/lib/FileSaver.js"></script>
+
+<script type="text/javascript">
+jQuery.fn.selectText = function(){
+   var doc = document;
+   var element = this[0];
+   console.log(this, element);
+   if (doc.body.createTextRange) {
+       var range = document.body.createTextRange();
+       range.moveToElementText(element);
+       range.select();
+   } else if (window.getSelection) {
+       var selection = window.getSelection();
+       var range = document.createRange();
+       range.selectNodeContents(element);
+       selection.removeAllRanges();
+       selection.addRange(range);
+   }
+};
+
+function displayResult( html )
+{
+    $("#result").text( html );
+}
+
+$(document).ready( function() {
+$("#run-jsonToXml").click( function() {
+    displayResult( "Loading..." );
+		var data = {
+			"json": $("#json").val(),
+			"xmlParams" : {
+				"rootNodeName" : $("#xmlParams-rootNodeName").val(),
+				"indent" : $("#xmlParams-indent").is(":checked"),
+				"isXmlStore" : $("#xmlParams-isXmlStore").is(":checked")
+			}
+		};
+    Jolie.call({
+        operation: 'jsonToXml',
+				method: 'GET',
+				service: '/FormatConverter',
+        success: function(response) { displayResult( response.$ ) },
+        error: function( xhr, textStatus, errorThrown ) {
+					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
+				},
+        data: data
+    })
+});
+
+$("#selectResult").click( function() {
+    $("#result").selectText();
+});
+
+$("#saveResult").click( function() {
+    var blob = new Blob( [$("#result").text()], {type: "text/plain;charset=utf-8"} );
+    saveAs( blob, "result.xml" );
+});
+
+});
+</script>
