@@ -1,12 +1,17 @@
 <!--Themed-->
-<div>
 <p>
 <h2>Convert data from JSON into XML</h2>
 </p>
+<div class="row w-100">
+
+<div class="col-6">
 <p>
 <h2>Input</h2>
 <form method="post">
-	<p><textarea id="json">{ "example" : "Some text" }</textarea></p>
+	<div class="form-group">
+		<label for="json">JSON to be translated</label>
+		<textarea id="json" style="width:100%">{ "example" : "Some text" }</textarea>
+	</div>
 	<div class="form-group">
     <label for="xmlParams-rootNodeName">Root node name</label>
     <input type="text" class="form-control" id="xmlParams-rootNodeName" value="json">
@@ -23,12 +28,15 @@
 	<p><input type="button" id="run-jsonToXml" class="btn btn-primary" value="Run!"/></p>
 </form>
 </p>
+</div>
+<div class="col-6">
 <p>
 	<h2>Output</h2>
 	<input type="button" class="btn" id="selectResult" value="Select result (to copy/paste)" />
 	<input type="button" class="btn" id="saveResult" value="Save as file" />
-	<pre id="result" style="overflow:auto;">No result yet. Insert your data and click Run!</pre>
+	<pre id="result" class="border border-dark rounded p-2 mt-1" style="overflow:auto;">No result yet. Insert your data and click Run!</pre>
 </p>
+</div>
 </div>
 
 <script type="text/javascript" src="/lib/FileSaver.js"></script>
