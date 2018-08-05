@@ -7,7 +7,18 @@ type JsonToXmlRequest:void {
 	}
 }
 
+type XmlToJsonRequest:string {
+	.isXmlStore?:bool
+	.options?:void {
+		.includeAttributes?:bool
+		.includeRoot?:bool
+		.charset?:string
+		.skipMixedText?:bool
+	}
+}
+
 interface FormatConverterIface {
 RequestResponse:
-	jsonToXml(JsonToXmlRequest)(string)
+	jsonToXml(JsonToXmlRequest)(string),
+	xmlToJson(XmlToJsonRequest)(string)
 }

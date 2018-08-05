@@ -28,4 +28,19 @@ main
 			.el = "jsonToXml"
 		} )()
 	}
+
+	[ xmlToJson( request )( response ) {
+		xmlToValue@XmlUtils( request )( xml );
+		getJsonString@JsonUtils( xml )( response )
+	} ] {
+		collect@GoogleAnalytics( {
+			.v = 1,
+			.tid = "UA-53616744-1",
+			.cid = 555,
+			.t = "event",
+			.ec = "service",
+			.ea = "format_converter",
+			.el = "xmlToJson"
+		} )()
+	}
 }
