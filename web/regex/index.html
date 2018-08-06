@@ -26,7 +26,7 @@ $("#runRegex").click( function() {
     Jolie.call({
         operation: 'match',
 				service: '/StringUtils',
-				method: 'GET',
+				method: 'POST',
         success: function(response) {
 					if ( response.$ == 1 ) {
 						result = "It's a match!";

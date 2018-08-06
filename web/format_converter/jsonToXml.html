@@ -77,7 +77,7 @@ $("#run-jsonToXml").click( function() {
 		};
     Jolie.call({
         operation: 'jsonToXml',
-				method: 'GET',
+				method: 'POST',
 				service: '/FormatConverter',
         success: function(response) { displayResult( response.$ ) },
         error: function( xhr, textStatus, errorThrown ) {
