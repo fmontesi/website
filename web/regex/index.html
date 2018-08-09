@@ -23,9 +23,9 @@ function displayResult( html )
 $(document).ready( function() {
 $("#runRegex").click( function() {
     displayResult( "Waiting for response..." );
-		Jo("StringUtils").match( {
-			data: { "$": $("#testString").val(), "regex": $("#regex").val() }
-		} ).then( response => {
+		Jo("StringUtils").match(
+			{ "$": $("#testString").val(), "regex": $("#regex").val() }
+		).then( response => {
 			if ( response.$ ) {
 				result = "It's a match!";
 			} else {

@@ -55,7 +55,7 @@ $(document).ready( function() {
 $("#getAuthorBibtex").click( function() {
     displayResult( "Loading..." );
 		Jo("dblp")
-			.getAuthorBibtex( { data: { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() } } )
+			.getAuthorBibtex( { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() } )
 			.then( response => displayResult( response.$ ) )
 			.catch( JoHelp.parseError ).catch( displayResult );
 });

@@ -76,7 +76,7 @@ $("#run-jsonToXml").click( function() {
 			}
 		};
 
-		Jo("FormatConverter").jsonToXml( { data: data } ).then( response => {
+		Jo("FormatConverter").jsonToXml( data ).then( response => {
 			displayResult( response.$ );
 		} ).catch( JoHelp.parseError ).catch( displayResult );
 });
