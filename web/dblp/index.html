@@ -54,15 +54,10 @@ function displayResult( html )
 $(document).ready( function() {
 $("#getAuthorBibtex").click( function() {
     displayResult( "Loading..." );
-    Jolie.call({
-        operation: 'getAuthorBibtex',
-				service: '/dblp',
-        success: function(response) { displayResult( response.$ ) },
-        error: function( xhr, textStatus, errorThrown ) {
-					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
-				},
-        data: { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() }
-    })
+		Jo("dblp")
+			.getAuthorBibtex( { data: { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() } } )
+			.then( response => displayResult( response.$ ) )
+			.catch( JoHelp.parseError ).catch( displayResult );
 });
 
 $("#selectResult").click( function() {
