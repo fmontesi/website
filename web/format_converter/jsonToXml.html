@@ -75,16 +75,10 @@ $("#run-jsonToXml").click( function() {
 				"isXmlStore" : $("#xmlParams-isXmlStore").is(":checked")
 			}
 		};
-    Jolie.call({
-        operation: 'jsonToXml',
-				method: 'POST',
-				service: '/FormatConverter',
-        success: function(response) { displayResult( response.$ ) },
-        error: function( xhr, textStatus, errorThrown ) {
-					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
-				},
-        data: data
-    })
+
+		Jo("FormatConverter").jsonToXml( { data: data } ).then( response => {
+			displayResult( response.$ );
+		} ).catch( JoHelp.parseError ).catch( displayResult );
 });
 
 $("#selectResult").click( function() {

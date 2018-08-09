@@ -23,28 +23,27 @@ function displayResult( html )
 $(document).ready( function() {
 $("#runRegex").click( function() {
     displayResult( "Waiting for response..." );
-    Jolie.call({
-        operation: 'match',
-				service: '/StringUtils',
-				method: 'POST',
-        success: function(response) {
-					if ( response.$ == 1 ) {
-						result = "It's a match!";
-					} else {
-						result = "No match";
-					}
-					if( Array.isArray( response.group ) ) {
-						for( var i = 0; i < response.group.length; i++ ) {
-							result += "\n" + "Group " + i + ": " + response.group[i];
-						}
-					}
-					displayResult( result );
-				},
-        error: function( xhr, textStatus, errorThrown ) {
-					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
-				},
-        data: { "$": $("#testString").val(), "regex": $("#regex").val() }
-    })
+		Jo("StringUtils").match( {
+			data: { "$": $("#testString").val(), "regex": $("#regex").val() }
+		} ).then( response => {
+			if ( response.$ ) {
+				result = "It's a match!";
+			} else {
+				result = "No match";
+			}
+			if( Array.isArray( response.group ) ) {
+				for( var i = 0; i < response.group.length; i++ ) {
+					result += "\n" + "Group " + i + ": " + response.group[i];
+				}
+			}
+			displayResult( result );
+		} ).catch( error => {
+			if ( error.isFault ) {
+				displayResult( JSON.stringify( error.fault ) );
+			} else {
+				displayResult( error.message );
+			}
+		} );
 });
 });
 </script>

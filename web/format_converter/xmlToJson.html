@@ -83,16 +83,16 @@ $("#run-xmlToJson").click( function() {
 				"includeAttributes" : $("#xmlParams-includeAttributes").is(":checked")
 			}
 		};
-    Jolie.call({
-        operation: 'xmlToJson',
-				method: 'POST',
-				service: '/FormatConverter',
-        success: function(response) { displayResult( response.$ ) },
-        error: function( xhr, textStatus, errorThrown ) {
-					displayResult( textStatus + ": " + errorThrown + "\n" + xhr.responseText );
-				},
-        data: data
-    })
+
+		Jo("FormatConverter").xmlToJson( { data: data } ).then( response => {
+			displayResult( response.$ );
+		} ).catch( error => {
+			if ( error.isFault ) {
+				displayResult( JSON.stringify( error.fault ) );
+			} else {
+				displayResult( error.message );
+			}
+		} );
 });
 
 $("#selectResult").click( function() {
