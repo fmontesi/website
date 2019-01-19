@@ -53,7 +53,8 @@
     <title>Fabrizio Montesi</title>
 
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/fm.css" rel="stylesheet" />
     <script src="/lib/jquery.js"></script>
 		<script src="/lib/jo.js"></script>
 		<script src="/lib/popper.js"></script>
@@ -67,15 +68,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-		<style>
-			.paper-title {
-				font-weight: bold;
-			}
-
-			.SectionTitle {
-				margin-top: 1rem;
-			}
-		</style>
   </head>
   <body>
     <!-- <span class="page-header" style="padding:1rem">
@@ -86,8 +78,9 @@
 			<strong>Fabrizio Montesi</strong>
 			<small>Choreographic Programming, Concurrency, Jolie, Microservices, ...</small>
     </span> -->
-    <nav class="navbar navbar-expand-md navbar-static-top navbar-light bg-light py-0 py-md-0">
-			<div class="navbar-brand">
+    <div class="container-fluid m-0 p-0 w-100 d-flex justify-content-end">
+    <nav class="navbar navbar-expand-md static-top navbar-light fm-navbar py-0 py-md-0">
+			<!-- <div class="navbar-brand">
 				<small>
 				<span class="d-inline">
 					<a href="https://imada.sdu.dk/" class="navbar-text py-0">IMADA</a>
@@ -104,59 +97,26 @@
 				</a>
 				</small>
 				<p class="py-0 my-0"><small><small><span class="text-muted">Choreographic Programming, Concurrency, Jolie, Microservices, ...</span></small></small></p>
-    	</div>
+    	</div> -->
       <div class="ml-auto">
 				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#fm-main-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="clear-fix"></div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse float-right" id="fm-main-navbar">
 					<ul class="navbar-nav mr-auto">
-            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
             <li class="nav-item"><a href="/index.html" class="nav-link py-0">Home</a></li>
             <li class="nav-item"><a href="/research.html" class="nav-link py-0">Research/Pubs</a></li>
             <li class="nav-item"><a href="/teaching.html" class="nav-link py-0">Teaching</a></li>
             <li class="nav-item"><a href="http://fmontesi.github.io" class="nav-link py-0" target="_new">Blog</a></li>
-            <!-- <li><a href="/crc.html">The CRC Project</a></li> -->
-            <li><a href="/tools.html" class="nav-link py-0">Tools</a></li>
+            <li class="nav-item"><a href="/tools.html" class="nav-link py-0">Tools</a></li>
             <li class="nav-item"><a href="https://www.jolie-lang.org/" class="nav-link py-0" target="_new">Jolie Language</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
           </ul>
-          <!-- <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form> -->
-          <!-- <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul> -->
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+  </div> <!-- The nav container -->
 
     <!-- <ol class="breadcrumb">
       <li><a href="#">Home</a></li>
@@ -164,5 +124,5 @@
       <li class="active">Data</li>
     </ol> -->
 
-    <div class="container page-content" style="margin-top: 1rem">
-    <div id="page-col" class="row col-xs-12">
+    <div class="container-fluid">
+    <!-- <div id="page-col" class="row col-xs-12"> -->

@@ -1,43 +1,186 @@
 <!--Themed-->
-<h2 class="SectionTitle">Research Interests</h2>
-<p>
-My research interests cover concurrency theory,
-distributed systems, service-oriented computing, web technologies, type systems,
-and most importantly the design and implementation of programming languages.
-</p>
-<p>My current work is focused on the <a href="http://www.jolie-lang.org/">Jolie</a>
-and <a href="http://www.chor-lang.org/">Chor</a> languages, explained <a href="#headerjolie">below</a>.
-</p>
 
-<div class="col-12">
+<div class="container fm-mt">
+	<!-- <div class="row justify-content-center"><h1>Research</h1></div> -->
+	<!-- <div class="row justify-content-center"><h1>Research</h1></div> -->
+	<!-- <div class="row justify-content-center">
+		<img class="rounded img-fluid" src="/images/drivingit-fm-2018.jpeg" />
+	</div> -->
+</div>
+
+<div class="container">
+	<h1>Research</h1>
+	<p>
+		My main research interests are
+		programming languages and concurrency,
+		both theory and systems.
+	</p>
+	<p>
+		I am particularly intrigued by the problem of
+		making software development more productive
+		and robust. With the explosive rise of connected systems, like the Internet of Things,
+		Edge Computing, Cloud Computing, and other distribute systems, today like never before
+		we need solid programming methods that can support programmers
+		in keeping up with the complexity of systems.
+	</p>
+	<p>
+		Improving our programming theories and tools holds the key to better productivity, innovation, and software that we can rely on.
+	</p>
+	<ul>
+		<li><a href="#research-overview">Research topics</a></li>
+		<li><a href="#publications-list">List of publications</a></li>
+	</ul>
+</div>
+
+<div class="container" id="research-overview">
+<h2>Research topics</h2>
+<p>Here's a summary of some of the research directions that I work on, including
+	references .</p>
+
+<div class="row align-items-center justify-content-center">
+	<div class="col-3 d-flex justify-content-center p-5">
+		<a href="https://www.jolie-lang.org"><img class="img-fluid rounded p-1 fm-light-img-bg h-100 w-100" src="/images/jolie_logo.png" /></a>
+	</div>
+	<div class="col-sm">
+		<h3>Microservices</h3>
+		<p style="text-justify">
+			Microservices is a programming paradigm where all components
+			are autonomous, reusable services that interact by exchanging messages.
+			It has emerged as the de-facto modern paradigm
+			for many system integrations, the Internet of Things,
+			Edge Computing, and Cloud Computing.
+			While the methods of microservices had already been around for years,
+			the term became widespread after the blog post by
+			<a href="https://martinfowler.com/articles/microservices.html">Lewis and Fowler [2013]</a>.
+			Later, we wrote the first academic survey on the current status and future of the paradigm
+			<a href="https://doi.org/10.1007/978-3-319-67425-4_12">[Dragoni et al., 2017]</a>.
+		</p>
+		<p>
+			I am the co-creator and maintainer of <a href="https://www.jolie-lang.org">Jolie</a>, the
+			first microservice-oriented programming language <a href="https://doi.org/10.1007/978-1-4614-7518-7_4">[Montesi et al., 2014]</a>.
+			The first version of Jolie was created in 2006, and was published in 2007 <a href="https://doi.org/10.1016/j.entcs.2007.01.051">[Montesi et al., 2007]</a>.
+			What sets Jolie apart from other languages is that it makes us more efficient and less prone to errors, by offering native
+			primitives for the programming and deployment of microservices. Fault recovery is an important part of this.
+			Concretely, Jolie draws these primitives from the theory of <a href="https://en.wikipedia.org/wiki/Process_calculus">process calculi</a>,
+			and brings them to practice by executing them with different protocols and data formats <a href="https://doi.org/10.1016/j.scico.2016.05.002">[Montesi, 2016]</a>.
+		</p>
+		<p>
+			Jolie has an active research and innovation community, commercial applications, and is taught in University courses.
+			The Jolie community kickstarted the <a href="https://conf-micro.services">first international conference on Microservices</a>.
+		</p>
+	</div>
+</div>
+
+<div class="row align-items-center justify-content-center">
+	<div class="col-sm">
+		<h3>Proofs as Processes</h3>
+		<p style="text-justify">
+			Not all programming models are born equal.
+			The <a href="https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence">Curry-Howard correspondence</a>
+			showed us that some aspects of functional programming are absolute,
+			as they share deep structures with logical reasoning.
+		</p>
+		<p>
+			Now that we entered the era of concurrent and distributed systems,
+			can we hope to find foundations that are as solid for concurrent programming?
+			<a href="https://doi.org/10.1016/0304-3975(94)00103-0">Abramsky [1994]</a> and <a href="https://doi.org/10.1016/0304-3975(94)00104-9">Bellin and Scott [1994]</a>
+			kickstarted this search, driven by the alluring idea that a similar correspondence
+			might exist between linear logic <a href="https://doi.org/10.1016/0304-3975(87)90045-4">[Girard, 1987]</a>
+			and the pi-calculus <a href="https://doi.org/10.1016/0890-5401(92)90008-4">[Milner et al., 1992]</a>.
+		</p>
+		<p>
+			This initial development was followed by a good series of successes. <a href="https://doi.org/10.1007/978-3-642-15375-4_16">Caires and Pfenning
+				[2010]</a> saw that linear propositions can be seen as the session types by
+				<a href="https://doi.org/10.1007/3-540-57208-2_35">Honda [1993]</a>, i.e., types
+				for communication protocols. <a
+				href="https://doi.org/10.1017/S095679681400001X">Wadler [2014]</a>
+				formalised the first connection between a standard presentation of session types
+				for a functional language and linear logic.
+			However, there remained fundamental discrepancies between linear logic and
+			the pi-calculus (and in general, most process calculi): there was no logical rule
+			corresponding to parallel composition, the hallmark of concurrency.
+			This discrepancy leaks to semantics, which does not quite correspond to that of the pi-calculus,
+			and ultimately generates a chasm: the tools developed for decades by researchers for studying the observable behaviour of processes
+			could not be used in this research line.
+			</p>
+			<p>
+			In <a href="https://doi.org/10.1145/3290337">[Kokke et al., 2019]</a>,
+			we overcame this issue by showing that there exists a conservative reformulation
+			of linear logic based on hypersequents, originally developed by <a href="https://doi.org/10.1007/BF01531058">Avron [1991]</a>.
+			The key idea is to use hypersequents to capture that two collections of propositions can be proven independently.
+			This led us to the rule on the right.
+			Say that you have two independent processes P and Q typed by G and H respectively; then, the parallel composition P|Q (with P and Q independent) is typed by G|H.
+			In other words, the protocols in G are run in parallel to those in H.
+			In the paper, we show that this leads to a logical reconstruction of a behavioural theory
+			for the pi-calculus corresponding to linear logic.
+			</p>
+			<p>
+				We made several other contributions to this research line,
+				for example the discovery that Multiparty Session Types (protocols with multiple participants)
+				correspond to a sound generalisation of the principle of duality of linear logic.
+			</p>
+	</div>
+	<div class="col-4 d-flex justify-content-center p-5">
+		<img class="rounded img-fluid h-100 w-100" src="/images/h-mix.png" />
+	</div>
+</div>
+
+<div class="row align-items-center justify-content-center">
+	<div class="col-4 d-flex justify-content-center p-5">
+		<img class="img-fluid rounded p-1 fm-light-img-bg h-100 w-100" src="/images/choreographic_programming.jpg" />
+	</div>
+	<div class="col-sm">
+		<h3>Choreographic Programming</h3>
+		<p style="text-justify">
+			Choreographic Programming is a new paradigm for
+			concurrent and distributed programming, where
+			the programmer defines communication protocols and then
+			correct implementations of these protocols are
+			automatically generated.
+			They are inspired by the "Alice and Bob" notation of
+			security protocols. (We are working on closing this loop,
+			i.e., using choreographies for producing correct-by-construction
+			implementations of security protocols.)
+		</p>
+		<p>
+			I developed the first proof-of-concept of choreographic programming in my PhD thesis <a href="/files/choreographic_programming.pdf">[Montesi, 2013]</a>,
+			where choreographies can be composed and then compiled to prototype implementations of
+			microservices.
+		</p>
+	</div>
+</div>
+
+</div>
+
+<div class="container">
+
+	<!-- <div class="row">
+		<div class="col-12">
+		<h2 class="SectionTitle">Highlights</h2>
+		<ul class="PubList">
+		<li><p><em>Choreographic Programming</em>. Fabrizio Montesi. PhD Thesis, IT University of Copenhagen, 2013.
+		<br/>
+		<a href="files/choreographic_programming.pdf">PDF</a> <a href="files/bibtex/m13_phdthesis.bib">Bibtex</a>
+		<a href="http://eapls.org/items/1855/"><strong>EAPLS Best PhD Dissertation Award 2014</strong></a>
+		</p></li>
+		<li><p><em>Service-Oriented Programming with Jolie</em>. Fabrizio Montesi, Claudio Guidi, Gianluigi Zavattaro. Book Chapter in Web Services Foundations, 2014.
+		<a href="files/mgz14.pdf">PDF</a> <a href="http://dblp.uni-trier.de/rec/bibtex/books/sp/wsf14/MontesiGZ14">Bibtex</a>
+		<li><p><em>JOLIE: a Service-oriented Programming Language</em>. Fabrizio Montesi. MSc Thesis, University of Bologna, 2010.
+		<a href="files/m10.pdf">PDF</a> <a href="files/bibtex/m10.bib">Bibtex</a>
+		</p></li>
+		</ul>
+		</div>
+	</div> -->
 
 <!--<fm-publication-list></fm-publication-list>-->
 
-<div style="width:50%;float:left">
-
-<h2 class="SectionTitle">Publications</h2>
+<h2 class="SectionTitle" id="publications-list">List of Publications</h2>
 <p>Search (by title, year, authors, ...): <input class="asearch" id="papers_search" type="text"/><br/>
 <!--Experimental: <paper-input floatingLabel inputValue="{{value}}" label="Search (by title, year, authors, ...):"></paper-input><br/>-->
 <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Montesi:Fabrizio.html">My page in DBLP</a> | <a href="http://scholar.google.com/citations?user=zRA6uA4AAAAJ">My profile in Google Scholar</a>
 </p>
 
 <!--PublicationsList-->
-</div>
-
-<div style="float:left; width:50%">
-<h2 class="SectionTitle">Highlights</h2>
-<ul class="PubList">
-<li><p><em>Choreographic Programming</em> <br/> Fabrizio Montesi. <br/> PhD Thesis, IT University of Copenhagen, 2013.
-<br/><a href="http://eapls.org/items/1855/"><strong>EAPLS Best PhD Dissertation Award 2014</strong></a><br/>
-<a href="files/choreographic_programming.pdf">PDF</a> <a href="files/bibtex/m13_phdthesis.bib">Bibtex</a>
-</p></li>
-<li><p><em>Service-Oriented Programming with Jolie</em> <br/> Fabrizio Montesi, Claudio Guidi, Gianluigi Zavattaro. <br/> Book Chapter in Web Services Foundations, 2014.
-<a href="files/mgz14.pdf">PDF</a> <a href="http://dblp.uni-trier.de/rec/bibtex/books/sp/wsf14/MontesiGZ14">Bibtex</a>
-<li><p><em>JOLIE: a Service-oriented Programming Language</em> <br/> Fabrizio Montesi. <br/> MSc Thesis, University of Bologna, 2010.
-<a href="files/m10.pdf">PDF</a> <a href="files/bibtex/m10.bib">Bibtex</a>
-</p></li>
-</ul>
-</div>
 
 </div>
 
@@ -130,51 +273,4 @@ function showItem( elm )
 
 </div>
 
-<h2 class="SectionTitle" id="headerjolie">Jolie</h2>
-<div style="float:left; margin-right: 3em;">
-<img src="images/jolie_logo.png" height="200px"/>
-</div>
-<div>
-<p>I am a main author and the maintainer of <a href="http://www.jolie-lang.org/">Jolie</a>,
-the first <strong>general-purpose programming language based on the service-oriented programming paradigm</strong>.
-Jolie has led to the winning of multiple prestigious awards in Italy, both industrial and academic.
-Jolie is the development language at <a href="http://www.italianasoftware.com/" target="_new">italianaSoftware s.r.l.</a>,
-a research spin-off company that develops service-oriented solutions.<br/>
-Jolie mixes the imperative and message-passing programming paradigm for offering an intuitive and expressive solution for programming services.
-</p>
-<p>Its most notable features are:
-<ul>
-<li><strong>Formal semantics:</strong>
-Jolie is based upon a solid mathematical foundation, the SOCK process calculus. Its semantics is thus formally specified, in contrast with the sometimes
-ambiguous semantics of other service-oriented solutions (e.g., WS-BPEL in Web Services). The formal basis of Jolie shortens the time needed to bring
-useful theoretical results into practice, by exploiting the abstraction offered by the Jolie Development API.
-</li>
-<li><strong>Safety:</strong> Jolie implements static and runtime techniques for ensuring program safety in various aspects, such as the programming
-of correct session references. These checks are made possible by the fact that Jolie uplifts crucial aspects of service-oriented programming to native language constructs.
-</li>
-<li><strong>Simplicity:</strong> Jolie provides simple and powerful primitives for handling data trees and structured documents (e.g., XML) that can be implicitly converted
-to other data formats.</li>
-<li><strong>Integration:</strong> Jolie is compatible with various different techonologies, ranging from Java to Web Services and C++. The most powerful integration feature
-is communication abstraction: Jolie can seamlessly use different data formats (from SOAP to binary protocols) and communication mediums (local memory, Bluetooth, TCP/IP sockets, etc.).
-You can take a Jolie program and re-deploy it with different communication technologies changing a single line of code!
-Jolie supports this mechanism also at runtime, through the usage of dynamic binding.</li>
-<li><strong>Fault handling:</strong> Jolie is the first language offering dynamic and compositional fault handling. Dynamic fault handling
-is a form of higher-order code composition in which the programmer can update a fault handler at runtime. This is not only more expressive
-than classical static fault handler definition, but the enhanced expressivity gives direct benefits in the programming of fault recovery
-procedures in distributed environments.</li>
-<li><strong>Efficiency:</strong> the Jolie interpreter has much lower memory consumption than other similar Web Services technologies and it also performs
-a lot of optimisations in network resource usage. In practice, this allows for the development of much more modular systems.
-</ul>
-Jolie is also <strong>open source</strong>, and we are always looking for people that want to join us in its development!
-</p>
-</div>
-
-<!-- <br/><br/><br/><br/><br/> -->
-<h2 class="SectionTitle" id="header_chor">Chor</h2>
-<div>
-I am currently developing <a href="http://www.chor-lang.org/">Chor</a>, a language for the implementation of concurrent systems in terms of <strong>global programs</strong>.
-Chor allows for the specification of protocols as behavioural types and the definition of global programs based upon them.
-I have developed a development environment in Eclipse for creating and checking Chor programs.
-Once a program is written and checked, a tool is provided to automatically generate Jolie code that correctly implements a Chor program.
-<!-- Chor is still in heavy development, but you may find its underlying theory described <a href="http://itu.dk/~fabr/multichor/">here</a>. -->
 </div>

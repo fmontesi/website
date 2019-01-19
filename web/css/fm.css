@@ -1,0 +1,61 @@
+.paper-title {
+  font-weight: bold;
+}
+
+.SectionTitle {
+  margin-top: 1rem;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16pt;
+  height: 100%;
+}
+
+.index-fm-image {
+  -webkit-mask-image: radial-gradient(circle at 52% 54%, #020202 57%, rgba(0, 0, 0, 0.0) 63%);
+  mask-image: radial-gradient(circle at 52% 54%, #020202 57%, rgba(0, 0, 0, 0.0) 63%);
+  /* radial-gradient(circle at 53% 55%, #020202 46%, rgba(0, 0, 0, 0.0) 50%); */
+  /* -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%); */
+  /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%); */
+}
+
+a, a:hover {
+  color: #0091ff;
+}
+
+h1, h2, h3 {
+  color: #fefefe;
+}
+
+
+.fm-mt {
+  margin-top: 2rem;
+}
+
+.fm-navbar {
+  /* border-bottom: 1px solid white; */
+  padding-left: 0px;
+  /* border-bottom-style: groove; */
+  /* border-bottom: radial-gradient( circle at 50% 50%, white 57%, blue 80 ); */
+  /* 5px solid white; */
+  background-color: #7171714f;
+}
+
+.nav-item > a {
+  font-size: 1.15rem;
+  /* text-decoration: underline; */
+  color: #fefefe !important;
+}
+
+.nav-item > a:hover {
+  text-decoration: underline;
+  color: #fefefe !important;
+}
+
+.fm-light-img-bg {
+  background-color: white;
+}
