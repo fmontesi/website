@@ -11,8 +11,9 @@ html {
 }
 
 body {
-  font-size: 16pt;
+  /* font-size: 16pt; */
   height: 100%;
+	background-color: black;
 }
 
 .index-fm-image {
@@ -45,8 +46,17 @@ h1, h2, h3 {
   background-color: #7171714f;
 }
 
+@font-face {
+  font-family: 'goodtimes';
+  src: url('/fonts/goodtimes.ttf');
+}
+
+.nav-item {
+	font-family: "goodtimes", monospace;
+}
+
 .nav-item > a {
-  font-size: 1.15rem;
+  /* font-size: 1.15rem; */
   /* text-decoration: underline; */
   color: #fefefe !important;
 }
