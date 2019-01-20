@@ -87,8 +87,8 @@ h1, h2, h3 {
 
 .nav-item > a:hover:before {
   visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -webkit-transform: scaleX(0.9);
+  transform: scaleX(0.9);
 }
 
 /* .nav-item > a:hover { */
