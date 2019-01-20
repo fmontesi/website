@@ -39,9 +39,9 @@ a, a:hover {
   color: #0091ff;
 }
 
-h1 {
+h1, h2, h3 {
   color: #fefefe;
-	font-family: "systemglitch", monospace;
+	font-family: "goodtimes", monospace;
 }
 
 .fm-mt {
