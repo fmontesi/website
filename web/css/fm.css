@@ -23,7 +23,8 @@ html {
 body {
   /* font-size: 16pt; */
   height: 100%;
-	background-color: black;
+	background-color: #141414;
+	color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
 }
 
@@ -36,12 +37,13 @@ body {
 }
 
 a, a:hover {
-  color: #0091ff;
+  color: #d88b26;
 }
 
 h1, h2, h3 {
-  color: #fefefe;
-	font-family: "goodtimes", monospace;
+  color: #dbd7d7;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
 }
 
 .fm-mt {
@@ -58,7 +60,8 @@ h1, h2, h3 {
 }
 
 .nav-item {
-	font-family: "goodtimes", monospace;
+	font-family: "Montserrate", sans-serif;
+	font-weight: 500;
 }
 
 .nav-item > a {
@@ -67,7 +70,7 @@ h1, h2, h3 {
   /* color: #fefefe !important; */
 	position: relative;
 	text-decoration: none;
-	color: rgb(204, 187, 51) !important;
+	color: #d88b26 !important;
 }
 
 .nav-item > a:before {
@@ -77,7 +80,7 @@ h1, h2, h3 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(204, 187, 51);
+  background-color: #af701d;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
