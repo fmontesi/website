@@ -44,6 +44,8 @@ h1, h2, h3 {
   color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 .fm-mt {
@@ -104,3 +106,52 @@ h1, h2, h3 {
 .fm-light-img-bg {
   background-color: white;
 }
+
+.navbutton-container {
+	z-index: 20000;
+	/* max-width: 100%; */
+	/* width: 100%; */
+}
+/*
+.navbar-toggler {
+	border: none;
+} */
+
+.fm-navbar-toggler {
+	cursor: pointer;
+}
+
+#fm-navbar {
+	max-width: 100% !important;
+	width: 100% !important;
+	max-height: 100% !important;
+	height: 100% !important;
+	opacity: 0.95;
+	background-color: #141414;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	font-size: 2rem;
+}
+
+.fm-navbar-container {
+	/* max-width: 100% !important; */
+	/* opacity: 0; */
+	/* transition: opacity 0.9 ease 0.3s; */
+}
+
+.fm-navbar-container {
+/* :not(.show) { */
+	/* display: none; */
+}
+
+/* .fm-navbar-container:(.show) {
+	display: flex !important;
+} */
+
+/* .navbar-nav {
+	margin:0;
+	padding:0;
+	border-top: 1px solid rgba(255, 255, 255, 0.10);
+} */
