@@ -26,6 +26,7 @@ body {
 	background-color: #141414;
 	color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
+	padding-top: 2rem;
 }
 
 .index-fm-image {
@@ -89,6 +90,8 @@ h1, h2, h3 {
 	/* right: 50%; */
 	/* text-decoration: none; */
 	color: #ddb55e !important;
+	font-size: 1.5rem;
+	height: 100%;
 	/* z-index: 10; */
 	/* font-family: "goodtimes"; */
 }
@@ -135,7 +138,8 @@ h1, h2, h3 {
 
 .navbutton-container {
 	z-index: 20000;
-	right: -5rem;
+	background-color: #141414;
+	/* right: -5rem; */
 	/* max-width: 100%; */
 	/* width: 100%; */
 }
@@ -160,7 +164,7 @@ h1, h2, h3 {
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	font-size: 2rem;
+	/* font-size: 2rem; */
 }
 
 .fm-navbar-container {
