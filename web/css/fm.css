@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'goodtimes';
   src: url('/fonts/goodtimes.ttf');
 }
@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'systemglitch';
   src: url('/fonts/SystemGlitch-Regular.otf');
-}
+} */
 
 .paper-title {
   font-weight: bold;
@@ -23,7 +23,7 @@ html {
 body {
   /* font-size: 16pt; */
   height: 100%;
-	background-color: #141414;
+	background-color: #231c1c;
 	color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
 	padding-top: 2rem;
@@ -77,6 +77,10 @@ h1, h2, h3 {
   -webkit-background-size: 100% 100%; */
 }
 
+.nav-item svg {
+	fill: #141414;
+}
+
 .nav-active #border {
 	stroke: #ddb55e;
 	stroke-width: 1;
@@ -95,13 +99,6 @@ h1, h2, h3 {
 	/* z-index: 10; */
 	/* font-family: "goodtimes"; */
 }
-
-.nav-active > #border {
-  stroke: #ddb55e;
-  stroke-width: 2;
-  fill: transparent;
-}
-
 
 /* .nav-item > a:before {
 	z-index: 20;
@@ -138,7 +135,6 @@ h1, h2, h3 {
 
 .navbutton-container {
 	z-index: 20000;
-	background-color: #141414;
 	/* right: -5rem; */
 	/* max-width: 100%; */
 	/* width: 100%; */
@@ -159,31 +155,10 @@ h1, h2, h3 {
 	max-height: 100% !important;
 	height: 100% !important;
 	opacity: 0.97;
-	background-color: #141414;
+	background-color: #231c1c;
 	position: fixed;
 	z-index: 1000;
 	left: 0;
 	top: 0;
 	/* font-size: 2rem; */
 }
-
-.fm-navbar-container {
-	/* max-width: 100% !important; */
-	/* opacity: 0; */
-	/* transition: opacity 0.9 ease 0.3s; */
-}
-
-.fm-navbar-container {
-/* :not(.show) { */
-	/* display: none; */
-}
-
-/* .fm-navbar-container:(.show) {
-	display: flex !important;
-} */
-
-/* .navbar-nav {
-	margin:0;
-	padding:0;
-	border-top: 1px solid rgba(255, 255, 255, 0.10);
-} */
