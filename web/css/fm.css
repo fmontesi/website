@@ -37,7 +37,7 @@ body {
 }
 
 a, a:hover {
-  color: #d88b26;
+  color: #ddb55e;
 }
 
 h1, h2, h3 {
@@ -46,6 +46,10 @@ h1, h2, h3 {
 	font-weight: 500;
 	margin-top: 1.5rem;
 	margin-bottom: 1rem;
+}
+
+#papers_list .text-primary {
+	color: #ddb55e !important;
 }
 
 .fm-mt {
@@ -62,24 +66,46 @@ h1, h2, h3 {
 }
 
 .nav-item {
-	font-family: "Montserrate", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
-}
-
-.nav-item > a {
-  /* font-size: 1.15rem; */
-  /* text-decoration: underline; */
-  /* color: #fefefe !important; */
+	width: 100%;
 	position: relative;
-	text-decoration: none;
-	color: #d88b26 !important;
+	/* background-image: url('/images/nav-item-bg.svg');
+	background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%; */
 }
 
-.nav-item > a:before {
+.nav-active #border {
+	stroke: #ddb55e;
+	stroke-width: 1;
+	fill: transparent;
+}
+
+.nav-text {
+	position: absolute;
+	top: 25%;
+	left: 30%;
+	/* right: 50%; */
+	/* text-decoration: none; */
+	color: #ddb55e !important;
+	/* z-index: 10; */
+	/* font-family: "goodtimes"; */
+}
+
+.nav-active > #border {
+  stroke: #ddb55e;
+  stroke-width: 2;
+  fill: transparent;
+}
+
+
+/* .nav-item > a:before {
+	z-index: 20;
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1rem;
   bottom: 0;
   left: 0;
   background-color: #af701d;
@@ -94,7 +120,7 @@ h1, h2, h3 {
   visibility: visible;
   -webkit-transform: scaleX(0.9);
   transform: scaleX(0.9);
-}
+} */
 
 /* .nav-item > a:hover { */
   /* text-decoration: underline; */
@@ -119,6 +145,7 @@ h1, h2, h3 {
 
 .fm-navbar-toggler {
 	cursor: pointer;
+	/* color: #ddb55e; */
 }
 
 #fm-navbar {
@@ -126,7 +153,7 @@ h1, h2, h3 {
 	width: 100% !important;
 	max-height: 100% !important;
 	height: 100% !important;
-	opacity: 0.95;
+	opacity: 0.97;
 	background-color: #141414;
 	position: fixed;
 	z-index: 1000;

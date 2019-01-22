@@ -1,0 +1,7 @@
+<svg viewBox="0 0 300 40" preserveAspectRatio="none" height="10" width="10">
+	<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
+		id="border" />
+	<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
+		fill="yellow"
+		id="fill" />
+</svg>
