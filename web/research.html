@@ -29,12 +29,12 @@
 <p>Here's a summary of some of the research directions that I work on, including
 	references .</p>
 
+<h3>Microservices</h3>
 <div class="row align-items-center justify-content-center">
-	<div class="col-3 d-flex justify-content-center p-5">
-		<a href="https://www.jolie-lang.org"><img class="img-fluid p-1 h-100 w-100" style="filter: invert(90%);" src="/images/jolie_logo.png" /></a>
+	<div class="col-sm-12 col-xl-3 order-sm-1 order-xl-2 d-flex justify-content-center p-5">
+		<a href="https://www.jolie-lang.org"><img class="img-fluid h-100 w-100" style="filter: invert(90%);" src="/images/jolie_logo.png" /></a>
 	</div>
-	<div class="col-sm">
-		<h3>Microservices</h3>
+	<div class="col-sm-12 col-xl-9 order-sm-2 order-xl-1">
 		<p style="text-justify">
 			Microservices is a programming paradigm where all components
 			are autonomous, reusable services that interact by exchanging messages.
@@ -63,9 +63,12 @@
 	</div>
 </div>
 
+<h3>Proofs as Processes</h3>
 <div class="row align-items-center justify-content-center">
-	<div class="col-sm">
-		<h3>Proofs as Processes</h3>
+	<div class="col-sm-12 col-xl-3 order-sm-1 order-xl-2 d-flex justify-content-center p-5">
+		<img class="img-fluid h-75 w-75" style="filter: invert(20%);" src="/images/h-mix.png" />
+	</div>
+	<div class="col-sm-12 col-xl-9 order-sm-2 order-xl-1">
 		<p style="text-justify">
 			Not all programming models are born equal.
 			The <a href="https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence">Curry-Howard correspondence</a>
@@ -100,7 +103,7 @@
 			we overcame this issue by showing that there exists a conservative reformulation
 			of linear logic based on hypersequents, originally developed by <a href="https://doi.org/10.1007/BF01531058">Avron [1991]</a>.
 			The key idea is to use hypersequents to capture that two collections of propositions can be proven independently.
-			This led us to the rule on the right.
+			This led us to the rule in the figure.
 			Say that you have two independent processes P and Q typed by G and H respectively; then, the parallel composition P|Q (with P and Q independent) is typed by G|H.
 			In other words, the protocols in G are run in parallel to those in H.
 			In the paper, we show that this leads to a logical reconstruction of a behavioural theory
@@ -112,17 +115,14 @@
 				correspond to a sound generalisation of the principle of duality of linear logic.
 			</p>
 	</div>
-	<div class="col-4 d-flex justify-content-center p-5">
-		<img class="img-fluid h-100 w-100" style="filter: invert(15%);" src="/images/h-mix.png" />
-	</div>
 </div>
 
+<h3>Choreographic Programming</h3>
 <div class="row align-items-center justify-content-center">
-	<div class="col-4 d-flex justify-content-center p-5">
-		<img class="img-fluid p-1 h-100 w-100" style="filter: invert(90%);" src="/images/choreographic_programming.jpg" />
+	<div class="col-sm-12 col-xl-4 order-sm-1 order-xl-2 d-flex justify-content-center p-5">
+		<img class="img-fluid p-1 h-75 w-75" style="filter: invert(80%);" src="/images/choreographic_programming.jpg" />
 	</div>
-	<div class="col-sm">
-		<h3>Choreographic Programming</h3>
+	<div class="col-sm-12 col-xl-8 order-sm-2 order-xl-1">
 		<p style="text-justify">
 			Choreographic Programming is a new paradigm for
 			concurrent and distributed programming, where
