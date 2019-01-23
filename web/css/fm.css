@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'goodtimes';
+  font-family: 'fm-future';
   src: url('/fonts/goodtimes.ttf');
 }
 
@@ -28,6 +28,7 @@ body {
 	color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
 	padding-top: 2rem;
+  line-height: 1.6;
 }
 
 .index-fm-image {
@@ -44,9 +45,9 @@ a, a:hover {
 
 h1, h2, h3 {
   color: #dbd7d7;
-	font-family: "goodtimes", sans-serif;
-	font-weight: 400;
-	margin-top: 1.5rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 200;
+	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
 
@@ -89,7 +90,7 @@ h1, h2, h3 {
 }
 
 .nav-text {
-	font-family: "goodtimes";
+	font-family: "fm-future";
 	position: absolute;
 	top: 25%;
 	right: 20%;
@@ -139,6 +140,9 @@ h1, h2, h3 {
 .navbutton-container {
 	z-index: 20000;
   background-color: #231c1c;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+  /* background-image: linear-gradient(to bottom, #231c1c 100%, #231c1c 50%); */
 	/* right: -5rem; */
 	/* max-width: 100%; */
 	/* width: 100%; */
