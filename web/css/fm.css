@@ -138,6 +138,7 @@ h1, h2, h3 {
 
 .navbutton-container {
 	z-index: 20000;
+  background-color: #231c1c;
 	/* right: -5rem; */
 	/* max-width: 100%; */
 	/* width: 100%; */
