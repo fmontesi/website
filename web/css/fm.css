@@ -77,6 +77,7 @@ h1, h2, h3 {
 	font-weight: 500;
 	width: 100%;
 	position: relative;
+	padding: 1rem;
 	/* background-image: url('/images/nav-item-bg.svg');
 	background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -93,9 +94,9 @@ h1, h2, h3 {
 	fill: transparent;
 }
 
-/* .nav-active svg {
+.nav-active svg {
 	fill: url(#nav-active-gradient);
-} */
+}
 
 /*
 #nav-active-gradient:hover {
@@ -111,14 +112,14 @@ h1, h2, h3 {
 } */
 
 .nav-active .nav-text {
-	/* color: #dbd7d7 !important; */
+	color: #dbd7d7 !important;
 	/* transition: 2s ease-in; */
 }
 
 .nav-text {
 	font-family: "fm-future";
 	position: absolute;
-	top: 25%;
+	top: 30%;
 	right: 20%;
 	/* right: 50%; */
 	/* text-decoration: none; */
