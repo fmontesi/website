@@ -49,6 +49,10 @@ h1, h2, h3 {
 	font-weight: 200;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
+
+	background: linear-gradient(#f7e887, #ddb55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #papers_list .text-primary {
