@@ -8,12 +8,12 @@ $("#fm-navbar").click( function() {
 	$("#fm-navbar").hide(500);
 });
 
-$(".nav-link").mouseover( function() {
+$(".nav-link").mouseenter( function() {
 	$( this ).toggleClass( "nav-active" );
 	$( "#nav-active-gradient animate" )[0].beginElement();
 });
 
-$(".nav-link").mouseout( function() {
+$(".nav-link").mouseleave( function() {
 	$( this ).toggleClass( "nav-active" );
 });
 </script>
