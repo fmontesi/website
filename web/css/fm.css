@@ -93,6 +93,28 @@ h1, h2, h3 {
 	fill: transparent;
 }
 
+/* .nav-active svg {
+	fill: url(#nav-active-gradient);
+} */
+
+/*
+#nav-active-gradient:hover {
+
+}
+
+#nav-active-gradient:hover ~ stop:first-child {
+  stop-color: #24bed2;
+}
+
+#nav-active-gradient:hover ~ stop:last-child {
+  stop-color: #32ffe4;
+} */
+
+.nav-active .nav-text {
+	/* color: #dbd7d7 !important; */
+	/* transition: 2s ease-in; */
+}
+
 .nav-text {
 	font-family: "fm-future";
 	position: absolute;
