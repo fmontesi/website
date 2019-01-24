@@ -1,15 +1,16 @@
 <script type="text/javascript">
 // $("#fm-navbar").show();
-$(".fm-navbar-toggler").click( function(e) {
+$(".fm-navbar-toggler").click( function() {
 	$("#fm-navbar").toggle(500);
 });
 
-$("#fm-navbar").click( function(e) {
+$("#fm-navbar").click( function() {
 	$("#fm-navbar").hide(500);
 });
 
 $(".nav-link").mouseover( function() {
 	$( this ).toggleClass( "nav-active" );
+	$( "#nav-active-gradient animate" )[0].beginElement();
 });
 
 $(".nav-link").mouseout( function() {
