@@ -50,7 +50,7 @@ h1, h2, h3 {
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 
-	background: linear-gradient(#f7e887, #ddb55e);
+	background: linear-gradient(#f7e887 0%, #ddb55e 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
