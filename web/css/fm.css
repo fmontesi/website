@@ -73,11 +73,11 @@ h1, h2, h3 {
 }
 
 .nav-item {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
+	/* font-family: "Montserrat", sans-serif; */
+	/* font-weight: 500; */
 	width: 100%;
-	position: relative;
-	padding: 1rem;
+	/* font-size: 2em; */
+	/* padding: 1rem; */
 	/* background-image: url('/images/nav-item-bg.svg');
 	background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -86,6 +86,7 @@ h1, h2, h3 {
 
 .nav-item svg {
 	fill: #141414;
+	/* padding: 1rem; */
 }
 
 .nav-active #border {
@@ -116,19 +117,23 @@ h1, h2, h3 {
 	/* transition: 2s ease-in; */
 }
 
+.nav-link {
+	position: relative;
+	/* padding: 0; */
+	/* margin-bottom: 1rem; */
+}
+
 .nav-text {
 	font-family: "fm-future";
 	position: absolute;
-	top: 30%;
+	top: 0;
 	right: 20%;
-	/* right: 50%; */
-	/* text-decoration: none; */
+	display: inline-block;
+	vertical-align: middle;
 	color: #ddb55e !important;
 	font-size: 1.5rem;
 	height: 100%;
 	text-transform: uppercase;
-	/* z-index: 10; */
-	/* font-family: "goodtimes"; */
 }
 
 /* .nav-item > a:before {
