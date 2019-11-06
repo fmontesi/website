@@ -9,6 +9,10 @@
   src: url('/fonts/SystemGlitch-Regular.otf');
 } */
 
+.social-table tr > td:first-child {
+	padding-right: 1em;
+}
+
 .paper-title {
   font-weight: bold;
 }
