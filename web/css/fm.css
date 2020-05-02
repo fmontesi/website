@@ -9,6 +9,10 @@
   src: url('/fonts/SystemGlitch-Regular.otf');
 } */
 
+hr {
+	border-color: #dbd7d7;
+}
+
 .social-table tr > td:first-child {
 	padding-right: 1em;
 }
@@ -23,6 +27,11 @@
 
 html {
   height: 100%;
+}
+
+code {
+	font-weight: bold;
+	color: white;
 }
 
 body {

@@ -1,0 +1,64 @@
+<!--Themed-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>Choreographies for Connected IT Systems</h1>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-sm-12 col-xl-4 order-sm-1 order-xl-1">
+					<ul>
+						<li>PI: <a href="/">Fabrizio Montesi</a></li>
+						<li>Type: Villum Young Investigator project</li>
+						<li>Amount: 7 million DKK (~1 million EUR)</li>
+						<li>Period: 2020-2025</li>
+					</ul>
+				</div>
+				<div class="col-sm-12 col-xl-8 order-sm-2 order-xl-2 d-flex justify-content-center p-5">
+					<a href="https://veluxfoundations.dk/en/"><img class="img-fluid rounded" src="/images/villum-logo.png" /></a>
+				</div>
+			</div>
+			<h3>Background</h3>
+			<p>
+				<strong>Choreography compliance.</strong>
+				Choreographies, broadly construed, are coordination plans for concurrent and distributed systems. Such plans prescribe how connected participants should interact to achieve a common goal. Examples include multiparty computation, security protocols, business processes, and decentralised composition strategies for emerging paradigms like microservices and the Internet of Things.
+			</p>
+			<p>
+				<strong>The problem.</strong>
+				Ensuring that a system complies with the intended choreographies is notoriously challenging, because mainstream programming languages do not come with appropriate abstractions that support reasoning on the interactions enacted by communicating programs.
+			</p>
+			<p>
+				<strong>State of the Art.</strong>
+				Choreographies are typically understood in terms of languages inspired by security protocol notation, process calculi, and communicating automata.
+				This creates a gap with mainstream languages, which are based on the established notion of data type.
+			</p>
+			<p class="w-100 text-center"><img src="/images/choco.png"/></p>
+			<h3>This project</h3>
+			<p>
+				This project will develop a new programming language and toolchain, called <i>Choral</i>, that will bridge the gap between choreographies and mainstream development practices.
+				Choral will extend object-oriented programming to be able to express choreographies, by extending data types to higher-kinded types that can <i>express that an object is implemented collaboratively by several roles at the type level</i>.
+				Then, a compiler will generate a pure-Java libraries for each role, which can be readily used by programmers to implement such role in a communicating system.
+			</p>
+			<p class="w-100 text-center">
+				<img src="/images/choral_logo.png" class="w-25" /><br/>
+				<i>The provisional logo of the Choral programming language.</i>
+			</p>
+			<p>
+				Choral draws inspiration by previous work on modal logics for spatially-distributed computation (like the work by <a href="https://doi.org/10.1109/LICS.2004.1319623">Murphy VII et al. [2004]</a>), multitier programming <a href="https://doi.org/10.1145/1040305.1040324">[Neubauer and Thiemann, 2005]</a>, session types <a href="https://doi.org/10.1007/3-540-57208-2_35">[Honda, 1993]</a>, and choreographic programming <a href="/files/choreographic_programming.pdf">[Montesi, 2013]</a>.
+				Through a novel combination of ideas from these works, we will obtain a language that integrates naturally with existing Java libraries and will require <i>no additional middleware to run its generated code</i>.
+			</p>
+			<p><strong>An example.</strong>
+				In general, we aim at making it possible to use Choral to produce correct (choreography-compliant) Java code with idiomatic APIs.
+				For example, consider a typical distributed authentication scenario where a Client authenticates itself to a Service through a third-party IP (Identity Provider).
+				We will represent such a choreography as a Choral object of type <code>DistAuth@(Client, Service, IP)</code>, where <code>@(Client, Service, IP)</code> denotes that the object is implemented collaboratively by three roles (<code>Client</code>, <code>Service</code>, and <code>IP</code>).  This object could offer a method authenticate with the following signature.
+			</p>
+			<p><code>Optional@Service&lt;AuthToken&gt; authenticate(Credentials@Client credentials)</code></p>
+			<p>
+				In other words, invoking method authenticate with some Credentials located at Client returns an authorisation token at Service (as an Optional, since authentication might fail).
+				The Choral compiler will then generate a Java library for <code>Client</code>, <code>Service</code>, and <code>IP</code>. These libraries will comply with the original choreography by construction: invoking the method <code>authenticate</code> from the respective implementations of the participants.
+				The API of each library will expose only the details relevant for its respective role, to support reusability.
+				For instance, the compiled version of method <code>authenticate</code> for role <code>Service</code> would have the following signature.
+			</p>
+			<p><code>Optional<AuthToken> authenticate()</code></p>
+ 		</div>
+	</div>
+</div>
