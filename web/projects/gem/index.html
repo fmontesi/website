@@ -1,0 +1,69 @@
+<!--Themed-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>Generic Microservices</h1>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-sm-12 col-xl-8 order-sm-1 order-xl-1">
+					<ul>
+						<li>PI: <a href="/">Fabrizio Montesi</a></li>
+						<li>Participants:
+							<a href="https://saveriogiallorenzo.com/">Saverio Giallorenzo</a>,
+							<a href="https://marcoperessotti.com/">Marco Peressotti</a>,
+							<a href="https://www.ifs.hsr.ch/Olaf-Zimmermann.11623.0.html">Olaf Zimmermann</a>
+						</li>
+						<li>Type: Research Project 1 from Independent Research Fund Denmark (FNU council)</li>
+						<li>Amount: 2,341,440 million DKK (~300k EUR)</li>
+						<li>Period: 2020-2023</li>
+					</ul>
+				</div>
+				<div class="col-sm-12 col-xl-4 order-sm-2 order-xl-2 d-flex justify-content-center p-5">
+					<a href="https://dff.dk/en/"><img class="img-fluid rounded" src="/images/irfd-logo.png" style="background: rgb(231, 231, 231); padding: 1em" /></a>
+				</div>
+			</div>
+			<h3>Background</h3>
+			<p>
+				The pervasive adoption of connected digital systems in modern society (as in cloud and mobile computing) has projected us towards the “API economy”: a market of digital services that can be accessed on networks through Application Programming Interfaces (APIs). To ensure that these systems are efficient and reliable, the best practice is to deploy dedicated software components (microservices) that act as proxies between clients and services [<a href="https://csrc.nist.gov/publications/detail/sp/800-204/final">Chandramouli, 2019</a>; <a href="https://doi.org/10.1145/3167132.3167427">Montesi and Weber, 2016</a>].
+			</p>
+			<p>
+				The implementation of this strategy is a challenge for the theory of types and programming languages. Ideally, we should program modular proxies that can be reused and combined in different contexts, by abstracting from the APIs that will be managed. These proxies typically alter the APIs that are ultimately exposed to clients, e.g., by adding required fields (like a password) and effects (like an exception in case of wrong passwords). Once a proxy implementation is used with some concrete APIs, the result of its API modifications should be computed statically (before execution), such that client developers can verify their clients against the actual APIs that the proxy will expose. Unfortunately, current programming tools do not properly support this ideal methodology, due to the lack of language abstractions for manipulating abstract APIs in proxy programs.
+			</p>
+
+			<h3>This project</h3>
+			<p>
+				The goal of this project is to establish the scientific foundations for the ideal development methodology described above. Specifically, we wish to program generic microservices: proxy microservices that can be reused with different APIs and allow for statically computing the resulting APIs exposed to clients.
+			</p>
+			<p>
+				The hypothesis is that a programming theory for generic microservices can be achieved by developing the first <strong>algebra of APIs</strong>, an abstract model of how common patterns for API management manipulate APIs. The abstract operators of our algebra are going to act as guidelines for reasoning on (i) how reusable proxies can be coded without knowing the APIs that they will guard, and (ii) how we can statically compute the resulting APIs once a generic microservice is applied to a specific context.
+			</p>
+			<p>
+				We plan to:
+				<ul>
+					<li>develop the algebra of APIs in terms of abstract operators and their laws;</li>
+					<li>build a prototype of a programming language for generic microservices, by creating new linguistic primitives that respect the laws of the algebra of APIs;</li>
+					<li>evaluate the usefulness of our language against current best practices for programming and deploying API management software.</li>
+				</ul>
+			</p>
+			<p>
+				As an example of what we want to be able to program, consider a <i>circuit breaker proxy</i>: a microservice that guards another service to prevent overload (including malevolent denial of service attacks).
+				The idea is that a circuit breaker should be parameterised over the API that it guards, obtaining a generic implementation like the one depicted below.
+			</p>
+			<p class="w-100 text-center"><img class="w-25 rounded" src="/images/generic-circuit-breaker.png"/></p>
+			<p>
+				A key property that we desire is substitutability: given a concrete service, it should be possible to deploy the generic circuit breaker to guard it and statically compute the resulting API.
+				For example, as depicted below, the same generic circuit breaker implementation should be applicable to two (or more) different services with difference APIs (here we have an HVAC service and an analytics service).
+			</p>
+			<p class="w-100 text-center"><img class="w-50 rounded" src="/images/hvac-analytics-circuit-breaker.png"/></p>
+			<p>
+				Another key property that we wish for is being able to reason abstractly about compositions of generic microservices. For example, given a generic circuit breaker and a generic authorisation proxy (which authorises invocations), we should be able to compose them in any order and be able to compute statically the resulting modification on the APIs that they could guard.
+				Below we depict an example of commutativity for these two generic microservices.
+			</p>
+			<p class="w-100 text-center"><img class="w-25 rounded" src="/images/compositional-gems.png"/></p>
+			<p>
+				In our work, we will be inspired by the catalogue of <a href="https://microservice-api-patterns.org/">microservice API patterns</a> and other design patterns for microservices [<a href="http://arxiv.org/abs/1609.05830">Montesi and Weber, 2016</a>].
+				We plan on using our language implementation to construct a catalogue of generic microservices that implement these patterns and make them available on public repositories (e.g., Docker Hub).
+			</p>
+ 		</div>
+	</div>
+</div>
