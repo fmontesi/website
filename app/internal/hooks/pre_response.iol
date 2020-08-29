@@ -1,5 +1,4 @@
 include "../leonardo/types/PreResponseHookIface.iol"
-include "string_utils.iol"
 include "file.iol"
 
 constants {
