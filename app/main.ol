@@ -1,3 +1,4 @@
+include "string_utils.iol"
 include "internal/hooks/pre_response.iol"
 include "internal/hooks/post_response.iol"
 
