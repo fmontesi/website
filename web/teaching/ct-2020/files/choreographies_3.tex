@@ -1,0 +1,515 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath,amsthm,amssymb,stmaryrd,proof-dashed}
+\usepackage{cleveref}
+\usepackage{xspace}
+\usepackage{xparse}
+\usepackage[square]{natbib}
+
+\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+% COLOURS ----------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage[breakable]{tcolorbox}
+
+\colorlet{keyword}{blue!25!black}
+\colorlet{literal}{red!40!black}
+\colorlet{type}{green!40!black}
+\colorlet{comment}{green!20!black}
+% ----
+
+\newcommand*{\pp}{\ensuremath{\mathop{\boldsymbol{|}}}}
+\newcommand*{\m}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand*{\pid}[1]{\m{#1}}
+\newcommand*{\com}[2]{\ensuremath{#1 \, \mbox{\tt{-\!>}}\, #2}}
+\newcommand*{\nil}{\ensuremath{\boldsymbol{0}}\xspace}
+\newcommand*{\rname}[1]{\textsc{#1}}
+\newcommand*{\mto}{\ensuremath{\to^{*}}}
+\newcommand*{\pto}{\ensuremath{\to^{+}}}
+\newcommand*{\proc}[2]{#1 \triangleright #2}
+\newcommand*{\procv}[3]{\ensuremath{{#1} \triangleright_{#2} #3}}
+\newcommand*{\psend}[1]{\ensuremath{{#1}!}}
+\newcommand*{\precv}[1]{\ensuremath{{#1}?}}
+\newcommand*{\psendf}[2]{\ensuremath{{#1}!#2}}
+\newcommand*{\precvf}[2]{\ensuremath{{#1}?#2}}
+\newcommand*{\precongr}{\preceq}
+\NewDocumentCommand{\epp}{m o o}
+	{\left\llbracket{#1}\right\rrbracket%
+		\IfNoValueF{#2}{_{#2}}%
+		\IfNoValueF{#3}{^{#3}}}
+\newcommand{\defeq}{\triangleq}
+\NewDocumentCommand{\rc}{m o o o}
+	{\left\langle{#1}%
+		\IfNoValueF{#2}{, #2}%
+		\IfNoValueF{#3}{, #3}%
+		\IfNoValueF{#4}{, #4}%
+		\right\rangle}
+
+\newcommand*{\procs}{\m{procs}\xspace}
+\newcommand*{\disjoint}{\mathop{\#}}
+\newcommand*{\cond}[3]{\m{if}\, #1 \, \m{then} \, #2 \, \m{else} \, #3}
+\newcommand*{\valuefnt}[1]{{\color{literal}\texttt{#1}}}
+\newcommand*{\trueval}{\valuefnt{true}\xspace}
+\newcommand*{\falseval}{\valuefnt{false}\xspace}
+\newcommand*{\gencom}{\com{\pid p.f}{\pid q.g}}
+\newcommand*{\gencomone}{\com{\pid p_1.f_1}{\pid q_1.g_1}}
+\newcommand*{\gencomtwo}{\com{\pid p_2.f_2}{\pid q_2.g_2}}
+\newcommand*{\gencond}{\cond{\pid p.f}{C_1}{C_2}}
+\newcommand*{\eval}{\ensuremath{\mathop{\downarrow}}\xspace}
+\newcommand{\tuple}[1]{\langle #1 \rangle}
+
+%opening
+\title{Lecture Notes on Choreographies, Part 3}
+\author{
+	Fabrizio Montesi
+	\\
+	\href{mailto:fmontesi@imada.sdu.dk}{fmontesi@imada.sdu.dk}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document contains lecture notes for the course on Concurrency Theory (2017) at the University 
+of Southern Denmark.
+\end{abstract}
+
+\section{EPP for Stateful Choreographies}
+
+In part 2, we left the definition of EPP for stateful choreographies as an exercise. We develop it 
+in this section, for reference.
+
+\begin{definition}[EndPoint Projection (EPP)]
+\label{def:epp}
+The EPP of a configuration $\rc{C}[\sigma]$, denoted $\epp{\rc{C}[\sigma]}$, is defined as:
+\[
+\epp{\rc C[\sigma]} = \prod_{\pid p \in \procs(C)} \procv{\pid p}{\sigma(\pid p)}{\epp{C}[\pid p]}
+\]
+.
+\end{definition}
+
+We also need to update the definition of behaviour projection---$\epp{C}[\pid p]$---since the 
+language of stateful choreographies is different from that of simple choreographies. We display the 
+new rules in \cref{fig:b_proj_stateful}.
+
+\begin{figure}
+\begin{displaymath}
+\begin{array}{rcl}
+\epp{\com{\pid p.f}{\pid q.g}; C}[\pid r] & = &
+\left\{
+	\begin{array}{ll}
+		\psendf{\pid q}f;\epp{C}[\pid r] & \mbox{if } \pid r = \pid p\\
+		\precvf{\pid p}g;\epp{C}[\pid r] & \mbox{if } \pid r = \pid q\\
+		
+		\epp{C}[\pid r] & \mbox{otherwise}
+	\end{array}
+\right.
+\\\\
+\epp{\pid p.f;C}[\pid r] & = & 
+\left\{
+	\begin{array}{ll}
+		f;\epp{C}[\pid r] & \mbox{if } \pid r = \pid p\\
+		\epp{C}[\pid r] & \mbox{otherwise}
+	\end{array}
+\right.
+\\\\
+\epp{\nil;C}[\pid p] & = & \epp{C}[\pid p]
+\\\\
+\epp{\nil}[\pid p] & = & \nil
+\end{array}
+\end{displaymath}
+\caption{Behaviour projection for stateful choreographies.}
+\label{fig:b_proj_stateful}
+\end{figure}
+
+\begin{exercise}
+\label{ex:epp_thm_stateful}
+Formulate the operational correspondence theorem for EPP in the setting of stateful 
+choreographies.
+\end{exercise}
+
+\begin{exercise}
+Prove the theorem that you have formulated in \cref{ex:epp_thm_stateful}.
+\end{exercise}
+
+\section{Conditionals}
+
+The choreographies that we have seen so far are simple sequences of interactions.
+What if we wanted to express a choice between alternative behaviours? For instance, in our 
+example with \pid{Buyer} and \pid{Seller}, \pid{Buyer} may proceeding by deciding whether to buy 
+the book or not depending on the price given by the \pid{Seller}.
+In this section, we extend our framework with conditionals that allow to capture this kind of 
+situations.
+
+\subsection{Choreographies}
+
+\paragraph{Syntax}
+We extend statements in choreographies to be instructions, denoted $I$, which may also contain 
+conditionals (if-then-else constructs). The new syntax is given in \cref{fig:c3_syntax}.
+
+\begin{figure}
+\begin{align*}
+C ::=\ & I; C \mid \nil
+\\
+I ::=\ & \com{\pid p.f}{\pid q.g} \mid \pid p.f \mid \cond{\pid p.f}{C_1}{C_2} \mid \nil
+\end{align*}
+\caption{Choreographies with conditionals, syntax.}
+\label{fig:c3_syntax}
+\end{figure}
+
+The new term $\cond{\pid p.f}{C_1}{C_2}$ means ``process \pid p runs function $f$, and the 
+choreography proceeds as $C_1$ if the result is the value \trueval, or proceeds as $C_2$ 
+otherwise''. (So we now assume that the set of possible values contains booleans.) The condition 
+used by this kind of terms is also typically called a \emph{guard}---in our case, the only kind of 
+guard that we can have for now is of the form $\pid p.f$.
+
+Extending function \procs to the new syntax is easy:
+\begin{align*}
+\procs \left( I;C \right) = \ & \procs(I) \cup \procs(C) \\
+\procs(\nil) = \ & \emptyset \\
+\procs \left( \gencom \right) = \ & \{ \pid p, \pid q \} \\
+\procs \left( \pid p.f \right ) = \ & \{ \pid p \}\\
+\procs \left( \gencond \right) = \ & \{ \pid p \} \cup \procs(C_1) \cup \procs(C_2)
+\end{align*}.
+
+\paragraph{Semantics}
+The reduction semantics of choreographies with conditionals is given by the rules in 
+\cref{fig:c3_semantics}.
+
+\begin{figure}[t]
+\begin{displaymath}
+\begin{array}{c}
+\infer[\rname{Com}]{
+	\rc{\gencom; C}[\sigma] \to \rc{C}[\sigma[\pid q \mapsto u]]
+}{
+	f(\sigma(\pid p)) \eval v
+	&
+	g(\sigma(\pid q),v) \eval u
+}
+\qquad
+\infer[\rname{Local}]{
+	\rc{\pid p.f;C}[\sigma] \to \rc{C}[\sigma[\pid p \mapsto v]]
+}{
+	f(\sigma(\pid p)) \eval v
+}
+\\\\
+\infer[\rname{Cond}]{
+	\rc{\gencond;C}[\sigma]
+	\to
+	\rc{C_i;C}[\sigma]
+}{
+	i = 1 \mbox{ if } f(\sigma(\pid p)) \eval \trueval
+	\mbox{, } i = 2 \mbox{ otherwise}
+}
+\\\\
+\infer[\rname{Struct}]{
+	\rc{C}[\sigma] \to \rc{C'}[\sigma']
+}{
+	C \precongr C_1
+	&
+	\rc{C_1}[\sigma] \to \rc{C_2}[\sigma']
+	&
+	C_2 \precongr C'
+}
+\end{array}
+\end{displaymath}
+\caption{Choreographies with conditionals, semantics.}
+\label{fig:c3_semantics}
+\end{figure}
+
+The new rule \rname{Cond} formalises the intended meaning of conditionals, choosing the 
+right branch depending on the result of the guard.
+
+Updating structural precongruence is a bit more involved. Let us do the easy part first. Observe 
+that an $I$ can be $\nil$. This is necessary for our semantics to be defined, since a 
+conditional may contain a $\nil$ branch. Consider the choreography
+$\cond{\pid p.\trueval}{\nil}{\nil};C$. By rule \rname{Cond}, this reduces to $\nil;C$. That $\nil$ 
+is now ``garbage'', in the sense that it does not specify any behaviour so we should just get rid 
+of it. For this purpose, we introduce the following rule.
+\[
+\infer[\rname{GCNil}]{
+	\nil;C \precongr C
+}{}
+\]
+
+Now for the more sophisticated part. Consider the following choreography.
+\[
+\left(\cond{\pid p.f}{\left(\cond{\pid q.g}{C_{11}}{C_{12}}\right);\nil}{
+\left(\cond{\pid q.g}{C_{21}}{C_{22}}\right);\nil\right); \nil
+}
+\]
+Since \pid p and \pid q are different, there is no causal dependency that gives an ordering in 
+which the two conditionals to be executed! This means that we should define precongruence rules 
+that capture out-of-order execution of conditionals, too.
+Another revealing example is the following.
+\[
+\gencom; \cond{\pid r.f'}{C_1}{C_2};\nil
+\]
+Since \pid p, \pid q, and \pid r are all different, it may happen that \pid r evaluates its 
+conditional before \pid p and \pid q interact. Our structural 
+precongruence should capture this kind of out-of-order behaviour too.
+
+The new rules for structural precongruence that follow the intuition that we have just built are 
+displayed in \cref{fig:c3_precongr}.
+
+\begin{figure}[t]
+\begin{displaymath}
+\begin{array}{c}
+\infer[\rname{I-I}]{
+	I;I' \quad \equiv \quad
+	I';I
+}{
+	\procs(I) \disjoint \procs(I')
+}
+\\\\
+\infer[\rname{I-Cond}]{
+	I;\cond{\pid p.f}{C_1}{C_2} \quad \equiv \quad
+	\cond{\pid p.f}{\left( I;C_1 \right)}{\left( I;C_2 \right)}
+}{
+	\pid p \not\in \procs(I)
+}
+\\\\
+\infer[\rname{Cond-Cond}]{
+\begin{array}{c}
+	\cond{\pid p.f}{\left(\cond{\pid q.g}{C_1^1}{C_2^1}\right);C}
+	{\left(\cond{\pid q.g}{C_1^2}{C_2^2}\right);C'}
+	\\ \equiv \\
+	\cond{\pid q.g}{\left(\cond{\pid p.f}{C_1^1;C}{C_1^2;C'}\right)}
+	{\left(\cond{\pid p.f}{C_2^1;C}{C_2^2;C'}\right)}
+\end{array}
+}{
+	\pid p \neq \pid q
+}
+\\\\
+\infer[\rname{GCNil}]{
+	\nil;C \precongr C
+}{}
+\end{array}	
+\end{displaymath}
+\caption{Choreographies with conditionals, structural precongruence.}
+\label{fig:c3_precongr}
+\end{figure}
+
+Rule \rname{Cond-I} allows us to swap instructions inside and outside of 
+conditionals, in case that they do not involve the process in the guard. Observe that when we bring 
+a term inside it gets duplicated in both branches of the conditionals, since we need to ensure 
+that it will be executed regardless of which branch is chosen at runtime.
+
+Rule \rname{Cond-Cond} allows us to swap two independent conditionals. Notice that branches 
+$C^1_2$ and $C^2_1$ get exchanged, in order to preserve the combined effects of evaluating the 
+two guards.
+We can check that this exchange makes sense with the following exercise, which verifies that 
+swapping the two conditionals does not introduce new behaviour.
+
+\begin{exercise}
+Prove the following statement.
+
+Let $\sigma$ be a global memory state. We have the following reduction chain without using 
+rule \rname{Struct} for some $j$ and $i$ in $\{1,2\}$
+\[
+\rc{\cond{\pid p.f}{\left(\cond{\pid q.g}{C_1^1}{C_2^1}\right)}
+	{\left(\cond{\pid q.g}{C_1^2}{C_2^2}\right)}}[\sigma]
+\to \to 
+\rc{C^j_i}[\sigma]
+\]
+if and only if we have also the following reduction chain
+\[
+\rc{\cond{\pid q.g}{\left(\cond{\pid p.f}{C_1^1}{C_1^2}\right)}
+	{\left(\cond{\pid p.f}{C_2^1}{C_2^2}\right)}}[\sigma]
+\to \to 
+\rc{C^j_i}[\sigma]
+\]
+.
+
+Suggestion: proceed by cases on $f(\sigma(\pid p)) \eval v$ (what can $v$ be?) and $g(\sigma(\pid 
+q)) \eval u$ (what can $u$ be?) and their consequences on the reduction chains.
+\end{exercise}
+
+
+\subsection{Processes}
+
+Introducing conditionals to our process calculus is straightforward, and follows the same 
+principles as for choreographies. The new syntax and semantics are given by the rules in 
+\cref{fig:p3_syntax,fig:p3_semantics,fig:p3_precongr}.
+
+\begin{figure}
+\begin{align*}
+N ::=\ & \procv{\pid p}v{B} \mid N \pp N \mid \nil
+\\
+B ::=\ & \psendf{\pid p}f;B \mid \precvf{\pid p}f;B \mid f;B \mid
+\cond{f}{B_1}{B_2};B \mid \nil; B \mid 
+\nil
+\end{align*}
+\caption{Processes with conditionals, syntax.}
+\label{fig:p3_syntax}
+\end{figure}
+
+\begin{figure}
+\begin{displaymath}
+\begin{array}{c}
+\infer[\rname{Com}]{
+	\procv{\pid p}v{\psendf{\pid q}f; B}
+	\ \pp\ 
+	\procv{\pid q}{u}{\precvf{\pid p}g;B'}
+	\quad\to\quad
+	\procv{\pid p}v{B}
+	\ \pp\ 
+	\procv{\pid q}{u'}{B'}
+}{
+	f(v)\eval v'
+	&
+	g(u,v') \eval u'
+}\\\\
+\infer[\rname{Local}]
+{
+	\procv{\pid p}{v}{f;B}
+	\ \to \ 
+	\procv{\pid p}{u}{B}
+}
+{
+	f(v) \eval u
+}
+\\\\
+\infer[\rname{Cond}]{
+	\procv{\pid p}{v}{\left(\cond{f}{B_1}{B_2}\right);B}
+	\to
+	\procv{\pid p}{v}{B_i;B}
+}{
+	i = 1 \mbox{ if } f(v) \eval \trueval
+	\mbox{, } i = 2 \mbox{ otherwise}
+}
+\\\\
+\infer[\rname{Par}]
+{N_1 \pp N_2 \ \to\ N'_1 \pp N_2}
+{
+N_1 \to N'_1
+} \qquad
+\infer[\rname{Struct}]
+{
+N \to N'
+}
+{
+N \precongr N_1
+&
+N_1 \to N_2
+&
+N_2 \precongr N'
+}
+\end{array}	
+\end{displaymath}
+\caption{Processes with conditionals, semantics.}
+\label{fig:p3_semantics}
+\end{figure}
+
+\begin{figure}
+\begin{displaymath}
+\begin{array}{c}
+\infer[\rname{PA}]{
+(N_1 \pp N_2) \pp N_3 \ \equiv\  N_1 \pp ( N_2 \pp N_3 )
+}{}
+\qquad
+\infer[\rname{GCB}]{
+	\nil;B \precongr B
+}{}
+\\\\
+\infer[\rname{PC}]
+{N_1 \pp N_2 \ \equiv\ N_2 \pp N_1}
+{} \qquad
+\infer[\rname{GCN}]
+{
+N \pp \nil \ \precongr\ N
+}
+{}
+\qquad
+\infer[\rname{GCP}]
+{
+\procv{\pid p}v{\nil} \ \precongr\ \nil
+}
+{}
+\end{array}	
+\end{displaymath}
+\caption{Processes with conditionals, structural precongruence.}
+\label{fig:p3_precongr}
+\end{figure}
+
+\subsection{EndPoint Projection}
+
+Adding conditionals to choreographies has intriguing consequences for EPP. Therefore, before we 
+dive into a general definition, it is useful to look at an example.
+Consider the following choreography.
+\[
+C_{\m{unproj}} \defeq\ \left( \cond{\pid p.f}{\com{\pid p.\trueval}{\pid q.x};\nil}{\nil}\right) ; 
+\nil
+\]
+If \pid p chooses the left branch in the conditional, then it sends the value \trueval to \pid q. 
+Otherwise, the choreography terminates.
+What should the EPP of $C_{\m{unproj}}$ look like? It seems obvious that the resulting network 
+should consist of two processes, \pid p and \pid q, so for any $\sigma$ we get:
+\begin{equation}
+\label{eq:unproj}
+\epp{\rc{C_{\m{unproj}}}[\sigma]} = \ 
+\procv{\pid p}{\sigma(\pid p)}{\epp{C_{\m{unproj}}}[\pid p]}
+\pp
+\procv{\pid q}{\sigma(\pid q)}{\epp{C_{\m{unproj}}}[\pid q]}
+\end{equation}
+. The projection for \pid p seems easy to achieve:
+\[
+\epp{C_{\m{unproj}}}[\pid p] = \
+\left(\cond{f}{\psendf{\pid q}{\trueval};\nil}{\nil}\right);\nil
+\]
+. Instead, we run into trouble for projecting \pid q. Process \pid q is not involved in evaluating 
+the conditional (since that is local at \pid p), so its projection should just ``skip'' it. Indeed 
+the only piece of code in the choreography that involves \pid q is $\com{\pid p.\trueval}{\pid 
+q.x}$. If we choose to project that (and we should, since the choreography contains it), 
+we obtain:
+\begin{equation}
+\label{eq:proj_cond_1}
+\epp{C_{\m{unproj}}}[\pid q] = \
+\precvf{\pid p}{x};\nil;\nil
+\end{equation}
+. If, instead, we choose \emph{not to} project the receive action by \pid q, we obtain:
+\begin{equation}
+\label{eq:proj_cond_2}
+\epp{C_{\m{unproj}}}[\pid q] = \
+\nil;\nil
+\end{equation}.
+Neither of these decisions gives us a correct EPP, as we can check with two exercises.
+
+\begin{exercise}
+Show that, if we adopt the behaviour projection in \cref{eq:proj_cond_1}, the network in 
+\cref{eq:unproj} may reduce to a network that is not the EPP of what $C_{\m{unproj}}$ reduces to.
+
+Hint: consider the case of $\rc{C_{\m{unproj}}}[\sigma]$ for some $\sigma$ such that $f(\sigma(\pid 
+p)) \eval \falseval$.
+\end{exercise}
+
+\begin{exercise}
+Show that, if we adopt the behaviour projection in \cref{eq:proj_cond_2}, the network in 
+\cref{eq:unproj} may reduce to a network that is not the EPP of what $C_{\m{unproj}}$ reduces to.
+
+Hint: consider the case of $\rc{C_{\m{unproj}}}[\sigma]$ for some $\sigma$ such that $f(\sigma(\pid 
+p)) \eval \trueval$.
+\end{exercise}
+
+\begin{exercise}
+Think about how you would define the behaviour projection for a conditional in a choreography. We 
+are going to delve into this problem in the next part.
+\end{exercise}
+
+
+% \clearpage
+% 
+% \bibliographystyle{abbrvnat}
+% \bibliography{biblio}
+
+\end{document}
+
