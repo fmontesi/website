@@ -1,3 +1,3 @@
 [submodule "app/leonardo"]
 	path = app/leonardo
-	url = https://github.com/jolie/leonardo.git
+	url = https://github.com/jolie/leonardo
