@@ -1,48 +1,42 @@
-include "string_utils.iol"
-include "internal/hooks/pre_response.iol"
-include "internal/hooks/post_response.iol"
+from .dblp.main import DBLP
+from .string_utils.main import StringUtilsSrv
+from .format_converter.main import FormatConverter
+from .hooks.main import PreResponseHook, PostResponseHook
+from runtime import Runtime
 
-include "internal/leonardo/ports/LeonardoAdmin.iol"
+service Main {
+	embed Runtime as Runtime
+	embed DBLP as DBLP
+	embed StringUtilsSrv as StringUtilsSrv
+	embed FormatConverter as FormatConverter
+	embed PreResponseHook as PreResponseHook
+	embed PostResponseHook as PostResponseHook
 
-include "internal/dblp/dblp_utils.iol"
+	main {
+		loadEmbeddedService@Runtime( {
+			filepath = "leonardo/main.ol"
+			service = "Leonardo"
+			params << {
+				location = "socket://localhost:8080"
+				wwwDir = "../web"
+				defaultPage = "index.html"
+				PreResponseHook << PreResponseHook
+				PostResponseHook << PostResponseHook
+				redirection[0] << {
+					name = "dblp"
+					binding << DBLP
+				}
+				redirection[1] << {
+					name = "StringUtils"
+					binding << StringUtilsSrv
+				}
+				redirection[2] << {
+					name = "FormatConverter"
+					binding << FormatConverter
+				}
+			}
+		} )()
 
-include "internal/format_converter/ports/FormatConverter.iol"
-
-outputPort DBLP {
-Interfaces: DBLPUtilsInterface
-}
-
-outputPort StringUtilsSrv {
-Interfaces: StringUtilsInterface
-}
-
-embedded {
-Jolie:
-	"-C Standalone=false internal/leonardo/cmd/leonardo/main.ol" in LeonardoAdmin,
-	"internal/dblp/dblp_utils.ol" in DBLP,
-	"internal/string_utils/main.ol" in StringUtilsSrv,
-	"internal/format_converter/main.ol" in FormatConverter
-}
-
-main
-{
-	with( config ) {
-		.wwwDir = "../web";
-		.PreResponseHook.location = PreResponseHook.location;
-		.PostResponseHook.location = PostResponseHook.location;
-		with( .redirection[0] ) {
-			.name = "dblp";
-			.binding.location = DBLP.location
-		};
-		with( .redirection[1] ) {
-			.name = "StringUtils";
-			.binding.location = StringUtilsSrv.location
-		};
-		with( .redirection[2] ) {
-			.name = "FormatConverter";
-			.binding.location = FormatConverter.location
-		}
-	};
-	config@LeonardoAdmin( config )();
-	linkIn( Shutdown )
+		linkIn( Shutdown )
+	}
 }

@@ -1,0 +1,8 @@
+FROM jolielang/jolie:jre
+
+COPY . /leonardo
+RUN rm -rf /leonardo/docker
+RUN rm -rf /leonardo/.git
+
+WORKDIR /leonardo
+CMD ["jolie","main.ol"]

@@ -1,22 +1,26 @@
 <!--Themed-->
 <div class="container">
 <h2 class="SectionTitle">DBLP - Get Author Bibtex</h2>
-<p>This is a small, and unsupported, tool for fetching the bibtex of all the publications registered in <a href="http://dblp.uni-trier.de">DBLP</a> for a given author.
-You have to provide the author's initial and name key in DBLP in the form below. My data is used as default values to provide an example.
+<p>This is a small, and unsupported, tool for fetching the bibtex of all the publications registered in <a href="https://dblp.uni-trier.de">DBLP</a> for a given author.
+You have to provide the author's person identifier in DBLP in the form below. My identifier is used as default value to provide an example.
 </p>
-    <p><strong>How to find your initial and name key:</strong> find your page in DBLP and look at the URL. For example, mine is <code>http://www.informatik.uni-trier.de/~ley/pers/hd/m/Montesi:Fabrizio</code>. The last part, <code>Montesi:Fabrizio</code>, is the name key and the second-last part, <code>m</code>, is the initial. Sometimes the name key is weird, e.g., if you have middle names. Remember to include everything from the last part in your name key, even symbols such as _ and = (but not the .html extension, if there is one).</p>
+<p>
+    <strong>How to find a person identifier:</strong>
+    find the author's page in DBLP and look at the URL.
+    For example, mine is <code>https://dblp.uni-trier.de/pid/65/3603.html</code>, so my identifier is <code>65/3603</code>.
+</p>
 <p>
 <strong>Note:</strong> unfortunately DBLP has a habit of breaking APIs, so the tool may stop working or have unexpected problems.
 </p>
 <p>
-Curious about how this works? It is a simple <a href="http://www.jolie-lang.org/">Jolie</a> program. If you want to run it yourself, you can download a similar script <a href="/files/dblp/dblp_fetchBibtex.ol">here</a> (pass the arguments using the command line). If you do not have Jolie installed, I have uploaded a static binary distribution <a href="/files/dblp/dblp-static.zip">here</a>.
+This tool is written in <a href="https://www.jolie-lang.org/">Jolie</a>.
+<!-- If you want to run it yourself, you can download a similar script <a href="/files/dblp/dblp_fetchBibtex.ol">here</a> (pass the arguments using the command line). If you do not have Jolie installed, I have uploaded a static binary distribution <a href="/files/dblp/dblp-static.zip">here</a>. -->
 </p>
 
 <div class="grid_24">
 <h2 class="SectionTitle">Author Info (Input)</h2>
 <form method="post">
-    <p>Initial: <input type="text" id="initial" value="m"/></p>
-    <p>Name key: <input type="text" id="nameKey" value="Montesi:Fabrizio"/></p>
+    <p>Person Identifier: <input type="text" id="pid" value="65/3603"/></p>
     <p><input type="button" id="getAuthorBibtex" class="btn btn-primary" value="Go!" /></p>
 </form>
 <h2 class="SectionTitle">Result (Output)</h2>
@@ -55,9 +59,9 @@ function displayResult( html )
 
 $(document).ready( function() {
 $("#getAuthorBibtex").click( function() {
-    displayResult( "Loading..." );
+    displayResult( "Asking the DBLP servers... this might take a while" );
 		Jo("dblp")
-			.getAuthorBibtex( { "initial": $("#initial").val(), "nameKey": $("#nameKey").val() } )
+			.getAuthorBibtex( { "pid": $("#pid").val() } )
 			.then( response => displayResult( response.$ ) )
 			.catch( JoHelp.parseError ).catch( displayResult );
 });
