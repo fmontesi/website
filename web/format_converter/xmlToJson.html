@@ -103,7 +103,7 @@ $("#selectResult").click( function() {
 
 $("#saveResult").click( function() {
     var blob = new Blob( [$("#result").text()], {type: "text/plain;charset=utf-8"} );
-    saveAs( blob, "result.xml" );
+    saveAs( blob, "result.json" );
 });
 
 });
