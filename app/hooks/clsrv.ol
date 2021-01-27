@@ -39,7 +39,7 @@ service CLSrv {
 		scope( s ) {
 			install( default => setNextTimeout@Time( RefreshTimeout ) )
 			html = "<ul class=\"PubList\" id=\"papers_list\">"
-			getPapersByAuthor@CL( "Montesi:Fabrizio" )( allPapers )
+			getPapersByAuthor@CL( "MontesiFabrizio" )( allPapers )
 			for( collection in allPapers.collection ) {
 				paperId = 0;
 				if( #collection.paper > 0 ) {
