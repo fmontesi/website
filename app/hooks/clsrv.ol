@@ -63,9 +63,9 @@ service CLSrv {
 						html += "<div id=\"bibItem-" + paperId + "\" class=\"collapse panel panel-default\">"
 							+ "<div class=\"panel-body\"><pre>" + paper.bibitem + "</pre></div></div>"
 						html += "</span>"
-						if( doi instanceof string ) {
+						/* if( doi instanceof string ) {
 							html += "<span style=\"float:right; width:20%\"><a data-size=\"medium\" href=\"https://plu.mx/plum/a/?doi=" + doi + "\" class=\"plumx-plum-print-popup\"></a></span>"
-						}
+						} */
 						html += "</li>"
 						paperId++
 					}
