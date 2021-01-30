@@ -230,3 +230,7 @@ h3 {
 .fm-navbar a {
 	font-weight: bold;
 }
+
+.people-list > li > span {
+	margin-right: 1em;
+}
