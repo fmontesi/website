@@ -68,15 +68,15 @@ h1, h2, h3 {
 }
 
 h2 {
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 }
 
 h3 {
-	font-size: 1.3rem;
+	font-size: 1rem;
 }
 
 #papers_list .text-primary {
@@ -233,4 +233,8 @@ h3 {
 
 .people-list > li > span {
 	margin-right: 1em;
+}
+
+.people-list > li > img {
+	height:90px;
 }
