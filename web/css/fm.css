@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'fm-future';
   src: url('/fonts/goodtimes.ttf');
+  font-display: swap;
 }
 
 /*
