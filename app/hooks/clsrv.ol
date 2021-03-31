@@ -22,7 +22,7 @@ service CLSrv {
 	}
 
 	outputPort CL {
-		location: "socket://concurrency.sdu.dk:443"
+		location: "socket://acp.sdu.dk:443"
 		protocol: https {
 			osc.getPapersByAuthor.alias = "srv/publications/byAuthor/%!{$}.xml"
 			osc.getPapersByAuthor.method = "get"
