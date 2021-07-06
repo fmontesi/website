@@ -1,4 +1,4 @@
-from string_utils import StringUtils, MatchRequest, MatchResult
+from string-utils import StringUtils, MatchRequest, MatchResult
 from ..ganalytics.main import GoogleAnalytics
 
 interface StringUtilsRestrictedIface {

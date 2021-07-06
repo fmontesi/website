@@ -1,6 +1,6 @@
 from .dblp.main import DBLP
-from .string_utils.main import StringUtilsSrv
-from .format_converter.main import FormatConverter
+from .string-utils-srv import StringUtilsSrv
+from .format-converter import FormatConverter
 from .hooks.main import PreResponseHook, PostResponseHook
 from runtime import Runtime
 
