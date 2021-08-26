@@ -239,3 +239,24 @@ h3 {
 .people-list > li > img {
 	height:100px;
 }
+
+.fm-year-dl {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	overflow: visible;
+}
+
+.fm-year-dl dt {
+	flex: 0 0 10%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.fm-year-dl dd {
+	flex: 0 0 90%;
+	margin-left: auto;
+	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
