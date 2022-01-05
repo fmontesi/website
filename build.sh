@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build . -f docker/Dockerfile.local -t fmontesi/website
+docker build . -f docker/Dockerfile -t fmontesi/website
