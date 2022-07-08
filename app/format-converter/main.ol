@@ -1,4 +1,4 @@
-from ..ganalytics.main import GoogleAnalytics
+from ganalytics.main import GoogleAnalytics
 from json_utils import JsonUtils
 from xml_utils import XmlUtils
 

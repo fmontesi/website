@@ -1,5 +1,5 @@
 interface GoogleAnalyticsIface {
-	RequestResponse: collect
+RequestResponse: collect
 }
 
 service GoogleAnalytics {

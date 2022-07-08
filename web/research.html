@@ -1,9 +1,6 @@
-<!--Themed-->
-<!-- 
-<div class="container align-items-center justify-content-center w-100">
-	<img class="rounded img-fluid" width="800" src="/images/research-header.jpeg" />
-</div> -->
-
+{{< fm-page.html}}
+{{$title}}Research | Fabrizio Montesi{{/title}}
+{{$content}}
 <div class="container">
 	<h1>Research</h1>
 	<p>
@@ -205,7 +202,28 @@
 <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Montesi:Fabrizio.html">My page in DBLP</a> | <a href="http://scholar.google.com/citations?user=zRA6uA4AAAAJ">My profile in Google Scholar</a>
 </p>
 
-<!--PublicationsList-->
+<ul class="PubList" id="papers_list">
+{{#collections}}
+	<li style="list-style-type: none; margin-left: -2.5em">
+		<h3>{{title}}</h3>
+	</li>
+	{{#papers}}
+		<li style="margin-bottom: 1em;" class="d-flex">
+		<span style="float:left; width:80%">{{{title}}}
+		<br/>
+		<a class="text-primary" style="cursor:pointer" data-toggle="collapse" data-target="#bibItem-{{id}}">Bibtex</a>
+		|
+		{{#links}}
+			<a class="text-primary" href="{{link}}">{{name}}</a>
+			{{^last}} | {{/last}}
+		{{/links}}
+		<div id="bibItem-{{id}}" class="collapse panel panel-default">
+		<div class="panel-body"><pre>{{bibitem}}</pre></div></div>
+		</span>
+		</li>
+	{{/papers}}
+{{/collections}}
+</ul>
 
 </div>
 
@@ -300,3 +318,5 @@ function showItem( elm )
 </div>
 
 </div>
+{{/content}}
+{{/fm-page.html}}
