@@ -107,7 +107,7 @@ service Main {
 					cacheControl.maxAge = getResult.cacheControl.maxAge
 				}
 
-				webPath = substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )
+				substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )( webPath )
 				if( getResult.format == "html" ) {
 					if( is_defined( global.dataBindings.(webPath) ) ) {
 						invoke@reflection( {
