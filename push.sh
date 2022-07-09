@@ -1,4 +1,4 @@
 #!/bin/sh
 
-docker build . -f docker/Dockerfile -t fmontesi/website
+./build.sh
 docker push fmontesi/website

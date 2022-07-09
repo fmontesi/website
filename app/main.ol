@@ -12,6 +12,7 @@ from reflection import Reflection
 from .acp import ACPSrv
 from .acp import GetCollectionsResponse
 from ganalytics import GoogleAnalytics
+from .dblp-utils import DblpUtils
 
 type HelloRequest {
 	name:string
@@ -43,6 +44,7 @@ service Main {
 	embed Reflection as reflection
 	embed ACPSrv as acp
 	embed GoogleAnalytics as ga
+	// embed DblpUtils as dblpUtils
 
 	inputPort WebInput {
 		location: "socket://localhost:8080"
