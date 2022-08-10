@@ -49,9 +49,9 @@ service Main {
 	inputPort WebInput {
 		location: "socket://localhost:8080"
 		protocol: http {
-			format -> format
-			contentType -> contentType
-			cacheControl.maxAge -> cacheControl.maxAge
+			format -> httpParams.format
+			contentType -> httpParams.contentType
+			cacheControl.maxAge -> httpParams.cacheControl.maxAge
 			redirect -> redirect
 			statusCode -> statusCode
 			default.get = "get"
@@ -103,14 +103,10 @@ service Main {
 					target = request.operation
 					wwwDir = global.wwwDir
 				} )( getResult )
-				format = getResult.format
-				contentType = getResult.mimeType
-				if( is_defined( getResult.cacheControl ) ) {
-					cacheControl.maxAge = getResult.cacheControl.maxAge
-				}
+				httpParams -> getResult.httpParams
 
 				substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )( webPath )
-				if( getResult.format == "html" ) {
+				if( getResult.httpParams.format == "html" ) {
 					if( is_defined( global.dataBindings.(webPath) ) ) {
 						invoke@reflection( {
 							operation = global.dataBindings.(webPath)
