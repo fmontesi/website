@@ -2,7 +2,7 @@ from console import Console
 from time import Time
 
 constants {
-	RefreshTimeout = 60000 // 1 min
+	RefreshTimeout = 600000 // 10 mins
 }
 
 type GetCollectionsResponse {
