@@ -1,5 +1,8 @@
+<audio id="beep-audio" preload="auto">
+	<source src="audio/beep.mp3"></source>
+	<source src="audio/beep.ogg"></source>
+</audio>
 <script type="text/javascript">
-// $("#fm-navbar").show();
 $(".fm-navbar-toggler").click( function() {
 	$("#fm-menu").toggle(500);
 });
@@ -10,13 +13,26 @@ $("#fm-menu").click( function() {
 
 $(".nav-link").mouseenter( function() {
 	$( this ).toggleClass( "nav-active" );
-	// $( "#nav-active-gradient animate" )[0].beginElement();
-	// $( "#nav-active-gradient animate" )[1].beginElement();
 });
 
 $(".nav-link").mouseleave( function() {
 	$( this ).toggleClass( "nav-active" );
 });
+
+$("#fm-menu a")
+	.each(function(i) {
+		if (i != 0) {
+			$("#beep-audio")
+				.clone()
+				.attr("id", "beep-audio" + i)
+				.appendTo($(this).parent());
+		}
+		$(this).data("beeper", i);
+	})
+	.mouseenter(function() {
+		$("#beep-audio" + $(this).data("beeper"))[0].play();
+	});
+$("#beep-audio").attr("id", "beep-audio0");
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
