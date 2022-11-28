@@ -51,7 +51,10 @@
 		"pdf": "lmz13"
 	},
 	"conf/sac/Montesi13": {
-		"pdf": "m13"
+		"pdf": "m13",
+		"notes": [
+			{ "text":"<strong>Best Poster Award</strong>" }
+		]
 	},
 	"conf/concur/MontesiY13": {
 		"pdf": "my13"
@@ -96,5 +99,176 @@
 	},
 	"conf/birthday/LaneseMZ15": {
 		"pdf": "lmz15"
+	},
+	"journals/corr/Cruz-FilipeLM16": {
+		"peerReviewedVersion": "conf/fossacs/Cruz-FilipeLM17"
+	},
+	"journals/corr/MontesiW16": {
+		"pdf": "mw16"
+	},
+	"journals/corr/DragoniGLMMMS16": {
+		"pdf": "dglmmms16",
+		"peerReviewedVersion": "books/sp/17/DragoniGLMMMS17"
+	},
+	"journals/corr/Cruz-FilipeM16a": {
+		"peerReviewedVersion": "conf/forte/Cruz-FilipeM16"
+	},
+	"journals/corr/TchitchiginSMEM16": {
+		"pdf": "tsmem16"
+	},
+	"journals/corr/Cruz-FilipeM16": {
+		"peerReviewedVersion": "conf/forte/Cruz-FilipeM17"
+	},
+	"conf/forte/Cruz-FilipeM16": {
+		"pdf": "cm16_forte"
+	},
+	"conf/facs2/Cruz-FilipeM16": {
+		"pdf": "cm16_facs"
+	},
+	"conf/concur/CarboneLMSW16": {
+		"pdf": "clmsw16"
+	},
+	"conf/birthday/GabbrielliGGMM16": {
+		"pdf": "gggmm16"
+	},
+	"conf/aina/SafinaMMR16": {},
+	"journals/scp/Montesi16": {
+		"pdf": "m16"
+	},
+	"journals/ftpl/AnconaBB0CDGGGH16": {
+		"pdf": "btipl"
+	},
+	"journals/corr/abs-1712-05465": {},
+	"journals/corr/abs-1711-10201": {
+		"peerReviewedVersion": "conf/sac/Cruz-FilipeMP18"
+	},
+	"journals/corr/abs-1711-08700": {},
+	"journals/corr/GuidiLMM17": {
+		"peerReviewedVersion": "books/sp/17/GuidiLMM17"
+	},
+	"books/sp/17/DragoniGLMMMS17": {
+		"pdf": "dglmmms17"
+	},
+	"journals/corr/abs-1711-11211": {
+		"pdf": "cm17-ice"
+	},
+	"conf/sac/Cruz-FilipeM17": {
+		"pdf": "cm17_sac"
+	},
+	"conf/fossacs/Cruz-FilipeLM17": {
+		"pdf": "clm17"
+	},
+	"conf/forte/Montesi17": {
+		"pdf": "m17_forte"
+	},
+	"conf/forte/Cruz-FilipeM17": {
+		"pdf": "cm17-forte"
+	},
+	"conf/dais/MontesiT17": {
+		"pdf": "mt17_forte"
+	},
+	"journals/acta/CarboneMSY17": {
+		"pdf": "cmsy17"
+	},
+	"journals/corr/abs-1811-02209": {
+		"peerReviewedVersion": "journals/pacmpl/KokkeMP19"
+	},
+	"journals/corr/abs-1808-05088": {
+		"peerReviewedVersion": "conf/lopstr/CarboneCMM18"
+	},
+	"journals/corr/abs-1904-06848": {
+		"pdf": "kmp18"
+	},
+	"conf/sac/MontesiW18": {
+		"pdf": "mw18"
+	},
+	"conf/sac/Cruz-FilipeMP18": {
+		"pdf": "cmp18"
+	},
+	"conf/lopstr/CarboneCMM18": {
+		"pdf": "ccmm18"
+	},
+	"conf/forte/GiallorenzoMG18": {
+		"pdf": "gmg18"
+	},
+	"journals/dc/CarboneMS18": {
+		"pdf": "cms18"
+	},
+	"journals/corr/abs-1903-07962": {
+		"peerReviewedVersion": "conf/coordination/GabbrielliGLMPZ19"
+	},
+	"conf/IEEEscc/GiallorenzoMSZ19": {
+		"pdf": "gmsz19"
+	},
+	"journals/pacmpl/KokkeMP19": {
+		"pdf": "kmp19"
+	},
+	"journals/corr/abs-2005-09520": {
+		"pdf": "gmp20"
+	},
+	"conf/microservices/2019": {
+		"pdf": "cgmprs19"
+	},
+	"conf/birthday/GiallorenzoLMSZ20": {
+		"pdf": "glmsz20"
+	},
+	"journals/tcs/Cruz-FilipeM20": {
+		"pdf": "cm20"
+	},
+	"journals/corr/abs-2111-03701": {
+		"peerReviewedVersion": "conf/ictac/Cruz-FilipeGLMP22"
+	},
+	"journals/corr/abs-2106-11818": {},
+	"journals/corr/abs-2104-02458": {
+		"peerReviewedVersion": "conf/coordination/GiallorenzoMPRS21"
+	},
+	"journals/corr/abs-2103-09518": {
+		"peerReviewedVersion": "conf/IEEEscc/MontesiPP21"
+	},
+	"journals/corr/abs-2102-10698": {
+		"peerReviewedVersion": "conf/ictac/Cruz-FilipeMP21"
+	},
+	"journals/corr/abs-2102-02627": {
+		"peerReviewedVersion": "conf/itp/Cruz-FilipeMP21"
+	},
+	"conf/itp/Cruz-FilipeMP21": {
+		"pdf": "cmp21"
+	},
+	"conf/ictac/Cruz-FilipeMP21": {
+		"pdf": "cmp21b"
+	},
+	"conf/ecoop/GiallorenzoMPRS21": {
+		"pdf": "gmprs21",
+		"notes": [
+			{ "text": "<strong>Distinguished Paper Award</strong>" }
+		]
+	},
+	"conf/coordination/GiallorenzoMPRS21": {
+		"pdf": "gmprs21"
+	},
+	"conf/IEEEscc/MontesiPP21": {
+		"pdf": "mpp21"
+	},
+	"journals/corr/abs-2207-08884": {
+		"peerReviewedVersion": "conf/lopstr/KjaerCM22"
+	},
+	"journals/corr/abs-2202-11397": {
+		"peerReviewedVersion": "conf/coordination/GiallorenzoMPR22"
+	},
+	"conf/esocc/2022": {},
+	"conf/lopstr/KjaerCM22": {
+		"pdf": "kcm22"
+	},
+	"conf/ictac/Cruz-FilipeGLMP22": {
+		"pdf": "cglmp22"
+	},
+	"conf/coordination/GiallorenzoMPR22": {
+		"pdf": "gmpr22"
+	},
+	"journals/peerj-cs/BerardiGMMMP22": {
+		"pdf": "bgmmmp22"
+	},
+	"journals/peerj-cs/GiallorenzoMSZ22": {
+		"pdf": "gmsz22"
 	}
 }

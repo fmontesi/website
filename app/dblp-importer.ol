@@ -36,6 +36,9 @@ type PublicationDataset {
 			bibtex: string
 			pdf?: string
 			peerReviewedVersion?: string
+			notes* {
+				text: string
+			}
 		}
 	}
 }
@@ -83,6 +86,12 @@ service Utils {
 			filename = "publications-extension.json"
 			format = "json"
 		} )( publicationsExtension )
+
+		// Store all (for now) unused keys
+		foreach( key : publicationsExtension ) {
+			extraKeys.(key) = false
+		}
+
 		getLocalLocation@runtime()( self.location )
 	}
 
@@ -117,17 +126,27 @@ service Utils {
 
 			if( is_defined( publicationsExtension.(entry.key) ) ) {
 				extraData << publicationsExtension.(entry.key)
-				entry.pdf = extraData.pdf
+
+				if( is_defined( extraData.pdf ) )
+					entry.pdf = extraData.pdf
+
 				if( is_defined( extraData.peerReviewedVersion ) )
 					entry.peerReviewedVersion = extraData.peerReviewedVersion
+				
+				if( is_defined( extraData.notes ) )
+					entry.notes << extraData.notes
 			}
 		} ]
 
-		[ title( rawTitle )( title ) {
-			title =
-				if( endsWith@su( rawTitle { suffix = "." } ) )
-					substring@su( rawTitle { })
-		} ]
+		[ title( rawTitle )(
+			if( endsWith@su( rawTitle { suffix = "." } ) )
+				substring@su( rawTitle {
+					begin = 0
+					end = length@su( rawTitle ) - 1
+				} )
+			else
+				rawTitle
+		) ]
 
 		[ where( r )( where ) {
 			where = 
