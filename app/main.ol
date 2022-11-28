@@ -9,10 +9,11 @@ from string-utils import StringUtils
 from leonardo import WebFiles
 from mustache import Mustache
 from reflection import Reflection
-from .acp import ACPSrv
-from .acp import GetCollectionsResponse
+// from .acp import ACPSrv
+// from .acp import GetCollectionsResponse
 from ganalytics import GoogleAnalytics
-from .dblp-utils import DblpUtils
+// from .dblp-utils import DblpUtils
+from .dblp-importer import PublicationDataset
 
 type HelloRequest {
 	name:string
@@ -26,7 +27,7 @@ RequestResponse:
 
 interface MustacheOperations {
 RequestResponse:
-	publications( void )( GetCollectionsResponse )
+	publications( void )( PublicationDataset )
 }
 
 service Main {
@@ -42,7 +43,7 @@ service Main {
 	embed File as file
 	embed StringUtils as stringUtils
 	embed Reflection as reflection
-	embed ACPSrv as acp
+	// embed ACPSrv as acp
 	embed GoogleAnalytics as ga
 	// embed DblpUtils as dblpUtils
 
@@ -149,28 +150,11 @@ service Main {
 			}
 		}
 
-		[ hello( request )( response ) {
-			template = "
-				{{< fm-page.html}}
-				{{$content}}
-				<div class=\"container\">
-				Hello {{name}}. Your name's length is {{length}}.
-				</div>
-				{{/content}}
-				{{/fm-page.html}}
-			"
-			render@mustache( {
-				template -> template
-				data << {
-					name = request.name
-					length = length@stringUtils( request.name )
-				}
-				dir = global.templatesDir
-			} )( response )
-		} ]
-
 		[ publications()( response ) {
-			getCollections@acp()( response )
+			readFile@file( {
+				filename = "publications.json"
+				format = "json"
+			} )( response )
 		} ]
 	}
 }

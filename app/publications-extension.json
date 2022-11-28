@@ -1,0 +1,100 @@
+{
+	"conf/popl/CarboneM13": {
+		"pdf": "cm13"
+	},
+	"conf/ecows/MontesiGZ07": {
+		"pdf": "mgz07"
+	},
+	"journals/entcs/MontesiGLZ07": {
+		"pdf": "mglz07"
+	},
+	"conf/sefm/LaneseGMZ08": {
+		"pdf": "lgmz08"
+	},
+	"conf/ecows/MontesiGLZ08": {
+		"pdf": "mglz08"
+	},
+	"conf/acsd/GuidiLMZ08": {
+		"pdf": "glmz08"
+	},
+	"journals/corr/abs-0906-3920": {
+		"pdf": "gm09"
+	},
+	"journals/fuin/GuidiLMZ09": {
+		"pdf": "glmz09"
+	},
+	"conf/tgc/LaneseBM10": {
+		"pdf": "lbm10"
+	},
+	"conf/tgc/MontesiS10": {
+		"pdf": "ms10"
+	},
+	"conf/isola/LaneseM10": {
+		"pdf": "lm10"
+	},
+	"conf/icsoc/MontesiC11": {
+		"pdf": "mc11"
+	},
+	"conf/coordination/MauroGGM11": {
+		"pdf": "mggm11"
+	},
+	"journals/corr/abs-1302-6331": {
+		"pdf": "mc11"
+	},
+	"conf/soca/PredaGGMM12": {
+		"pdf": "dggmm12"
+	},
+	"conf/esocc/PredaGGMM12": {
+		"pdf": "dggmm12b"
+	},
+	"journals/corr/LaneseMZ13": {
+		"pdf": "lmz13"
+	},
+	"conf/sac/Montesi13": {
+		"pdf": "m13"
+	},
+	"conf/concur/MontesiY13": {
+		"pdf": "my13"
+	},
+	"journals/corr/Montesi14": {
+		"pdf": "m14",
+		"peerReviewedVersion": "journals/scp/Montesi16"
+	},
+	"books/sp/wsf14/MontesiGZ14": {
+		"pdf": "mgz14"
+	},
+	"conf/dcai/GabbrielliGM14": {
+		"pdf": "ggm14"
+	},
+	"conf/coordination/CarboneDM14": {
+		"pdf": "cdm14"
+	},
+	"conf/concur/CarboneMS14": {
+		"pdf": "cms14"
+	},
+	"journals/corr/SafinaMM15": {
+		"pdf": "smm15",
+		"peerReviewedVersion": "conf/aina/SafinaMMR16"
+	},
+	"journals/corr/GabbrielliGM15": {
+		"pdf": "ggm15",
+		"peerReviewedVersion": "conf/forte/GiallorenzoMG18"
+	},
+	"journals/corr/Cruz-FilipeM15": {
+		"pdf": "cm15",
+		"peerReviewedVersion": "journals/tcs/Cruz-FilipeM20"
+	},
+	"journals/corr/Montesi15": {
+		"pdf": "m15",
+		"peerReviewedVersion": "conf/wsfm/Montesi15"
+	},
+	"conf/wsfm/Montesi15": {
+		"pdf": "m15"
+	},
+	"conf/concur/CarboneMSY15": {
+		"pdf": "cmsy15"
+	},
+	"conf/birthday/LaneseMZ15": {
+		"pdf": "lmz15"
+	}
+}
