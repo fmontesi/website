@@ -17,7 +17,7 @@ type PublicationDataset {
 	collections* {
 		title: string
 		entries* {
-			id: int
+			id: long
 			key: string
 			title: string
 			year: string
@@ -96,19 +96,18 @@ service Utils {
 	}
 
 	main {
-		[ entry( request )( entry ) {
-			r -> request.r
-			entry.id = request.id
+		[ entry( r )( entry ) {
 			entry.key = r.(Attributes).key
 			entry.year = r.year
 			entry.type = r.type
 			title@self( r.title )( entry.title )
 			where@self( r )( where )
-			if( where instanceof string ) {
-				entry.where = where
-			} else {
-				entry.where = "ERROR"
-			}
+			entry.where =
+				if( where instanceof string )
+			 		where
+				else
+					"ERROR"
+
 			authors@self(
 				if( entry.type == "proceedings" )
 					{ authors -> r.editor }
@@ -233,6 +232,14 @@ service Main {
 	// }
 
 	main {
+		readFile@files( {
+			filename = "publications-manual.json"
+			format = "json"
+		} )( manual )
+		for( collection in manual.collections ) {
+			collections[#collections] << collection
+		}
+
 		getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
 		for( r in dblpPerson.r ) {
 			undef( key )
@@ -251,14 +258,20 @@ service Main {
 			request.items[#request.items] = int(yearKey)
 		}
 		sort@quicksort( request )( sortedYears )
-		id = 0
 		for( year in sortedYears.items ) {
 			collection.title = string(year)
 			for( r in cMap.(year).papers ) {
-				entry@utils( { r << r, id = id++ } )( collection.entries[#collection.entries] )
+				entry@utils( r )( collection.entries[#collection.entries] )
 			}
 			collections[#collections] << collection
 			undef( collection )
+		}
+
+		id = 0
+		for( collection in collections ) {
+			for( entry in collection.entries ) {
+				entry.id = id++
+			}
 		}
 
 		writeFile@files( { filename = "publications.json", format = "json", content << { collections -> collections } } )()

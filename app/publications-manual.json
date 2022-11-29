@@ -1,0 +1,73 @@
+{
+	"collections": [ {
+		"title": "Highlights",
+		"entries": [ {
+			"key": "M23",
+			"title": "Introduction to Choreographies",
+			"year": "2023",
+			"authors": {
+				"name": "Fabrizio Montesi",
+				"last": true
+			},
+			"type": "book",
+			"where": "Cambridge University Press, 2023",
+			"links": [
+				{ "name": "Website", "href": "/introduction-to-choreographies/", "last": true }
+			],
+			"bibtex": "@book{M23,\r\n  title = {{Introduction to Choreographies}},\r\n  author = {Fabrizio Montesi},\r\n  year = 2023,\r\n  publisher = \"Cambridge University Press\",\r\n  note = \"To appear\"\r\n}"
+		}, {
+			"key": "M13:phd",
+			"title": "Choreographic Programming",
+			"year": "2013",
+			"authors": {
+				"name": "Fabrizio Montesi",
+				"last": true
+			},
+			"type": "phd",
+			"where": "PhD Thesis, IT University of Copenhagen, 2013",
+			"links": [
+				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Choreographic_programming", "last": false },
+				{ "name": "EAPLS Best PhD Dissertation Award (2014)", "href": "https://eapls.org/items/1855/", "last": true }
+			],
+			"bibtex": "@PhdThesis{M13:phd,\r\n  author = \"Fabrizio Montesi\",\r\n  title = \"Choreographic {P}rogramming\",\r\n  school = \"IT University of Copenhagen\",\r\n  type = \"Ph.{D}. Thesis\",\r\n  year = 2013,\r\n  note = {\\url{https:\/\/www.fabriziomontesi.com\/files\/choreographic-programming.pdf}}\r\n}",
+			"pdf": "choreographic-programming"
+		}, {
+			"key": "MGZ14",
+			"title": "Service-Oriented Programming with Jolie",
+			"year": "2014",
+			"authors": [ {
+				"name": "Fabrizio Montesi",
+				"last": false
+			}, {
+				"name": "Claudio Guidi",
+				"last": false
+			}, {
+				"name": "Gianluigi Zavattaro",
+				"last": true
+			} ],
+			"type": "incollection",
+			"where": "Book chapter in Web Services Foundations, pp. 81-107, 2014",
+			"links": [
+				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Jolie_(programming_language)", "last": true }
+			],
+			"bibtex": "@incollection{DBLP:books\/sp\/wsf14\/MontesiGZ14,\r\n  author    = {Fabrizio Montesi and\r\n               Claudio Guidi and\r\n               Gianluigi Zavattaro},\r\n  editor    = {Athman Bouguettaya and\r\n               Quan Z. Sheng and\r\n               Florian Daniel},\r\n  title     = {Service-Oriented Programming with Jolie},\r\n  booktitle = {Web Services Foundations},\r\n  pages     = {81--107},\r\n  publisher = {Springer},\r\n  year      = {2014},\r\n  url       = {https:\/\/doi.org\/10.1007\/978-1-4614-7518-7\\_4},\r\n  doi       = {10.1007\/978-1-4614-7518-7\\_4},\r\n  timestamp = {Sat, 19 Oct 2019 19:02:56 +0200},\r\n  biburl    = {https:\/\/dblp.org\/rec\/books\/sp\/wsf14\/MontesiGZ14.bib},\r\n  bibsource = {dblp computer science bibliography, https:\/\/dblp.org}\r\n}",
+			"pdf": "mgz14"
+		}, {
+			"key": "M10",
+			"title": "JOLIE: a Service-oriented Programming Language",
+			"year": "2010",
+			"authors": [ {
+				"name": "Fabrizio Montesi",
+				"last": true
+			} ],
+			"type": "msc",
+			"where": "MSc Thesis, University of Bologna, 2010",
+			"links": [
+				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Jolie_(programming_language)", "last": true }
+			],
+			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}",
+			"pdf": "m10",
+			"notes": { "text": "Best M.Sc. thesis on ICT (General Confederation of Italian Industry)" }
+		} ]
+	} ]
+}

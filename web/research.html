@@ -208,9 +208,7 @@
 	{{#entries}}
 		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex">
 		<span style="float:left; width:80%">
-			{{#authors}}
-				<!-- {{^link}}{{name}}{{/link}} -->
-				{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}.
+			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}.
 			<strong>{{{title}}}.</strong>
 			{{where}}.
 		<br/>

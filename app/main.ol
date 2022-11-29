@@ -150,11 +150,11 @@ service Main {
 			}
 		}
 
-		[ publications()( response ) {
+		[ publications()(
 			readFile@file( {
 				filename = "publications.json"
 				format = "json"
-			} )( response )
-		} ]
+			} )
+		) ]
 	}
 }
