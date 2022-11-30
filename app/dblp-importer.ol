@@ -239,6 +239,7 @@ service Main {
 		for( collection in manual.collections ) {
 			collections[#collections] << collection
 		}
+		undef( collection )
 
 		getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
 		for( r in dblpPerson.r ) {
