@@ -125,30 +125,33 @@ service Main {
 					response -> getResult.content
 				}
 			}
-		} ] {
+		} ]
+		/* {
 			endsWith@stringUtils( webPath { suffix = ".pdf" } )( isPdf )
 			if( isPdf ) {
 				contains@stringUtils( webPath { substring = "files" } )( isPub )
 				contains@stringUtils( webPath { substring = "teaching" } )( isTeaching )
 				if( isTeaching ) {
-					ec = "Teaching"
+					en = "download_teaching"
 				} else if( isPub ) {
-					ec = "Publications"
+					en = "download_publications"
 				} else {
-					ec = "Others"
+					en = "download_others"
 				}
 				split@stringUtils( webPath { regex = "/" } )( result )
 				collect@ga( {
-					v = 1
-					tid = "UA-53616744-1"
-					cid = 555
-					t = "event"
-					ec = ec
-					ea = "Download"
-					el = result.result[ #result.result - 1 ]
+					v = 2
+					tid = "G-4PF4QHJMB8"
+					// cid = 555
+					// ec = ec
+					en = en
+					dt = result.result[ #result.result - 1 ]
+					// dl = "https://www.fabriziomontesi.com/research.html"
+					// dr = "https://www.fabriziomontesi.com/"
 				} )()
 			}
 		}
+		*/
 
 		[ publications()(
 			readFile@file( {
