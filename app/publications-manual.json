@@ -14,7 +14,7 @@
 			"links": [
 				{ "name": "Website", "href": "/introduction-to-choreographies/", "last": true }
 			],
-			"bibtex": "@book{M23,\r\n  title = {{Introduction to Choreographies}},\r\n  author = {Fabrizio Montesi},\r\n  year = 2023,\r\n  publisher = \"Cambridge University Press\",\r\n  note = \"To appear\"\r\n}"
+			"bibtex": "@book{M23,\r\n  place={Cambridge},\r\n  title={Introduction to Choreographies},\r\n  publisher={Cambridge University Press},\r\n  author={Montesi, Fabrizio},\r\n  year={2023}\r\n}"
 		}, {
 			"key": "M13:phd",
 			"title": "Choreographic Programming",
