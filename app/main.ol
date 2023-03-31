@@ -116,6 +116,42 @@ service Main {
 					} else {
 						data << {}
 					}
+					data.menu.col1 << {
+						item[0] << {
+							text = "Home"
+							link = "/index.html"
+						}
+						item[1] << {
+							text = "Research"
+							link = "/research.html"
+						}
+						item[2] << {
+							text = "Teaching"
+							link = "/teaching.html"
+						}
+						item[3] << {
+							text = "Blog"
+							link = "https://fmontesi.github.io"
+						}
+					}
+					data.menu.col2 << {
+						item[0] << {
+							text = "Book"
+							link = "/introduction-to-choreographies/"
+						}
+						item[1] << {
+							text = "People"
+							link = "/people.html"
+						}
+						item[2] << {
+							text = "Projects"
+							link = "/projects/"
+						}
+						item[3] << {
+							text = "Tools"
+							link = "/tools.html"
+						}
+					}
 					render@mustache( {
 						template -> getResult.content
 						data -> data

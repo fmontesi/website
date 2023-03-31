@@ -114,108 +114,62 @@
 				<!-- </stop> -->
 				<!-- <animate attributeName="x2" dur="300ms" from="0" to="100" begin="indefinite" fill="freeze" /> -->
 			</linearGradient>
+			<g id="fm-menu-shape">
+				<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
+					id="border" />
+				<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
+					id="fill" />
+			</g>
 		</defs>
 	</svg>
 	<div id="fm-menu" style="display:none">
-	<div class="container h-100 overflow-auto w-100 d-flex align-items-center text-center justify-content-center">
-	<!-- <div class="row w-100 justify-content-center"> -->
-	<div class="col-sm-12 col-md-8 col-lg-6">
+	<div class="container h-100 overflow-auto w-100 d-flex align-items-center text-center justify-content-center col-sm-12 col-md-12 col-lg-12">
+	<div class="row w-100 justify-content-center">
+	{{#menu}}
+	{{#col1}}
+	<div class="col-sm-12 col-md-6 col-lg-6">
 		<ul class="navbar-nav m-auto w-100">
-			<li class="nav-item">
-				<a href="/index.html" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Home</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="/research.html" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Research</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="/projects/" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Projects</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="/teaching.html" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Teaching</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="https://fmontesi.github.io" class="nav-link" target="_new">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Blog</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="/tools.html" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>Tools</span></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="/people.html" class="nav-link">
-				<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-					<g id="shape-bordered">
-					<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-						id="border" />
-					<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-						id="fill" />
-					</g>
-				</svg>
-				<span class="nav-text d-flex align-items-center"><span>People</span></span>
-				</a>
-			</li>
-			<!-- <li class="nav-item"><a href="https://www.jolie-lang.org/" class="nav-link py-0" target="_new">Jolie Language</a></li> -->
+			{{#item}}
+				<li class="nav-item">
+					<a href="{{{link}}}" class="nav-link">
+					<svg viewBox="0 0 300 40" preserveAspectRatio="none">
+						<g>
+							<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
+								id="border" />
+							<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
+								id="fill" />
+						</g>
+					</svg>
+					<span class="nav-text d-flex align-items-center"><span>{{{text}}}</span></span>
+					</a>
+				</li>
+			{{/item}}
 		</ul>
 	</div>
-	<!-- </div> -->
+	{{/col1}}
+	{{#col2}}
+	<div class="col-sm-12 col-md-6 col-lg-6">
+		<ul class="navbar-nav m-auto w-100">
+			{{#item}}
+				<li class="nav-item">
+					<a href="{{{link}}}" class="nav-link">
+					<svg viewBox="0 0 300 40" preserveAspectRatio="none">
+						<g>
+							<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
+								id="border" />
+							<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
+								id="fill" />
+						</g>
+					</svg>
+					<span class="nav-text d-flex align-items-center"><span>{{{text}}}</span></span>
+					</a>
+				</li>
+			{{/item}}
+		</ul>
+	</div>
+	{{/col2}}
+	{{/menu}}
+	</div>
 	</div>
 	</div>
 

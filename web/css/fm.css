@@ -159,7 +159,8 @@ h3 {
 	display: inline-block;
 	vertical-align: middle;
 	color: #ddb55e !important;
-	font-size: 1.5rem;
+	font-size: 1rem;
+	font-size: min(3vw,1.5rem);
 	height: 100%;
 	text-transform: uppercase;
 }
