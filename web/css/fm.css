@@ -60,7 +60,7 @@ h1, h2, h3 {
 	color: #dbd7d7;
 	font-family: "fm-future", sans-serif;
 	font-weight: 200;
-	margin-top: 2rem;
+	/* margin-top: 1rem; */
 	margin-bottom: 1rem;
 
 	background: linear-gradient(#f7e887 0%, #ddb55e 50%);
