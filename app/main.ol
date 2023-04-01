@@ -116,7 +116,7 @@ service Main {
 					} else {
 						data << {}
 					}
-					data.menu.col1 << {
+					data.menu.cols[0] << {
 						item[0] << {
 							text = "Home"
 							link = "/index.html"
@@ -132,9 +132,10 @@ service Main {
 						item[3] << {
 							text = "Blog"
 							link = "https://fmontesi.github.io"
+							break = true
 						}
 					}
-					data.menu.col2 << {
+					data.menu.cols[1] << {
 						item[0] << {
 							text = "Book"
 							link = "/introduction-to-choreographies/"
