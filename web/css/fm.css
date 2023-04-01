@@ -229,7 +229,7 @@ h3 {
 	position: fixed;
 	z-index: 1000;
 	left: 0;
-	top: 30;
+	top: 0;
 }
 
 .fm-navbar a {

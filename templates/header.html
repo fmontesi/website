@@ -148,25 +148,25 @@
 		</nav>
 	</div>
 
-	<div id="fm-menu" style="display:none">
-	<div class="container h-100 overflow-auto w-100 d-flex align-items-center text-center justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-8">
-	<div class="row w-100 justify-content-center">
+	<div id="fm-menu" class="overflow-auto" style="display:none">
+	<div class="container w-100 d-flex align-items-center text-center justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-8">
+	<div class="row w-100 justify-content-center pt-5">
 	{{#menu}}
 	{{#cols}}
 	<div class="col-sm-12 col-md-6 col-lg-6">
-		<ul class="navbar-nav m-auto w-100">
+		<ul class="navbar-nav m-auto w-100" style="list-style-type: none";>
 			{{#item}}
 				<li class="nav-item">
 					<a href="{{{link}}}" class="nav-link">
-					<svg viewBox="0 0 300 40" preserveAspectRatio="none">
-						<g>
-							<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
-								id="border" />
-							<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
-								id="fill" />
-						</g>
-					</svg>
-					<span class="nav-text d-flex align-items-center"><span>{{{text}}}</span></span>
+						<svg viewBox="0 0 300 40" preserveAspectRatio="none">
+							<g>
+								<path d="M9,1 A8,8 0 0,0 1,9 L1,20 30,39 292,39 A8,8 0 0,0 299,32 L299,20 270,1z"
+									id="border" />
+								<path d="M10,4 A7,7 0 0,0 4,6 L4,19 31,36 290,36 A5,5 0 0,0 296,34 L296,21 269,4z"
+									id="fill" />
+							</g>
+						</svg>
+						<span class="nav-text d-flex align-items-center"><span>{{{text}}}</span></span>
 					</a>
 				</li>
 			{{/item}}
