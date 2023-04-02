@@ -133,7 +133,6 @@ service Main {
 							text = "People"
 							link = "/people.html"
 						}
-						
 					}
 					data.menu.cols[1] << {
 						item[0] << {
@@ -141,17 +140,20 @@ service Main {
 							link = "/introduction-to-choreographies/"
 						}
 						item[1] << {
+							text = "Media"
+							link = "/media.html"
+						}
+						item[2] << {
 							text = "Projects"
 							link = "/projects/"
 						}
-						item[2] << {
+						item[3] << {
 							text = "Tools"
 							link = "/tools.html"
 						}
-						item[3] << {
+						item[4] << {
 							text = "Blog"
 							link = "https://fmontesi.github.io"
-							break = true
 						}
 					}
 					render@mustache( {
