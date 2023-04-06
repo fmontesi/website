@@ -1,7 +1,13 @@
 @font-face {
   font-family: 'fm-future';
-  src: url('/fonts/goodtimes.ttf');
+  src: url('/fonts/movement.ttf');
   font-display: swap;
+}
+
+@font-face {
+	font-family: 'fm-trek';
+	src: url('/fonts/goodtimes.ttf');
+	font-display: swap;
 }
 
 /*
@@ -42,6 +48,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	padding-top: 2rem;
 	line-height: 1.5;
+	font-size: 1rem;
 }
 
 a, a:hover {
@@ -56,10 +63,48 @@ a, a:hover {
   /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%); */
 }
 
+.bg-1 {
+	background-color: #231c1c;
+}
+
+.color-2 {
+	color: #ddb55e;
+}
+
+.bg-2 {
+	background-color: #ddb55e;
+}
+
+.filter-2 {
+	filter: brightness(0) saturate(100%) invert(79%) sepia(73%) saturate(393%) hue-rotate(336deg) brightness(91%) contrast(89%);
+}
+
+.bg-3 {
+	background-color: #575e85;
+}
+
+.bg-4 {
+	background-color: #4bbfb4;
+}
+
+.fm-banner-name {
+	font-family: "fm-future", sans-serif;
+	text-align: right;
+	/* font-size: 2rem; */
+	/* font-size: 10vh; */
+	line-height: normal;
+}
+
+.banner {
+	position: relative;
+	top: -3.5rem;
+	height: 100vh;
+}
+
 h1, h2, h3 {
 	color: #dbd7d7;
 	font-family: "fm-future", sans-serif;
-	font-weight: 200;
+	font-weight: 400;
 	/* margin-top: 1rem; */
 	margin-bottom: 1rem;
 
@@ -68,19 +113,25 @@ h1, h2, h3 {
 	-webkit-text-fill-color: transparent;
 }
 
-h2 {
-	font-size: 1.2rem;
+.fm-divider {
+	border-bottom: .1rem solid #dbd7d7;
+	width: 100%;
+	margin-bottom: 1rem;
 }
 
 h1 {
-	font-size: 1.5rem;
-	/* border-bottom: .1rem solid #ddb55e;
-	width: 100%;
-	display: block; */
+	font-size: 2rem;
+	/* border-bottom: .05rem solid #ddb55e; */
+	/* width: 100%; */
+	/* display: block; */
+}
+
+h2 {
+	font-size: 1.8rem;
 }
 
 h3 {
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 #papers_list .text-primary {
@@ -153,6 +204,7 @@ h3 {
 
 .nav-text {
 	font-family: "fm-future";
+	font-weight: 600;
 	position: absolute;
 	top: 0;
 	right: 20%;
@@ -160,7 +212,7 @@ h3 {
 	vertical-align: middle;
 	color: #ddb55e !important;
 	font-size: 1rem;
-	font-size: min(3vw,1.5rem);
+	font-size: min(4vw,1.5rem);
 	height: 100%;
 	text-transform: uppercase;
 }
@@ -200,9 +252,9 @@ h3 {
 
 .navbutton-container {
 	z-index: 20000;
-  background-color: #231c1c;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+  /* background-color: #231c1c; */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
   /* background-image: linear-gradient(to bottom, #231c1c 100%, #231c1c 50%); */
 	/* right: -5rem; */
 	/* max-width: 100%; */
@@ -263,4 +315,12 @@ h3 {
 	text-align: left;
 	text-overflow: ellipsis;
 	overflow: hidden;
+}
+
+@media (min-width: 350px) {
+  .d-mini-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }

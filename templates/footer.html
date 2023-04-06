@@ -34,5 +34,29 @@ $("#fm-menu a")
 	});
 $("#beep-audio").attr("id", "beep-audio0");
 </script>
+<script>
+$( window ).on( "load", function() {
+    mainNav();
+    $(window).scroll(function() {
+        mainNav();
+    });
+    function mainNav() {
+        var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        if (top > 30) {
+			$('.navbutton-container').addClass("bg-1");
+			$('#fm-navbar-links').css("display","flex");
+			$('#fm-navbar-links').stop().animate({
+				"opacity": '1'
+			});
+		} else {
+			$('.navbutton-container').removeClass("bg-1");
+			$('#fm-navbar-links').css("display","none");
+			$('#fm-navbar-links').stop().animate({
+				"opacity": '0'
+			});
+		}
+	}
+     });
+</script>
 </body>
 </html>

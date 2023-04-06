@@ -1,64 +1,113 @@
 {{< fm-page.html}}
 {{$title}}Home | Fabrizio Montesi{{/title}}
+{{$banner}}
+<!-- <div class="w-100 bg-3 text-right" style="position: relative;">
+	<div class="p-2" style="position:absolute; top:0; left: 0; z-index: 10;">
+		<div class="text-left">
+			<p class="fm-banner-name text-left m-0" style="font-size: 7vw; max-width: 40%;">
+				Fabrizio
+				Montesi
+			</p>
+			<p class="text-left mt-3 m-0" style="font-size: 3vw; max-width: 30%;">
+				Computer Scientist
+			</p>
+		</div>
+	</div>
+	<div class="w-100 text-right p-2">
+		<img src="/images/data-choreographies-system.svg" style="max-height: 90vh; max-width: 90%;"/>
+	</div>
+</div> -->
+<div class="container text-right banner">
+	<div class="d-flex h-100 align-items-center text-right">
+		<div class="w-100 text-right" style="position:relative">
+			<div style="position:absolute; top:15px; left: 15px; z-index: 10;">
+				<div class="text-left">
+					<p class="fm-banner-name text-left m-0" style="font-size: min(5.5vw,4.5rem); width: 40%;">
+						Fabrizio
+						Montesi
+					</p>
+					<p class="text-left mt-3 m-0" style="font-size: min(3.3vw,1.8rem); width: 30%;">
+						Computer Scientist
+					</p>
+				</div>
+			</div>
+			<div class="text-right pt-3">
+				<img src="/images/data-choreographies-system.svg" style="max-height: 90vh; max-width: 80%;"/>
+			</div>
+		</div>
+	</div>
+</div>
+{{/banner}}
 {{$content}}
-<div class="container text-justify" style="margin-top: 2rem">
-	<h1>Welcome!</h1>
-	<div class="row align-items-center">
-		<div class="col-sm-8">
-			<p>My name is Fabrizio Montesi.
-				I'm a Professor of Computer Science and IT professional working on programming languages, microservices, web development, cybersecurity, and automated reasoning.
-				<!-- and the
-	  <a href="https://dio.sdu.dk">Digital Innovation Office</a>. -->
+<section class="container text-justify align-items-start">
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			<h1>Welcome!</h1>
+			<p>
+				I'm Fabrizio, a computer science researcher and professor with a passion for programming languages and systems.
+			</p>
+			<p>
+				I develop new methods and technology for programming digital systems, helping people to be more productive and write correct and secure software.
 			</p>
 			<p>
 				Check out the menu on the top-right if you are looking for material about my <a href="/research.html">research</a>, <a href="/projects/">projects</a>, <a href="/teaching.html">education</a>, <a href="/tools.html">tools</a>, or my <a href="https://fmontesi.github.io">blog</a>.
 			</p>
 			<p>
-				I really enjoy working with people. (You can see some of my past and current <a href="/people.html">PhD students and postdocs</a>.)
+				I really enjoy working with people. You can see some of my past and current <a href="/people.html">PhD students and postdocs</a>.
 			</p>
 			<p>
 				If you're interested in chatting about topics I'm interested in, working with me, or you're just curious about
 				something I do, you are very welcome to contact me on any of the following.
 				<table class="social-table">
-				<tr><td><a rel="me" href="https://mastodon.social/@fmontesi"><i class="fab fa-mastodon"></i></a></td><td><a href="https://mastodon.social/@fmontesi">@fmontesi@mastodon.social</a></td></tr>
+				<tr><td><a rel="me" href="https://mastodon.social/@fmontesi"><i class="fab fa-mastodon"></i></a></td><td><a href="https://mastodon.social/@fmontesi">@fmontesi<wbr/>@mastodon.social</a></td></tr>
 				<tr><td><a href="https://twitter.com/famontesi"><i class="fab fa-twitter"></i></a></td><td><a href="https://twitter.com/famontesi">@famontesi</a></td></tr>
 				<tr><td><a href="https://linkedin.com/in/fmontesi"><i class="fab fa-linkedin"></i></a></td><td><a href="https://linkedin.com/in/fmontesi">fmontesi</a></td></tr>
-				<tr><td><a href="https://www.youtube.com/channel/UCHMirV7UOCx-miEzXgcDBeA"><i class="fab fa-youtube"></i></a></td><td><a href="https://www.youtube.com/channel/UCHMirV7UOCx-miEzXgcDBeA">famontesi</a></td></tr>
-				<tr><td><a href="mailto:fmontesi@imada.sdu.dk"><i class="far fa-envelope"></i></a></td><td><a href="mailto:fmontesi@imada.sdu.dk">fmontesi@imada.sdu.dk</a></td></tr>
+				<tr><td><a href="https://www.youtube.com/@fmontesi"><i class="fab fa-youtube"></i></a></td><td><a href="https://www.youtube.com/@fmontesi">fmontesi</a></td></tr>
+				<tr><td><a href="mailto:fmontesi@imada.sdu.dk"><i class="far fa-envelope"></i></a></td><td><a href="mailto:fmontesi@imada.sdu.dk">fmontesi<wbr/>@imada.sdu.dk</a></td></tr>
 				</table>
 			</p>
 		</div>
-		<div class="col-sm-4 text-center">
-			<img src="/images/fm-big-2-opt.jpg" width="80%" class="img-responsive img-fluid" />
+		<div class="col-sm-12 col-md-6 d-flex text-center align-items-start">
+			<img src="/images/fm-big-2-opt.jpg" class="img-responsive img-fluid" style="max-height: 100%;" />
 		</div>
 	</div>
-</div>
-<div class="container"><hr/></div>
-<div class="container text-justify align-items-center">
-	<h3 class="w-100 text-right">Book: Introduction to Choreographies</h3>
-	<div class="row align-items-center">
-		<div class="col-sm-4 text-center">
-			<a href="https://www.cambridge.org/core/books/introduction-to-choreographies/65D3DA3CFF11AB835452CBC97FAE4830">
-				<img src="/images/itc-cover.png" width="80%" class="img-responsive img-fluid"></img>
-			</a>
-			<p><em>Cambridge University Press</em></p>
-		</div>
-		<div class="col-sm-8">
-			<p>
-				Modern society relies on connected digital systems that exchange data for business, entertainment, public services, and social activities.
-				This book introduces principles that aid in the design and development of these systems, improving productivity and correctness (which is crucial for reliability and security).
-			</p>
-			<p>
-				It is a rigorous and systematic introduction to <em>choreographic languages</em> &mdash; formal languages equipped with high-level abstractions for expressing communications &mdash; and their mechanical and reliable implementation by means of <em>endpoint projection</em>.
-			</p>
-			<p><a href="/introduction-to-choreographies/">Read more...</a></p>
-		</div>
-	</div>
-</div>
-<div class="container"><hr/></div>
-<div class="container text-justify">
+			<!-- <p>My name is Fabrizio Montesi.
+				I'm a Professor of Computer Science and IT professional working on programming languages, microservices, web development, cybersecurity, and automated reasoning.
+			</p> -->
+</section>
+<!-- <div class="fm-divider"></div> -->
+<!-- <div class="w-100">
+	<img src="/images/itc-cover.png" width="100%" class="img-responsive img-fluid"></img>
+</div> -->
+<div class="w-100 bg-4">
+<section class="container">
 	<div class="row">
-		<div class="col-sm-8 col-xl-8">
+		<div class="col-sm-12 col-md-6 text-center">
+			<a href="https://www.cambridge.org/core/books/introduction-to-choreographies/65D3DA3CFF11AB835452CBC97FAE4830">
+				<img src="/images/itc-cover.png" width="100%" class="img-responsive img-fluid"></img>
+			</a>
+			<p style="color:white"><em>Cambridge University Press</em></p>
+		</div>
+		<div class="col-sm-12 col-md-6 p-3">
+			<div class="bg-1 p-3">
+				<p><strong>BOOK</strong></p>
+				<h1>Intro<wbr/>duction to Choreo<wbr/>graphies</h1>
+				<p class="text-justify">
+					Modern society relies on connected digital systems that exchange data for business, entertainment, public services, and social activities.
+					This book introduces principles that aid in the design and development of these systems, improving productivity and correctness (which is crucial for reliability and security).
+				</p>
+				<p>
+					It is a rigorous and systematic introduction to <em>choreographic languages</em> &mdash; formal languages equipped with high-level abstractions for expressing communications &mdash; and their mechanical and reliable implementation by means of <em>endpoint projection</em>.
+				</p>
+				<p><a href="/introduction-to-choreographies/">Read more...</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<section class="container text-justify mt-2">
+	<div class="row">
+		<div class="col-sm-9 col-xl-9">
 			<!-- <h3>Open Positions</h3>
 			<p>
 				<ul>
@@ -142,7 +191,7 @@
 				</ul>
 			</p>
 		</div>
-		<div class="col-sm-4 col-xl-4">
+		<div class="col-sm-3 col-xl-3">
 			<!-- <h3><a rel="me" href="https://mastodon.social/@fmontesi"><i class="fab fa-mastodon"></i></a> posts by <a href="https://mastodon.social/@fmontesi" target="_new">@fmontesi</a></h3> -->
 			<!-- <iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="400" height="800" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmastodon.social%2Fusers%2Ffmontesi&theme=dark&size=100&header=false&replies=false&boosts=false"></iframe> -->
 			<h3>Tweets by <a href="https://twitter.com/famontesi" target="_new">@famontesi</a></h3>
@@ -151,6 +200,6 @@
 			</p>
 		</div>
 	</div>
-</div>
+</section>
 {{/content}}
 {{/fm-page.html}}
