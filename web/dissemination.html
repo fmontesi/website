@@ -1,0 +1,109 @@
+{{< fm-page.html}}
+{{$title}}Dissemination | Fabrizio Montesi{{/title}}
+{{$banner}}
+<div class="w-100 banner" style="padding-top: 3.5em">
+	<div class="w-100 h-100" style="position:absolute; top: 0; left: 0; background-image: url(/images/data-choreographies-shot-1.png); background-size: cover; background-position: center; filter: blur(2px);"></div>
+	<div class="container">
+		<div class="col-12 text-right">
+			<span class="fm-banner-text text-left m-0 bg-1 p-1" style="font-size: min(5.5vw,4.5rem);">Dissemination</span>
+			<br/>
+			<span class="mt-3 m-0 p-1 bg-1" style="font-size: min(3.3vw,1.8rem);">Articles, Interviews,<br/>Media, Tutorials, Videos</span>
+		</div>
+	</div>
+</div>
+{{/banner}}
+{{$content}}
+<section class="container">
+	<h1>Dissemination Articles</h1>
+	<!-- <div class="col-12"> -->
+		<p>For academic articles, see <a href="/research.html">research</a>.</p>
+		<ol>
+			{{#articles}}
+				<li><a href="{{{link}}}">{{{text}}}</a>. <em>{{{where}}}</em>, {{{year}}}.<!-- {{#image}}<img src="{{{src}}}" style="max-width:40%"/>{{/image}}-->
+				</li>
+			{{/articles}}
+		</ol>
+	<!-- </div> -->
+</section>
+<section class="container">
+	<h1>Tutorials &amp; Seminars</h1>
+	<p>See also my <a href="https://www.youtube.com/@fmontesi">YouTube channel</a>.</p>
+	<div class="row">
+	{{#presentations}}
+		<div class="col-sm-4 text-center">
+		<iframe class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<br/>
+		{{{text}}}
+		</div>
+	{{/presentations}}
+	</div>
+</section>
+<section class="container">
+	<h1>Interviews</h1>
+	<div class="row">
+	{{#interviews}}
+		{{#link}}
+		<div class="col-sm-4 text-center">
+		<a href="{{{target}}}">{{{text}}}</a> ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
+		</div>
+		{{/link}}
+		{{#link-img}}
+		<div class="col-sm-4 text-center">
+		<a href="{{{target}}}"><img src="{{{img}}}" class="pt-1" style="max-width:100%"/></a><br/>
+		<a href="{{{target}}}">{{{text}}}</a> ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
+		</div>
+		{{/link-img}}
+		{{#video}}
+		<div class="col-sm-4 text-center">
+		<iframe class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<br/>
+		{{{text}}} ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
+		</div>
+		{{/video}}
+	{{/interviews}}
+	</div>
+</section>
+<!-- <section class="container">
+	<h1>Interviews</h1>
+	<table class="table" style="width:100%">
+		<thead>
+			<tr>
+				<th>Year</th>
+				<th>What</th>
+				<th>Where</th>
+				<th>Language</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2023</td>
+				<td>Interview with Nuvolaris Inc.
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/FI30n0RiNlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+				<td>YouTube</td>
+				<td>English 🇬🇧</td>
+			</tr>
+			<tr>
+				<td>2022</td>
+				<td>Interview: <a href="https://www.prosa.dk/fileadmin/user_upload/Prosabladet_202211.pdf">Data og demokrati</a>
+				<img src="/images/prosa-snippet.png"/>
+				</td>
+				<td>PROSA Bladet</td>
+				<td>Danish 🇩🇰</td>
+			</tr>
+			<tr>
+				<td>2022</td>
+				<td>Interview: <a href="https://fyens.dk/fyn/verdensfoerende-computerforsker-paa-fyn-fabrizio-er-med-til-at-udvikle-hjernen-i-din-smartphone">Verdensførende computerforsker på Fyn</a></td>
+				<td>Fyens Stiftstidende</td>
+				<td>Danish 🇩🇰</td>
+			</tr>
+			<tr>
+				<td>2008</td>
+				<td>Interview: <a href="https://dot.kde.org/2008/09/07/interview-jolie-and-service-oriented-computing-explained">JOLIE and Service-Oriented Computing Explained</a></td>
+				<td>KDE.news</td>
+				<td>English 🇬🇧</td>
+			</tr>
+		</tbody>
+	</table>
+</section> -->
+{{/content}}
+{{/fm-page.html}}

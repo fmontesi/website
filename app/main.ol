@@ -27,7 +27,8 @@ RequestResponse:
 
 interface MustacheOperations {
 RequestResponse:
-	publications( void )( PublicationDataset )
+	publications( void )( PublicationDataset ),
+	dissemination
 }
 
 service Main {
@@ -82,6 +83,7 @@ service Main {
 		global.wwwDir = "../web"
 		global.templatesDir = "../templates"
 		global.dataBindings.("/research.html") = "publications"
+		global.dataBindings.("/dissemination.html") = "dissemination"
 		format = "html"
 
 		getLocalLocation@runtime()( self.location )
@@ -126,10 +128,14 @@ service Main {
 							link = "/research.html"
 						}
 						item[2] << {
-							text = "Teaching"
-							link = "/teaching.html"
+							text = "Dissemination"
+							link = "/dissemination.html"
 						}
 						item[3] << {
+							text = "Education"
+							link = "/education.html"
+						}
+						item[4] << {
 							text = "People"
 							link = "/people.html"
 						}
@@ -140,18 +146,14 @@ service Main {
 							link = "/introduction-to-choreographies/"
 						}
 						item[1] << {
-							text = "Media"
-							link = "/media.html"
-						}
-						item[2] << {
 							text = "Projects"
 							link = "/projects/"
 						}
-						item[3] << {
+						item[2] << {
 							text = "Tools"
 							link = "/tools.html"
 						}
-						item[4] << {
+						item[3] << {
 							text = "Blog"
 							link = "https://fmontesi.github.io"
 						}
@@ -196,6 +198,13 @@ service Main {
 		[ publications()(
 			readFile@file( {
 				filename = "publications.json"
+				format = "json"
+			} )
+		) ]
+
+		[ dissemination()(
+			readFile@file( {
+				filename = "dissemination.json"
 				format = "json"
 			} )
 		) ]

@@ -1,0 +1,100 @@
+{
+	"articles": [ {
+		"link": "https://hackernoon.com/how-to-implement-decorator-pattern-in-microservice",
+		"image": { "src": "/images/decorator.jpg" },
+		"year": 2022,
+		"text": "How to Implement the Decorator Pattern in Microservices",
+		"where": "Hackernoon"
+	}, {
+		"text": "Comparing Express With Jolie: Creating a REST Service",
+		"link": "https://dzone.com/articles/comparing-express-and-jolie-backend-for-frontend",
+		"year": 2022,
+		"where": "DZone"
+	}, {
+		"text": "3 Easy Steps for a (Dev)Containerized Microservice With Jolie and Docker",
+		"link": "https://dzone.com/articles/3-easy-steps-for-creating-a-microservice-with-joli",
+		"year": 2022,
+		"where": "DZone"
+	}, {
+		"text": "Decorating Microservices",
+		"link": "https://dzone.com/articles/decorating-microservices",
+		"year": 2022,
+		"where": "DZone"
+	}, {
+		"text": "Build a Microservice in 4 Steps: An Introduction to Jolie",
+		"link": "https://dzone.com/articles/introduction-to-jolie",
+		"year": 2021,
+		"where": "DZone"
+	}, {
+		"text": "A Detailed Introduction to Service-Oriented Programming",
+		"where": "Hackernoon",
+		"year": 2020,
+		"link": "https://hackernoon.com/a-detailed-introduction-to-service-oriented-programming-zx413tsa",
+		"image": { "src": "/images/detailed-intro-sop.jpeg" }
+	}, {
+		"text": "Hack your way through the microservices revolution",
+		"where": "InfoWorld",
+		"year": 2015,
+		"link": "https://www.infoworld.com/article/2903590/hack-your-way-through-the-microservices-revolution.html"
+	} ],
+	"presentations": [ {
+		"text": "Jolie - Making a service",
+		"ytid": "NMCd89HgJSc"
+	}, {
+		"ytid": "YDPcBWLtzNs",
+		"text": "An Introduction to Structured Microservice Programming and the Jolie Programming Language"
+	}, {
+		"ytid": "g_LyBEaTA0M",
+		"text": "Understandable Microservices (Keynote at Microservice 2019)"
+	}, {
+		"ytid": "zx07I-f7ZME",
+		"text": "Multiparty Languages: The Choreographic and Multitier Cases (ECOOP'21 Distinguished Paper)"
+	}, {
+		"ytid": "wpqwCLI5Spk",
+		"text": "Create Quickly a Microservice Project With VS Code DevContainers, Docker, npm, and Jolie"
+	} ],
+	"interviews": [ {
+		"video": {
+			"ytid": "FI30n0RiNlQ",
+			"year": 2023,
+			"text": "Serverless today and tomorrow: an interview with Fabrizio Montesi",
+			"lang": "EN",
+			"where": "Nuvolaris Inc."
+		}
+	}, {
+		"link-img": {
+			"text": "Data og demokrati",
+			"target": "https://www.prosa.dk/fileadmin/user_upload/Prosabladet_202211.pdf",
+			"img": "/images/prosa-snippet.png",
+			"year": 2022,
+			"lang": "DK",
+			"where": "PROSA Bladet"
+		}
+	}, {
+		"link-img": {
+			"target": "https://fyens.dk/fyn/verdensfoerende-computerforsker-paa-fyn-fabrizio-er-med-til-at-udvikle-hjernen-i-din-smartphone",
+			"img": "/images/fyens-portrait-1.jpg",
+			"text": "Verdensførende computerforsker på Fyn",
+			"year": 2022,
+			"lang": "DK",
+			"where": "Fyens Stiftstidende"
+		}
+	}, {
+		"link-img": {
+			"target": "https://fyens.dk/indland/professor-om-talent-fellowship-det-her-er-en-maade-at-investere-i-vores-fremtidige-generationer",
+			"img": "/images/fyens-portrait-2.jpg",
+			"text": "Professor om Talent Fellowship: Det her er en måde at investere i vores fremtidige generationer",
+			"year": 2018,
+			"lang": "DK",
+			"where": "Fyens Stiftstidende"
+		}
+	}, {
+		"link": {
+			"target": "https://dot.kde.org/2008/09/07/interview-jolie-and-service-oriented-computing-explained",
+			"text": "JOLIE and Service-Oriented Computing Explained",
+			"year": 2008,
+			"lang": "EN",
+			"where": "KDE.news"
+		}
+	} ]
+}

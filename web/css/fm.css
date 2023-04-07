@@ -95,10 +95,24 @@ a, a:hover {
 	line-height: normal;
 }
 
+.fm-banner-text {
+	font-family: "fm-future", sans-serif;
+	/* font-size: 2rem; */
+	/* font-size: 10vh; */
+	line-height: normal;
+	font-size: min(5.5vw,4.5rem);
+}
+
 .banner {
 	position: relative;
 	top: -3.5rem;
 	height: 100vh;
+}
+
+.fm-yt {
+	width: 560px;
+	height: 315px;
+	max-width: 100%;
 }
 
 h1, h2, h3 {
