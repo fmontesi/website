@@ -1,22 +1,40 @@
 {{< fm-page.html}}
 {{$title}}Home | Fabrizio Montesi{{/title}}
+{{$head}}
+<style>
+.fm-banner-h {
+	font-size: min(5.5vw,4.5rem);
+}
+
+#banner-img {
+	max-height: 90vh;
+	max-width: 80%;
+}
+
+@media(max-width: 500px) {
+	#banner-img {
+		max-width: 100%;
+	}
+}
+</style>
+{{/head}}
 {{$banner}}
 <div class="container text-right banner">
 	<div class="d-flex h-100 align-items-center text-right">
 		<div class="w-100 text-right" style="position:relative">
 			<div style="position:absolute; top:15px; left: 15px; z-index: 10;">
 				<div class="text-left">
-					<p class="fm-banner-name text-left m-0" style="font-size: min(5.5vw,4.5rem); width: 40%;">
+					<p class="fm-banner-h text-left m-0" style="width: 40%;">
 						Fabrizio
 						Montesi
 					</p>
-					<p class="text-left mt-3 m-0" style="font-size: min(3.3vw,1.8rem); width: 30%;">
+					<p class="fm-banner-text text-left mt-3 m-0" style="font-size: min(3.3vw,1.8rem); width: 30%;">
 						Computer Scientist
 					</p>
 				</div>
 			</div>
 			<div class="text-right pt-3">
-				<img src="/images/data-choreographies-system.svg" style="max-height: 90vh; max-width: 80%;"/>
+				<img src="/images/data-choreographies-system.svg" id="banner-img"/>
 			</div>
 		</div>
 	</div>

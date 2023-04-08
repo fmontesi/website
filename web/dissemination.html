@@ -5,9 +5,9 @@
 	<div class="w-100 h-100" style="position:absolute; top: 0; left: 0; background-image: url(/images/data-choreographies-shot-1.png); background-size: cover; background-position: center; filter: blur(2px);"></div>
 	<div class="container">
 		<div class="col-12 text-right">
-			<span class="fm-banner-text text-left m-0 bg-1 p-1" style="font-size: 2rem;">Dissemination</span>
+			<span class="fm-banner-h text-left m-0 bg-1 p-1" style="font-size: 2rem;">Dissemination</span>
 			<br/>
-			<span class="mt-3 m-0 p-1 bg-1" style="font-size: 1.2rem;">Articles, Interviews,<br/>Media, Tutorials, Videos</span>
+			<span class="fm-banner-text mt-3 m-0 p-1 bg-1" style="font-size: 1.2rem;">Articles, Interviews,<br/>Media, Tutorials, Videos</span>
 		</div>
 	</div>
 </div>
@@ -30,7 +30,7 @@
 	<p>See also my <a href="https://www.youtube.com/@fmontesi">YouTube channel</a>.</p>
 	<div class="row">
 	{{#presentations}}
-		<div class="col-sm-4 text-center">
+		<div class="col-sm-4 text-center mb-3">
 		<iframe class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		<br/>
 		{{{text}}}
@@ -42,24 +42,20 @@
 	<h1>Interviews</h1>
 	<div class="row">
 	{{#interviews}}
+		<div class="col-sm-4 text-center mb-3">
 		{{#link}}
-		<div class="col-sm-4 text-center">
 		<a href="{{{target}}}">{{{text}}}</a> ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
-		</div>
 		{{/link}}
 		{{#link-img}}
-		<div class="col-sm-4 text-center">
-		<a href="{{{target}}}"><img src="{{{img}}}" class="pt-1" style="max-width:100%"/></a><br/>
+		<a href="{{{target}}}"><img src="{{{img}}}" style="width:100%"/></a><br/>
 		<a href="{{{target}}}">{{{text}}}</a> ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
-		</div>
 		{{/link-img}}
 		{{#video}}
-		<div class="col-sm-4 text-center">
-		<iframe class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<iframe class="fm-yt" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		<br/>
 		{{{text}}} ({{{lang}}}), <em>{{{where}}}</em>, {{{year}}}.
-		</div>
 		{{/video}}
+		</div>
 	{{/interviews}}
 	</div>
 </section>
