@@ -90,6 +90,15 @@
 		}
 	}, {
 		"link-img": {
+			"target": "https://www.punto-informatico.it/ricerca-e-impresa-insieme-in-italia-a-volte/",
+			"text": "Ricerca e impresa insieme in Italia. A volte",
+			"img": "/images/punto-informatico.png",
+			"year": 2008,
+			"lang": "IT",
+			"where": "Punto Informatico"
+		}
+	}, {
+		"link-img": {
 			"target": "https://dot.kde.org/2008/09/07/interview-jolie-and-service-oriented-computing-explained",
 			"text": "JOLIE and Service-Oriented Computing Explained",
 			"img": "/images/kde-logo.svg",
