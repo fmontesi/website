@@ -1,17 +1,17 @@
-from .dblp.main import DBLP
-from .string-utils-srv import StringUtilsSrv
-from .format-converter import FormatConverter
+from .private.dblp import DBLP
+from .private.string-utils-srv import StringUtilsSrv
+from .private.format-converter import FormatConverter
 from protocols.http import DefaultOperationHttpRequest
 from runtime import Runtime
 from console import Console
 from file import File
 from string-utils import StringUtils
-from leonardo import WebFiles
+from @jolie.leonardo import WebFiles
 from mustache import Mustache
 from reflection import Reflection
 // from .acp import ACPSrv
 // from .acp import GetCollectionsResponse
-from ganalytics import GoogleAnalytics
+from .private.ganalytics import GoogleAnalytics
 // from .dblp-utils import DblpUtils
 from .dblp-importer import PublicationDataset
 
@@ -80,8 +80,8 @@ service Main {
 	}
 
 	init {
-		global.wwwDir = "../web"
-		global.templatesDir = "../templates"
+		global.wwwDir = "web"
+		global.templatesDir = "templates"
 		global.dataBindings.("/research.html") = "publications"
 		global.dataBindings.("/dissemination.html") = "dissemination"
 		format = "html"
@@ -197,14 +197,14 @@ service Main {
 
 		[ publications()(
 			readFile@file( {
-				filename = "publications.json"
+				filename = "data/publications.json"
 				format = "json"
 			} )
 		) ]
 
 		[ dissemination()(
 			readFile@file( {
-				filename = "dissemination.json"
+				filename = "data/dissemination.json"
 				format = "json"
 			} )
 		) ]

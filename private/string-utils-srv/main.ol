@@ -1,5 +1,5 @@
 from string-utils import StringUtils, MatchRequest, MatchResult
-from ganalytics.main import GoogleAnalytics
+from ..ganalytics import GoogleAnalytics
 
 interface StringUtilsRestrictedIface {
 RequestResponse:

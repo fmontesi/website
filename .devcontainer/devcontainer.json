@@ -1,5 +1,6 @@
 {
-	"image": "jolielang/jolie:edge",
+	"image": "jolielang/jolie:edge-dev",
+	"containerUser": "jolie",
 	"customizations": {
 		"vscode": {
 			"extensions": ["jolie.vscode-jolie"]

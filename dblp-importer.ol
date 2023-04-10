@@ -3,7 +3,7 @@
 from console import Console
 from file import File
 from string-utils import StringUtils
-from quicksort import Quicksort
+from .private.quicksort import Quicksort
 from runtime import Runtime
 
 constants {
@@ -233,7 +233,7 @@ service Main {
 
 	main {
 		readFile@files( {
-			filename = "publications-manual.json"
+			filename = "data/publications-manual.json"
 			format = "json"
 		} )( manual )
 		for( collection in manual.collections ) {
@@ -275,6 +275,6 @@ service Main {
 			}
 		}
 
-		writeFile@files( { filename = "publications.json", format = "json", content << { collections -> collections } } )()
+		writeFile@files( { filename = "data/publications.json", format = "json", content << { collections -> collections } } )()
 	}
 }

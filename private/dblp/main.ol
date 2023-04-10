@@ -1,6 +1,6 @@
 from console import Console
 from string_utils import StringUtils
-from ganalytics.main import GoogleAnalytics
+from ..ganalytics import GoogleAnalytics
 
 constants {
 	Attrs = "@Attributes",
