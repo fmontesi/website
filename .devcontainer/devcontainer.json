@@ -1,0 +1,8 @@
+{
+	"image": "jolielang/jolie:edge",
+	"customizations": {
+		"vscode": {
+			"extensions": ["jolie.vscode-jolie"]
+		}
+	}
+}
