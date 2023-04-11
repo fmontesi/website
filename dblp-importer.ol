@@ -83,7 +83,7 @@ service Utils {
 
 	init {
 		readFile@files( {
-			filename = "publications-extension.json"
+			filename = "data/publications-extension.json"
 			format = "json"
 		} )( publicationsExtension )
 
