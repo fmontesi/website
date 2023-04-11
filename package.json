@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon jolie main.ol"
+    "watch": "nodemon --exec jolie main.ol"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
