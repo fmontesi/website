@@ -1,0 +1,10 @@
+{{> header.html}}
+<div class="container">
+<h1>{{$title}}{{/title}}</h1>
+{{$content}}{{/content}}
+</div>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
+{{> footer.html}}

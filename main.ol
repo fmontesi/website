@@ -7,6 +7,7 @@ from console import Console
 from file import File
 from string-utils import StringUtils
 from @jolie.leonardo import WebFiles
+from @jolie.commonmark import CommonMark
 from mustache import Mustache
 from reflection import Reflection
 // from .acp import ACPSrv
@@ -44,6 +45,7 @@ service Main {
 	embed File as file
 	embed StringUtils as stringUtils
 	embed Reflection as reflection
+	embed CommonMark as commonMark
 	// embed ACPSrv as acp
 	embed GoogleAnalytics as ga
 	// embed DblpUtils as dblpUtils
@@ -102,11 +104,35 @@ service Main {
 						redirect = get.MovedPermanently
 						statusCode = 301
 				)
-				get@webFiles( {
-					target = request.operation
-					wwwDir = global.wwwDir
-				} )( getResult )
+
+				// It's a bliki page request
+				if( match@stringUtils( request.operation { regex = ".*/bliki/[^/\\.]+" } ) ) {
+					request.operation += ".md"
+				}
+
+				scope( markdown ) {
+					install( FileNotFound =>
+						if( endsWith@stringUtils( request.operation { suffix = ".html" } ) ) {
+							println@console( "Could try md" )()
+						} else if ( endsWith@stringUtils( request.operation { suffix = "/" } ) ) {
+							println@console( "Could try index.md" )()
+						} else {
+							throw FileNotFound( markdown.FileNotFound )
+						}
+					)
+					get@webFiles( {
+						target = request.operation
+						wwwDir = global.wwwDir
+					} )( getResult )
+				}
 				httpParams -> getResult.httpParams
+
+				if( endsWith@stringUtils( getResult.path { suffix = ".md" } ) ) {
+					getResult.httpParams.format = "html"
+					getResult.httpParams.contentType = "text/html"
+					// getResult.content = string( getResult.content )
+					getResult.content = render@commonMark( string( getResult.content ) )
+				}
 
 				substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )( webPath )
 				if( getResult.httpParams.format == "html" ) {
@@ -163,6 +189,10 @@ service Main {
 						data -> data
 						dir = global.templatesDir
 					} )( response )
+
+					// if( endsWith@stringUtils( getResult.path { suffix = ".md" } ) ) {
+					// 	render@commonMark( response )( response )
+					// }
 				} else {
 					response -> getResult.content
 				}

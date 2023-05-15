@@ -16,11 +16,14 @@
   },
   "jolie": {
     "dependencies": {
-      "@jolie/leonardo": "0.4.1"
+      "@jolie/leonardo": "0.4.1",
+      "@jolie/commonmark": "0.1.0"
     },
     "maven": {
       "dependencies": {},
-      "indirectDependencies": {}
+      "indirectDependencies": {
+        "org.commonmark:commonmark": "0.21.0"
+      }
     }
   }
 }
