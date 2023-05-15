@@ -29,7 +29,8 @@ RequestResponse:
 interface MustacheOperations {
 RequestResponse:
 	publications( void )( PublicationDataset ),
-	dissemination
+	dissemination,
+	blikiIndex
 }
 
 service Main {
@@ -86,6 +87,7 @@ service Main {
 		global.templatesDir = "templates"
 		global.dataBindings.("/research.html") = "publications"
 		global.dataBindings.("/dissemination.html") = "dissemination"
+		global.dataBindings.("/bliki/index.html") = "blikiIndex"
 		format = "html"
 
 		getLocalLocation@runtime()( self.location )
@@ -106,20 +108,22 @@ service Main {
 				)
 
 				// It's a bliki page request
-				if( match@stringUtils( request.operation { regex = ".*/bliki/[^/\\.]+" } ) ) {
+				if( match@stringUtils( request.operation { regex = ".*bliki/[^/\\.]+" } ) ) {
 					request.operation += ".md"
 				}
 
 				scope( markdown ) {
-					install( FileNotFound =>
-						if( endsWith@stringUtils( request.operation { suffix = ".html" } ) ) {
-							println@console( "Could try md" )()
-						} else if ( endsWith@stringUtils( request.operation { suffix = "/" } ) ) {
-							println@console( "Could try index.md" )()
-						} else {
-							throw FileNotFound( markdown.FileNotFound )
-						}
-					)
+					// println@console( request.operation )()
+					// install( FileNotFound =>
+					// 	// if( endsWith@stringUtils( request.operation { suffix = ".html" } ) ) {
+					// 	// 	println@console( "Could try md" )()
+					// 	// } else
+					// 	if ( endsWith@stringUtils( request.operation { suffix = "/" } ) ) {
+							
+					// 	} else {
+					// 		throw FileNotFound( markdown.FileNotFound )
+					// 	}
+					// )
 					get@webFiles( {
 						target = request.operation
 						wwwDir = global.wwwDir
@@ -238,5 +242,26 @@ service Main {
 				format = "json"
 			} )
 		) ]
+
+		[ blikiIndex()( response ) {
+			list@file( {
+				directory = "web/bliki"
+				regex = ".+\\.md"
+				order.byname = true
+			} )( listResponse )
+			i = 0
+			for( result in listResponse.result ) {
+				match@stringUtils( result {
+					regex = "([^\\.]+)\\.md"
+				} )( matchResult )
+				if( matchResult.group[1] instanceof string ) {
+					name = matchResult.group[1]
+					response.entries[ i++ ] << {
+						text = name
+						link = name
+					}
+				}
+			}
+		} ]
 	}
 }
