@@ -2,7 +2,7 @@
 
 This page lists expert reviewers on different aspects of [choreographic programming](/bliki/ChoreographicProgramming). If you are looking for a reviewer, they might be able to help you directly or suggest an expert. The list is ordered alphabetically on surnames.
 
-If you know of a person that should be added to or removed from the list (including yourself), please feel free to edit this file and make a pull request. Please make sure that the person in question is ok with the action.
+If you know of a person that should be added to or removed from the list (including yourself), please feel free to [edit this file on the web and make a pull request](https://github.com/fmontesi/website/blob/master/web/bliki/ChoreographicProgrammingReviewers.md). Please make sure that the person in question is ok with the action.
 
 - [Matteo Acclavio](https://matteoacclavio.com/)
 - [Marco Carbone](https://carbonem.github.io/)
