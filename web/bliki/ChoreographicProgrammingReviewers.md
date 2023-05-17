@@ -9,7 +9,7 @@ If you know of a person that should be added to or removed from the list (includ
 - [Luís Cruz-Filipe](https://www.sdu.dk/staff/lcf)
 - [Saverio Giallorenzo](https://saveriogiallorenzo.com/)
 - [Eva Graversen](https://www.sdu.dk/staff/efgraversen)
-- [Andrew Hirsch](https://akhirsch.science/)
+- [Andrew K. Hirsch](https://akhirsch.science/)
 - [Hugo Andrés López](http://lopezacosta.net/)
 - [Sung-Shik Jongmans](https://sungshik.github.io/)
 - [Lindsey Kuper](https://decomposition.al/)
