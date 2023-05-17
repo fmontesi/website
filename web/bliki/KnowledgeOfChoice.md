@@ -2,7 +2,7 @@
 
 This page is still under construction.
 
-A [choreography](Choreography) has the **knowledge of choice** property if it ensures that all participants are aware of which alternative behaviours are chosen at runtime [[Montesi 2023]](#M23). The name 'knowledge of choice' was introduced by [Castagna et al. [2012]](#CDP12) in the context of multiparty session types, but the problem is much older and applies to all [choreographic languages](ChoreographicLanguage).
+A [choreography](Choreography) has the **knowledge of choice** property if it ensures that all participants are aware of which alternative behaviours are chosen at runtime [[Montesi 2023]](#M23). The name 'knowledge of choice' was introduced by [Castagna et al. [2012]](#CDP12) in the context of multiparty session types, but the problem is older and applies to all [choreographic languages](ChoreographicLanguage).
 
 ## The problem
 
