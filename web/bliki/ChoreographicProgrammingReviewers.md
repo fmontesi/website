@@ -18,6 +18,5 @@ If you know of a person that should be added to or removed from the list (includ
 - [Marco Peressotti](https://marcoperessotti.com/)
 - [Dan Plyukhin](https://dplyukhin.github.io/)
 - [Larisa Safina](https://lsafina.github.io/)
-- [Nobuko Yoshida](https://www.cs.ox.ac.uk/people/nobuko.yoshida/)
 
 <!-- --> {{/content}}{{/fm-bliki.html}}

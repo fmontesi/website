@@ -108,7 +108,7 @@ a, a:hover {
 	max-width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
 	color: #dbd7d7;
 	font-family: "fm-future", sans-serif;
 	font-weight: 400;
@@ -139,6 +139,22 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1rem;
 }
 
 #papers_list .text-primary {
@@ -330,4 +346,31 @@ h3 {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+}
+
+.fm-figure {
+	background-color: #575e8530;
+	/* border: #ddb55e 1px solid; */
+	/* border-top: #dbd7d7 1px solid; */
+	/* border-bottom: #dbd7d7 1px solid; */
+	border-radius: 5px;
+	padding: 0.5rem;
+	width: fit-content;
+	/* background-color: black; */
+}
+
+.fm-figure figcaption {
+	background: transparent;
+	border-top: #dbd7d7 1px solid;
+	padding-top: .5rem;
+}
+
+.fm-figure figcaption p {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.fm-figure hr {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
