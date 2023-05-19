@@ -21,7 +21,7 @@ else
 
 <figcaption>
 
-A simple choreography where a `buyer` requests the price of a product from a `seller` and then decides whether to go forward with the product's shipping by a third-party `shipper`, given in [Selective Choreographies](ChoreographicLanguage#SelectiveChoreographies).
+A simple choreography where a `buyer` requests the price of a product from a `seller` and then decides whether to go forward with the product's shipping by a third-party `shipper`, given in [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies). Adapted from [[Carbone et al. 2012]](#CHY12).
 </figcaption>
 </figure>
 
@@ -53,12 +53,6 @@ A similar buyer-seller-shipper example, but given as a [sequence diagram](Choreo
 ## Data Choreographies
 
 Choreographies in computer science are not to be confused with choreographies in other fields. When disambiguation is necessary, the choreographies in computer science can be called 'Data Choreographies' (<https://youtu.be/B7MNZk1v37g>).
-
-## The family of Buyer-Seller examples
-
-The Buyer-Seller-Shipper example is well-known in the field of choreographies. It is simple, but it suffices to showcase some central issues like [knowledge of choice](KnowledgeOfChoice). For this reason, many articles present some variation of the same example as an illustrative example.
-
-In the communities of [choreographic programming](ChoreographicProgramming) and [multiparty session types](ChoreographicLanguage#GlobalType), some people (me included) like to joke about the fact that the codification of the buyer-seller-example in textual choreographic languages is the most impactful contribution of the seminal paper on endpoint projection by [[Carbone et al.](#CHY12)].
 
 ## Decentralised nature
 

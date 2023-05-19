@@ -19,7 +19,7 @@ else
 
 <figcaption>
 
-A simplistic choreography for single-sign on, given in the language of [Selective Choreographies](ChoreographicLanguage#SelectiveChoreographies). As we are going to see, there is a problem with this choreography.
+A simplistic choreography for single-sign on, given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies). As we are going to see, there is a problem with this choreography.
 </figcaption>
 </figure>
 
@@ -119,7 +119,7 @@ There exist automatic procedures for amendment, for example in [[Basu and Bultan
 
 ## Additional notes
 
-- Some compilers for [choreographic programming](ChoreographicProgramming) avoid the problem of knowledge of choice by adding extra communications in implementations, e.g., see [[Dalla Preda et al. 2017](#DGGLM17); [Shen et al. 2023](#SKK23)]. That is, the code compiled for choreographic conditionals include instructions that broadcast the choice made to all other processes. While this is a suboptimal solution, it is simple and remains predictable, so one could argue that the choreography is still representative in this case (choreographic conditionals in this case should be read as both a local choice and a set of communications).
+- Some [choreographic programming](ChoreographicProgramming) frameworks avoid the problem of knowledge of choice by adding extra communications in implementations, e.g., see [[Dalla Preda et al. 2017](#DGGLM17); [Shen et al. 2023](#SKK23)]. That is, the code compiled for choreographic conditionals include instructions that broadcast the choice made to all other processes. While this is a suboptimal solution, it is simple and remains predictable, so one could argue that the choreography is still representative in this case (choreographic conditionals in this case should be read as both a local choice and a set of communications).
 
 ## References
 

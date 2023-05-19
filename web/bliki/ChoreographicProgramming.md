@@ -1,15 +1,58 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a> and <a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic Programming (Wikipedia)</a>{{/subHeader}}{{$content}}
 
 **Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreographies) [[Montesi 2013](#M13p)].
 A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage).
 A program given in a choreographic programming language is called choreographic program, or simply choreography when it is clear from the context.
 
-Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems. The theory of [endpoint projection](EndpointProjection) (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
+<figure class="fm-figure">
 
-Choreographic programming was first pioneered and formulated as a complete paradigm in [[Montesi 2013](#M13p)], but the principles of endpoint projection were studied before. See [[Montesi 2023](#M23)] for a foundational introduction to the principles of [choreographic languages](ChoreographicLanguages) and endpoint projection.
+```
+Alice.modPow(g, a, p) -> Bob.x;
+Bob.modPow(g, b, p) -> Alice.y;
+```
+
+<figcaption>
+
+A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange), given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies).
+</figcaption>
+</figure>
+
+Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems  [[Montesi 2023](#M23)]. The theory of [endpoint projection](EndpointProjection) (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
 The name 'endpoint projection' was originally introduced by [Carbone et al [2012]](#CHY12).
 
-A distinguishing feature of choreographic programming languages is the inclusion of primitives for performing computation, which is useful for expressing data manipulation in protocols, distributed applications, security protocols, parallel algorithms, etc.
+<figure class="fm-figure">
+
+<div class="row">
+<div class="col-auto">
+
+Code for `Alice`:
+```
+send modPow(g, a, p) to Bob;
+recv y from Bob;
+```
+</div>
+<div class="col-auto">
+
+Code for `Bob`:
+```
+recv x from Alice;
+send modPow(g, b, p) to Alice;
+```
+</div>
+</div>
+
+<figcaption>
+
+Implementations of `Alice` and `Bob` compiled from the previous choreography, given in pseudocode.
+</figcaption>
+</figure>
+
+<!--
+
+
+Choreographic programming was formulated as a programming paradigm and prototyped in [[Montesi 2013](#M13p)].
+Since the syntax of choreographies does not allow for mismatching send and receive actions, ... [Carbone and Montesi 2013]
+Its theoretical foundations were inspired by earlier work on endpoint projection for message sequence charts and choreographies for web services. See [[Montesi 2023](#M23)] for a foundational introduction to the principles of [choreographic languages](ChoreographicLanguages) and endpoint projection.
 
 ## Implementations
 
@@ -30,6 +73,7 @@ Core Choreographies.[15] A core theoretical model for choreographic programming.
 Kalas.[18] A choreographic programming language with a verified compiler to CakeML.
 Pirouette.[7] A mechanised choreographic programming language theory with higher-order procedures.
 
+-->
 
 ## References
 <a id="further-reading"></a>
@@ -40,7 +84,5 @@ Pirouette.[7] A mechanised choreographic programming language theory with higher
 <a id="M13p"></a>Montesi, F. [2013], 'Choreographic Programming', PhD Thesis, _IT University of Copenhagen_. <https://www.fabriziomontesi.com/files/choreographic-programming.pdf>
 
 <a id="M23"></a>Montesi, F. [2023], 'Introduction to Choreographies', _Cambridge University Press_. <https://doi.org/10.1017/9781108981491>
-
-Wikipedia Authors, 'Choreographic Programming', _Wikipedia_. <https://en.wikipedia.org/wiki/Choreographic_programming>
 
 <!-- --> {{/content}}{{/fm-bliki.html}}

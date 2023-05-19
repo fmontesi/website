@@ -1,7 +1,7 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Language{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
 
 A **choreographic language** is a language for expressing [choreographies](Choreography) [[Montesi 2023](#M23)].
-Key to choreographic languages is having a high-level primitive for expressing a communication between independent processes (also called roles, or participants). This is inspired by [security protocol notation](https://en.wikipedia.org/wiki/Security_protocol_notation) (also called 'Alice and Bob' notation), which presents the primitive
+Key to choreographic languages is having a high-level primitive for expressing a communication between independent processes (also called roles, or participants). This is inspired by the ['Alice and Bob' notation of security protocols](https://en.wikipedia.org/wiki/Security_protocol_notation), which presents the primitive
 
 ```
 A -> B: M
@@ -17,89 +17,59 @@ Another possible source of categorisation: choreographic languages can be textua
 
 Choreographic languages can be translated to executable distributed code or abstract models of participants by means of [endpoint projection](EndpointProjection).
 
-## Examples of Choreographic Languages
+## Recursive Choreographies<a id="RecursiveChoreographies"></a>
 
-### Languages in 'Introduction to Choreographies'
+An example of a choreographic language is the language of Recursive Choreographies [[Montesi 2023](#M23)]. I often refer to it examples in the other entries.
 
-The book 'Introduction to Choreographies' [[Montesi 2023](#M23)] presents a series of choreographic languages of increased sophistication, aimed at the study of principles behind choreographies and [endpoint projection](EndpointProjection). They can be summarised as follows. We report their syntax in BNF format, adapted to ASCII.
-
+Recursive Choreographies is defined by the following grammar, in BNF format (the original presentation is adapted to ASCII here).
 Note that, in the examples on these pages, I sometimes take the liberty of omitting trailing `0`s and `else` branches.
 
-#### Simple Choreographies<a id="SimpleChoreographies"></a>
-
 ```
-(Choreographies)	C ::=	p -> q; C | 0
-```
+(Choreographies)	C ::=	I;C							(sequence)
+						|	0							(empty choreography)
 
-Notes:
-- `p -> q` means '`p` communicates a message to `q`'. Message payloads are not specified in this language.
-- A choreography in this language is essentially a finite list of communications.
+(Instructions)		I ::=	p.e -> q.x					(value communication)
+						|	p -> q[L]					(selection)
+						|	p.x := e					(assignment)
+						|	if p.e then C1 else C2		(conditional)
+						|	X(p...)						(procedure call)
 
-#### Stateful Choreographies<a id="StatefulChoreographies"></a>
-
-```
-(Choreographies)	C ::=	I;C | 0
-(Instructions)		I ::=	p.e -> q.x | p.x := e
-(Expressions)		e ::=	v | x | f(e...)
+(Expressions)		e ::=	v							(value)
+						|	x							(variable)
+						|	f(e...)						(function call)
 ```
 
-Above, `v` ranges over values, `x` ranges over local variables, and `f` ranges over function names that are assumed to be defined in a separate language.
+Above, `p` ranges over process names, `L` over selection labels (special ), `X` ranges over procedure names, `v` ranges over (data) values, `x` ranges over local variables, and `f` ranges over function names that are assumed to be defined in a separate language.
 Each process is assumed to have a local memory store that maps variables to values.
 
-Notes:
-- `p.e -> q.x` means '`p` locally evalutes `e` and communicates the resulting value to `q`, which stores the value in its local variable `x`. 
-- `p.x := e` means '`p` locally evaluates `e` and stores the result in its variable `x`'.
-- In `f(e...)` the `e...` stands for a list of expressions, e.g., `e1, e2, e3`.
-
-#### Conditional Choreographies<a id="ConditionalChoreographies"></a>
-
-Augments the grammar of Stateful Choreographies with the production:
-```
-(Instructions)		I ::=	... | if p.e then C1 else C2
-```
-
-Notes:
+A choreography `C` is essentially a list of instructions (`I`), terminated by `0`.
+Instructions can be read as follows.
+- `p.e -> q.x` reads '`p` locally evalutes `e` and communicates the resulting value to `q`, which stores the value in its local variable `x`. 
+- `p -> q[L]` reads '`p` communicates the selection label `L` to `q`'. See [knowledge of choice](KnowledgeOfChoice) about the role of selections.
+- `p.x := e` reads '`p` locally evaluates `e` and stores the result in its variable `x`'.
 - `if p.e then C1 else C2` reads 'if `p` evaluates `e` to the value `true`, proceed as `C1`, otherwise as `C2`'.
-- Stateful Choreographies is sufficient to display the issue of [knowledge of choice](KnowledgeOfChoice).
+- `X(p...)` means 'the processes `p...` enter procedure `X`'. `p...` stands for a list of process names, e.g., `p, q, r`. Procedures are mapped to choreographies in a context of procedure definitions, and can be recursive.
 
-#### Selective Choreographies<a id="SelectiveChoreographies"></a>
-
-Augments the grammar of Conditional Choreographies with the production:
-```
-(Instructions)		I ::=	... | p -> q[L]
-```
-
-Notes:
-- `p -> q[L]` means '`p` communicates the selection label `L` to `q`'.
-
-#### Recursive Choreographies<a id="RecursiveChoreographies"></a>
-
-Augments the grammar of Selective Choreographies with the production:
-```
-(Instructions)		I ::=	... | X(p...)
-```
-
-`X` ranges over procedure names, which are mapped to choreographies in a context of procedure definitions.
-
-Notes:
-- `X(p...)` means 'the processes `p...` enter procedure `X`'.
-
-#### Tail-Recursive Choreographies<a id="TailRecursiveChoreographies"></a>
-
-It is the fragment of Recursive Choreographies where procedure calls (`X(p...)`) and conditionals do not have continuations, i.e., they are always followed by a `0`.
-
-### Choreographic Programming Languages<a href="ChoreographicProgrammingLanguage"></a>
+## Choreographic Programming Languages<a id="ChoreographicProgrammingLanguage"></a>
 
 A choreographic programming language is a choreographic language for expressing executable concurrent and distributed code. See [choreographic programming](ChoreographicProgramming).
+Recursive Choreographies is a choreographic programming language.
 
-### Global Types<a href="GlobalType"></a>
+## Global Types<a id="GlobalType"></a>
 
 Global types are choreographies where communications define propositions about the transmitted data, instead of the computations used to produce or manipulate the data [[Honda et al. 2016](#HYC16)].
 They are often used in theories of static verification for process calculi.
 
-### Sequence Diagrams<a href="SequenceDiagram"></a>
+Languages for global types are typically similar to Recursive Choreographies, with some notable key differences:
+- Value communication specifies the type of the transmitted message (e.g., an integer), instead of the expression and variable used for computing and storing the message.
+- There is no assignment instruction.
+- Conditionals are nondeterministic choices, e.g., `C1 + C2`.
+
+## Sequence Diagrams<a id="SequenceDiagram"></a>
 
 Sequence diagram are visualisations of choreographies, where the timelines of participants are represented by vertical lines and their interactions by connecting horisontal lines. See [sequence diagrams on Wikipedia](https://en.wikipedia.org/wiki/Sequence_diagram).
+
+Tools for sequence diagrams typically give a lot of freedom in what can be written about interactions, so the choice of including computation or not can be left to the user.
 
 ## References
 
