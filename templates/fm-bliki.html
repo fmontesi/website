@@ -1,7 +1,12 @@
 {{> header.html}}
 <div class="container">
 <p class="text-right"><a href="/bliki/">Go back to the bliki index</a></p>
-<h1>{{$title}}{{/title}}</h1>
+<h1 class="mb-1">{{$title}}{{/title}}</h1>
+<p><small>
+By {{$author}}{{/author}}.
+Created on: {{$date}}{{/date}}.
+{{$subHeader}}{{/subHeader}}
+</small></p>
 {{$content}}{{/content}}
 </div>
 <script type="module">

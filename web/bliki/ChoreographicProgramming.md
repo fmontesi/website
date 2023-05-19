@@ -1,6 +1,4 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$content}}
-
-(This page is still under heavy construction. Come back soon!)
+<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
 
 **Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreographies) [[Montesi 2013](#M13p)].
 A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage).
@@ -8,27 +6,30 @@ A program given in a choreographic programming language is called choreographic 
 
 Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems. The theory of [endpoint projection](EndpointProjection) (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
 
-Choreographic programming was pioneered in [[Montesi 2013](#M13p)], but the principles of endpoint projection were studied before. See [[Montesi 2023](#M23)] for an overview and an introduction.
+Choreographic programming was first pioneered and formulated as a complete paradigm in [[Montesi 2013](#M13p)], but the principles of endpoint projection were studied before. See [[Montesi 2023](#M23)] for a foundational introduction to the principles of [choreographic languages](ChoreographicLanguages) and endpoint projection.
 The name 'endpoint projection' was originally introduced by [Carbone et al [2012]](#CHY12).
+
+A distinguishing feature of choreographic programming languages is the inclusion of primitives for performing computation, which is useful for expressing data manipulation in protocols, distributed applications, security protocols, parallel algorithms, etc.
 
 ## Implementations
 
+- [Chor](https://www.chor-lang.org/). The first prototype of choreographic programming. Supports typing choreographic programs with [global types](ChoreographicLanguage#GlobalType).
 - [Choral](https://www.choral-lang.org). An object-oriented choreographic programming language that supports higher-order choreographies and compiles to libraries in Java. Arguably the most applicable choreographic programming language so far.
 - [AIOCJ](http://www.cs.unibo.it/projects/jolie/aiocj.html). A choreographic programming language that supports runtime adaptation. Compiles to code in the Jolie programming language.
-- [Chor](https://www.chor-lang.org/)
+- hacc. A partially-certified compilation pipeline from choreographies to several programming languages.
+- HasChor. A library for choreographic programming in Haskell.
 
-AIOCJ (website).[5] A choreographic programming language for adaptable systems that produces code in Jolie.
-Chor (website).[4] A session-typed choreographic programming language that compiles to microservices in Jolie.
-Choral (website). A higher-order, object-oriented choreographic programming language that compiles to libraries in Java.
-Core Choreographies.[15] A core theoretical model for choreographic programming. A mechanised implementation is available in Coq.[16][17]
-Kalas.[18] A choreographic programming language with a verified compiler to CakeML.
-Pirouette.[7] A mechanised choreographic programming language theory with higher-order procedures.
-
-- Choral, 
 
 ## Mechanisations
 
 There exist several mechanisations of choreographic programming in theorem provers.
+
+- A formalisation of [tail-recursive choreographies](ChoreographicLanguage#TailRecursiveChoreographies)
+
+Core Choreographies.[15] A core theoretical model for choreographic programming. A mechanised implementation is available in Coq.[16][17]
+Kalas.[18] A choreographic programming language with a verified compiler to CakeML.
+Pirouette.[7] A mechanised choreographic programming language theory with higher-order procedures.
+
 
 ## References
 <a id="further-reading"></a>
