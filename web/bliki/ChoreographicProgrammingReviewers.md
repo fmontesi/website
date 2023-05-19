@@ -1,4 +1,4 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming Reviewers{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming Reviewers{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}22 May 2023{{/date}}{{$content}}
 
 This page lists expert reviewers on different aspects of [choreographic programming](ChoreographicProgramming). If you are looking for a reviewer, they might be able to help you directly or suggest an expert. The list is ordered alphabetically on surnames.
 
