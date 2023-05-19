@@ -53,7 +53,7 @@ While there is nothing wrong with this in principle, lack of knowledge of choice
 - The implementor might decide to add extra communications in the implementation, for example the communication of a Boolean from `a` to `ws` that would inform `ws` about `a`'s choice. But this would entail that the choreography would not be representative anymore, since the implementation would enact unforeseen communications.
 - The implementor might decide to use hidden side-effects that break decentralisation or introduce tight coupling. For example, one could use a shared database to store `a`'s choice (`a` would write it and `ws` would read it).
 
-A better solution is to fix the choreography, such that it remains representative and.
+A better solution is to fix the choreography.
 
 ## Achieving knowledge of choice
 
