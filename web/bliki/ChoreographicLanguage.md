@@ -24,6 +24,8 @@ An example of a choreographic language is the language of Recursive Choreographi
 Recursive Choreographies is defined by the following grammar, in BNF format (the original presentation is adapted to ASCII here).
 Note that, in the examples on these pages, I sometimes take the liberty of omitting trailing `0`s and `else` branches.
 
+<figure class="bliki-figure">
+
 ```
 (Choreographies)	C ::=	I;C							(sequence)
 						|	0							(empty choreography)
@@ -39,7 +41,13 @@ Note that, in the examples on these pages, I sometimes take the liberty of omitt
 						|	f(e...)						(function call)
 ```
 
-Above, `p` ranges over process names, `L` over selection labels (special ), `X` ranges over procedure names, `v` ranges over (data) values, `x` ranges over local variables, and `f` ranges over function names that are assumed to be defined in a separate language.
+<figcaption>
+
+The syntax of Recursive Choreographies [[Montesi 2023](#M23)].
+</figcaption>
+</figure>
+
+In the syntax, `p` ranges over process names, `L` over selection labels (special ), `X` ranges over procedure names, `v` ranges over (data) values, `x` ranges over local variables, and `f` ranges over function names that are assumed to be defined in a separate language.
 Each process is assumed to have a local memory store that maps variables to values.
 
 A choreography `C` is essentially a list of instructions (`I`), terminated by `0`.

@@ -176,14 +176,18 @@ service Main {
 							link = "/introduction-to-choreographies/"
 						}
 						item[1] << {
+							text = "Bliki"
+							link = "/bliki/"
+						}
+						item[2] << {
 							text = "Projects"
 							link = "/projects/"
 						}
-						item[2] << {
+						item[3] << {
 							text = "Tools"
 							link = "/tools.html"
 						}
-						item[3] << {
+						item[4] << {
 							text = "Blog"
 							link = "https://fmontesi.github.io"
 						}

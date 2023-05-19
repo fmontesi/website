@@ -348,7 +348,7 @@ h6 {
   }
 }
 
-.fm-figure {
+.bliki-figure {
 	background-color: #575e8530;
 	/* border: #ddb55e 1px solid; */
 	/* border-top: #dbd7d7 1px solid; */
@@ -359,13 +359,13 @@ h6 {
 	/* background-color: black; */
 }
 
-.fm-figure figcaption {
+.bliki-figure figcaption {
 	background: transparent;
 	border-top: #dbd7d7 1px solid;
 	padding-top: .5rem;
 }
 
-.fm-figure figcaption p {
+.bliki-figure figcaption p {
 	padding: 0;
 	margin-bottom: 0;
 }

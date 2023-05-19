@@ -7,7 +7,7 @@ A [choreography](Choreography) has the **knowledge of choice** property if it en
 Consider the following choreography for [single-sign on](https://en.wikipedia.org/wiki/Single_sign-on). A client (`c`) communicates some credentials to an authenticator (`a`), which then decides if a web service (`ws`) should communicate a new session token to the client. In the negative case, the web service should communicate a special `NoToken` value to the client, denoting failure.
 
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 ```
 c.credentials -> a.x;
@@ -23,7 +23,7 @@ A simplistic choreography for single-sign on, given in the language of [Recursiv
 </figcaption>
 </figure>
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 <pre class="mermaid">
 sequenceDiagram
@@ -59,7 +59,7 @@ A better solution is to fix the choreography, such that it remains representativ
 
 Fixing our choreography is relatively simple. We just need to add communications that allow `ws` to infer what it should do. Here is the resulting choreography, both in textual and visual forms.
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 ```
 c.credentials -> a.x;

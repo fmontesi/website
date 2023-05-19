@@ -5,7 +5,7 @@ It defines the communications that these processes are expected to perform, usua
 
 Choreographies are typically given in a [choreographic language](ChoreographicLanguage).
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 ```
 buyer.product -> seller.x;
@@ -25,7 +25,7 @@ A simple choreography where a `buyer` requests the price of a product from a `se
 </figcaption>
 </figure>
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 <pre class="mermaid text-center">
 sequenceDiagram

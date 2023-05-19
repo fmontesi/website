@@ -4,7 +4,7 @@
 A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage).
 A program given in a choreographic programming language is called choreographic program, or simply choreography when it is clear from the context.
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 ```
 Alice.modPow(g, a, p) -> Bob.x;
@@ -20,7 +20,7 @@ A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia
 Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems  [[Montesi 2023](#M23)]. The theory of [endpoint projection](EndpointProjection) (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
 The name 'endpoint projection' was originally introduced by [Carbone et al [2012]](#CHY12).
 
-<figure class="fm-figure">
+<figure class="bliki-figure">
 
 <div class="row">
 <div class="col-auto">
