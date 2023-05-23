@@ -64,10 +64,10 @@ Fixing our choreography is relatively simple. We just need to add communications
 ```
 c.credentials -> a.x;
 if a.valid(x) then
-	a -> c[OK];
+	a -> ws[OK];
 	ws.newToken() -> c.token;
 else
-	a -> c[KO];
+	a -> ws[KO];
 	ws.NoToken -> c.token;
 ```
 
