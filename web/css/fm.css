@@ -36,11 +36,6 @@ html {
   height: 100%;
 }
 
-code {
-	font-weight: bold;
-	color: white;
-}
-
 body {
 	height: 100%;
 	background-color: #231c1c;
@@ -379,6 +374,14 @@ pre {
 	tab-size: 4;
 }
 
+code {
+	font-weight: bold;
+	/* font-weight: 600; */
+	color: #dbd7d7;
+	/* background-color: #575e8530; */
+	/* padding: .2em; */
+}
+
 blockquote {
 	position: relative;
 	border-left: #b6b6b6 4px solid;
@@ -411,4 +414,22 @@ blockquote::before {
 .bliki-tip-list {
 	list-style-type: "💡";
 	padding-left: 1.5em;
+}
+
+.bg-data-chor {
+	position: relative;
+}
+
+.bg-data-chor::after {
+	content: "";
+	background-image: url("/images/data-choreographies-system.svg");
+	background-size: cover;
+	opacity: 0.025;
+	background-position: center center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
 }

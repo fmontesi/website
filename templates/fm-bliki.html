@@ -13,4 +13,10 @@ Created on: {{$date}}{{/date}}.
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({ startOnLoad: true, theme: 'dark' });
 </script>
+<!-- <script type="module">
+import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/es/highlight.min.js';
+import bnf from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/es/languages/bnf.min.js';
+hljs.registerLanguage('bnf', bnf);
+hljs.highlightAll();
+</script> -->
 {{> footer.html}}
