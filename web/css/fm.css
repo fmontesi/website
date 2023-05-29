@@ -378,3 +378,28 @@ h6 {
 pre {
 	tab-size: 4;
 }
+
+.big-quote {
+	position: relative;
+	border-left: #b6b6b6 2px solid;
+	padding-left: 2em;
+	/* inset-inline: 1em; */
+	background-color: #575e8530;
+}
+
+.big-quote::before {
+	content: "‘";
+	font-family: serif;
+	font-size: 4em;
+	position: absolute;
+	top: -.35em;
+	left: .05em;
+}
+
+.big-quote-author {
+	font-weight: bold;
+}
+
+.big-quote-author::before {
+	content: "– ";
+}
