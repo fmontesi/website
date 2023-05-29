@@ -381,8 +381,11 @@ pre {
 
 blockquote {
 	position: relative;
-	border-left: #b6b6b6 2px solid;
+	border-left: #b6b6b6 4px solid;
 	padding-left: 2em;
+	/* padding-top: 1em; */
+	/* padding-bottom: 1em; */
+	/* padding: 2 0 0 0; */
 	/* inset-inline: 1em; */
 	background-color: #575e8530;
 }
