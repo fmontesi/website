@@ -379,7 +379,7 @@ pre {
 	tab-size: 4;
 }
 
-.big-quote {
+blockquote {
 	position: relative;
 	border-left: #b6b6b6 2px solid;
 	padding-left: 2em;
@@ -387,7 +387,7 @@ pre {
 	background-color: #575e8530;
 }
 
-.big-quote::before {
+blockquote::before {
 	content: "‘";
 	font-family: serif;
 	font-size: 4em;
@@ -402,4 +402,9 @@ pre {
 
 .big-quote-author::before {
 	content: "– ";
+}
+
+.bliki-tip-list {
+	list-style-type: "💡";
+	padding-left: 1.5em;
 }
