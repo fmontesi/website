@@ -128,7 +128,7 @@ The two layers, choreographies and processes, are kept in sync with respect to f
 ## Opinions from the course 'Concurrency Theory'
 
 The choreography-first approach is the result of years of teaching both concurrency theory (MSc level) and concurrent programming (BSc level) in higher education. (There's a lot to be said also about research and professional work, but let's stick to teaching here.)
-My admittedly personal experience is that putting choreographies at the forefront in the beginning and then keeping them side to side with processes gives students a clearer sense of what we are doing and why. After seeing mechanical methods for translating choreographies into processes for a while ([endpoint projection](ChoreographicProgramming#EndpointProjection)), they start applying the same principles in their heads while looking at examples. How do I know? Sometimes they correct me when I write processes on the blackboard... ;-)
+My admittedly personal experience is that putting choreographies at the forefront in the beginning and then keeping them side to side with processes gives students a clearer sense of what we are doing and why. After seeing mechanical methods for translating choreographies into processes for a while ([endpoint projection](ChoreographicProgramming#EndpointProjection)), they start applying the same principles in their heads while looking at examples. How do I know? Sometimes they correct me when I write processes on the blackboard, citing blatantly that 'Hey, the choreography said ...' ;-)
 
 How do students feel about it? Here are some of the comments that my students left in the evaluation of the first course I taught by using the book. (DM861: Concurrency Theory, University of Southern Denmark, Spring 2023.)
 
@@ -139,6 +139,15 @@ How do students feel about it? Here are some of the comments that my students le
 - '[...] unique and effective.'
 - '[...] very interesting lectures.'
 
+
+<figure class="bliki-figure">
+<img src="/images/ct-2023-reasons.jpg" class="img-fluid"/>
+<figcaption>
+A little bit of fun: in the first lecture of Concurrency Theory, I discuss with students why they joined the course.
+This breaks the ice and gets a few jokes going (apparently one student found me to be the 'least scary teacher'...?).
+Most students joined because they wanted to acquire principles for taming the complexity of concurrency.
+</figcaption>
+</figure>
 
 ## References
 
