@@ -1,6 +1,6 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}Knowledge of Choice{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
 
-A [choreography](Choreography) has the **knowledge of choice** property if it ensures that all participants are aware of which alternative behaviours are chosen at runtime [[Montesi 2023](#M23)]. The name 'knowledge of choice' was introduced by [Castagna et al. [2012]](#CDP12) in the context of multiparty session types, but the problem is older and applies to all [choreographic languages](ChoreographicLanguage).
+A [choreography](Choreography) has the **knowledge of choice** property if it ensures that, when a choice is made to pick between alternative behaviours, all affected participants are made aware of the choice [[Montesi 2023](#M23)]. The name 'knowledge of choice' was introduced by [Castagna et al. [2012]](#CDP12) in the context of multiparty session types, but the problem is older and applies to all [choreographic languages](ChoreographicLanguage).
 
 ## The problem
 
