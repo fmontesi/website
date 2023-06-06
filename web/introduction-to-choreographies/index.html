@@ -70,7 +70,20 @@
 </ul>
 </p>
 <h2>Errata</h2>
-<p>Nothing to report.. yet!</p>
+<h6>Chapter 11</h6>
+<ul>
+<li>
+Page 192 misses an equation about message sequences, which allows for exchanging messages from different receivers.
+This equation is necessary to deal with situations where the same sender communicates multiple messages to the same receiver one right after the other.
+Here is the equation:
+<img src="/images/itc/queue-exchange.png" class="img-fluid"/>
+</li>
+<li>
+Rule SEND-VAL in Figure 11.2 should not update the store in the derivative (the Σ component should be the same before and after the transition). Thanks to Lovro Lugović for spotting this!
+Here is the fixed rule:
+<img src="/images/itc/send-val.png" class="img-fluid" />
+</li>
+</ul>
 </div>
 {{/content}}
 {{/fm-page.html}}
