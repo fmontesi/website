@@ -1,9 +1,9 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Teaching with 'Introduction to Choreographies'{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}31 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}Teaching with 'Introduction to Choreographies'{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}7 June 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
 
 <!-- Ever wondered how teaching concurrency theory would change if you adopted an 'intention-first' approach?
 What if you always kept focus on defining and  focused first on the high-level structures that you wish to codify  -->
 
-For the past few years I have been experimenting with a different way of teaching concurrency theory, or even the integration of communicating participants in a concurrent or distributed system.
+For the past few years I have been experimenting with a different way of teaching concurrency theory, and even the integration of communicating participants in a concurrent or distributed system.
 I call it the _choreography-first approach_. It's the soul behind [the book](/introduction-to-choreographies/) that I've recently written about theory of choreographic languages.
 
 <figure class="bliki-figure bg-data-chor">
@@ -16,6 +16,8 @@ Curious of what students think of this? Check out the highlights of a <a href="#
 </li>
 </ul>
 </figure>
+
+**Disclaimer:** No, I am not claiming that everybody should teach like this, or that choreographies should always come first. Rather, my hope is to raise awareness that formal choreographic languages can have an important role to play in understanding concurrency based on message passing. What you find below is what worked well for me. If you use choreographies in this or other ways in your courses, I'd be thrilled to hear about it!
 
 ## The approach
 
@@ -139,6 +141,7 @@ How do students feel about it? Here are some of the comments that my students le
 - '[...] unique and effective.'
 - '[...] very interesting lectures.'
 
+Students also left a kind 100% score for the teacher's pedagogical competences. Take it with a grain of salt: I really like teaching concurrency!
 
 <figure class="bliki-figure">
 <img src="/images/ct-2023-reasons.jpg" class="img-fluid"/>
