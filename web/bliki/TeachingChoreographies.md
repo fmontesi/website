@@ -17,7 +17,7 @@ Curious of what students think of this? Check out the highlights of a <a href="#
 </ul>
 </figure>
 
-**Disclaimer:** No, I am not claiming that everybody should teach like this, or that choreographies should always come first. Rather, my hope is to raise awareness that formal choreographic languages can have an important role to play in understanding concurrency based on message passing. What you find below is what worked well for me. If you use choreographies in this or other ways in your courses, I'd be thrilled to hear about it!
+**Disclaimer:** I am not claiming that everybody should teach like this, or that choreographies should always come first. Rather, my hope is to raise awareness that formal choreographic languages can have an important role to play in understanding concurrency based on message passing. What you find below is what worked well for me. If you use choreographies in this or other ways in your courses, I'd be thrilled to hear about it!
 
 ## The approach
 
