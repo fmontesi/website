@@ -1,6 +1,6 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}19 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a> and <a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic Programming (Wikipedia)</a>{{/subHeader}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}12 June 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a> and <a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic Programming (Wikipedia)</a>.{{/subHeader}}{{$content}}
 
-**Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreographies) [[Montesi 2013](#M13p)].
+**Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreography) [[Montesi 2013](#M13p)].
 A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage).
 A program given in a choreographic programming language is called choreographic program, or simply choreography when it is clear from the context.
 
@@ -20,8 +20,8 @@ A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia
 <a id="epp"></a>
 ## Endpoint Projection (EPP)
 
-Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems  [[Montesi 2023](#M23)]. The theory of endpoint projection (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
-The name 'endpoint projection' was originally introduced by [Carbone et al. [2012]](#CHY12).
+Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems [[Montesi 2023](#M23)]. The theory of endpoint projection (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
+
 
 <figure class="bliki-figure">
 
@@ -50,12 +50,16 @@ Implementations of `Alice` and `Bob` compiled from the previous choreography, gi
 </figcaption>
 </figure>
 
-<!--
+In general a choreography might involve many participants, so EPP must be able to distribute code onto many target programs.
 
+Ideally, EPP should not produce executable code that requires central control (choreographies are [intended to be decentralised](Choreography#Decentralised)).
+This introduces an interesting challenge known as [knowledge of choice](KnowledgeOfChoice), which deals with ensuring that processes agrees on the alternative behaviours selected during the execution of the choreography.
+
+<!-- ## Implementations
 
 Choreographic programming was formulated as a programming paradigm and prototyped in [[Montesi 2013](#M13p)].
-Since the syntax of choreographies does not allow for mismatching send and receive actions, ... [Carbone and Montesi 2013]
-Its theoretical foundations were inspired by earlier work on endpoint projection for message sequence charts and choreographies for web services. See [[Montesi 2023](#M23)] for a foundational introduction to the principles of [choreographic languages](ChoreographicLanguages) and endpoint projection.
+
+The name 'endpoint projection' was originally introduced by [Carbone et al. [2012]](#CHY12), for a theory inspired by the specification language of  .
 
 ## Implementations
 
@@ -80,9 +84,6 @@ Pirouette.[7] A mechanised choreographic programming language theory with higher
 
 ## References
 <a id="further-reading"></a>
-
-<a id="CHY12"></a>Carbone, M., Honda, K., Yoshida, N. [2012],
-'Structured Communication-Centered Programming for Web Services', _ACM Trans. Program. Lang. Syst._ 34(2): 8:1-8:78. <https://doi.org/10.1145/2220365.2220367>
 
 <a id="M13p"></a>Montesi, F. [2013], 'Choreographic Programming', PhD Thesis, _IT University of Copenhagen_. <https://www.fabriziomontesi.com/files/choreographic-programming.pdf>
 

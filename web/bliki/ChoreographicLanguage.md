@@ -60,13 +60,13 @@ Instructions can be read as follows.
 
 ## Choreographic Programming Languages<a id="ChoreographicProgrammingLanguage"></a>
 
-A choreographic programming language is a choreographic language for expressing executable concurrent and distributed code. See [choreographic programming](ChoreographicProgramming).
+A choreographic programming language is a choreographic language for expressing executable concurrent and distributed code [[Montesi 2013](#M13p)]. See [choreographic programming](ChoreographicProgramming).
 Recursive Choreographies is a choreographic programming language.
 
 ## Global Types<a id="GlobalType"></a>
 
 Global types are choreographies where communications define propositions about the transmitted data, instead of the computations used to produce or manipulate the data [[Honda et al. 2016](#HYC16)].
-They are often used in theories of static verification for process calculi.
+They are often used in theories of static verification for process calculi called multiparty session types [[Honda et al. 2016](#HYC16); [Hüttel et al. 2016](#Hetal16)].
 
 Languages for global types are typically similar to Recursive Choreographies, with some notable key differences:
 - Value communication specifies the type of the transmitted message (e.g., an integer), instead of the expression and variable used for computing and storing the message.
@@ -82,6 +82,10 @@ Tools for sequence diagrams typically give a lot of freedom in what can be writt
 ## References
 
 <a id="HYC16"></a>Honda, K., Yoshida, N., Carbone, M. [2016], 'Multiparty Asynchronous Session Types', _J. ACM 63(1): 9:1-9:67_. <https://doi.org/10.1145/2827695>
+
+<a id="Hetal16"></a>Hüttel, H., Lanese, I., Vasconcelos, V. T., Caires, L., Carbone, M., Deniélou, P., Mostrous, D., Padovani, L., Ravara, A., Tuosto, E., Vieira, H. T., Zavattaro, G. [2016], 'Foundations of Session Types and Behavioural Contracts', _ACM Comput. Surv. 49(1): 3:1-3:36_. <https://doi.org/10.1145/2873052>
+
+<a id="M13p"></a>Montesi, F. [2013], 'Choreographic Programming', PhD Thesis, _IT University of Copenhagen_. <https://www.fabriziomontesi.com/files/choreographic-programming.pdf>
 
 <a id="M23"></a>Montesi, F. [2023], 'Introduction to Choreographies', _Cambridge University Press_. <https://doi.org/10.1017/9781108981491>
 

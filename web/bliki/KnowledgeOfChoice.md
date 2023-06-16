@@ -111,6 +111,8 @@ case KO:
 }
 ```
 
+The theory of these 'switching behaviours' has an elegant algebraic formulation by means of a [join operator](https://en.wikipedia.org/wiki/Join_and_meet), called merging, and the [join-semilattice](https://en.wikipedia.org/wiki/Semilattice) that it induces on a process calculus [[Montesi 2023](#M23)].
+The idea of a merging operator was originally introduced in [[Carbone et al. 2012](#CHY12)].
 
 ## Amendment
 
@@ -126,6 +128,9 @@ There exist automatic procedures for amendment, for example in [[Basu and Bultan
 <a id="BB16"></a>Basu, S., Bultan, T. [2016], 'Automated Choreography Repair', _Proceedings of FASE 2016_. <https://doi.org/10.1007/978-3-662-49665-7_2>
 
 <a id="CDP12"></a>Castagna, G., Dezani-Ciancaglini, M. & Padovani, L. [2012], 'On global types and multi-party session', _Log. Methods Comput. Sci._ 8(1). <https://doi.org/10.2168/LMCS-8(1:24)2012>
+
+<a id="CHY12"></a>Carbone, M., Honda, K., Yoshida, N. [2012],
+'Structured Communication-Centered Programming for Web Services', _ACM Trans. Program. Lang. Syst._ 34(2): 8:1-8:78. <https://doi.org/10.1145/2220365.2220367>
 
 <a id="CM23"></a>Cruz-Filipe, L., Montesi, F., 'Now It Compiles! Certified Automatic Repair of Uncompilable Protocols', _Proceedings of ITP 2023_. <https://doi.org/10.48550/arXiv.2302.14622>
 
