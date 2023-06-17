@@ -274,7 +274,7 @@ service Main {
 					updated = entry.updated
 				}
 			}
-			response.updated = "c2"
+			lastUpdated@blikiUtils()( response.updated )
 		} ]
 	}
 }

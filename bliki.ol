@@ -3,12 +3,13 @@ from file import File
 from string-utils import StringUtils
 
 service BlikiUtils {
+	execution: concurrent
 	embed File as file
 	embed StringUtils as stringUtils
 
 	inputPort Input {
 		location: "local"
-		RequestResponse: entries
+		RequestResponse: entries, lastUpdated
 	}
 
 	main {
@@ -38,6 +39,14 @@ service BlikiUtils {
 					i++
 				}
 			}
+		} ]
+
+		[ lastUpdated()( response ) {
+			readFile@file( {
+				filename = "data/bliki.json"
+				format = "json"
+			} )( blikiData )
+			response = blikiData.lastUpdated
 		} ]
 	}
 }
