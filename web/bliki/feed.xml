@@ -1,0 +1,23 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Fabrizio Montesi's Bliki</title>
+	<link href="https://www.fabriziomontesi.com/bliki/"/>
+	<link type="application/atom+xml" rel="self" href="https://www.fabriziomontesi.com/bliki/feed.xml"/>
+	<updated>{{updated}}</updated>
+	<id>https://fmontesi.github.io</id>
+	<author>
+		<name>Fabrizio Montesi</name>
+	</author>
+	{{#entries}}
+	<entry>
+		<id>{{id}}</id>
+		<title>{{title}}</title>
+		<published>{{published}}</published>
+		<updated>{{updated}}</updated>
+		<author>
+			<name>Fabrizio Montesi</name>
+			<uri>https://www.fabriziomontesi.com/</uri>
+		</author>
+		<content type="html" src=""></content>
+	</entry>
+	{{/entries}}
+</feed>
