@@ -1,6 +1,7 @@
 from .private.dblp import DBLP
 from .private.string-utils-srv import StringUtilsSrv
 from .private.format-converter import FormatConverter
+from .bliki import BlikiUtils
 from protocols.http import DefaultOperationHttpRequest
 from runtime import Runtime
 from console import Console
@@ -48,6 +49,7 @@ service Main {
 	embed StringUtils as stringUtils
 	embed Reflection as reflection
 	embed CommonMark as commonMark
+	embed BlikiUtils as blikiUtils
 	// embed ACPSrv as acp
 	embed GoogleAnalytics as ga
 	// embed DblpUtils as dblpUtils
@@ -251,49 +253,28 @@ service Main {
 		) ]
 
 		[ blikiIndex()( response ) {
-			list@file( {
-				directory = "web/bliki"
-				regex = ".+\\.md"
-				order.byname = true
-			} )( listResponse )
+			entries@blikiUtils()( entriesResp )
 			i = 0
-			for( result in listResponse.result ) {
-				match@stringUtils( result {
-					regex = "([^\\.]+)\\.md"
-				} )( matchResult )
-				if( matchResult.group[1] instanceof string ) {
-					name = matchResult.group[1]
-					response.entries[ i++ ] << {
-						text = name
-						link = name
-					}
+			for( entry in entriesResp.entries ) {
+				response.entries[i++] << {
+					text = entry.id
+					link = entry.id
 				}
 			}
 		} ]
 
 		[ blikiFeed()( response ) {
-			response.updated = "c2"
-			list@file( {
-				directory = "web/bliki"
-				regex = ".+\\.md"
-				order.byname = true
-			} )( listResponse )
+			entries@blikiUtils()( entriesResp )
 			i = 0
-			for( result in listResponse.result ) {
-				match@stringUtils( result {
-					regex = "([^\\.]+)\\.md"
-				} )( matchResult )
-				if( matchResult.group[1] instanceof string ) {
-					name = matchResult.group[1]
-					response.entries[ i++ ] << {
-						id = name
-						title = name
-						published = 1
-						updated = 2
-						
-					}
+			for( entry in entriesResp.entries ) {
+				response.entries[ i++ ] << {
+					id = entry.id
+					title = entry.id
+					published = entry.published
+					updated = entry.updated
 				}
 			}
+			response.updated = "c2"
 		} ]
 	}
 }

@@ -1,23 +1,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://www.fabriziomontesi.com/bliki/</id>
 	<title>Fabrizio Montesi's Bliki</title>
+	<updated>{{updated}}</updated>
 	<link href="https://www.fabriziomontesi.com/bliki/"/>
 	<link type="application/atom+xml" rel="self" href="https://www.fabriziomontesi.com/bliki/feed.xml"/>
-	<updated>{{updated}}</updated>
-	<id>https://fmontesi.github.io</id>
+	<category term="computer science"/>
+	<category term="programming languages"/>
+	<category term="programming"/>
+	<category term="concurrency theory"/>
+	<category term="distributed systems"/>
+	<category term="microservices"/>
 	<author>
 		<name>Fabrizio Montesi</name>
+		<email>famontesi@gmail.com</email>
+		<uri>https://www.fabriziomontesi.com/</uri>
 	</author>
 	{{#entries}}
 	<entry>
-		<id>{{id}}</id>
+		<id>https://www.fabriziomontesi.com/bliki/{{id}}</id>
 		<title>{{title}}</title>
 		<published>{{published}}</published>
 		<updated>{{updated}}</updated>
 		<author>
 			<name>Fabrizio Montesi</name>
+			<email>famontesi@gmail.com</email>
 			<uri>https://www.fabriziomontesi.com/</uri>
 		</author>
-		<content type="html" src=""></content>
+		<content type="html" src="https://www.fabriziomontesi.com/bliki/{{id}}"></content>
 	</entry>
 	{{/entries}}
 </feed>
