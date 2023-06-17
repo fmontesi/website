@@ -148,6 +148,7 @@ service Main {
 					} else {
 						data << {}
 					}
+					data.webPath = webPath
 					data.menu.cols[0] << {
 						item[0] << {
 							text = "Home"
