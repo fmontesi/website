@@ -30,7 +30,8 @@ interface MustacheOperations {
 RequestResponse:
 	publications( void )( PublicationDataset ),
 	dissemination,
-	blikiIndex
+	blikiIndex,
+	blikiFeed
 }
 
 service Main {
@@ -88,6 +89,7 @@ service Main {
 		global.dataBindings.("/research.html") = "publications"
 		global.dataBindings.("/dissemination.html") = "dissemination"
 		global.dataBindings.("/bliki/index.html") = "blikiIndex"
+		global.dataBindings.("/bliki/feed.xml") = "blikiFeed"
 		format = "html"
 
 		getLocalLocation@runtime()( self.location )
@@ -139,7 +141,7 @@ service Main {
 				}
 
 				substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )( webPath )
-				if( getResult.httpParams.format == "html" ) {
+				if( getResult.httpParams.format == "html" || getResult.httpParams.format == "xml" ) {
 					if( is_defined( global.dataBindings.(webPath) ) ) {
 						invoke@reflection( {
 							operation = global.dataBindings.(webPath)
@@ -264,6 +266,31 @@ service Main {
 					response.entries[ i++ ] << {
 						text = name
 						link = name
+					}
+				}
+			}
+		} ]
+
+		[ blikiFeed()( response ) {
+			response.updated = "c2"
+			list@file( {
+				directory = "web/bliki"
+				regex = ".+\\.md"
+				order.byname = true
+			} )( listResponse )
+			i = 0
+			for( result in listResponse.result ) {
+				match@stringUtils( result {
+					regex = "([^\\.]+)\\.md"
+				} )( matchResult )
+				if( matchResult.group[1] instanceof string ) {
+					name = matchResult.group[1]
+					response.entries[ i++ ] << {
+						id = name
+						title = name
+						published = 1
+						updated = 2
+						
 					}
 				}
 			}
