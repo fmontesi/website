@@ -1,4 +1,4 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Language{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}19 May 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Language{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a>{{/subHeader}}{{$content}}
 
 A **choreographic language** is a language for expressing [choreographies](Choreography) [[Montesi 2023](#M23)].
 Key to choreographic languages is having a high-level primitive for expressing a communication between independent processes (also called roles, or participants). This is inspired by the ['Alice and Bob' notation of security protocols](https://en.wikipedia.org/wiki/Security_protocol_notation), which presents the primitive

@@ -9,7 +9,7 @@ service BlikiUtils {
 
 	inputPort Input {
 		location: "local"
-		RequestResponse: entries, lastUpdated
+		RequestResponse: entries, lastUpdated, entryData
 	}
 
 	main {
@@ -47,6 +47,13 @@ service BlikiUtils {
 				format = "json"
 			} )( blikiData )
 			response = blikiData.lastUpdated
+		} ]
+
+		[ entryData( id )( blikiData.entries.(id) ) {
+			readFile@file( {
+				filename = "data/bliki.json"
+				format = "json"
+			} )( blikiData )
 		} ]
 	}
 }

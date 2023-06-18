@@ -111,10 +111,15 @@ service Main {
 						statusCode = 301
 				)
 
-				// It's a bliki page request
-				if( match@stringUtils( request.operation { regex = ".*bliki/[^/\\.]+" } ) ) {
+				// It's a bliki page request. Sets blikiPage: string | void
+				match@stringUtils( request.operation { regex = ".*bliki/([^/\\.]+)" } )( blikiMatch )
+				if( blikiMatch ) {
 					request.operation += ".md"
+					blikiPage = blikiMatch.group[1]
+				} else {
+					blikiPage = {}
 				}
+				undef( blikiMatch )
 
 				scope( markdown ) {
 					// println@console( request.operation )()
@@ -152,6 +157,16 @@ service Main {
 					} else {
 						data << {}
 					}
+
+					if( blikiPage instanceof string ) {
+						data << entryData@blikiUtils( blikiPage )
+						split@stringUtils( data.published { regex = "T" } )( s )
+						data.published = s.result[0]
+						split@stringUtils( data.updated { regex = "T" } )( s )
+						data.updated = s.result[0]
+						undef( s )
+					}
+
 					data.webPath = webPath
 					data.menu.cols[0] << {
 						item[0] << {

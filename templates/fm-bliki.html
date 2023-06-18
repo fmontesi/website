@@ -2,14 +2,19 @@
 <div class="container">
 <p class="text-right">
 <span class="mr-3">
+	<a href="/bliki/feed.xml">Follow with <i class="fa fa-rss"></i></a>
+</span>	
+<span class="mr-3">
 <a href="https://github.com/fmontesi/website/edit/master/web{{webPath}}">Edit this page on <i class="fab fa-github"></i></a>
 </span>
-<a href="/bliki/">Go back to the Bliki index</a>
+<span><a href="/bliki/">Go back to the Bliki index</a></span>
 </p>
 <h1 class="mb-1">{{$title}}{{/title}}</h1>
 <p><small>
 By {{$author}}{{/author}}.
-Created on: {{$date}}{{/date}}.
+Created on {{published}}.
+Last updated on {{updated}}.
+<br/>
 {{$subHeader}}{{/subHeader}}
 </small></p>
 {{$content}}{{/content}}
