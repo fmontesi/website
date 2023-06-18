@@ -4,7 +4,7 @@
 
 declare -A bliki
 ids=()
-lastUpdated=0
+lastUpdated="2023-06-15T10:28:07+02:00"
 
 for f in web/bliki/*.md
 do
