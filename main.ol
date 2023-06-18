@@ -276,6 +276,9 @@ service Main {
 					link = entry.id
 				}
 			}
+			lastUpdated@blikiUtils()( lastUpdated )
+			split@stringUtils( lastUpdated { regex = "T" } )( s )
+			response.lastUpdated = s.result[0]			
 		} ]
 
 		[ blikiFeed()( response ) {
