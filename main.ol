@@ -140,6 +140,10 @@ service Main {
 				}
 				httpParams -> getResult.httpParams
 
+				if( getResult.path == global.wwwDir + "/bliki/feed.xml" ) {
+					getResult.httpParams.contentType = "application/atom+xml"
+				}
+
 				if( endsWith@stringUtils( getResult.path { suffix = ".md" } ) ) {
 					getResult.httpParams.format = "html"
 					getResult.httpParams.contentType = "text/html"
