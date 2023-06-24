@@ -3,7 +3,7 @@
 In computer science, a **choreography** is a coordination plan for processes that participate in concurrent and distributed systems [[Montesi 2023](#M23)].
 It defines the communications that these processes are expected to perform, usually with the intention that these processes collaborate in order to achieve a joint goal.
 
-Choreographies are typically given in a [choreographic language](ChoreographicLanguage), whose design often depends on the desired application.
+Choreographies are typically given in a [choreographic language](ChoreographicLanguage), which feature high-level primitives for expressing communications between processes. The design of these languages often depends on the desired application.
 When a choreographic language is powerful enough to express executable distributed programs, it is called a [choreographic programming](ChoreographicProgramming) language.
 
 <figure class="bliki-figure">
