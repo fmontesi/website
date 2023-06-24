@@ -1,4 +1,4 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}What is a Bliki?{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}18 May 2023{{/date}}{{$content}}
+<!-- --> {{< fm-bliki.html}}{{$title}}What is a Bliki?{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$content}}
 
 See <https://martinfowler.com/bliki/WhatIsaBliki.html>.
 
