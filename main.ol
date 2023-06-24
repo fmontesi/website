@@ -285,11 +285,31 @@ service Main {
 			entries@blikiUtils()( entriesResp )
 			i = 0
 			for( entry in entriesResp.entries ) {
+				get@webFiles( {
+					target = "bliki/" + entry.id + ".md"
+					wwwDir = global.wwwDir
+				} )( getResult )
+				render@commonMark( string( getResult.content ) )( content )
+				entryData@blikiUtils( entry.id )( data )
+				split@stringUtils( data.published { regex = "T" } )( s )
+				data.published = s.result[0]
+				split@stringUtils( data.updated { regex = "T" } )( s )
+				data.updated = s.result[0]
+				undef( s )
+				data.isForFeed = true
+				data.webPath = "/bliki/" + entry.id
+				render@mustache( {
+					template -> content
+					data -> data
+					dir = global.templatesDir
+				} )( content )
+				// getResult.content = render@commonMark( string( getResult.content ) )
 				response.entries[ i++ ] << {
 					id = entry.id
 					title = entry.id
 					published = entry.published
 					updated = entry.updated
+					content = content
 				}
 			}
 			lastUpdated@blikiUtils()( response.updated )

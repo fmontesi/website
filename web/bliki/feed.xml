@@ -26,7 +26,7 @@
 			<email>famontesi@gmail.com</email>
 			<uri>https://www.fabriziomontesi.com/</uri>
 		</author>
-		<content src="https://www.fabriziomontesi.com/bliki/{{id}}"/>
+		<content type="html">{{content}}</content>
 		<link rel="alternate" href="/bliki/{{id}}"/>
 	</entry>
 	{{/entries}}

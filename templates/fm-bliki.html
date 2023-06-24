@@ -1,3 +1,4 @@
+{{^isForFeed}}
 {{> header.html}}
 <div class="container">
 <p class="text-right"><small>
@@ -9,6 +10,14 @@
 </span>
 <span><a href="/bliki/">Go back to the Bliki index</a></span>
 </p>
+{{/isForFeed}}
+{{#isForFeed}}
+<p>
+<small>
+If some details (like sequence charts) display incorrectly, please check the <a href="{{webPath}}">website version of this page</a>.
+</small>
+</p>
+{{/isForFeed}}
 <h1 class="mb-1">{{$title}}{{/title}}</h1>
 <p>
 By {{$author}}{{/author}}.
@@ -19,6 +28,7 @@ Last updated on {{updated}}.
 </small></p>
 {{$content}}{{/content}}
 </div>
+{{^isForFeed}}
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({ startOnLoad: true, theme: 'dark' });
@@ -30,3 +40,4 @@ hljs.registerLanguage('bnf', bnf);
 hljs.highlightAll();
 </script> -->
 {{> footer.html}}
+{{/isForFeed}}
