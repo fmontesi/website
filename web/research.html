@@ -221,18 +221,18 @@ award {
 	</div> -->
 
 <h2 class="SectionTitle" id="publications-list">List of Publications</h2>
-<!-- <p>Search (by title, year, authors, ...): <input class="asearch" id="papers_search" type="text"/><br/> -->
+<p>Search (by title, year, authors, ...): <input class="asearch" id="papers-search" type="text"/><br/>
 <!--Experimental: <paper-input floatingLabel inputValue="{{value}}" label="Search (by title, year, authors, ...):"></paper-input><br/>-->
 <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Montesi:Fabrizio.html">My page in DBLP</a> | <a href="http://scholar.google.com/citations?user=zRA6uA4AAAAJ">My profile in Google Scholar</a>
 <br/>(Data from <a href="https://dblp.org/">DBLP</a>.)</p>
 
-<ul class="PubList" id="papers_list">
+<ul class="PubList" id="papers-list">
 {{#collections}}
 	<li style="list-style-type: none; margin-left: -2.5em">
 		<h3>{{title}}</h3>
 	</li>
 	{{#entries}}
-		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex">
+		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex" entry>
 		<span style="float:left; width:80%">
 			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
 			{{where}}.
@@ -261,41 +261,36 @@ award {
 
 </div>
 
-<br style="clear:left;" />
-
+<!-- <br style="clear:left;" /> -->
 
 <script type="text/javascript">
-var LIST_SELECTOR = "#papers_list > li";
-var ItemActions = { NONE: 0, SHOW: 1, HIDE: 2 };
-var MyFuseOptions = {
-	keys: ["text"],	// keys to search in
-	id: "id",	// return a list of identifiers only
-	threshold: 0.6
-}
+var LIST_SELECTOR = "#papers-list > li[entry]";
+// var ItemActions = { NONE: 0, SHOW: 1, HIDE: 2 };
+// var MyFuseOptions = {
+// 	keys: ["text"],	// keys to search in
+// 	id: "id",	// return a list of identifiers only
+// 	threshold: 0.6
+// }
 
 var list = [];
 
 $(document).ready( function() {
-
-{
 	var i = 0;
 	$(LIST_SELECTOR).each( function() {
-		var text = $(this).children("*").text();
-		list.push( { id: i++, text: text, visible: { now: true, next: false } } );
+		var ref = $(this);
+		var text = ref.children("*").text();
+		list.push( { id: i++, text: text, visible: { now: true, next: true }, ref: ref } );
 	});
-}
+	
+	$("#papers-search").keyup( function() { onSearchInput( this ); } );
+	// $("#papers-search").change( function() { onSearchInput( this ); } );
+});
 
-$("#papers_search").keyup( function() { onSearchInput( this ); } );
-$("#papers_search").change( function() { onSearchInput( this ); } );
-
-}); // $(document).ready
-
-function onSearchInput( searchField )
-{
+function onSearchInput( searchField ) {
 	var result = (function( searchString ) {
-		if ( searchString.trim() == "" ) {
+		if( searchString.trim() == "" ) {
 			var ret = [];
-			$(list).each( function() { ret.push( this.id ); } );
+			$(list).each( function( idx ) { ret.push( idx ); } );
 			return ret;
 		} else {
 			/* var f = new Fuse( list, MyFuseOptions );
@@ -303,51 +298,48 @@ function onSearchInput( searchField )
 			var ret = [];
 			for( var i = 0; i < list.length; i++ ) {
 				//if ( fuzzy( list[i].text.replace(/\s/g, ""), searchString ).length > 0 ) {
-				if ( list[i].text.toLowerCase().replace(/\s/g, "").indexOf( searchString.toLowerCase() ) != -1 ) {
+				if( list[i].ref.text().toLowerCase().indexOf( searchString.toLowerCase() ) != -1 ) {
 					ret.push( i );
 				}
-
 			}
 			return ret;
-
 		}
 	})( $(searchField).val() );
 
 	updateList( list, result );
 }
 
-function updateList( list, matchingItems )
-{
-	$(list).each( function() { this.visible.next = false } );
+function updateList( list, matchingItems ) {
+	list.forEach( function( elem ) { elem.visible.next = false; } );
 
-	for( var i = 0, idx, item; i < matchingItems.length; i++ ) {
+	for( var i = 0; i < matchingItems.length; i++ ) {
 		list[ matchingItems[i] ].visible.next = true;
 	}
 
-	$(LIST_SELECTOR).each( function( idx ) {
-		var item = list[idx];
+	list.forEach( function( item ) {
+		// var item = list[idx];
 		if( item.visible.now == true && item.visible.next == false ) {
 			item.visible.now = false;
-			hideItem( $(this) );
+			hideItem( item.ref );
 		} else if ( item.visible.now == false && item.visible.next == true ) {
 			item.visible.now = true;
-			showItem( $(this) );
+			showItem( item.ref );
 		}
 	} );
 }
 
-function hideItem( elm )
-{
+function hideItem( elm ) {
 	elm.hide( "slide" );
+	elm.removeClass( "d-flex" );
 }
 
-function showItem( elm )
-{
+function showItem( elm ) {
 	elm.show( "slide" );
+	elm.addClass( "d-flex" );
 }
 </script>
 
-<script type="text/javascript" src="https://cdn.plu.mx/widget-popup.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.plu.mx/widget-popup.js"></script> -->
 
 </div>
 
