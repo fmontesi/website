@@ -166,7 +166,7 @@ service Utils {
 			for( author in vec.authors ) {
 				a.name = author
 				a.last = (++i == #vec.authors)
-				authorLink@self( vec.authors )( link )
+				authorLink@self( author )( link )
 				if( link instanceof string ) {
 					a.link = link
 				}

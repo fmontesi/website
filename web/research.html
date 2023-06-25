@@ -1,5 +1,25 @@
 {{< fm-page.html}}
 {{$title}}Research | Fabrizio Montesi{{/title}}
+{{$head}}
+<style>
+award {
+	font-weight: bold;
+	/* text-transform: uppercase; */
+}
+
+/* .pub-title {
+	font-weight: bold;
+} */
+
+.pub-title::before {
+	content: "‘";
+}
+
+.pub-title::after {
+	content: "’";
+}
+</style>
+{{/head}}
 {{$content}}
 <div class="container">
 	<h1>Research</h1>
@@ -214,8 +234,7 @@
 	{{#entries}}
 		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex">
 		<span style="float:left; width:80%">
-			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}.
-			<strong>{{{title}}}.</strong>
+			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
 			{{where}}.
 		<br/>
 		{{#notes}}
@@ -230,7 +249,7 @@
 		<a class="text-primary" style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">bibtex</a>
 		|
 		{{#links}}
-			<a class="text-primary" href="{{href}}">{{name}}</a>{{^last}} | {{/last}}
+			<a class="text-primary" href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}
 		{{/links}}
 		<div id="bibItem-{{id}}" class="collapse panel panel-default">
 		<div class="panel-body"><pre>{{bibtex}}</pre></div></div>

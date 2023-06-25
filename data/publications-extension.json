@@ -1,4 +1,25 @@
 {
+	"journals/jar/CruzFilipeMP23": {
+		"pdf": "cmp23"
+	},
+	"conf/coordination/Cruz-FilipeGMP23": {
+		"pdf": "cgmp23"
+	},
+	"conf/forte/Cruz-FilipeLM23": {
+		"pdf": "clm23"
+	},
+	"conf/coordination/GiallorenzoMPRU23": {
+		"pdf": "gmpru23",
+		"notes": [
+			{ "text": "<award>Best Artefact Award</award>" }
+		]
+	},
+	"journals/corr/abs-2303-03972": {
+		"peerReviewedVersion": "conf/forte/Cruz-FilipeLM23"
+	},
+	"journals/corr/abs-2304-14539": {
+		"peerReviewedVersion": "conf/coordination/Cruz-FilipeGMP23"
+	},
 	"conf/popl/CarboneM13": {
 		"pdf": "cm13"
 	},
@@ -53,7 +74,7 @@
 	"conf/sac/Montesi13": {
 		"pdf": "m13",
 		"notes": [
-			{ "text":"<strong>Best Poster Award</strong>" }
+			{ "text":"<award>Best Poster Award</award>" }
 		]
 	},
 	"conf/concur/MontesiY13": {
@@ -240,7 +261,7 @@
 	"conf/ecoop/GiallorenzoMPRS21": {
 		"pdf": "gmprs21",
 		"notes": [
-			{ "text": "<strong>Distinguished Paper Award</strong>" }
+			{ "text": "<award>Distinguished Paper Award</award>" }
 		]
 	},
 	"conf/coordination/GiallorenzoMPRS21": {

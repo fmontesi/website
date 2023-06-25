@@ -27,10 +27,11 @@
 			"where": "PhD Thesis, IT University of Copenhagen, 2013",
 			"links": [
 				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Choreographic_programming", "last": false },
-				{ "name": "EAPLS Best PhD Dissertation Award (2014)", "href": "https://eapls.org/items/1855/", "last": true }
+				{ "name": "Award announcement", "href": "https://eapls.org/items/1855/", "last": true }
 			],
 			"bibtex": "@PhdThesis{M13:phd,\r\n  author = \"Fabrizio Montesi\",\r\n  title = \"Choreographic {P}rogramming\",\r\n  school = \"IT University of Copenhagen\",\r\n  type = \"Ph.{D}. Thesis\",\r\n  year = 2013,\r\n  note = {\\url{https:\/\/www.fabriziomontesi.com\/files\/choreographic-programming.pdf}}\r\n}",
-			"pdf": "choreographic-programming"
+			"pdf": "choreographic-programming",
+			"notes": { "text": "<award>EAPLS Best PhD Dissertation Award (2014)</award>" }
 		}, {
 			"key": "MGZ14",
 			"title": "Service-Oriented Programming with Jolie",
@@ -67,7 +68,7 @@
 			],
 			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}",
 			"pdf": "m10",
-			"notes": { "text": "Best M.Sc. thesis on ICT (General Confederation of Italian Industry)" }
+			"notes": { "text": "<award>Best M.Sc. thesis on ICT (General Confederation of Italian Industry)</award>" }
 		} ]
 	} ]
 }
