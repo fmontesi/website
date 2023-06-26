@@ -78,11 +78,18 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400;500&display=swap" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400;500&display=swap" as="style"/>
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css?family=Montserrat:400;500&display=swap"/>
 	<link rel="preload" href="/webfonts/fa-brands-400.woff2" as="style"/>
 	<link rel="preload" href="/webfonts/fa-regular-400.woff2" as="style"/>
 	<link rel="preload" href="/fonts/goodtimes.ttf" as="style"/>
-	<link rel="stylesheet" href="/css/all.min.css"/>
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="/css/all.min.css"/>
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400;500&display=swap"/>
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="/css/all.min.css"/>
+	</noscript>
 	<!-- Highlight js -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"> -->
   <!-- Bootstrap -->
@@ -91,7 +98,7 @@
   <script src="/lib/jquery.js"></script>
   <script src="/lib/bootstrap.min.js"></script>
   <script src="/lib/jo.js"></script>
-  <!-- <script src="/lib/popper.js"></script> -->
+  <script src="/lib/popper.js"></script>
     <!-- <script type="text/javascript" src="/lib/alist.js"></script> -->
   <!-- <script type="text/javascript" src="/lib/fuse.js"></script> -->
 
