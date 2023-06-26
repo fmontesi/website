@@ -8,11 +8,13 @@
   "author": "fmontesi",
   "license": "MIT",
   "scripts": {
+    "build": "npx purgecss --config purgecss.config.js --output web/css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon --exec jolie main.ol"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "purgecss": "^5.0.0"
   },
   "jolie": {
     "dependencies": {
