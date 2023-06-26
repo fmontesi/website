@@ -246,10 +246,10 @@ award {
 		{{#peerReviewedVersion}}
 		<a href="#{{peerReviewedVersion}}">peer-reviewed version</a> | 
 		{{/peerReviewedVersion}}
-		<a class="text-primary" style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">bibtex</a>
+		<a style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">bibtex</a>
 		|
 		{{#links}}
-			<a class="text-primary" href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}
+			<a href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}
 		{{/links}}
 		<div id="bibItem-{{id}}" class="collapse panel panel-default">
 		<div class="panel-body"><pre>{{bibtex}}</pre></div></div>
