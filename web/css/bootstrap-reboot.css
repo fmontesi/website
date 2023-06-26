@@ -24,7 +24,7 @@ html {
   width: device-width;
 }
 
-article, figcaption, figure, header, main, nav, section {
+article, figcaption, figure, footer, header, main, nav, section {
   display: block;
 }
 
