@@ -323,8 +323,8 @@ h6 {
 
 .fm-year-dl dt {
 	flex: 0 0 10%;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	/* text-overflow: ellipsis; */
+	/* overflow: hidden; */
 }
 
 .fm-year-dl dd {
