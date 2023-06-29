@@ -1,7 +1,7 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}12 June 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a> and <a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic Programming (Wikipedia)</a>.{{/subHeader}}{{$content}}
 
 **Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreography) [[Montesi 2013](#M13p)].
-A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage).
+A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage). Choreographic programming languages feature high-level abstractions for defining interactions among concurrent participants (typically, message exchanges).
 A program given in a choreographic programming language is called choreographic program, or simply choreography when it is clear from the context.
 
 <figure class="bliki-figure">
@@ -14,13 +14,14 @@ Bob.modPow(g, b, p) -> Alice.y;
 <figcaption>
 
 A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange), given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies).
+The protocol specifies computation, making it an ideal candidate for choreographic programming.
 </figcaption>
 </figure>
 
 <a id="epp"></a>
 ## Endpoint Projection (EPP)
 
-Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems [[Montesi 2023](#M23)]. The theory of endpoint projection (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
+Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems [[Montesi 2023](#M23)]. This code can form standalone applications, libraries, software connectors, etc.  The theory of endpoint projection (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
 
 
 <figure class="bliki-figure">
@@ -51,6 +52,16 @@ Implementations of `Alice` and `Bob` compiled from the previous choreography, gi
 </figure>
 
 In general a choreography might involve many participants, so EPP must be able to distribute code onto many target programs.
+
+<figure class="bliki-figure">
+
+<img src="/images/cp-epp.svg" class="img-fluid"/>
+
+<figcaption>
+
+In general, a choreography may define the collective behaviour of many processes. Compilation then returns an executable program for each process.
+</figcaption>
+</figure>
 
 Ideally, EPP should not produce executable code that requires central control (choreographies are [intended to be decentralised](Choreography#Decentralised)).
 This introduces an interesting challenge known as [knowledge of choice](KnowledgeOfChoice), which deals with ensuring that processes agrees on the alternative behaviours selected during the execution of the choreography.
