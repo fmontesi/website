@@ -1,7 +1,8 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}Choreographic Programming{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$date}}12 June 2023{{/date}}{{$subHeader}}See also: <a href="/introduction-to-choreographies">Introduction to Choreographies</a> and <a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic Programming (Wikipedia)</a>.{{/subHeader}}{{$content}}
 
 **Choreographic Programming** is a programming paradigm where programs are [choreographies](Choreography) [[Montesi 2013](#M13p)].
-A choreographic programming language is a special case of a [choreographic language](ChoreographicLanguage). Choreographic programming languages feature high-level abstractions for defining interactions among concurrent participants (typically, message exchanges).
+These programs are written in choreographic programming languages, which feature high-level abstractions for defining the interactions and computations that independent processes engage in.
+A choreographic programming language is therefore a special case of a [choreographic language](ChoreographicLanguage).
 A program given in a choreographic programming language is called choreographic program, or simply choreography when it is clear from the context.
 
 <figure class="bliki-figure">
@@ -13,15 +14,16 @@ Bob.modPow(g, b, p) -> Alice.y;
 
 <figcaption>
 
-A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange), given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies).
-The protocol specifies computation, making it an ideal candidate for choreographic programming.
+A snippet of the [Diffie-Hellman protocol for key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange), given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies). The two archetypal processes `Alice` and `Bob` exchange data to establish a symmetric encryption key over a public channel (Wikipedia has a nice [explanation of its parameters and cryptographic principles](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)).
+The protocol specifies both communication and computation, making it an ideal candidate for being expressed in choreographic programming.
 </figcaption>
 </figure>
 
 <a id="epp"></a>
 ## Endpoint Projection (EPP)
 
-Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems [[Montesi 2023](#M23)]. This code can form standalone applications, libraries, software connectors, etc.  The theory of endpoint projection (EPP for short) usually plays an important role in such compilers, in addition to the details of the target executable language.
+Choreographic programming languages are typically accompanied by a compiler, which translates choreographies into executable code for concurrent and distributed systems [[Montesi 2023](#M23)]. This code can form standalone applications, libraries, software connectors, etc. Libraries compiled from choreographies can be used in the modular development of distributed applications [[Giallorenzo et al. 2020](#GMP20)].
+The theory of endpoint projection (EPP for short) usually plays an important role in the development of choreography compilers, in addition to the details of the target executable language.
 
 
 <figure class="bliki-figure">
@@ -59,7 +61,7 @@ In general a choreography might involve many participants, so EPP must be able t
 
 <figcaption>
 
-In general, a choreography may define the collective behaviour of many processes. Compilation then returns an executable program for each process.
+A choreography might define the collective behaviour of many processes. Compilation then returns an executable program for each process.
 </figcaption>
 </figure>
 
