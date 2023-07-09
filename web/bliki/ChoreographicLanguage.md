@@ -15,7 +15,7 @@ Choreographic languages can be roughly divided in two categories:
 
 Another possible source of categorisation: choreographic languages can be textual, graphical, or visual. Some examples are given next. In the remainder, `p`, `q`, `r`, `s`, etc. are process names.
 
-Choreographic languages can be translated to executable distributed code or abstract models of participants by means of [endpoint projection](EndpointProjection).
+Choreographic languages can be translated to executable distributed code or abstract models of participants by means of [endpoint projection](ChoreographicProgramming#epp).
 
 ## Recursive Choreographies<a id="RecursiveChoreographies"></a>
 
