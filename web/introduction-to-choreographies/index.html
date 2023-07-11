@@ -89,9 +89,10 @@ Page 192 misses an equation about message sequences, which allows for exchanging
 This equation is necessary to deal with situations where the same sender communicates multiple messages to the same receiver one right after the other.
 Here is the equation:
 <img src="/images/itc/queue-exchange.png" class="img-fluid"/>
+Having this kind of exchange rules is quite standard in the literature of choreographic programming and session types, but looking back a simpler approach might have been to model messaging states like choreographic stores (a map of maps of type PName -> PName -> Value | Label, mapping each process to another function that maps each process to the values or selection labels received from this latter process). This would eliminate the need for such exchanges.
 </li>
 <li>
-Rule SEND-VAL in Figure 11.2 should not update the store in the derivative (the Σ component should be the same before and after the transition). Thanks to Lovro Lugović for spotting this!
+Rule SEND-VAL in Figure 11.2 should not update the store in the derivative: the Σ component should (obviously) be the same before and after the transition. Thanks to Lovro Lugović for spotting this!
 Here is the fixed rule:
 <img src="/images/itc/send-val.png" class="img-fluid" />
 </li>

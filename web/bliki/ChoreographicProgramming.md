@@ -68,10 +68,12 @@ A choreography might define the collective behaviour of many processes. Compilat
 Ideally, EPP should not produce executable code that requires central control (unless this is specified explicitly by the source choreography): choreographies are [intended to be decentralised](Choreography#Decentralised).
 This introduces an interesting challenge known as [knowledge of choice](KnowledgeOfChoice), which deals with ensuring that processes agrees on the alternative behaviours selected during the execution of the choreography.
 
+Theories of EPP are also usually accompanied by proofs that the compiled code is deadlock-free. These proofs leverage the fact that source choreographies do not allow for pairing send and receive actions incorrectly (possibly under the assumption of some well-formedness or well-typedness conditions) [[Montesi 2023](#M23)]. The technique became popular under the slogan of 'deadlock-freedom by design' [[Carbone and Montesi 2013](#CM13)].
+
 ## Development
 
-Choreographic programming was proposed as a programming paradigm in [[Montesi 2013](#M13p)], which is also where the term was coined.
-The paradigm builds on and extends a series of previous theoretical results on the design of [choreographic languages](ChoreographicLanguage) and endpoint projection. For historical remarks and an introduction to theory of choreographies and their compilation, see [Introduction to Choreographies](/introduction-to-choreographies/) [[Montesi 2023](#M23)].
+The term choreographic programming was coined in the titular PhD thesis [[Montesi 2013](#M13p)], which proposed the approach as a programming paradigm.
+The paradigm builds on and extends a series of previous theoretical results on the design of [choreographic languages](ChoreographicLanguage) and endpoint projection (e.g., message sequence charts, choreographies for web services, multiparty session types). For historical remarks and an introduction to theory of choreographies and their compilation, see [Introduction to Choreographies](/introduction-to-choreographies/) [[Montesi 2023](#M23)].
 
 
 ## Implementations
