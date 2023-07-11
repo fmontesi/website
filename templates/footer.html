@@ -3,6 +3,13 @@
 	<source src="/audio/beep.ogg"></source>
 </audio>
 <script type="text/javascript">
+$(".viewport-down").click( function(event) {
+	var viewportHeight = $(window).height() - $("#navbar-container").height();
+	$('html, body').animate({
+		scrollTop: viewportHeight
+	}, 700);
+});
+
 $(".fm-navbar-toggler").click( function() {
 	$("#fm-menu").toggle(500);
 });
@@ -56,7 +63,7 @@ $( window ).on( "load", function() {
 			});
 		}
 	}
-     });
+});
 </script>
 </body>
 </html>

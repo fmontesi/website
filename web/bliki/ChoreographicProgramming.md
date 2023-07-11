@@ -65,7 +65,7 @@ A choreography might define the collective behaviour of many processes. Compilat
 </figcaption>
 </figure>
 
-Ideally, EPP should not produce executable code that requires central control (choreographies are [intended to be decentralised](Choreography#Decentralised)).
+Ideally, EPP should not produce executable code that requires central control (unless this is specified explicitly by the source choreography): choreographies are [intended to be decentralised](Choreography#Decentralised).
 This introduces an interesting challenge known as [knowledge of choice](KnowledgeOfChoice), which deals with ensuring that processes agrees on the alternative behaviours selected during the execution of the choreography.
 
 ## Development

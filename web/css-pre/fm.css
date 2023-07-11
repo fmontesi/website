@@ -433,3 +433,7 @@ blockquote::before {
 	width: 100%;
 	background-color: black;
 }
+
+.viewport-down {
+	cursor: pointer;
+}
