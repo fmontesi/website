@@ -1,4 +1,10 @@
 {
+	"journals/scp/GiallorenzoMPR23": {
+		"pdf": "gmpr23"
+	},
+	"conf/ecoop/Cruz-FilipeGLMP23": {
+		"pdf": "cglmp23"
+	},
 	"journals/jar/CruzFilipeMP23": {
 		"pdf": "cmp23"
 	},
