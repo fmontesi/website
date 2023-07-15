@@ -16,6 +16,9 @@
 {{$title}}{{title}}{{/title}}
 {{$content}}
 <div class="container">
+<p class="w-100 text-right"><small>
+	<a href="/research.html#publications-list">Back to list of publications</a>
+</small></p>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
 {{#fullView}}
 <p><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
@@ -45,9 +48,11 @@
 
 {{#pdf}}
 <p>A PDF is available (possibly a preprint):</p>
-<div style="height: 100vh">
+<div style="padding-bottom: .1rem">
+<!-- <div style="height: 100vh"> -->
 <object data="/files/{{pdf}}.pdf" type="application/pdf" width="100%" style="height: 85vh">
-<a href="/files/{{pdf}}.pdf"><p class="w-100 text-center bliki-figure"><i class="fa fa-download"></i> Download PDF</p></a>
+	<a href="/files/{{pdf}}.pdf"><p class="w-100 text-center bliki-figure"><i class="fa fa-download"></i> Download PDF</p></a>
+</object>
 </div>
 {{/pdf}}
 
