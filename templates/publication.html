@@ -1,0 +1,56 @@
+{{< fm-page.html}}
+{{$head}}
+<style>
+.pub-title-card {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.publication-dl dt {
+	font-weight: bold;
+}
+.publication-dl dd {
+}
+</style>
+{{/head}}
+{{$title}}{{title}}{{/title}}
+{{$content}}
+<div class="container">
+<p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
+{{#fullView}}
+<p><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
+{{/fullView}}
+<dl class="publication-dl">
+	<dt>Author(s)</dt>
+	<dd>{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}</dd>
+	<dt>Year</dt>
+	<dd>{{year}}</dd>
+	<dt>Where</dt>
+	<dd>{{where}}.</dd>
+	<dt>Links</dt>
+	<dd>{{^links}}None{{/links}}{{#links}}<a href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}{{/links}}</dd>
+	<dt>Additional notes</dt>
+	<dd>{{^notes}}None{{/notes}}{{#notes}}<span class="mr-3">{{{text}}}</span>{{/notes}}</dd>
+	<dt>Cite (Bibtex)</dt>
+	<dd>
+		<a style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">Click to expand</a>
+		<div id="bibItem-{{id}}" class="collapse panel panel-default">
+			<div class="panel-body"><pre>{{bibtex}}</pre></div></div>
+	</dd>
+	{{#peerReviewedVersion}}
+	<dt>Peer-reviewed version</dt>
+	<dd><a href="/research.html#{{peerReviewedVersion}}">Click to show in publication list</a></dd>
+	{{/peerReviewedVersion}}
+</dl>
+
+{{#pdf}}
+<p>A PDF is available (possibly a preprint):</p>
+<div style="height: 100vh">
+<object data="/files/{{pdf}}.pdf" type="application/pdf" width="100%" style="height: 85vh">
+<a href="/files/{{pdf}}.pdf"><p class="w-100 text-center bliki-figure"><i class="fa fa-download"></i> Download PDF</p></a>
+</div>
+{{/pdf}}
+
+</div>
+{{/content}}
+{{/fm-page.html}}

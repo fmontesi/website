@@ -1,4 +1,13 @@
 {
+	"journals/corr/abs-2205-02636": {
+		"path": "implementing-choreography-extraction-complete-arxiv"
+	},
+	"journals/corr/abs-1910-11741": {
+		"path": "implementing-choreography-extraction-impl-only-arxiv"
+	},
+	"M10": {
+		"path": "jolie-msc"
+	},
 	"journals/scp/GiallorenzoMPR23": {
 		"pdf": "gmpr23"
 	},
@@ -33,9 +42,11 @@
 		"pdf": "mgz07"
 	},
 	"journals/entcs/MontesiGLZ07": {
+		"path": "jolie-a-java-orchestration-engine-interpreter-engine",
 		"pdf": "mglz07"
 	},
 	"conf/sefm/LaneseGMZ08": {
+		"path": "bridging-the-gap-between-interaction-and-process-oriented-choreographies",
 		"pdf": "lgmz08"
 	},
 	"conf/ecows/MontesiGLZ08": {
@@ -57,6 +68,7 @@
 		"pdf": "ms10"
 	},
 	"conf/isola/LaneseM10": {
+		"path": "error-handling-from-theory-to-practice",
 		"pdf": "lm10"
 	},
 	"conf/icsoc/MontesiC11": {
@@ -160,7 +172,8 @@
 	},
 	"conf/aina/SafinaMMR16": {},
 	"journals/scp/Montesi16": {
-		"pdf": "m16"
+		"pdf": "m16",
+		"path": "process-aware-web-programming-with-jolie-journal"
 	},
 	"journals/ftpl/AnconaBB0CDGGGH16": {
 		"pdf": "btipl"
@@ -170,11 +183,16 @@
 		"peerReviewedVersion": "conf/sac/Cruz-FilipeMP18"
 	},
 	"journals/corr/abs-1711-08700": {},
+	"books/sp/17/GuidiLMM17": {
+		"path": "microservices-a-language-based-approach"
+	},
 	"journals/corr/GuidiLMM17": {
-		"peerReviewedVersion": "books/sp/17/GuidiLMM17"
+		"peerReviewedVersion": "books/sp/17/GuidiLMM17",
+		"path": "microservices-a-language-based-approach-arxiv"
 	},
 	"books/sp/17/DragoniGLMMMS17": {
-		"pdf": "dglmmms17"
+		"pdf": "dglmmms17",
+		"path": "microservices-yesterday-today-and-tomorrow"
 	},
 	"journals/corr/abs-1711-11211": {
 		"pdf": "cm17-ice"
@@ -195,7 +213,8 @@
 		"pdf": "mt17_forte"
 	},
 	"journals/acta/CarboneMSY17": {
-		"pdf": "cmsy17"
+		"pdf": "cmsy17",
+		"path": "multiparty-session-types-as-coherence-proofs-journal"
 	},
 	"journals/corr/abs-1811-02209": {
 		"peerReviewedVersion": "journals/pacmpl/KokkeMP19"
@@ -219,7 +238,8 @@
 		"pdf": "gmg18"
 	},
 	"journals/dc/CarboneMS18": {
-		"pdf": "cms18"
+		"pdf": "cms18",
+		"path": "choreographies-logically-journal"
 	},
 	"journals/corr/abs-1903-07962": {
 		"peerReviewedVersion": "conf/coordination/GabbrielliGLMPZ19"
@@ -234,13 +254,15 @@
 		"pdf": "gmp20"
 	},
 	"conf/microservices/2019": {
+		"path": "proceedings-microservices-2017-2019",
 		"pdf": "cgmprs19"
 	},
 	"conf/birthday/GiallorenzoLMSZ20": {
 		"pdf": "glmsz20"
 	},
 	"journals/tcs/Cruz-FilipeM20": {
-		"pdf": "cm20"
+		"pdf": "cm20",
+		"path": "a-core-model-for-choreographic-programming-journal"
 	},
 	"journals/corr/abs-2111-03701": {
 		"peerReviewedVersion": "conf/ictac/Cruz-FilipeGLMP22"
@@ -282,7 +304,9 @@
 	"journals/corr/abs-2202-11397": {
 		"peerReviewedVersion": "conf/coordination/GiallorenzoMPR22"
 	},
-	"conf/esocc/2022": {},
+	"conf/esocc/2022": {
+		"path": "proceedings-esocc-2022"
+	},
 	"conf/lopstr/KjaerCM22": {
 		"pdf": "kcm22"
 	},

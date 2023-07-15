@@ -237,11 +237,17 @@ award {
 			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
 			{{where}}.
 		<br/>
+		{{^fullView}}
+		<a href="/publication/{{path}}"><i class="fa fa-eye"></i> Full view & info</a> | 
+		{{/fullView}}
+		{{#fullView}}
+		<a href="{{fullView}}"><i class="fa fa-eye"></i> Full view & info</a> | 
+		{{/fullView}}
 		{{#notes}}
 			{{{text}}} | 
 		{{/notes}}
 		{{#pdf}}
-		<a href="/files/{{pdf}}.pdf">PDF</a> | 
+		<a href="/files/{{pdf}}.pdf"><i class="fa fa-download"></i> PDF</a> | 
 		{{/pdf}}
 		{{#peerReviewedVersion}}
 		<a href="#{{peerReviewedVersion}}">peer-reviewed version</a> | 

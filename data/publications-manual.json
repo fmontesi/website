@@ -10,11 +10,16 @@
 				"last": true
 			},
 			"type": "book",
+			"notes": [
+				{ "text": "ISBN (Print): 9781108833769" },
+				{ "text": "ISBN (Online): 9781108981491" }
+			],
 			"where": "Cambridge University Press, 2023",
 			"links": [
-				{ "name": "Website", "href": "/introduction-to-choreographies/", "last": true }
+				{ "name": "doi.org", "href": "https://doi.org/10.1017/9781108981491", "last": true }
 			],
-			"bibtex": "@book{M23,\r\n  place={Cambridge},\r\n  title={Introduction to Choreographies},\r\n  publisher={Cambridge University Press},\r\n  author={Montesi, Fabrizio},\r\n  year={2023}\r\n}"
+			"bibtex": "@book{M23,\r\n  place={Cambridge},\r\n  title={Introduction to Choreographies},\r\n  publisher={Cambridge University Press},\r\n  author={Montesi, Fabrizio},\r\n  year={2023}\r\n}",
+			"fullView": "/introduction-to-choreographies/"
 		}, {
 			"key": "M13:phd",
 			"title": "Choreographic Programming",
@@ -33,7 +38,7 @@
 			"pdf": "choreographic-programming",
 			"notes": { "text": "<award>EAPLS Best PhD Dissertation Award (2014)</award>" }
 		}, {
-			"key": "MGZ14",
+			"key": "books/sp/wsf14/MontesiGZ14",
 			"title": "Service-Oriented Programming with Jolie",
 			"year": "2014",
 			"authors": [ {

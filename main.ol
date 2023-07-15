@@ -24,7 +24,8 @@ type HelloRequest {
 interface WebInterface {
 RequestResponse:
 	get( DefaultOperationHttpRequest )( undefined ),
-	hello( HelloRequest )( string )
+	hello( HelloRequest )( string ),
+	publicationPage throws PublicationNotFound( string )
 }
 
 interface MustacheOperations {
@@ -32,7 +33,8 @@ RequestResponse:
 	publications( void )( PublicationDataset ),
 	dissemination,
 	blikiIndex,
-	blikiFeed
+	blikiFeed,
+	menu
 }
 
 service Main {
@@ -67,6 +69,12 @@ service Main {
 			osc.hello << {
 				template = "/hello?name={name}"
 				method = "get"
+			}
+
+			osc.publicationPage << {
+				template = "/publication/{path}"
+				method = "get"
+				statusCodes.PublicationNotFound = 404
 			}
 		}
 		interfaces: WebInterface
@@ -172,50 +180,7 @@ service Main {
 					}
 
 					data.webPath = webPath
-					data.menu.cols[0] << {
-						item[0] << {
-							text = "Home"
-							link = "/index.html"
-						}
-						item[1] << {
-							text = "Research"
-							link = "/research.html"
-						}
-						item[2] << {
-							text = "Dissemination"
-							link = "/dissemination.html"
-						}
-						item[3] << {
-							text = "Education"
-							link = "/education.html"
-						}
-						item[4] << {
-							text = "People"
-							link = "/people.html"
-						}
-					}
-					data.menu.cols[1] << {
-						item[0] << {
-							text = "Book"
-							link = "/introduction-to-choreographies/"
-						}
-						item[1] << {
-							text = "Bliki"
-							link = "/bliki/"
-						}
-						item[2] << {
-							text = "Projects"
-							link = "/projects/"
-						}
-						item[3] << {
-							text = "Tools"
-							link = "/tools.html"
-						}
-						item[4] << {
-							text = "Blog"
-							link = "https://fmontesi.github.io"
-						}
-					}
+					menu@self()( data.menu )
 					render@mustache( {
 						template -> getResult.content
 						data -> data
@@ -318,5 +283,68 @@ service Main {
 			}
 			lastUpdated@blikiUtils()( response.updated )
 		} ]
+
+		[ publicationPage( request )( response ) {
+			httpParams.format = "html"
+			readFile@file( { filename = "data/publications-by-path.json", format = "json" } )( publicationsByPath )
+			if( !is_defined( publicationsByPath.( request.path ) ) ) {
+				throw PublicationNotFound( "Sorry, I could not find the publication " + request.path + "." )
+			}
+
+			data << publicationsByPath.( request.path )
+			menu@self()( data.menu )
+			render@mustache( {
+				template = "{{< publication.html}}{{/publication.html}}"
+				data -> data
+				dir = global.templatesDir
+			} )( response )
+		} ]
+
+		[ menu()( {
+			cols[0] << {
+				item[0] << {
+					text = "Home"
+					link = "/index.html"
+				}
+				item[1] << {
+					text = "Research"
+					link = "/research.html"
+				}
+				item[2] << {
+					text = "Dissemination"
+					link = "/dissemination.html"
+				}
+				item[3] << {
+					text = "Education"
+					link = "/education.html"
+				}
+				item[4] << {
+					text = "People"
+					link = "/people.html"
+				}
+			}
+			cols[1] << {
+				item[0] << {
+					text = "Book"
+					link = "/introduction-to-choreographies/"
+				}
+				item[1] << {
+					text = "Bliki"
+					link = "/bliki/"
+				}
+				item[2] << {
+					text = "Projects"
+					link = "/projects/"
+				}
+				item[3] << {
+					text = "Tools"
+					link = "/tools.html"
+				}
+				item[4] << {
+					text = "Blog"
+					link = "https://fmontesi.github.io"
+				}
+			}
+		} ) ]
 	}
 }

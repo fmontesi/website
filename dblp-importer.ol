@@ -19,6 +19,7 @@ type PublicationDataset {
 		entries* {
 			id: long
 			key: string
+			path: string
 			title: string
 			year: string
 			authors* {
@@ -39,6 +40,7 @@ type PublicationDataset {
 			notes* {
 				text: string
 			}
+			fullView?: string
 		}
 	}
 }
@@ -134,6 +136,9 @@ service Utils {
 				
 				if( is_defined( extraData.notes ) )
 					entry.notes << extraData.notes
+				
+				if( is_defined( extraData.path ) )
+					entry.path = extraData.path
 			}
 		} ]
 
@@ -232,49 +237,92 @@ service Main {
 	// }
 
 	main {
-		readFile@files( {
-			filename = "data/publications-manual.json"
-			format = "json"
-		} )( manual )
-		for( collection in manual.collections ) {
-			collections[#collections] << collection
-		}
-		undef( collection )
+		if( args[0] == "no-dblp" ) {
+			readFile@files( {
+				filename = "data/publications.json"
+				format = "json"
+			} )( data )
+			collections << data.collections
+		} else {
+			readFile@files( {
+				filename = "data/publications-manual.json"
+				format = "json"
+			} )( manual )
+			for( collection in manual.collections ) {
+				collections[#collections] << collection
+			}
+			undef( collection )
 
-		getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
-		for( r in dblpPerson.r ) {
-			undef( key )
-			foreach( k : r ) {
-				if( is_defined( r.(k).year ) ) {
-					key = k
+			getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
+			for( r in dblpPerson.r ) {
+				undef( key )
+				foreach( k : r ) {
+					if( is_defined( r.(k).year ) ) {
+						key = k
+					}
+				}
+				if( is_defined( key ) ) {
+					year = r.(key).year
+					r.(key).type = key
+					cMap.(year).papers[#cMap.(year).papers] << r.(key)
 				}
 			}
-			if( is_defined( key ) ) {
-				year = r.(key).year
-				r.(key).type = key
-				cMap.(year).papers[#cMap.(year).papers] << r.(key)
+			foreach( yearKey : cMap ) {
+				request.items[#request.items] = int(yearKey)
 			}
-		}
-		foreach( yearKey : cMap ) {
-			request.items[#request.items] = int(yearKey)
-		}
-		sort@quicksort( request )( sortedYears )
-		for( year in sortedYears.items ) {
-			collection.title = string(year)
-			for( r in cMap.(year).papers ) {
-				entry@utils( r )( collection.entries[#collection.entries] )
+			sort@quicksort( request )( sortedYears )
+			for( year in sortedYears.items ) {
+				collection.title = string(year)
+				for( r in cMap.(year).papers ) {
+					entry@utils( r )( collection.entries[#collection.entries] )
+				}
+				collections[#collections] << collection
+				undef( collection )
 			}
-			collections[#collections] << collection
-			undef( collection )
+
+			id = 0
+			for( collection in collections ) {
+				for( entry in collection.entries ) {
+					entry.id = id++
+				}
+			}
 		}
 
-		id = 0
+		undef( pathMap )
 		for( collection in collections ) {
 			for( entry in collection.entries ) {
-				entry.id = id++
+				if( !is_defined( entry.path ) ) {
+					path = entry.title
+					toLowerCase@stringUtils( path )( path )
+					replaceAll@stringUtils( path { regex = " - .*" replacement = "" } )( path )
+					replaceAll@stringUtils( path { regex = ": .*" replacement = "" } )( path )
+					replaceAll@stringUtils( path { regex = "[^[^\\p{P}]-]+" replacement = "" } )( path ) // remove all punctuation but -
+					replaceAll@stringUtils( path { regex = "π" replacement = "pi" } )( path )
+					replaceAll@stringUtils( path { regex = "\\p{javaWhitespace}+", replacement = "-" } )( path )
+					if( startsWith@stringUtils( entry.key { prefix = "journals/corr/" } ) ) {
+						path += "-arxiv"
+					}
+					entry.path = path
+				} else {
+					path = entry.path
+				}
+				if( !is_defined( pathMap.(path) )
+					|| (
+						pathMap.(path).collection.title == "Highlights"
+						&& pathMap.(path).key == entry.key
+					) ) {
+					undef( pathMap.(path) )
+					pathMap.(path) << entry
+					pathMap.(path).collection.title = collection.title
+					println@console( "Imported " + entry.key + " as " + path )()
+				} else {
+					throw DuplicatePublicationPath( { path = path, key = entry.key } )
+				}
+				undef( path )
 			}
 		}
 
 		writeFile@files( { filename = "data/publications.json", format = "json", content << { collections -> collections } } )()
+		writeFile@files( { filename = "data/publications-by-path.json", format = "json", content << pathMap } )()
 	}
 }
