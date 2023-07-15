@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	/* margin-top: 1rem; */
 	margin-bottom: 1rem;
+	scroll-margin-top: 3rem;
 
 	background: linear-gradient(#f7e887 0%, #ddb55e 50%);
 	-webkit-background-clip: text;
@@ -436,4 +437,8 @@ blockquote::before {
 
 .viewport-down {
 	cursor: pointer;
+}
+
+a {
+	scroll-margin-top: 3rem;
 }
