@@ -6,10 +6,21 @@
 	font-weight: bold;
 }
 
+.publication-dl {
+}
+
 .publication-dl dt {
 	font-weight: bold;
 }
+
 .publication-dl dd {
+}
+
+.footer-note {
+	border-top: 1px solid #ddb55e;
+	width: 100%;
+	text-align: center !important;
+	/* padding-bottom: .1rem; */
 }
 </style>
 {{/head}}
@@ -20,12 +31,19 @@
 	<a href="/research.html#publications-list">Back to list of publications</a>
 </small></p>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
+<p class="w-100 text-center">
+{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}
+</p>
 {{#fullView}}
 <p><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
 {{/fullView}}
 <dl class="publication-dl">
-	<dt>Author(s)</dt>
-	<dd>{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}</dd>
+	<!-- <dt>Author(s)</dt>
+	<dd>{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}</dd> -->
+	{{#abstract}}
+	<dt>Abstract</dt>
+	<dd>{{{abstract}}}</dd>
+	{{/abstract}}
 	<dt>Year</dt>
 	<dd>{{year}}</dd>
 	<dt>Where</dt>
@@ -34,7 +52,7 @@
 	<dd>{{^links}}None{{/links}}{{#links}}<a href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}{{/links}}</dd>
 	<dt>Additional notes</dt>
 	<dd>{{^notes}}None{{/notes}}{{#notes}}<span class="mr-3">{{{text}}}</span>{{/notes}}</dd>
-	<dt>Cite (Bibtex)</dt>
+	<dt>Cite (BibTeX)</dt>
 	<dd>
 		<a style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">Click to expand</a>
 		<div id="bibItem-{{id}}" class="collapse panel panel-default">
@@ -56,6 +74,7 @@
 </div>
 {{/pdf}}
 
+<p class="footer-note"><small>Some data from <a href="https://dblp.org/">DBLP</a> and <a href="https://www.crossref.org/">Crossref</a>.</small></p>
 </div>
 {{/content}}
 {{/fm-page.html}}

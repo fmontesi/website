@@ -22,6 +22,8 @@ type PublicationDataset {
 			path: string
 			title: string
 			year: string
+			doi?:string
+			abstract?:string
 			authors* {
 				name: string
 				link?: string
@@ -82,6 +84,7 @@ service Utils {
 	embed StringUtils as su
 	embed File as files
 	embed Console as console
+	embed StringUtils as stringUtils
 
 	init {
 		readFile@files( {
@@ -122,6 +125,11 @@ service Utils {
 			links@self( r )( vec )
 			if( #vec.links > 0 ) {
 				entry.links << vec.links
+				for( link in entry.links ) {
+					if( link.name == "doi.org" ) {
+						replaceAll@stringUtils( link.href { regex = "https://doi.org/", replacement = "" } )( entry.doi )
+					}
+				}
 			}
 			bibtex@self( r )( entry.bibtex )
 
@@ -225,6 +233,17 @@ service Main {
 		interfaces: DblpServerInterface
 	}
 
+	outputPort crossRef {
+		location: "socket://api.crossref.org:443/"
+		protocol: https {
+			osc.getWork << {
+				alias = "works/%!{doi}"
+				method = "get"
+			}
+		}
+		RequestResponse: getWork
+	}
+
 	embed Utils as utils
 
 	embed Console as console
@@ -284,6 +303,19 @@ service Main {
 			for( collection in collections ) {
 				for( entry in collection.entries ) {
 					entry.id = id++
+					if( !is_defined( entry.abstract ) && is_defined( entry.doi ) ) {
+						print@console( "Getting abstract for " + entry.key + " with doi " + entry.doi + "... " )()
+						scope( crossRefFetch ) {
+							install( default => println@console( "❌ (not found or error in contacting Crossref) " )() )
+							getWork@crossRef( { doi = entry.doi } )( crossRefData )
+							if( is_defined( crossRefData.message.abstract ) ) {
+								replaceAll@stringUtils( crossRefData.message.abstract { regex = "<jats:title>.*</jats:title>", replacement = "" } )( entry.abstract )
+								println@console( "❌ (no abstract from Crossref)" )()
+							} else {
+								println@console( "✅" )()
+							}
+						}
+					}
 				}
 			}
 		}
