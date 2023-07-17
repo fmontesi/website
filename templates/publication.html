@@ -31,13 +31,13 @@
 {{$title}}{{title}}{{/title}}
 {{$content}}
 <div class="container">
-<div class="row header-row">
+<div class="row m-0 header-row">
 	{{#previous}}
-	<div class="col text-left"><a href="/publication/{{previous}}"><i class="fa fa-angle-left"></i> Previous</a></div>
+	<div class="text-left" style="margin-right: auto"><a href="/publication/{{previous}}"><i class="fa fa-angle-left"></i> Previous</a></div>
 	{{/previous}}
-	<div class="col-6 text-center"><a href="/research.html#publications-list">All publications</a></div>
+	<div class="text-center" style="margin-left: auto; margin-right: auto;"><a href="/research.html#publications-list">All publications</a></div>
 	{{#next}}
-	<div class="col text-right"><a href="/publication/{{next}}">Next <i class="fa fa-angle-right"></i></a></div>
+	<div class="text-right" style="margin-left: auto;"><a href="/publication/{{next}}">Next <i class="fa fa-angle-right"></i></a></div>
 	{{/next}}
 </div>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
