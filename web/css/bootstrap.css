@@ -1682,6 +1682,10 @@ a.close.disabled {
   border: 1px solid #dee2e6 !important;
 }
 
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+
 .border-dark {
   border-color: #adb5bd !important;
 }
