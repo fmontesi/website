@@ -94,6 +94,38 @@ service Main {
 	}
 
 	init {
+		readFile@file( { filename = "data/publications.json", format = "json" } )( pubData )
+		lastCollection -> pubData.collections[#pubData.collections - 1]
+		lastId = lastCollection.entries[#lastCollection.entries - 1].id
+		firstId = 0
+		for( collection in pubData.collections ) {
+			for( entry in collection.entries ) {
+				pubIdToPath.(entry.id) = entry.path
+			}
+		}
+		foreach( id : pubIdToPath ) {
+			id = int(id)
+			pubPathToDirs.(pubIdToPath.(id)) << {
+				next =
+					pubIdToPath.(
+						if( id == lastId )
+							firstId
+						else
+							id + 1
+					)
+				previous =
+					pubIdToPath.(
+						if( id == firstId )
+							lastId
+						else
+							id - 1
+					)
+			}
+		}
+		undef( pubIdToPath ); undef( firstId ); undef( lastId ); undef( lastCollection ); undef( pubData )
+	}
+
+	init {
 		global.wwwDir = "web"
 		global.templatesDir = "templates"
 		global.dataBindings.("/research.html") = "publications"
@@ -292,6 +324,8 @@ service Main {
 			}
 
 			data << publicationsByPath.( request.path )
+			data << pubPathToDirs.( request.path )
+			
 			menu@self()( data.menu )
 			render@mustache( {
 				template = "{{< publication.html}}{{/publication.html}}"

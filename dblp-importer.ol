@@ -1,4 +1,4 @@
-#!/usr/bin/env -S jolie -s Main
+#!/usr/bin/env -S jolie -s Main --responseTimeout 2000
 
 from console import Console
 from file import File
@@ -54,7 +54,7 @@ RequestResponse:
 }
 
 interface UtilsInterface {
-RequestResponse: entry, where, authors, authorLink, links, bibtex, title
+RequestResponse: entry, where, authors, authorLink, links, bibtex, title, abstract, arxivAbstract
 }
 
 service Utils {
@@ -78,6 +78,28 @@ service Utils {
 			method -> method
 		}
 		interfaces: DblpServerInterface
+	}
+
+	outputPort crossRef {
+		location: "socket://api.crossref.org:443/"
+		protocol: https {
+			osc.getWork << {
+				alias = "works/%!{doi}"
+				method = "get"
+			}
+		}
+		RequestResponse: getWork
+	}
+
+	outputPort arxiv {
+		location: "socket://export.arxiv.org:80/"
+		protocol: http {
+			osc.query << {
+				alias = "api/query"
+				method = "get"
+			}
+		}
+		RequestResponse: query
 	}
 
 	embed Runtime as runtime
@@ -147,6 +169,9 @@ service Utils {
 				
 				if( is_defined( extraData.path ) )
 					entry.path = extraData.path
+
+				if( is_defined( extraData.abstract ) )
+					entry.abstract = extraData.abstract
 			}
 		} ]
 
@@ -218,6 +243,63 @@ service Utils {
 		[ bibtex( r )( bibtex ) {
 			getBibtex@dblp( r.(Attributes).key )( bibtex )
 		} ]
+
+		[ abstract( entry )( abstract ) {
+			if( is_defined( entry.abstract ) ) {
+				abstract = entry.abstract
+			} else {
+				println@console( "Missing abstract for " + entry.key + "." )()
+				if( startsWith@stringUtils( entry.key { prefix = "journals/corr/abs-" } ) ) {
+					replaceAll@stringUtils( entry.key { regex = "journals/corr/abs-", replacement = "" } )( arxivId )
+					replaceAll@stringUtils( arxivId { regex = "-", replacement = "." } )( arxivId )
+					print@console( "\t Entry is from arXiv (id " + arxivId + "). Trying arXiv... " )()
+					arxivAbstract@self( arxivId )( abstract )
+				} else if( startsWith@stringUtils( entry.key { prefix = "journals/corr/" } ) ) {
+					print@console( "\t Entry is from arXiv, looking for id... " )()
+					arxivId = {}
+					for( link in entry.links ) {
+						if( link.name == "arxiv.org" && startsWith@stringUtils( link.href { prefix = "http://arxiv.org/abs/" } ) ) {
+							replaceAll@stringUtils( link.href { regex = "http://arxiv.org/abs/", replacement = "" } )( arxivId )
+						}
+					}
+					if( arxivId instanceof string ) {
+						print@console( "found id " + arxivId + ". Trying arXiv... " )()
+						arxivAbstract@self( arxivId )( abstract )
+					}
+				} else if( is_defined( entry.doi ) ) {
+					print@console( "\tEntry has doi (" + entry.doi + "). Trying Crossref... " )()
+					scope( crossRefFetch ) {
+						install( default => println@console( "❌ (not found or error in contacting Crossref)" )() )
+						getWork@crossRef( { doi = entry.doi } )( crossRefData )
+						if( is_defined( crossRefData.message.abstract ) ) {
+							replaceAll@stringUtils( crossRefData.message.abstract { regex = "<jats:title>.*</jats:title>", replacement = "" } )( abstract )
+							println@console( "✅" )()
+						} else {
+							println@console( "❌ (no abstract in Crossref entry)" )()
+						}
+					}
+				}
+			}
+
+			if( abstract instanceof string ) {
+				trim@stringUtils( abstract )( abstract )
+			}
+		} ]
+
+		[ arxivAbstract( arxivId )( abstract ) {
+			scope( fetch ) {
+				install( default => println@console( "❌ (not found or error in contacting arXiv)" )() )
+				query@arxiv( { id_list = arxivId } )( arxivRecord )
+				if( arxivRecord.entry.title == "Error" ) {
+					println@console( "❌ (error returned from arXiv)" )()
+				} else if( is_defined( arxivRecord.entry.summary ) ) {
+					abstract = arxivRecord.entry.summary
+					println@console( "✅" )()
+				} else {
+					println@console( "❌ (arXiv entry has no abstract)" )()
+				}
+			}
+		} ]
 	}
 }
 
@@ -233,17 +315,6 @@ service Main {
 		interfaces: DblpServerInterface
 	}
 
-	outputPort crossRef {
-		location: "socket://api.crossref.org:443/"
-		protocol: https {
-			osc.getWork << {
-				alias = "works/%!{doi}"
-				method = "get"
-			}
-		}
-		RequestResponse: getWork
-	}
-
 	embed Utils as utils
 
 	embed Console as console
@@ -251,9 +322,12 @@ service Main {
 	embed Quicksort as quicksort
 	embed File as files
 
-	// init {
-	// 	refreshCollections
-	// }
+	init {
+		readFile@files( {
+			filename = "data/publications-extension.json"
+			format = "json"
+		} )( publicationsExtension )
+	}
 
 	main {
 		if( args[0] == "no-dblp" ) {
@@ -303,18 +377,10 @@ service Main {
 			for( collection in collections ) {
 				for( entry in collection.entries ) {
 					entry.id = id++
-					if( !is_defined( entry.abstract ) && is_defined( entry.doi ) ) {
-						print@console( "Getting abstract for " + entry.key + " with doi " + entry.doi + "... " )()
-						scope( crossRefFetch ) {
-							install( default => println@console( "❌ (not found or error in contacting Crossref) " )() )
-							getWork@crossRef( { doi = entry.doi } )( crossRefData )
-							if( is_defined( crossRefData.message.abstract ) ) {
-								replaceAll@stringUtils( crossRefData.message.abstract { regex = "<jats:title>.*</jats:title>", replacement = "" } )( entry.abstract )
-								println@console( "❌ (no abstract from Crossref)" )()
-							} else {
-								println@console( "✅" )()
-							}
-						}
+					abstract@utils( entry )( abstract )
+					if( abstract instanceof string ) {
+						entry.abstract = abstract
+						publicationsExtension.(entry.key).abstract = abstract
 					}
 				}
 			}
@@ -354,7 +420,8 @@ service Main {
 			}
 		}
 
-		writeFile@files( { filename = "data/publications.json", format = "json", content << { collections -> collections } } )()
-		writeFile@files( { filename = "data/publications-by-path.json", format = "json", content << pathMap } )()
+		writeFile@files( { filename = "data/publications.json", format << "json", content << { collections -> collections } } )()
+		writeFile@files( { filename = "data/publications-by-path.json", format << "json", content << pathMap } )()
+		writeFile@files( { filename = "data/publications-extension.json", format << "json", content << publicationsExtension } )()
 	}
 }

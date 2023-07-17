@@ -22,20 +22,31 @@
 	text-align: center !important;
 	/* padding-bottom: .1rem; */
 }
+
+.header-row div {
+	font-size: smaller;
+}
 </style>
 {{/head}}
 {{$title}}{{title}}{{/title}}
 {{$content}}
 <div class="container">
-<p class="w-100 text-right"><small>
-	<a href="/research.html#publications-list">Back to list of publications</a>
-</small></p>
+<div class="row header-row">
+	{{#previous}}
+	<div class="col text-left"><a href="/publication/{{previous}}">Previous</a></div>
+	{{/previous}}
+	<div class="col-6 text-center"><a href="/research.html#publications-list">All publications</a></div>
+	{{#next}}
+	<div class="col text-right"><a href="/publication/{{next}}">Next</a></div>
+	{{/next}}
+</div>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
 <p class="w-100 text-center">
 {{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}
+[{{year}}].<br/>{{where}}.
 </p>
 {{#fullView}}
-<p><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
+<p class="w-100 text-center" style="font-size: larger; font-weight: bolder;"><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
 {{/fullView}}
 <dl class="publication-dl">
 	<!-- <dt>Author(s)</dt>
@@ -44,10 +55,10 @@
 	<dt>Abstract</dt>
 	<dd>{{{abstract}}}</dd>
 	{{/abstract}}
-	<dt>Year</dt>
+	<!-- <dt>Year</dt>
 	<dd>{{year}}</dd>
 	<dt>Where</dt>
-	<dd>{{where}}.</dd>
+	<dd>{{where}}.</dd> -->
 	<dt>Links</dt>
 	<dd>{{^links}}None{{/links}}{{#links}}<a href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}{{/links}}</dd>
 	<dt>Additional notes</dt>
