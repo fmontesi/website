@@ -16,20 +16,34 @@
 		max-width: 100%;
 	}
 }
+
+.input-cursor {
+	animation: blink .4s linear infinite alternate;
+}
+
+.input-cursor::after {
+	content: "|";
+}
+
+@keyframes blink {
+	0% { opacity: 1; }
+	40% { opacity: 1; }
+	60% { opacity: 0; }
+	100% { opacity: 0; }
+}
 </style>
 {{/head}}
 {{$banner}}
-<div class="container h-100 text-right banner">
+<section class="container h-100 text-right banner">
 	<div class="d-flex h-100 align-items-center text-right">
 		<div class="w-100 text-right" style="position:relative">
 			<div style="position:absolute; top:15px; left: 15px; z-index: 10;">
 				<div class="text-left">
-					<p class="fm-banner-h text-left m-0" style="width: 40%;">
-						Fabrizio
-						Montesi
+					<p id="banner-header-p-1" class="fm-banner-h text-left m-0" style="width: 40%;">
+						<noscript>Fabrizio Montesi</noscript>
 					</p>
-					<p class="fm-banner-text text-left mt-3 m-0" style="font-size: min(3.3vw,1.8rem); width: 30%;">
-						Computer Scientist
+					<p id="banner-header-p-2" class="fm-banner-text text-left mt-3 m-0" style="font-size: min(3.3vw,1.8rem); width: 30%;">
+						<noscript>Computer Scientist</noscript>
 					</p>
 				</div>
 			</div>
@@ -39,13 +53,42 @@
 		</div>
 	</div>
 	<div class="text-center" style="position: absolute; bottom: 0; left:50%;"><i class="fa fa-angle-down viewport-down" style="font-size: 2rem;"></i></div>
-</div>
+</section>
+<script>
+const BANNER_P_1_SELECTOR = "#banner-header-p-1"
+const BANNER_P_2_SELECTOR = "#banner-header-p-2"
+const BANNER_TEXT_1 = "Fabrizio Montesi"
+const BANNER_TEXT_2 = "Computer Scientist"
+const CURSOR = '<span class="input-cursor"></span>'
+
+function sleep( ms ) {
+	return new Promise( resolve => setTimeout(resolve, ms) )
+}
+
+async function typeWrite( element, text, cursor, removeCursor = true, initialDelay = 1800, delay = 60 ) {
+	element.html( CURSOR )
+	await sleep( initialDelay )
+	for( let i = 0; i <= text.length; i++ ) {
+		element.html( text.substr( 0, i ) + CURSOR )
+		await sleep( delay )
+	}
+
+	if( removeCursor ) {
+		element.html( text )
+	}
+}
+
+$(document).ready( async () => {
+	await typeWrite( $(BANNER_P_1_SELECTOR), BANNER_TEXT_1, CURSOR )
+	await typeWrite( $(BANNER_P_2_SELECTOR), BANNER_TEXT_2, CURSOR, false )
+});
+</script>
 {{/banner}}
 {{$content}}
 <section class="container text-justify align-items-start">
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
-			<h1>Welcome!</h1>
+			<h1 id="welcome-h">Welcome!</h1>
 			<p>
 				I'm Fabrizio, a computer science researcher and professor with a passion for programming languages and systems.
 			</p>
@@ -77,9 +120,6 @@
 			</picture>
 		</div>
 	</div>
-			<!-- <p>My name is Fabrizio Montesi.
-				I'm a Professor of Computer Science and IT professional working on programming languages, microservices, web development, cybersecurity, and automated reasoning.
-			</p> -->
 </section>
 <!-- <div class="fm-divider"></div> -->
 <!-- <div class="w-100">
@@ -99,7 +139,7 @@
 		</div>
 		<div class="col-sm-12 col-md-6 p-3">
 			<div class="bg-1 p-3">
-				<p><strong>BOOK</strong></p>
+				<p id="book-h-p" style="font-weight: bolder;">BOOK</p>
 				<h1>Intro<wbr/>duction to Choreo<wbr/>graphies</h1>
 				<p class="text-justify">
 					Modern society relies on connected digital systems that exchange data for business, entertainment, public services, and social activities.

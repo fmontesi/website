@@ -382,6 +382,6 @@ blockquote::before {
 	cursor: pointer;
 }
 
-a {
-	scroll-margin-top: 3rem;
+a,section {
+	scroll-margin-top: 3.4rem;
 }
