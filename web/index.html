@@ -62,7 +62,7 @@ const BANNER_TEXT_2 = "Computer Scientist"
 const CURSOR = '<span class="input-cursor"></span>'
 
 function sleep( ms ) {
-	return new Promise( resolve => setTimeout(resolve, ms) )
+	return new Promise( resolve => setTimeout( resolve, ms ) )
 }
 
 async function typeWrite( element, text, cursor, removeCursor = true, initialDelay = 1800, delay = 60 ) {
