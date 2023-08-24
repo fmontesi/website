@@ -65,7 +65,7 @@ function sleep( ms ) {
 	return new Promise( resolve => setTimeout( resolve, ms ) )
 }
 
-async function typeWrite( element, text, cursor, removeCursor = true, initialDelay = 1800, delay = 60 ) {
+async function typeWrite( element, text, cursor, removeCursor = true, initialDelay = 1000, delay = 60 ) {
 	element.html( CURSOR )
 	await sleep( initialDelay )
 	for( let i = 0; i <= text.length; i++ ) {
@@ -79,7 +79,7 @@ async function typeWrite( element, text, cursor, removeCursor = true, initialDel
 }
 
 $(document).ready( async () => {
-	await typeWrite( $(BANNER_P_1_SELECTOR), BANNER_TEXT_1, CURSOR )
+	await typeWrite( $(BANNER_P_1_SELECTOR), BANNER_TEXT_1, CURSOR, true, 500 )
 	await typeWrite( $(BANNER_P_2_SELECTOR), BANNER_TEXT_2, CURSOR, false )
 });
 </script>
