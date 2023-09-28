@@ -192,7 +192,10 @@ service Main {
 				}
 
 				substring@stringUtils( getResult.path { begin = length@stringUtils( global.wwwDir ) } )( webPath )
-				if( getResult.httpParams.format == "html" || getResult.httpParams.format == "xml" ) {
+				if( 
+					!endsWith@stringUtils( getResult.path { suffix = ".tex" } )
+					&&
+					(getResult.httpParams.format == "html" || getResult.httpParams.format == "xml") ) {
 					if( is_defined( global.dataBindings.(webPath) ) ) {
 						invoke@reflection( {
 							operation = global.dataBindings.(webPath)
