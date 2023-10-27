@@ -18,7 +18,7 @@
   },
   "jolie": {
     "dependencies": {
-      "@jolie/leonardo": "0.4.1",
+      "@jolie/leonardo": "0.4.3",
       "@jolie/commonmark": "0.1.0"
     },
     "maven": {
