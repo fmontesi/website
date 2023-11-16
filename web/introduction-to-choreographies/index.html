@@ -86,9 +86,9 @@
 <h6>Chapter 6</h6>
 <ul>
 <li>
-The extension to nondeterministic local functions in Section 6.1.2, page 111, requires a small modification to the transition labels of conditionals for Lemma 8.20 to hold (in particular, in order to deal with the case of DELAY-COND).
-Here are the updated COND-THEN and COND-ELSE rules.
+The extension to nondeterministic local functions in Section 6.1.2, page 111, requires a small modification to the transition labels of conditionals for Lemma 8.20 to hold (in particular, in order to deal with the case of DELAY-COND). Here are the updated COND-THEN and COND-ELSE rules.
 <img src="/images/itc/cond-rules-update.png" class="img-fluid"/>
+Thanks to Marco Peressotti and Dan Plyukhin for notifying me of the initial issue!
 </li>
 </ul>
 <h6>Chapter 11</h6>
@@ -101,9 +101,10 @@ Here is the equation:
 Having this kind of exchange rules is quite standard in the literature of choreographic programming and session types, but looking back a simpler approach might have been to model messaging states like choreographic stores (a map of maps of type PName -> PName -> Value | Label, mapping each process to another function that maps each process to the values or selection labels received from this latter process). This would eliminate the need for such exchanges.
 </li>
 <li>
-Rule SEND-VAL in Figure 11.2 should not update the store in the derivative: the Σ component should (obviously) be the same before and after the transition. Thanks to Lovro Lugović for spotting this!
+Rule SEND-VAL in Figure 11.2 should not update the store in the derivative: the Σ component should (obviously) be the same before and after the transition.
 Here is the fixed rule:
 <img src="/images/itc/send-val.png" class="img-fluid" />
+Thanks to Lovro Lugović for spotting this issue!
 </li>
 </ul>
 </div>
