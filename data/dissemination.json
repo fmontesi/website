@@ -54,12 +54,30 @@
 		"text": "Create Quickly a Microservice Project With VS Code DevContainers, Docker, npm, and Jolie"
 	} ],
 	"interviews": [ {
+		"link-img": {
+			"text": "EU grant to revolutionise the programming of connected computer systems",
+			"target": "https://www.sdu.dk/en/om_sdu/fakulteterne/naturvidenskab/nyheder-2023/erc-montesi",
+			"img": "/images/sdu-erc-2023.png",
+			"year": 2023,
+			"lang": "EN",
+			"where": "University of Southern Denmark"
+		}
+	}, {
 		"video": {
 			"ytid": "FI30n0RiNlQ",
 			"year": 2023,
 			"text": "Serverless today and tomorrow: an interview with Fabrizio Montesi",
 			"lang": "EN",
 			"where": "Nuvolaris Inc."
+		}
+	}, {
+		"link-img": {
+			"text": "Grant will make your clicks more transparent",
+			"target": "https://www.sdu.dk/en/om_sdu/institutter_centre/imada_matematik_og_datalogi/nyt_fra_imada/x-idf",
+			"img": "/images/sdu-xidf-2022.png",
+			"year": 2022,
+			"lang": "EN",
+			"where": "University of Southern Denmark"
 		}
 	}, {
 		"link-img": {
