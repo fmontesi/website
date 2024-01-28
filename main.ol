@@ -275,9 +275,11 @@ service Main {
 			entries@blikiUtils()( entriesResp )
 			i = 0
 			for( entry in entriesResp.entries ) {
+				split@stringUtils( entry.updated { regex = "T" } )( s )
 				response.entries[i++] << {
 					text = entry.id
 					link = entry.id
+					updated = s.result[0]
 				}
 			}
 			lastUpdated@blikiUtils()( lastUpdated )
