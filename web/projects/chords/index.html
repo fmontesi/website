@@ -1,0 +1,50 @@
+{{< fm-page.html}}
+{{$content}}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>Choreographies for Distributed Systems: Reasoning, Expressivity, and Development (CHORDS)</h1>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-sm-12 col-xl-4 order-sm-1 order-xl-1">
+					<ul>
+						<li>PI: <a href="/">Fabrizio Montesi</a></li>
+						<li>Type: ERC Consolidator Grant</li>
+						<li>Amount: 1,999,497 EUR</li>
+						<li>Period: 2024--2029</li>
+					</ul>
+				</div>
+				<div class="col-sm-12 col-xl-8 order-sm-2 order-xl-2 d-flex justify-content-center p-5">
+					<a href="https://erc.europa.eu/"><img class="img-fluid rounded" src="/images/erc-logo-fm.svg" /></a>
+				</div>
+			</div>
+			<h3>Abstract</h3>
+			<p>
+				Decades of research in computing led to high-level programming languages that can turn a
+				programmer's ideas into executable software. For applications that run in isolation, we have a
+				solid toolbox. We can write code with abstract concepts like functions and objects, and then a
+				compiler tool can automatically produce working implementations. This significantly increases
+				productivity, facilitates program analysis, and reduces the risk of bugs.
+			</p>
+			<p>Today, society increasingly relies on distributed systems for work, services, social participation,
+				and so forth. Here the key high-level concept is that of <em>communication</em>: a message exchange
+				between independent programs. Yet it is nowhere to be found in the syntax of modern program-
+				ming languages. Instead, we manually write lower-level instructions for sending and receiving
+				messages in separate programs, hoping that they match each other during execution and produce
+				the wished communications. This is infamously hard, leaving us with code that is difficult to
+				write or trust.</p>
+			<p>This situation is not due to lack of trying. <em>Choreographic programming</em> is a recent attempt at
+				a programming paradigm with high-level abstractions for communications and their composi-
+				tion in programs called <em>choreographies</em>. Unfortunately, compiling choreographies is technically
+				challenging, which resulted in excessive simplification. Current theories make unrealistic as-
+				sumptions &ndash; remaining confined to toy scenarios &ndash; and reasoning methods for choreographies are
+				underdeveloped.</p>
+			<p>This project will break new ground by developing (a) new linguistic constructs for choreographies
+				that can deal with realistic scenarios, (b) logics for verifying properties about choreographies
+				and understanding what they mean for the compiled code, and (c) a toolchain for compiling,
+				testing, and deploying software based on our choreographies. These actions have the potential
+				to significantly impact how we will model and program distributed applications in the future.</p>
+ 		</div>
+	</div>
+</div>
+{{/content}}
+{{/fm-page.html}}
