@@ -106,14 +106,14 @@ service Main {
 		foreach( id : pubIdToPath ) {
 			id = int(id)
 			pubPathToDirs.(pubIdToPath.(id)) << {
-				next =
+				previous =
 					pubIdToPath.(
 						if( id == lastId )
 							firstId
 						else
 							id + 1
 					)
-				previous =
+				next =
 					pubIdToPath.(
 						if( id == firstId )
 							lastId
