@@ -1,4 +1,4 @@
-{{< fm-page.html}}
+{{< fm-page-toc.html}}
 {{$title}}Research | Fabrizio Montesi{{/title}}
 {{$head}}
 <style>
@@ -20,12 +20,13 @@ award {
 }
 </style>
 {{/head}}
+{{$pre-header}}
+<p class="w-100 text-right"><small>
+	<a href="#publications-list">Jump to list of publications</a>
+</small></p>
+{{/pre-header}}
+{{$header}}Research{{/header}}
 {{$content}}
-<div class="container">
-	<p class="w-100 text-right"><small>
-		<a href="#publications-list">Jump to list of publications</a>
-	</small></p>
-	<h1>Research</h1>
 	<p>
 		My main research interests are programming languages and systems, cloud and edge computing, microservices, concurrency, cybersecurity, and digital democracy.
 	</p>
@@ -53,7 +54,7 @@ award {
 </div>
 
 <section class="container">
-	<h3 id="choreographic-programming">Choreo<wbr/>graphic Pro<wbr/>gramming <a href="https://en.wikipedia.org/wiki/Choreographic_programming" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a></h3>
+	<h3 id="choreographic-programming" toc-text="Choreographic Programming">Choreo<wbr/>graphic Pro<wbr/>gramming <a href="https://en.wikipedia.org/wiki/Choreographic_programming" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a></h3>
 	<div class="row align-items-center">
 	<div class="col-sm-12 col-md-9 order-sm-2 order-xl-1 text-justify">
 		<p>
@@ -83,7 +84,7 @@ award {
 </section>
 
 <div class="container mt-3">
-<h3>Microservices <a href="https://en.wikipedia.org/wiki/Microservices" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a> and the Jolie programming language <a href="https://en.wikipedia.org/wiki/Jolie_(programming_language)" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a></h3>
+<h3 toc-text="Microservices and the Jolie programming language">Microservices <a href="https://en.wikipedia.org/wiki/Microservices" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a> and the Jolie programming language <a href="https://en.wikipedia.org/wiki/Jolie_(programming_language)" target="_new">[<i class="fab fa-wikipedia-w"></i>]</a></h3>
 <div class="row align-items-center justify-content-center">
 	<div class="col-sm-12 col-xl-3 order-sm-1 order-xl-2 d-flex justify-content-center p-3">
 		<a href="https://www.jolie-lang.org"><img class="img-fluid" style="filter: invert(90%);" src="/images/jolie_logo.png" /></a>
@@ -352,7 +353,5 @@ function showItem( elm ) {
 <!-- <script type="text/javascript" src="https://cdn.plu.mx/widget-popup.js"></script> -->
 
 </div>
-
-</div>
 {{/content}}
-{{/fm-page.html}}
+{{/fm-page-toc.html}}
