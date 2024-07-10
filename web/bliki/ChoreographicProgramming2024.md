@@ -71,7 +71,7 @@ At the end of the talk, attendees asked some very relevant questions, including 
 ## What's next?
 
 The workshop triggered so many discussions. People talked about how we could:
-- Scale to settings malicious actors.
+- Scale to settings with malicious actors.
 - Explore how choreographic programming applies to more domains.
 - Understand choreographies from a formal logical viewpoint.
 - and much more...
