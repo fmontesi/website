@@ -124,5 +124,13 @@
 			"lang": "EN",
 			"where": "KDE.news"
 		}
+	} ],
+	"slides": [ {
+		"title": "Choreographic Programming: its essence, beauty, and necessity",
+		"where": {
+			"href": "https://pldi24.sigplan.org/home/cp-2024",
+			"text": "Choreographic Programming 2024"
+		},
+		"pdf": "cp24-keynote"
 	} ]
 }
