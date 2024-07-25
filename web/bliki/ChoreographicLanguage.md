@@ -10,7 +10,7 @@ A -> B: M
 for expressing the communication of a message `M` from `A` (Alice) to `B` (Bob) [[Needham and Schroeder 1978](#NS78)].
 
 Choreographic languages can be roughly divided in two categories:
-- Choreographic languages that include primitives for expressing computation, as often found in distributed applications, security protocols, etc. These are typically called [choreographic programming languages](ChoreographicProgramming).
+- Choreographic languages meant to express computer programs. These languages typically include primitives for expressing computation, as often found in distributed applications, security protocols, etc. They are called [choreographic programming languages](ChoreographicProgramming).
 - Choreographic languages without computation, aimed at expressing abstract specifications of protocols. Notable examples include [global types](#GlobalType), [BPMN choreographies](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-bpmn-choreography), and (at least in the way they are typically applied) [sequence diagrams](#SequenceDiagram).
 
 Another possible source of categorisation: choreographic languages can be textual, graphical, or visual. Some examples are given next. In the remainder, `p`, `q`, `r`, `s`, etc. are process names.
