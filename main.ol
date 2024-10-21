@@ -139,6 +139,11 @@ service Main {
 		println@console( "Server started at " + global.inputPorts.WebInput.location )()
 	}
 
+	// Defaults for redirected requests
+	init {
+		httpParams.format = "json"
+	}
+
 	main {
 		[ get( request )( response ) {
 			scope( get ) {
