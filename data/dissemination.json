@@ -55,6 +55,15 @@
 	} ],
 	"interviews": [ {
 		"link-img": {
+			"text": "Distributed Systems, Microservices, and Choreographies",
+			"target": "https://www.typetheoryforall.com/episodes/distribuited-systems-microservices-and-choreographies",
+			"img": "/images/ttforall.jpg",
+			"year": 2024,
+			"lang": "EN",
+			"where": "Type Theory Forall Podcast"
+		}
+	},{
+		"link-img": {
 			"text": "EU grant to revolutionise the programming of connected computer systems",
 			"target": "https://www.sdu.dk/en/om_sdu/fakulteterne/naturvidenskab/nyheder-2023/erc-montesi",
 			"img": "/images/sdu-erc-2023.png",
