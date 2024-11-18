@@ -2,41 +2,7 @@
 <div class="container">
 {{$pre-header}}{{/pre-header}}
 <h1>{{$header}}{{/header}}</h1>
-<div id="toc-container" style="margin-bottom: 1em;">
-<strong><a href="#">Table of Contents (click to show)</a></strong>
-<ul id="toc-list" style="display:none">
-</ul>
-</div>
-<script>
-$( window ).on( "load", function() {
-	$( "#toc-container" ).click( function() {
-		$( "#toc-list" ).toggle( "slow" );
-	} );
-
-	var list = $( "#toc-list" );
-	// find all headers and add them to the list, using nested lists to represent nested headers
-	$( "h2, h3, h4, h5, h6" ).each(function() {
-		var header = $( this );
-		var level = parseInt( this.nodeName.substring(1) );
-		var text = header.attr( "toc-text" ) || header.text();
-		var id = header.attr( "id" );
-		if ( !id ) {
-			id = text.replace( /\s/g, "-" );
-			header.attr( "id", id );
-		}
-		var item = $( "<li><a href=\"#" + id + "\">" + text + "</a></li>" );
-		if ( level === 2 ) {
-			list.append( item );
-		} else {
-			var lastItem = list.children( "li" ).last();
-			if ( !lastItem.children( "ul" ).length ) {
-				lastItem.append( "<ul></ul>" );
-			}
-			lastItem.children( "ul" ).first().append( item );
-		}
-	});
-});
-</script>
+{{> toc.html}}
 {{$content}}{{/content}}
 </div>
 {{> footer.html}}
