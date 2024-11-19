@@ -110,8 +110,8 @@ Cruz-Filipe, L., Montesi, F., Peressotti, M. [2023], 'A Formal Theory of Choreog
 Dalla Preda, M., Gabbrielli, M., Giallorenzo, S., Lanese, I., Mauro, J. [2017], 'Dynamic Choreographies: Theory And Implementation', _Log. Methods Comput. Sci._ 13(2). <https://doi.org/10.23638/LMCS-13(2:1)2017>
 
 <a id="GMP20"></a>
-Giallorenzo, S., Montesi, F., Peressotti, M. [2020], 'Choral: Object-oriented Choreographic Programming', _CoRR abs/2005.09520_.
-<https://arxiv.org/abs/2005.09520>
+Giallorenzo, S., Montesi, F., Peressotti, M. [2024], 'Choral: Object-oriented Choreographic Programming', _ACM Trans. Program. Lang. Syst._ 46(1): 1:1-1:59.
+<https://doi.org/10.1145/3632398>
 
 <a id="HG22"></a>
 Hirsch, A. K., Garg, D. [2022], 'Pirouette: higher-order typed functional choreographies', _Proc. ACM Program. Lang._ 6(POPL): 1-27. <https://doi.org/10.1145/3498684>
