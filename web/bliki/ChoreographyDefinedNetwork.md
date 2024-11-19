@@ -28,6 +28,16 @@ The Choreography-Defined Network approach consists of the following steps:
 2. **Compile to Executables.** The choreography is automatically compiled into decentralised local programs.
 3. **Deploy in Containers.** The local programs are containerized for deployment in modern cloud-native environments.
 
+<figure class="bliki-figure">
+
+<img src="/images/cdn-gmmmpp24.png" class="img-fluid"/>
+
+<figcaption>
+
+Illustration of the development workflow based on CDN applied to a security case study, from [[Giallorenzo et al. 2024]](#Getal24). A choreography of 4 virtual network functions written in the choreographic programming language [Choral](https://www.choral-lang.org) [[Giallorenzo et al. 2024b](#GMP24)] is automatically compiled into 4 different programs, which are then containerised and deployed.
+</figcaption>
+</figure>
+
 ## Advantages
 
 CDNs aim at bringing the advantages of [choreographic programming](ChoreographicProgramming) to software-defined networks.
@@ -48,7 +58,7 @@ At the time of this writing, the following challenges about CDNs are open.
 ## Read More
 
 For more information on CDNs, see the paper by [[Giallorenzo et al. 2024]](#Getal24).
-The paper uses the [Choral programming language](https://www.choral-lang.org) [[Giallorenzo et al. 2024](#GMP24)] to showcase the approach through a security case study for SDNs.
+The paper uses the [Choral programming language](https://www.choral-lang.org) [[Giallorenzo et al. 2024b](#GMP24)] to showcase the approach through a security case study for SDNs.
 
 For information on the choreographic method, choreographic languages, and choreographic programming, see [Introduction to Choreographies](/introduction-to-choreographies) [[Montesi 2023]](#M23).
 
