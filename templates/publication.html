@@ -42,8 +42,7 @@
 </div>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
 <p class="w-100 text-center">
-<!-- {{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} -->
-{{#authors}}<a href="{{^link}}#" onClick="return false;"{{/link}}{{#link}}{{.}}"{{/link}} target="_new">{{name}}</a>{{^last}}, {{/last}}{{/authors}}
+{{> author-list.html}}
 [{{year}}].<br/>{{where}}.
 </p>
 {{#fullView}}

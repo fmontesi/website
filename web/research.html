@@ -239,7 +239,7 @@ award {
 	{{#entries}}
 		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex" entry>
 		<span style="float:left; width:80%">
-			{{#authors}}<a href="{{^link}}#" onClick="return false;"{{/link}}{{#link}}{{.}}"{{/link}} target="_new">{{name}}</a>{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
+			{{> author-list.html}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
 			{{where}}.
 		<br/>
 		{{^fullView}}
