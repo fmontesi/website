@@ -33,27 +33,28 @@
 <div class="container">
 <div class="row m-0 header-row">
 	{{#previous}}
-	<div class="text-left" style="margin-right: auto"><a href="/publication/{{previous}}"><i class="fa fa-angle-left"></i> Previous</a></div>
+	<div class="text-left" style="margin-right: auto"><a href="/publication/{{.}}"><i class="fa fa-angle-left"></i> Previous</a></div>
 	{{/previous}}
 	<div class="text-center" style="margin-left: auto; margin-right: auto;"><a href="/research.html#publications-list">All publications</a></div>
 	{{#next}}
-	<div class="text-right" style="margin-left: auto;"><a href="/publication/{{next}}">Next <i class="fa fa-angle-right"></i></a></div>
+	<div class="text-right" style="margin-left: auto;"><a href="/publication/{{.}}">Next <i class="fa fa-angle-right"></i></a></div>
 	{{/next}}
 </div>
 <p class="bliki-figure pub-title-card w-100 text-center">{{title}}</p>
 <p class="w-100 text-center">
-{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}
+<!-- {{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} -->
+{{#authors}}<a href="{{^link}}#" onClick="return false;"{{/link}}{{#link}}{{.}}"{{/link}} target="_new">{{name}}</a>{{^last}}, {{/last}}{{/authors}}
 [{{year}}].<br/>{{where}}.
 </p>
 {{#fullView}}
-<p class="w-100 text-center" style="font-size: larger; font-weight: bolder;"><i class="fa fa-eye"></i> This publication has a <a href="{{fullView}}">dedicated page with more information</a>.</p>
+<p class="w-100 text-center" style="font-size: larger; font-weight: bolder;"><i class="fa fa-eye"></i> This publication has a <a href="{{.}}">dedicated page with more information</a>.</p>
 {{/fullView}}
 <dl class="publication-dl">
 	<!-- <dt>Author(s)</dt>
 	<dd>{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}}</dd> -->
 	{{#abstract}}
 	<dt>Abstract</dt>
-	<dd>{{{abstract}}}</dd>
+	<dd>{{{.}}}</dd>
 	{{/abstract}}
 	<!-- <dt>Year</dt>
 	<dd>{{year}}</dd>

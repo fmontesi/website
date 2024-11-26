@@ -239,23 +239,23 @@ award {
 	{{#entries}}
 		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex" entry>
 		<span style="float:left; width:80%">
-			{{#authors}}{{^link}}{{name}}{{/link}}{{#link}}<a href="{{link}}" target="_new">{{name}}</a>{{/link}}{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
+			{{#authors}}<a href="{{^link}}#" onClick="return false;"{{/link}}{{#link}}{{.}}"{{/link}} target="_new">{{name}}</a>{{^last}}, {{/last}}{{/authors}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
 			{{where}}.
 		<br/>
 		{{^fullView}}
 		<a href="/publication/{{path}}"><i class="fa fa-eye"></i> Full view & info</a> | 
 		{{/fullView}}
 		{{#fullView}}
-		<a href="{{fullView}}"><i class="fa fa-eye"></i> Full view & info</a> | 
+		<a href="{{.}}"><i class="fa fa-eye"></i> Full view & info</a> | 
 		{{/fullView}}
 		{{#notes}}
 			{{{text}}} | 
 		{{/notes}}
 		{{#pdf}}
-		<a href="/files/{{pdf}}.pdf"><i class="fa fa-download"></i> PDF</a> | 
+		<a href="/files/{{.}}.pdf"><i class="fa fa-download"></i> PDF</a> | 
 		{{/pdf}}
 		{{#peerReviewedVersion}}
-		<a href="#{{peerReviewedVersion}}">peer-reviewed version</a> | 
+		<a href="#{{.}}">peer-reviewed version</a> | 
 		{{/peerReviewedVersion}}
 		<a style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">bibtex</a>
 		|
