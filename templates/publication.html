@@ -71,7 +71,7 @@
 	</dd>
 	{{#peerReviewedVersion}}
 	<dt>Peer-reviewed version</dt>
-	<dd><a href="/research.html#{{peerReviewedVersion}}">Click to show in publication list</a></dd>
+	<dd><a href="/research.html#{{.}}">Click to show in publication list</a></dd>
 	{{/peerReviewedVersion}}
 </dl>
 
@@ -79,8 +79,8 @@
 <p>A PDF is available (possibly a preprint):</p>
 <div style="padding-bottom: .1rem">
 <!-- <div style="height: 100vh"> -->
-<object data="/files/{{pdf}}.pdf" type="application/pdf" width="100%" style="height: 85vh">
-	<a href="/files/{{pdf}}.pdf"><p class="w-100 text-center bliki-figure"><i class="fa fa-download"></i> Download PDF</p></a>
+<object data="/files/{{.}}.pdf" type="application/pdf" width="100%" style="height: 85vh">
+	<a href="/files/{{.}}.pdf"><p class="w-100 text-center bliki-figure"><i class="fa fa-download"></i> Download PDF</p></a>
 </object>
 </div>
 {{/pdf}}
