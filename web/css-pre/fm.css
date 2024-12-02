@@ -442,3 +442,11 @@ blockquote::before {
 a,section {
 	scroll-margin-top: 3.4rem;
 }
+
+.pub-title::before {
+	content: "‘";
+}
+
+.pub-title::after {
+	content: "’";
+}

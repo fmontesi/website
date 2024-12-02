@@ -2,6 +2,7 @@ from .private.dblp import DBLP
 from .private.string-utils-srv import StringUtilsSrv
 from .private.format-converter import FormatConverter
 from .bliki import BlikiUtils
+from .mustache-functions import MustacheFunctions
 from protocols.http import DefaultOperationHttpRequest
 from runtime import Runtime
 from console import Console
@@ -9,7 +10,7 @@ from file import File
 from string-utils import StringUtils
 from @jolie.leonardo import WebFiles
 from @jolie.commonmark import CommonMark
-from mustache import Mustache
+from mustache import Mustache, MustacheFunctionProviderInterface
 from reflection import Reflection
 // from .acp import ACPSrv
 // from .acp import GetCollectionsResponse
@@ -55,6 +56,7 @@ service Main {
 	// embed ACPSrv as acp
 	embed GoogleAnalytics as ga
 	// embed DblpUtils as dblpUtils
+	embed MustacheFunctions as mustacheFunctions
 
 	inputPort WebInput {
 		location: "socket://localhost:8080"
@@ -86,7 +88,7 @@ service Main {
 
 	inputPort Local {
 		location: "local"
-		interfaces: MustacheOperations
+		interfaces: MustacheOperations, MustacheFunctionProviderInterface
 	}
 
 	outputPort self {
@@ -225,6 +227,7 @@ service Main {
 						template -> getResult.content
 						data -> data
 						dir = global.templatesDir
+						functions.binding.location = self.location
 					} )( response )
 
 					// if( endsWith@stringUtils( getResult.path { suffix = ".md" } ) ) {
@@ -390,5 +393,16 @@ service Main {
 				}
 			}
 		} ) ]
+		
+		[ call( request )( response ) {
+			invocationRequest << {
+				operation = request.name
+				outputPort = "mustacheFunctions"
+			}
+			if( request.template instanceof string ) {
+				invocationRequest.data = request.template
+			}
+			invoke@reflection( invocationRequest )( response )
+		} ]
 	}
 }

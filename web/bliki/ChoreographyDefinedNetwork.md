@@ -65,7 +65,11 @@ For information on the choreographic method, choreographic languages, and choreo
 
 ## References
 
+<!-- {{#fn.cite}}GMP24{{/fn.cite}} -->
+
 <a id="Getal24"></a>Giallorenzo, S., Mauro, J., Melis, A., Montesi, F., Peressotti, M., Prandini, M. [2024], 'Choreography-Defined Networks: a Case Study on DoS Mitigation', _Proc. ICSOC_ 2024. [Pre-print](/files/gmmmpp24.pdf)
+
+<!-- {{#fn.citation}}GMP24 packaging-microservices{{/fn.citation}} -->
 
 <a id="GMP24"></a>
 Giallorenzo, S., Montesi, F., Peressotti, M. [2024], 'Choral: Object-oriented Choreographic Programming', _ACM Trans. Program. Lang. Syst._ 46(1): 1:1-1:59.

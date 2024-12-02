@@ -1,25 +1,5 @@
 {{< fm-page-toc.html}}
 {{$title}}Research | Fabrizio Montesi{{/title}}
-{{$head}}
-<style>
-award {
-	font-weight: bold;
-	/* text-transform: uppercase; */
-}
-
-/* .pub-title {
-	font-weight: bold;
-} */
-
-.pub-title::before {
-	content: "‘";
-}
-
-.pub-title::after {
-	content: "’";
-}
-</style>
-{{/head}}
 {{$pre-header}}
 <p class="w-100 text-right"><small>
 	<a href="#publications-list">Jump to list of publications</a>
@@ -239,31 +219,7 @@ award {
 	{{#entries}}
 		<li id="{{key}}" style="margin-bottom: 1em;" class="d-flex" entry>
 		<span style="float:left; width:80%">
-			{{> author-list.html}} [{{year}}], <span class="pub-title">{{{title}}}</span>.
-			{{where}}.
-		<br/>
-		{{^fullView}}
-		<a href="/publication/{{path}}"><i class="fa fa-eye"></i> Full view & info</a> | 
-		{{/fullView}}
-		{{#fullView}}
-		<a href="{{.}}"><i class="fa fa-eye"></i> Full view & info</a> | 
-		{{/fullView}}
-		{{#notes}}
-			{{{text}}} | 
-		{{/notes}}
-		{{#pdf}}
-		<a href="/files/{{.}}.pdf"><i class="fa fa-download"></i> PDF</a> | 
-		{{/pdf}}
-		{{#peerReviewedVersion}}
-		<a href="#{{.}}">peer-reviewed version</a> | 
-		{{/peerReviewedVersion}}
-		<a style="cursor:pointer" data-toggle="collapse" href="#bibItem-{{id}}">bibtex</a>
-		|
-		{{#links}}
-			<a href="{{href}}">{{{name}}}</a>{{^last}} | {{/last}}
-		{{/links}}
-		<div id="bibItem-{{id}}" class="collapse panel panel-default">
-		<div class="panel-body"><pre>{{bibtex}}</pre></div></div>
+		{{> reference.html}}
 		</span>
 		</li>
 	{{/entries}}
