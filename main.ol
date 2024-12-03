@@ -54,7 +54,7 @@ service Main {
 	embed CommonMark as commonMark
 	embed BlikiUtils as blikiUtils
 	// embed ACPSrv as acp
-	embed GoogleAnalytics as ga
+	// embed GoogleAnalytics as ga
 	// embed DblpUtils as dblpUtils
 	embed MustacheFunctions as mustacheFunctions
 
