@@ -4,7 +4,7 @@ A [choreography](Choreography) has the **knowledge of choice** property if it en
 
 ## The problem
 
-Consider the following choreography for [single-sign on](https://en.wikipedia.org/wiki/Single_sign-on). A client (`c`) communicates some credentials to an authenticator (`a`), which then decides if a web service (`ws`) should communicate a new session token to the client. In the negative case, the web service should communicate a special `NoToken` value to the client, denoting failure.
+Consider the following choreography for [single sign-on](https://en.wikipedia.org/wiki/Single_sign-on). A client (`c`) communicates some credentials to an authenticator (`a`), which then decides if a web service (`ws`) should communicate a new session token to the client. In the negative case, the web service should communicate a special `NoToken` value to the client, denoting failure.
 
 
 <figure class="bliki-figure">
@@ -19,7 +19,7 @@ else
 
 <figcaption>
 
-A simplistic choreography for single-sign on, given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies). As we are going to see, there is a problem with this choreography.
+A simplistic choreography for single sign-on, given in the language of [Recursive Choreographies](ChoreographicLanguage#RecursiveChoreographies). As we are going to see, there is a problem with this choreography.
 </figcaption>
 </figure>
 
