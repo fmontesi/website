@@ -2,6 +2,7 @@
 
 from console import Console
 from file import File
+from vectors import Vectors
 from string-utils import StringUtils
 from .private.quicksort import Quicksort
 from runtime import Runtime
@@ -124,7 +125,8 @@ service Utils {
 
 	main {
 		[ entry( r )( entry ) {
-			entry.key = r.(Attributes).key
+			// entry.key = r.(Attributes).key
+			entry.key = r.key
 			entry.year = r.year
 			entry.type = r.type
 			title@self( r.title )( entry.title )
@@ -135,25 +137,25 @@ service Utils {
 				else
 					"ERROR"
 
-			authors@self(
-				if( entry.type == "proceedings" )
-					{ authors -> r.editor }
-				else
-					{ authors -> r.author }
-			)( vec )
+			if( is_defined( r.authors ) ) {
+				vec.authors << r.authors
+			} else {
+				authors@self(
+					if( entry.type == "proceedings" )
+						{ authors -> r.editor }
+					else
+						{ authors -> r.author }
+				)( vec )
+			}
 			if( #vec.authors > 0 ) {
 				entry.authors << vec.authors
 			}
-			links@self( r )( vec )
-			if( #vec.links > 0 ) {
-				entry.links << vec.links
-				for( link in entry.links ) {
-					if( link.name == "doi.org" ) {
-						replaceAll@stringUtils( link.href { regex = "https://doi.org/", replacement = "" } )( entry.doi )
-					}
-				}
-			}
-			bibtex@self( r )( entry.bibtex )
+
+			entry.bibtex =
+				if( is_defined( r.bibtex ) )
+					r.bibtex
+				else
+					bibtex@self( r )
 
 			if( is_defined( publicationsExtension.(entry.key) ) ) {
 				extraData << publicationsExtension.(entry.key)
@@ -172,6 +174,27 @@ service Utils {
 
 				if( is_defined( extraData.abstract ) )
 					entry.abstract = extraData.abstract
+				
+				if( is_defined( extraData.fullView ) )
+					entry.fullView = extraData.fullView
+				
+				if( is_defined( extraData.links ) )
+					entry.links << extraData.links
+				
+				if( is_defined( extraData.notes ) )
+					entry.notes << extraData.notes
+			}
+
+			if( !is_defined( entry.links ) ) {
+				links@self( r )( vec )
+				if( #vec.links > 0 ) {
+					entry.links << vec.links
+					for( link in entry.links ) {
+						if( link.name == "doi.org" ) {
+							replaceAll@stringUtils( link.href { regex = "https://doi.org/", replacement = "" } )( entry.doi )
+						}
+					}
+				}
 			}
 		} ]
 
@@ -187,7 +210,9 @@ service Utils {
 
 		[ where( r )( where ) {
 			where = 
-				if( r.type == "inproceedings" )
+				if( is_defined( r.where ) )
+					r.where
+				else if( r.type == "inproceedings" )
 					"In proceedings of " + r.booktitle + " " + r.year + ", pp. " + r.pages
 				else if( r.type == "article" )
 					"In " + r.journal + " " + r.volume
@@ -321,6 +346,7 @@ service Main {
 	embed StringUtils as stringUtils
 	embed Quicksort as quicksort
 	embed File as files
+	embed Vectors as vectors
 
 	init {
 		readFile@files( {
@@ -342,7 +368,10 @@ service Main {
 				format = "json"
 			} )( manual )
 			for( collection in manual.collections ) {
-				collections[#collections] << collection
+				for( r in collection.entries ) {
+					cMap.(collection.title).papers[#cMap.(collection.title).papers] << r
+				}
+				sortedCollectionNames.items[#sortedCollectionNames.items] = collection.title
 			}
 			undef( collection )
 
@@ -357,14 +386,22 @@ service Main {
 				if( is_defined( key ) ) {
 					year = r.(key).year
 					r.(key).type = key
+					r.(key).key = r.(key).(Attributes).key
 					cMap.(year).papers[#cMap.(year).papers] << r.(key)
+					dblpYears.(year) = true
 				}
 			}
-			foreach( yearKey : cMap ) {
+			foreach( yearKey : dblpYears ) {
 				request.items[#request.items] = int(yearKey)
 			}
-			sort@quicksort( request )( sortedYears )
-			for( year in sortedYears.items ) {
+			sort@quicksort( request )( sortedDblpYears )
+			concat@vectors( {
+				fst << sortedCollectionNames
+				snd << sortedDblpYears
+			} )( sortedCollectionNames )
+
+			for( year in sortedCollectionNames.items ) {
+				println@console( "Processing collection " + year )()
 				collection.title = string(year)
 				for( r in cMap.(year).papers ) {
 					entry@utils( r )( collection.entries[#collection.entries] )

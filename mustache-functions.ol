@@ -39,8 +39,15 @@ service MustacheFunctions {
 
 		[ citation( request )( response ) {
 			split@stringUtils( request { regex = " " } )( splitResponse )
-			key = splitResponse.result[ 0 ]
-			path = splitResponse.result[ 1 ]
+			if( #splitResponse.result == 1 ) {
+				key = path = splitResponse.result[ 0 ]
+			} else if( #splitResponse.result == 2 ) {
+				key = splitResponse.result[ 0 ]
+				path = splitResponse.result[ 1 ]
+			} else {
+				throw TypeMismatch( "Bad request: " + request )
+			}
+
 			readFile@file( { filename = "data/publications-by-path.json", format = "json" } )( publicationsByPath )
 			if( !is_defined( publicationsByPath.( path ) ) ) {
 				throw PublicationNotFound( "Could not find the publication " + path + "." )
@@ -52,7 +59,8 @@ service MustacheFunctions {
 				template = "{{> reference.html}}"
 				data << publication
 				dir = "templates"
-			} )( response )
+			} )( reference )
+			response = "<a id=\"" + key +"\"></a>" + reference
 		} ]
 	}
 }

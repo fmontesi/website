@@ -10,17 +10,8 @@
 				"last": true
 			},
 			"type": "book",
-			"notes": [
-				{ "text": "ISBN (Print): 9781108833769" },
-				{ "text": "ISBN (Online): 9781108981491" }
-			],
 			"where": "Cambridge University Press",
-			"links": [
-				{ "name": "doi.org", "href": "https://doi.org/10.1017/9781108981491", "last": true }
-			],
-			"bibtex": "@book{M23,\r\n  place={Cambridge},\r\n  title={Introduction to Choreographies},\r\n  publisher={Cambridge University Press},\r\n  author={Montesi, Fabrizio},\r\n  year={2023}\r\n}",
-			"fullView": "/introduction-to-choreographies/",
-			"abstract": "In concurrent and distributed systems, processes can complete tasks together by playing their parts in a joint plan. The plan, or protocol, can be written as a choreography: a formal description of overall behaviour that processes should collaborate to implement, like authenticating a user or purchasing an item online. Formality brings clarity, but not only that. Choreographies can contribute to important safety and liveness properties. This book is an ideal introduction to theory of choreographies for students, researchers, and professionals in computer science and applied mathematics. It covers languages for writing choreographies and their semantics, and principles for implementing choreographies correctly. The text treats the study of choreographies as a discipline in its own right, following a systematic approach that starts from simple foundations and proceeds to more advanced features in incremental steps. Each chapter includes examples and exercises aimed at helping with understanding the theory and its relation to practice."
+			"bibtex": "@book{M23,\r\n  place={Cambridge},\r\n  title={Introduction to Choreographies},\r\n  publisher={Cambridge University Press},\r\n  author={Montesi, Fabrizio},\r\n  year={2023}\r\n}"
 		}, {
 			"key": "M13:phd",
 			"title": "Choreographic Programming",
@@ -31,17 +22,7 @@
 			},
 			"type": "phd",
 			"where": "PhD Thesis, IT University of Copenhagen",
-			"links": [
-				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Choreographic_programming", "last": false },
-				{ "name": "Award announcement", "href": "https://eapls.org/items/1855/", "last": true }
-			],
-			"bibtex": "@PhdThesis{M13:phd,\r\n  author = \"Fabrizio Montesi\",\r\n  title = \"Choreographic {P}rogramming\",\r\n  school = \"IT University of Copenhagen\",\r\n  type = \"Ph.{D}. Thesis\",\r\n  year = 2013,\r\n  note = {\\url{https:\/\/www.fabriziomontesi.com\/files\/choreographic-programming.pdf}}\r\n}",
-			"pdf": "choreographic-programming",
-			"notes": [
-				{ "text": "<award>EAPLS Best PhD Dissertation Award (2014)</award>" },
-				{ "text": "ISBN: 9788779492998" }
-			],
-			"abstract": "<p>Choreographies are descriptions of distributed systems where the developer gives a global view of how messages are exchanged by endpoint nodes (endpoints for short), instead of separately defining the behaviour of each endpoint. They have a significant impact on the quality of software, as they offer a concise view of the message flows enacted by a system. For this reason, in the last decade choreographies have been employed in the development of programming languages, giving rise to a programming paradigm that in this dissertation we refer to as Choreographic Programming.</p><p>Recent formal investigations of choreographies show that they have potential as foundations for the development of safe distributed software. The key idea is that since choreographies abstract from the single input/output actions of endpoints, they avoid typical safety problems such as deadlocks and race conditions; the concrete implementation of each endpoint described in a choreography can then be automatically obtained by compilation, ensuring that such implementations are also safe by construction from the originating choreography. However, current formal models for choreographies do not deal with critical aspects of distributed programming, such as asynchrony, mobility, modularity, and multiparty sessions; it remains thus unclear whether choreographies can still guarantee safety when dealing with such nontrivial features.</p><p>This PhD dissertation argues for the usefulness of choreographic programming as a paradigm for the development of safe distributed systems. We proceed by investigating its foundations and application. To this aim we provide three main contributions.</p><p>The first contribution is the development of a formal model and type theory for choreographic programming that support asynchrony, mobility, modular development, and multiparty sessions. We prove that our model guarantees safety by mapping choreographies to distributed implementations in terms of a variant of the π-calculus, the reference model for mobile processes. Our translation preserves the expected safety properties of choreographies, among which freedom from deadlocks and race conditions.</p><p>The second contribution is the development of Linear Connection Logic (LCL), a formal logic that captures the reasoning behind choreographic programming. We show that LCL is a conservative extension of Linear Logic. We then develop a Curry-Howard correspondence between LCL and a calculus of choreographies, proving that: (i) proofs in LCL correspond to choreographies; and (ii) the transformations between proofs in LCL to proofs in Linear Logic and vice versa correspond to compiling choreography programs to π-calculus terms and vice versa. The latter result, known as round-trip development, contributes to the open problem of extracting choreographies from existing endpoint programs.</p><p>The third contribution is the implementation of a prototype programming framework for choreographic programming, called Chor. Chor provides an Integrated Development Environment (IDE) for programming with choreographies, equipped with a type checker for verifying that choreographies respect protocol specifications given as session types. Programs in Chor can be compiled to executable endpoint implementation in the Jolie programming language, a general-purpose language for distributed computing, which we extend to support the development of multiparty asynchronous sessions. We use Chor for evaluating choreographic programming against a series of use cases.</p>"
+			"bibtex": "@PhdThesis{M13:phd,\r\n  author = \"Fabrizio Montesi\",\r\n  title = \"Choreographic {P}rogramming\",\r\n  school = \"IT University of Copenhagen\",\r\n  type = \"Ph.{D}. Thesis\",\r\n  year = 2013,\r\n  note = {\\url{https:\/\/www.fabriziomontesi.com\/files\/choreographic-programming.pdf}}\r\n}"
 		}, {
 			"key": "books/sp/wsf14/MontesiGZ14",
 			"title": "Service-Oriented Programming with Jolie",
@@ -58,12 +39,7 @@
 			} ],
 			"type": "incollection",
 			"where": "Book chapter in Web Services Foundations, pp. 81-107",
-			"links": [
-				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Jolie_(programming_language)", "last": true }
-			],
-			"bibtex": "@incollection{DBLP:books\/sp\/wsf14\/MontesiGZ14,\r\n  author    = {Fabrizio Montesi and\r\n               Claudio Guidi and\r\n               Gianluigi Zavattaro},\r\n  editor    = {Athman Bouguettaya and\r\n               Quan Z. Sheng and\r\n               Florian Daniel},\r\n  title     = {Service-Oriented Programming with Jolie},\r\n  booktitle = {Web Services Foundations},\r\n  pages     = {81--107},\r\n  publisher = {Springer},\r\n  year      = {2014},\r\n  url       = {https:\/\/doi.org\/10.1007\/978-1-4614-7518-7\\_4},\r\n  doi       = {10.1007\/978-1-4614-7518-7\\_4},\r\n  timestamp = {Sat, 19 Oct 2019 19:02:56 +0200},\r\n  biburl    = {https:\/\/dblp.org\/rec\/books\/sp\/wsf14\/MontesiGZ14.bib},\r\n  bibsource = {dblp computer science bibliography, https:\/\/dblp.org}\r\n}",
-			"pdf": "mgz14",
-			"abstract": "<p>The wide adoption of service-oriented computing has led to a heterogeneous scenario formed by different technologies and specifications. Examples can be found both at the design level \u2014 the frameworks for defining services and those for defining their coordination feature fundamentally different primitives \u2014 and at the implementation level \u2014 different communication technologies are used depending on the context.<\/p><p>In this chapter we present Jolie, a fully-fledged service-oriented programming language. Jolie addresses the aforementioned heterogeneity in two ways. On the one hand, it combines computation and composition primitives in an intuitive and concise syntax. On the other hand, the behaviour and deployment of a Jolie program are orthogonal: they can be independently defined and recombined as long as they have compatible typing.<\/p>"
+			"bibtex": "@incollection{DBLP:books\/sp\/wsf14\/MontesiGZ14,\r\n  author    = {Fabrizio Montesi and\r\n               Claudio Guidi and\r\n               Gianluigi Zavattaro},\r\n  editor    = {Athman Bouguettaya and\r\n               Quan Z. Sheng and\r\n               Florian Daniel},\r\n  title     = {Service-Oriented Programming with Jolie},\r\n  booktitle = {Web Services Foundations},\r\n  pages     = {81--107},\r\n  publisher = {Springer},\r\n  year      = {2014},\r\n  url       = {https:\/\/doi.org\/10.1007\/978-1-4614-7518-7\\_4},\r\n  doi       = {10.1007\/978-1-4614-7518-7\\_4},\r\n  timestamp = {Sat, 19 Oct 2019 19:02:56 +0200},\r\n  biburl    = {https:\/\/dblp.org\/rec\/books\/sp\/wsf14\/MontesiGZ14.bib},\r\n  bibsource = {dblp computer science bibliography, https:\/\/dblp.org}\r\n}"
 		}, {
 			"key": "M10",
 			"title": "JOLIE: a Service-oriented Programming Language",
@@ -74,14 +50,30 @@
 			} ],
 			"type": "msc",
 			"where": "MSc Thesis, University of Bologna",
-			"links": [
-				{ "name": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Jolie_(programming_language)", "last": true }
-			],
-			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}",
-			"pdf": "m10",
-			"notes": { "text": "<award>Best M.Sc. thesis on ICT (General Confederation of Italian Industry)</award>" },
-			"abstract": "The original MSc thesis in Computer Science on the Jolie programming language.",
-        	"path": "jolie-msc"
+			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}"
+		} ]
+	}, {
+		"title": "To appear",
+		"entries": [ {
+			"key": "conf/esocc/MontesiPPZ25",
+			"title": "A Conceptual Framework for API Refactoring in Service-Oriented Architectures",
+			"year": "2025",
+			"authors": [ {
+				"name": "Fabrizio Montesi",
+				"last": false
+			}, {
+				"name": "Valentino Picotti",
+				"last": false
+			}, {
+				"name": "Marco Peressotti",
+				"last": false
+			}, {
+				"name": "Olaf Zimmermann",
+				"last": true
+			} ],
+			"type": "inproceedings",
+			"where": "In proceedings of ESOCC 2025 (to appear)",
+			"bibtex": "@inproceedings{DBLP:conf\/esocc\/MontesiPPZ25,\r\n  author       = {Fabrizio Montesi and\r\n Valentino Picotti and\r\n Marco Peressotti and\r\n Olaf Zimmermann},\r\n  title        = {A Conceptual Framework for API Refactoring in Service-Oriented Architectures},\r\n  booktitle    = {Service-Oriented and Cloud Computing - 12th {IFIP} {WG} 6.12 European\r\n                  Conference, {ESOCC} 2025, Proceedings, to appear},\r\n  series       = {Lecture Notes in Computer Science},\r\n  publisher    = {Springer},\r\n  year         = {2025}}"
 		} ]
 	} ]
 }
