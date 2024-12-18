@@ -60,7 +60,7 @@ In general, any EMI strategy yields a score from 1 to 3 on each quality aspect o
 
 <figcaption>
 
-The EMI score table, from [[Montesi et al. 2025](#emi)].
+The EMI score table, from [[Montesi et al. 2025](#emi)]. Note the typical absence of a 'silver bullet' strategy, because of the tension between the three quality aspects under consideration.
 </figcaption>
 </figure>
 
