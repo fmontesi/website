@@ -7,7 +7,7 @@ EMI was introduced in [[Montesi et al. 2025](#emi)], building on the catalogue o
 
 ## The problem: API evolution
 
-APIs evolve continuously, because of changing business and technical requirements. Therefore, refactoring of APIs is often requires in the development and maintenance of many software architectures. Such refactorings can help with introducing new features, reduce coupling, improving efficiency of communication, etc. A typical example is the introduction of an API key to authenticate requests to an API (see: [API Key pattern](https://microservice-api-patterns.org/patterns/structure/specialPurposeRepresentations/APIKey)).
+APIs evolve continuously, because of changing business and technical requirements. Therefore, refactoring of APIs is often required in the development and maintenance of many software architectures. Such refactorings can help with introducing new features, reduce coupling, improving efficiency of communication, etc. A typical example is the introduction of an API key to authenticate requests to an API (see: [API Key pattern](https://microservice-api-patterns.org/patterns/structure/specialPurposeRepresentations/APIKey)).
 
 What implementation choices and tradeoffs should developers keep in mind when dealing API refactoring? This is where EMI comes into play.
 
@@ -69,6 +69,7 @@ The EMI score table, from [[Montesi et al. 2025](#emi)].
 That's basically the gist of it. In [our paper [Montesi et al. 2025]](#emi) ([pdf](/files/mppz25.pdf)), we give a more detailed presentation, exemplify the strategies on different patterns, and extract mechanical recipes for refactoring APIs that can be used to obtain the wished EMI scores.
 
 Hope that you have enjoyed reading this article!
+We welcome feedback and discussions on extending EMI, for example by considering new patterns, more granular scores, and other quality aspects.
 
 ## References
 
