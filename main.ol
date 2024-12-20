@@ -33,6 +33,7 @@ interface MustacheOperations {
 RequestResponse:
 	publications( void )( PublicationDataset ),
 	dissemination,
+	people,
 	blikiIndex,
 	blikiFeed,
 	menu
@@ -132,6 +133,7 @@ service Main {
 		global.templatesDir = "templates"
 		global.dataBindings.("/research.html") = "publications"
 		global.dataBindings.("/dissemination.html") = "dissemination"
+		global.dataBindings.("/people.html") = "people"
 		global.dataBindings.("/bliki/index.html") = "blikiIndex"
 		global.dataBindings.("/bliki/feed.xml") = "blikiFeed"
 		format = "html"
@@ -346,6 +348,11 @@ service Main {
 				dir = global.templatesDir
 			} )( response )
 		} ]
+
+		[ people()( readFile@file( {
+			filename = "data/people.yaml"
+			format = "yaml"
+		} ) ) ]
 
 		[ menu()( {
 			cols[0] << {

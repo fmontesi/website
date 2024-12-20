@@ -4,82 +4,17 @@
 	<div class="row">
 		<div class="col-12">
 			<h1>People</h1>
-			<h3>Current</h3>
-			<ul class="list-group people-list">
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://dblp.org/pid/199/2114.html">Eva Graversen</a>.
-					Postdoc (from October 2020).</span>
-					<img src="/images/people/eg.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://qpqp.dk/">Viktor Strate Kløvedal</a>.
-					PhD student (from August 2024).</span>
-					<img src="/images/people/vs.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://www.linkedin.com/in/sophia-kostopoulou-239a6b40/">Sophia Kostopoulou</a>.
-					PhD student (from February 2022).</span>
-					<img src="/images/people/sk.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span>Giulia Manara.
-					Postdoc (from October 2025).</span>
-					<img src="/images/people/gm.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://portal.findresearcher.sdu.dk/en/persons/picotti">Valentino Picotti</a>.
-					PhD student (from October 2020).</span>
-					<img src="/images/people/vp.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://dblp.org/pid/232/0111.html">Dan Plyukhin</a>.
-					Postdoc (from January 2023).</span>
-					<img src="/images/people/dp.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://orcid.org/0000-0003-4825-2023">Xueying Qin</a>.
-					Postdoc (from October 2024).</span>
-					<img src="/images/people/xq.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span>Marco Santamaria.
-					PhD student (from October 2025).</span>
-					<img src="/images/people/ms.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://www.linkedin.com/in/narongrit-unwe/">Narongrit Unwerawattana</a>.
-					Scientific Software Engineer (permanent position, from April 2022).</span>
-					<img src="/images/people/nu.jpg"/>
-				</li>
-			</ul>
-			<h3>Previous</h3>
-			<ul class="list-group people-list">
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="http://matteoacclavio.com/">Matteo Acclavio</a>.
-					Postdoc. Now Assistant Professor ("Lecturer") at the University of Sussex.</span>
-					<img src="/images/people/ma.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://saveriogiallorenzo.com/">Saverio Giallorenzo</a>.
-					Co-advised PhD student, then postdoc. Now Assistant Professor ("Researcher") at the University of Bologna.</span>
-					<img src="/images/people/sg.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://portal.findresearcher.sdu.dk/en/persons/lugovic">Lovro Lugović</a>.
-					PhD student.</span>
-					<img src="/images/people/ll.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://marcoperessotti.com/">Marco Peressotti</a>.
-					Postdoc. Now Associate Professor at the University of Southern Denmark.</span>
-					<img src="/images/people/mp.jpg"/>
-				</li>
-				<li class="list-group-item justify-content-between align-items-center d-flex">
-					<span><a href="https://scholar.google.com/citations?hl=en&user=XifW61cAAAAJ">Larisa Safina</a>.
-					PhD student (co-supervised by Lu&Iacute;s Cruz-Filipe and Manuel Mazzara). Now permanent Researcher at INRIA Lille.</span>
-					<img src="/images/people/ls.jpg"/>
-				</li>
-			</ul>
+			{{#collections}}
+				<h3>{{title}}</h3>
+				<ul class="list-group people-list mb-2">
+					{{#entries}}
+						<li class="list-group-item justify-content-between align-items-center d-flex">
+							<span><a href="{{{link}}}">{{name}}</a>. {{role}}.</span>
+							<img src="/images/people/{{{image}}}"/>
+						</li>
+					{{/entries}}
+				</ul>
+			{{/collections}}
 		</div>
 	</div>
 </div>

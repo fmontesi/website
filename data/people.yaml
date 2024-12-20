@@ -1,0 +1,61 @@
+collections:
+  - title: Current
+    entries:
+      - name: Viktor Strate Kløvedal
+        role: PhD student
+        image: vs.jpg
+        link: https://qpqp.dk/
+      - name: Sophia Kostopoulou
+        role: PhD student
+        image: sk.jpg
+        link: https://www.linkedin.com/in/sophia-kostopoulou-239a6b40/
+      - name: Giulia Manara
+        role: Postdoc
+        image: gm.jpg
+        link: https://dblp.org/pid/378/6497.html
+      - name: Valentino Picotti
+        role: PhD student
+        image: vp.jpg
+        link: https://portal.findresearcher.sdu.dk/en/persons/picotti
+      - name: Dan Plyukhin
+        role: Postdoc
+        image: dp.jpg
+        link: https://dplyukhin.github.io/
+      - name: Xueying Qin
+        role: Postdoc
+        image: xq.jpg
+        link: https://orcid.org/0000-0003-4825-2023
+      - name: Marco Santamaria
+        role: PhD student
+        image: ms.jpg
+        link: https://portal.findresearcher.sdu.dk/en/persons/santamaria
+      - name: Narongrit Unwerawattana
+        role: Scientific Software Engineer
+        image: nu.jpg
+        link: https://www.linkedin.com/in/narongrit-unwe/
+  - title: Previous
+    entries:
+      - name: Matteo Acclavio
+        role: Postdoc. Now Assistant Professor at the University of Sussex.
+        image: ma.jpg
+        link: http://matteoacclavio.com/
+      - name: Saverio Giallorenzo
+        role: Co-advised PhD student, then postdoc. Now Assistant Professor at the University of Bologna.
+        image: sg.jpg
+        link: https://saveriogiallorenzo.com/
+      - name: Eva Graversen
+        role: Postdoc
+        image: eg.jpg
+        link: https://dblp.org/pid/199/2114.html
+      - name: Lovro Lugović
+        role: PhD student
+        image: ll.jpg
+        link: https://portal.findresearcher.sdu.dk/en/persons/lugovic
+      - name: Marco Peressotti
+        role: Postdoc. Now Associate Professor at the University of Southern Denmark.
+        image: mp.jpg
+        link: https://marcoperessotti.com/
+      - name: Larisa Safina
+        role: PhD student (co-supervised by Lu&Iacute;s Cruz-Filipe and Manuel Mazzara). Now permanent Researcher at INRIA Lille.
+        image: ls.jpg
+        link: https://scholar.google.com/citations?hl=en&user=XifW61cAAAAJ
