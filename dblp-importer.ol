@@ -1,4 +1,4 @@
-#!/usr/bin/env -S jolie -s Main --responseTimeout 2000
+#!/usr/bin/env -S jolie -s Main --responseTimeout 10000
 
 from console import Console
 from file import File

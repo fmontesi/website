@@ -52,28 +52,5 @@
 			"where": "MSc Thesis, University of Bologna",
 			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}"
 		} ]
-	}, {
-		"title": "To appear",
-		"entries": [ {
-			"key": "conf/esocc/MontesiPPZ25",
-			"title": "A Conceptual Framework for API Refactoring in Service-Oriented Architectures",
-			"year": "2025",
-			"authors": [ {
-				"name": "Fabrizio Montesi",
-				"last": false
-			}, {
-				"name": "Valentino Picotti",
-				"last": false
-			}, {
-				"name": "Marco Peressotti",
-				"last": false
-			}, {
-				"name": "Olaf Zimmermann",
-				"last": true
-			} ],
-			"type": "inproceedings",
-			"where": "In proceedings of ESOCC 2025 (to appear)",
-			"bibtex": "@inproceedings{DBLP:conf\/esocc\/MontesiPPZ25,\r\n  author       = {Fabrizio Montesi and\r\n Valentino Picotti and\r\n Marco Peressotti and\r\n Olaf Zimmermann},\r\n  title        = {A Conceptual Framework for API Refactoring in Service-Oriented Architectures},\r\n  booktitle    = {Service-Oriented and Cloud Computing - 12th {IFIP} {WG} 6.12 European\r\n                  Conference, {ESOCC} 2025, Proceedings, to appear},\r\n  series       = {Lecture Notes in Computer Science},\r\n  publisher    = {Springer},\r\n  year         = {2025}}"
-		} ]
 	} ]
 }
