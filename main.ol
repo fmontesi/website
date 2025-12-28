@@ -395,8 +395,8 @@ service Main {
 					link = "/tools.html"
 				}
 				item[4] << {
-					text = "Blog"
-					link = "https://fmontesi.github.io"
+					text = "About"
+					link = "/about.html"
 				}
 			}
 		} ) ]
