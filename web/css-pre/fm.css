@@ -38,7 +38,7 @@ html {
 
 body {
 	height: 100%;
-	background-color: #231c1c;
+	background-color: #161414;
 	color: #dbd7d7;
 	font-family: "Montserrat", sans-serif;
 	padding-top: 2rem;
@@ -59,7 +59,7 @@ a, a:hover {
 }
 
 .bg-1 {
-	background-color: #231c1c;
+	background-color: #161414;
 }
 
 .color-2 {
@@ -80,6 +80,10 @@ a, a:hover {
 
 .bg-4 {
 	background-color: #4bbfb4;
+}
+
+.bg-cutout {
+	background-color: #231c1c;
 }
 
 .fm-banner-h {
@@ -449,4 +453,23 @@ a,section {
 
 .pub-title::after {
 	content: "’";
+}
+
+.fm-cutout {
+	width: 100vw;
+	margin-left: calc((-100vw + 100%) / 2);
+	margin-right: calc((-100vw + 100%) / 2);
+	margin-bottom: 1em;
+	background-color: #231c1c;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.fm-cutout-panel {
+	background-color: #16141470;
+}
+
+.fm-cutout-eyebrow {
+	opacity: 80%;
+	font-weight: bold;
 }
