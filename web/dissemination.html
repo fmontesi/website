@@ -32,9 +32,16 @@
 	<div class="row">
 	{{#presentations}}
 		<div class="col-sm-4 text-center mb-3">
-		<iframe loading="lazy" class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{ytid}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		{{#ytid}}
+		<iframe loading="lazy" class="fm-yt pt-1" src="https://www.youtube.com/embed/{{{.}}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		{{/ytid}}
+		{{#image}}
+		<img src="{{{.}}}" style="width:100%"/>
+		{{/image}}
 		<br/>
 		{{{text}}}
+		{{#pdf}}(<a href="/files/{{.}}.pdf"><i class="fa fa-download"></i> PDF</a>){{/pdf}}
+		{{#where}}<br/><em>{{{.}}}</em>{{/where}}
 		</div>
 	{{/presentations}}
 	</div>

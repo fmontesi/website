@@ -38,20 +38,25 @@
 		"link": "https://www.infoworld.com/article/2903590/hack-your-way-through-the-microservices-revolution.html"
 	} ],
 	"presentations": [ {
+		"text": "CSLib - The Lean Computer Science Library",
+		"where": "Lean Together 2026",
+		"pdf": "slides/cslib-lean-together-2026",
+		"image": "/files/slides/cslib-lean-together-2026-0.webp"
+	}, {
 		"text": "Jolie - Making a service",
 		"ytid": "NMCd89HgJSc"
 	}, {
-		"ytid": "YDPcBWLtzNs",
-		"text": "An Introduction to Structured Microservice Programming and the Jolie Programming Language"
+		"text": "An Introduction to Structured Microservice Programming and the Jolie Programming Language",
+		"ytid": "YDPcBWLtzNs"
 	}, {
-		"ytid": "g_LyBEaTA0M",
-		"text": "Understandable Microservices (Keynote at Microservice 2019)"
+		"text": "Understandable Microservices (Keynote at Microservice 2019)",
+		"ytid": "g_LyBEaTA0M"
 	}, {
-		"ytid": "zx07I-f7ZME",
-		"text": "Multiparty Languages: The Choreographic and Multitier Cases (ECOOP'21 Distinguished Paper)"
+		"text": "Multiparty Languages: The Choreographic and Multitier Cases (ECOOP'21 Distinguished Paper)",
+		"ytid": "zx07I-f7ZME"
 	}, {
-		"ytid": "wpqwCLI5Spk",
-		"text": "Create Quickly a Microservice Project With VS Code DevContainers, Docker, npm, and Jolie"
+		"text": "Create Quickly a Microservice Project With VS Code DevContainers, Docker, npm, and Jolie",
+		"ytid": "wpqwCLI5Spk"
 	} ],
 	"interviews": [ {
 		"link-img": {
