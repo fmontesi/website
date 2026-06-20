@@ -9,18 +9,14 @@ collections:
         role: PhD student
         image: sk.jpg
         link: https://www.linkedin.com/in/sophia-kostopoulou-239a6b40/
+      - name: Anna Blume Jakobsen
+        role: PhD student
+        image: abj.jpg
+        link: https://portal.findresearcher.sdu.dk/en/persons/ablume/
       - name: Giulia Manara
         role: Postdoc
         image: gm.jpg
         link: https://dblp.org/pid/378/6497.html
-      - name: Valentino Picotti
-        role: PhD student
-        image: vp.jpg
-        link: https://portal.findresearcher.sdu.dk/en/persons/picotti
-      - name: Dan Plyukhin
-        role: Postdoc
-        image: dp.jpg
-        link: https://dplyukhin.github.io/
       - name: Xueying Qin
         role: Postdoc
         image: xq.jpg
@@ -36,11 +32,11 @@ collections:
   - title: Previous
     entries:
       - name: Matteo Acclavio
-        role: Postdoc. Now Assistant Professor at the University of Sussex.
+        role: Postdoc.
         image: ma.jpg
         link: http://matteoacclavio.com/
       - name: Saverio Giallorenzo
-        role: Co-advised PhD student, then postdoc. Now Assistant Professor at the University of Bologna.
+        role: Co-advised PhD student, then postdoc.
         image: sg.jpg
         link: https://saveriogiallorenzo.com/
       - name: Eva Graversen
@@ -52,10 +48,18 @@ collections:
         image: ll.jpg
         link: https://portal.findresearcher.sdu.dk/en/persons/lugovic
       - name: Marco Peressotti
-        role: Postdoc. Now Associate Professor at the University of Southern Denmark.
+        role: Postdoc.
         image: mp.jpg
         link: https://marcoperessotti.com/
+      - name: Valentino Picotti
+        role: PhD student
+        image: vp.jpg
+        link: https://portal.findresearcher.sdu.dk/en/persons/picotti
+      - name: Dan Plyukhin
+        role: Postdoc
+        image: dp.jpg
+        link: https://dplyukhin.github.io/
       - name: Larisa Safina
-        role: PhD student (co-supervised by Lu&Iacute;s Cruz-Filipe and Manuel Mazzara). Now permanent Researcher at INRIA Lille.
+        role: PhD student (co-supervised by Lu&Iacute;s Cruz-Filipe and Manuel Mazzara).
         image: ls.jpg
         link: https://scholar.google.com/citations?hl=en&user=XifW61cAAAAJ
