@@ -1,4 +1,4 @@
-#!/usr/bin/env -S jolie -s Main --responseTimeout 10000
+#!/usr/bin/env -S jolie -s Main --responseTimeout 60000
 
 from console import Console
 from file import File
@@ -6,12 +6,14 @@ from vectors import Vectors
 from string-utils import StringUtils
 from .private.quicksort import Quicksort
 from runtime import Runtime
+from time import Time
 
 constants {
 	PersonId = "65/3603",
 	Attributes = "@Attributes",
 	DoiUrlPrefix = "https://doi.org/",
-	ArxivUrlPrefix = "http://arxiv.org/"
+	ArxivUrlPrefix = "http://arxiv.org/",
+	DblpSleep = 2000
 }
 
 type PublicationDataset {
@@ -108,6 +110,7 @@ service Utils {
 	embed File as files
 	embed Console as console
 	embed StringUtils as stringUtils
+	embed Time as time
 
 	init {
 		readFile@files( {
@@ -266,7 +269,18 @@ service Utils {
 		} ]
 
 		[ bibtex( r )( bibtex ) {
-			getBibtex@dblp( r.(Attributes).key )( bibtex )
+			req = r.(Attributes).key + ".bib"
+			req.regex = "/"
+			req.replacement = "-"
+			path = "data/bibtex/" + replaceAll@stringUtils( req )
+			scope( read ) {
+				install( default =>
+					sleep@time( DblpSleep )()
+					getBibtex@dblp( r.(Attributes).key )( bibtex )
+					writeFile@files( { filename = path, content = bibtex } )()
+				)
+				readFile@files( { filename = path } )( bibtex )
+			}
 		} ]
 
 		[ abstract( entry )( abstract ) {
