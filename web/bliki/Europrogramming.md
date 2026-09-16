@@ -15,6 +15,7 @@ Proof assistants are particularly powerful environments for this, because progra
 
 None of this appeared overnight. Europrogramming rests on decades of free, fundamental research and on the extraordinary execution that turned mathematical ideas about computing into languages, proof assistants, libraries, and tools. Before looking forward, it is worth reflecting on where that came from.
 
+
 ## From Eurotheory to Europrogramming
 
 I encountered the term Eurotheory only years after entering research. I think I first heard it from an algorithms researcher. It felt weird, as if the name had been invented to mark a divide: there was theory, meaning algorithms and complexity, and then there was the other theory (Eurotheory).
@@ -111,7 +112,17 @@ Computer science has developed an extraordinary variety of models, logics, progr
 However, these theories often live in different worlds.
 A verification project may therefore spend substantial effort rebuilding the concepts it needs before it can even state the property it ultimately cares about. The same definitions and theorems are formalised repeatedly, sometimes in subtly incompatible ways. This is expensive for humans, makes results difficult to reuse, and provides a fragmented foundation for AI.
 
-This is one motivation behind the [CSLib](https://cslib.io/) open source project, where I serve as lead maintainer. Our ambition is to build a shared, machine-checked body of computer science in [Lean](https://lean-lang.org/): algorithms, data structures, models of computation, logics, semantics, verification infrastructure, and verified software, designed so that results from different areas can be connected and reused.
+This is one motivation behind the [CSLib](https://cslib.io/) open source project, where I serve as lead maintainer [[Barrett et al., 2026](#cslib); [Henson and Montesi, 2026](#cslib-spine)]. Our ambition is to build a shared, machine-checked body of computer science in [Lean](https://lean-lang.org/): algorithms, data structures, models of computation, logics, semantics, verification infrastructure, and verified software, designed so that results from different areas can be connected and reused.
+
+<figure class="bliki-figure">
+
+<img src="/images/vm-choiceAfterCoin.png" class="img-fluid"/>
+
+<figcaption>
+
+Proof that a simple vending machine satisfies a behavioural specification: after inserting a coin, the user can choose between tea and coffee. The example uses [CSLib](https://cslib.io)'s reusable APIs for [labelled transition systems](https://en.wikipedia.org/?title=Labelled_transition_system) and [Hennessy–Milner Logic](https://en.wikipedia.org/wiki/Hennessy%E2%80%93Milner_logic).
+</figcaption>
+</figure>
 
 CSLib is inspired by [Mathlib](https://github.com/leanprover-community/mathlib4)'s success.
 Mathlib is much more than a repository of theorems. It gives mathematicians and AI systems a common language in which definitions and results from different areas can be stated, checked, connected, and reused.
@@ -197,6 +208,10 @@ AI has come to code, and we are ready – or this is how we become ready.
 
 ## References
 
+{{#fn.citation}}cslib cslib-arxiv{{/fn.citation}}
+
+{{#fn.citation}}cslib-spine computer-science-as-infrastructure-arxiv{{/fn.citation}}
+
 <a id="htcs"></a>Jan van Leeuwen (Editor) [1994], ‘Handbook of Theoretical Computer Science’, _MIT Press_. ISBN: 9780262220408.
 
 <a id="l16"></a>Xavier Leroy, Sandrine Blazy, Daniel Kästner, Bernhard Schommer, Markus Pister, Christian Ferdinand [2016], ‘CompCert – a formally verified optimizing compiler’, in _Proceedings of ERTS_ 2016.
@@ -207,3 +222,5 @@ AI has come to code, and we are ready – or this is how we become ready.
 
 <a id="v15"></a>Moshe Vardi [2015], ‘Why Doesn’t ACM Have a SIG For Theoretical Computer Science?’, _Communications of the ACM_. DOI:
 10.1145/2791388. Link: <https://cacm.acm.org/opinion/why-doesnt-acm-have-a-sig-for-theoretical-computer-science/>
+
+<!-- --> {{/content}}{{/fm-bliki.html}}
