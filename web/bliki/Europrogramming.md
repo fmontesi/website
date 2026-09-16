@@ -1,5 +1,15 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}Europrogramming: From Eurotheory to Practice{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$content}}
 
+<figure class="bliki-figure">
+
+<img src="/images/lean-mathlib-cslib-banner.svg" class="img-fluid"/>
+
+<figcaption>
+
+Some of the growing infrastructure behind Europrogramming: [Lean](https://lean-lang.org), [Mathlib](https://mathlib.org), and [CSLib](https://cslib.io).
+</figcaption>
+</figure>
+
 **Europrogramming** is the practice of developing software with formal methods so that programs, specifications, and machine-checkable evidence about their behaviour are part of the same process. The practice is not new. I started using Europrogramming in recent conversations to refer to something that has been taking shape for a long time, but is now rapidly assuming a new scale.
 
 The name comes from _Eurotheory_, the somewhat peculiar label for a tradition in theoretical computer science concerned with formal models, logic, programming languages, semantics, and verification. I mean _Europrogramming_ somewhat tongue-in-cheek, but also as a homage to the gargantuan amount of free research behind that tradition.
