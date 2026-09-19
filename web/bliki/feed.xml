@@ -10,6 +10,10 @@
 	<category term="concurrency theory"/>
 	<category term="distributed systems"/>
 	<category term="microservices"/>
+	<category term="formal methods"/>
+	<category term="CSLib"/>
+	<category term="Lean"/>
+	<category term="theorem proving"/>
 	<author>
 		<name>Fabrizio Montesi</name>
 		<email>fm@fabriziomontesi.com</email>
