@@ -12,7 +12,7 @@
 	<category term="microservices"/>
 	<author>
 		<name>Fabrizio Montesi</name>
-		<email>famontesi@gmail.com</email>
+		<email>fm@fabriziomontesi.com</email>
 		<uri>https://www.fabriziomontesi.com/</uri>
 	</author>
 	{{#entries}}
@@ -23,7 +23,7 @@
 		<updated>{{updated}}</updated>
 		<author>
 			<name>Fabrizio Montesi</name>
-			<email>famontesi@gmail.com</email>
+			<email>fm@fabriziomontesi.com</email>
 			<uri>https://www.fabriziomontesi.com/</uri>
 		</author>
 		<content type="html">{{content}}</content>
