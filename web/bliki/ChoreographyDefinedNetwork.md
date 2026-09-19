@@ -2,7 +2,7 @@
 
 A **Choreography-Defined Network (CDN)** is a [software-defined network](https://en.wikipedia.org/wiki/Software-defined_networking) whose behaviour is programmed by means 
 of [choreographic programming](ChoreographicProgramming).
-This method, introduced [Giallorenzo et al. [2024]](#Getal24), targets in particular the coordination of Virtual Network Functions (VNFs).
+This method, introduced by [Giallorenzo et al. [2024]](#Getal24), targets in particular the coordination of Virtual Network Functions (VNFs).
 By leveraging choreographic programming, CDNs offer a distributed and parallel programming model that eliminates centralised orchestration bottlenecks.
 The method aims at simplifying the creation of efficient and scalable virtual network architectures, enabling better utilisation of cloud and edge computing in SDNs.
 
@@ -65,11 +65,7 @@ For information on the choreographic method, choreographic languages, and choreo
 
 ## References
 
-<!-- {{#fn.cite}}GMP24{{/fn.cite}} -->
-
 <a id="Getal24"></a>Giallorenzo, S., Mauro, J., Melis, A., Montesi, F., Peressotti, M., Prandini, M. [2024], 'Choreography-Defined Networks: a Case Study on DoS Mitigation', _Proc. ICSOC_ 2024. [Pre-print](/files/gmmmpp24.pdf)
-
-<!-- {{#fn.citation}}GMP24 packaging-microservices{{/fn.citation}} -->
 
 <a id="GMP24"></a>
 Giallorenzo, S., Montesi, F., Peressotti, M. [2024], 'Choral: Object-oriented Choreographic Programming', _ACM Trans. Program. Lang. Syst._ 46(1): 1:1-1:59.
