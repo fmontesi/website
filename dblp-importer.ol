@@ -275,9 +275,10 @@ service Utils {
 			path = "data/bibtex/" + replaceAll@stringUtils( req )
 			scope( read ) {
 				install( default =>
-					sleep@time( DblpSleep )()
-					getBibtex@dblp( r.(Attributes).key )( bibtex )
-					writeFile@files( { filename = path, content = bibtex } )()
+					println@console( "Missing bibtex: " + path )()
+					// sleep@time( DblpSleep )()
+					// getBibtex@dblp( r.(Attributes).key )( bibtex )
+					// writeFile@files( { filename = path, content = bibtex } )()
 				)
 				readFile@files( { filename = path } )( bibtex )
 			}
@@ -389,8 +390,9 @@ service Main {
 			}
 			undef( collection )
 
-			getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
-			for( r in dblpPerson.r ) {
+			// getPersonPublications@dblp( { pid = PersonId } )( dblpPerson )
+			readFile@files( { filename = "data/dblp-fm.xml", format = "xml" } )( dblpPerson )
+			for( r in dblpPerson.dblpperson.r ) {
 				undef( key )
 				foreach( k : r ) {
 					if( is_defined( r.(k).year ) ) {

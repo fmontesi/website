@@ -1,0 +1,2129 @@
+<?xml version="1.0"?>
+<dblpperson name="Fabrizio Montesi" pid="65/3603" n="148">
+<person key="homepages/65/3603" mdate="2023-07-18">
+<author pid="65/3603">Fabrizio Montesi</author>
+<url>https://www.fabriziomontesi.com</url>
+<url>https://scholar.google.com/citations?user=zRA6uA4AAAAJ</url>
+<url>https://dl.acm.org/profile/81361598958</url>
+<url>https://mathscinet.ams.org/mathscinet/MRAuthorID/889020</url>
+<url>https://mathgenealogy.org/id.php?id=244055</url>
+<url>https://twitter.com/famontesi</url>
+<url>https://github.com/fmontesi</url>
+<url>https://orcid.org/0000-0003-4666-901X</url>
+<url>https://www.wikidata.org/entity/Q58674749</url>
+<url>https://d-nb.info/gnd/1250864062</url>
+<note type="affiliation">University of Southern Denmark, Department of Mathematics and Computer Science, Odense, Denmark</note>
+</person>
+<r><article key="journals/infsof/GiallorenzoMMMPP26" mdate="2026-06-25">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0002-0101-2551" pid="184/7813">Andrea Melis 0001</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0002-3962-5513" pid="53/4448">Marco Prandini</author>
+<title>Choreography-defined networks: Concepts and a case study on AI-based attack detection.</title>
+<year>2026</year>
+<pages>108180</pages>
+<volume>197</volume>
+<journal>Inf. Softw. Technol.</journal>
+<ee type="oa">https://doi.org/10.1016/j.infsof.2026.108180</ee>
+<url>db/journals/infsof/infsof197.html#GiallorenzoMMMPP26</url>
+<stream>streams/journals/infsof</stream>
+</article>
+</r>
+<r><inproceedings key="conf/icsa/GreinerUJM26" mdate="2026-09-12">
+<author pid="183/9453">Sandra Greiner 0001</author>
+<author orcid="0009-0001-4682-5548" pid="349/6040">Narongrit Unwerawattana</author>
+<author pid="441/9249">Niels Erik Jepsen</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Benchmarking API Data Transfer Refactorings to Service-Oriented Architectures.</title>
+<booktitle>ICSA</booktitle>
+<year>2026</year>
+<pages>193-200</pages>
+<crossref>conf/icsa/2026</crossref>
+<ee>https://doi.org/10.1109/ICSA66085.2026.00025</ee>
+<url>db/conf/icsa/icsa2026.html#GreinerUJM26</url>
+<stream>streams/conf/icsa</stream>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2602-04846" mdate="2026-03-19">
+<author pid="b/ClarkWBarrett">Clark W. Barrett</author>
+<author pid="37/6100">Swarat Chaudhuri</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="92/2259">Jim Grundy</author>
+<author pid="94/248">Pushmeet Kohli</author>
+<author pid="d/LeonardoMdeMoura">Leonardo de Moura 0001</author>
+<author pid="59/2479">Alexandre Rademaker</author>
+<author pid="140/9538">Sorrachai Yingchareonthawornchai</author>
+<title>CSLib: The Lean Computer Science Library.</title>
+<year>2026</year>
+<month>February</month>
+<volume>abs/2602.04846</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2602.04846</ee>
+<url>db/journals/corr/corr2602.html#abs-2602-04846</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2602-15078" mdate="2026-03-29">
+<author pid="430/9279">Christopher Henson</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Computer Science as Infrastructure: the Spine of the Lean Computer Science Library (CSLib).</title>
+<year>2026</year>
+<month>February</month>
+<volume>abs/2602.15078</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2602.15078</ee>
+<url>db/journals/corr/corr2602.html#abs-2602-15078</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2602-15409" mdate="2026-03-29">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="59/2479">Alexandre Rademaker</author>
+<title>Hennessy-Milner Logic in CSLib, the Lean Computer Science Library.</title>
+<year>2026</year>
+<month>February</month>
+<volume>abs/2602.15409</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2602.15409</ee>
+<url>db/journals/corr/corr2602.html#abs-2602-15409</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2603-20942" mdate="2026-04-15">
+<author pid="432/8649">Viktor Strate Kl&#248;vedal</author>
+<author pid="232/0111">Dan Plyukhin</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Accompanist: A Runtime for Resilient Choreographic Programming.</title>
+<year>2026</year>
+<month>March</month>
+<volume>abs/2603.20942</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2603.20942</ee>
+<url>db/journals/corr/corr2603.html#abs-2603-20942</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2607-15174" mdate="2026-08-07">
+<author pid="94/6767">Xueying Qin</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Mech: Mechanised Choreographic Programming.</title>
+<year>2026</year>
+<month>July</month>
+<volume>abs/2607.15174</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2607.15174</ee>
+<url>db/journals/corr/corr2607.html#abs-2607-15174</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2607-23793" mdate="2026-08-11">
+<author pid="182/1948">Matteo Acclavio</author>
+<author pid="378/6497">Giulia Manara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="94/6767">Xueying Qin</author>
+<title>Choreographic Programming: a Semantic Approach.</title>
+<year>2026</year>
+<month>July</month>
+<volume>abs/2607.23793</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2607.23793</ee>
+<url>db/journals/corr/corr2607.html#abs-2607-23793</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article key="journals/pacmpl/PlyukhinQM25" mdate="2026-02-25">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0003-4825-2023" pid="94/6767">Xueying Qin</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Relax! The Semilenient Core of Choreographic Programming (Functional Pearl).</title>
+<pages>947-973</pages>
+<year>2025</year>
+<volume>9</volume>
+<journal>Proc. ACM Program. Lang.</journal>
+<number>ICFP</number>
+<ee type="oa">https://doi.org/10.1145/3747538</ee>
+<url>db/journals/pacmpl/pacmpl9.html#PlyukhinQM25</url>
+</article>
+</r>
+<r><article key="journals/pacmpl/PlyukhinAM25" mdate="2025-09-06">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0002-0580-4206" pid="a/GulAAgha">Gul Agha</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>CRGC: Fault-Recovering Actor Garbage Collection in Pekko.</title>
+<pages>945-969</pages>
+<year>2025</year>
+<volume>9</volume>
+<journal>Proc. ACM Program. Lang.</journal>
+<number>PLDI</number>
+<ee type="oa">https://doi.org/10.1145/3729288</ee>
+<url>db/journals/pacmpl/pacmpl9.html#PlyukhinAM25</url>
+<stream>streams/journals/pacmpl</stream>
+</article>
+</r>
+<r><article key="journals/scp/GiallorenzoMPRU25" mdate="2026-09-12">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author pid="167/5000">Florian Rademacher</author>
+<author orcid="0009-0001-4682-5548" pid="349/6040">Narongrit Unwerawattana</author>
+<title>JoT: A Jolie framework for testing microservices.</title>
+<pages>103215</pages>
+<year>2025</year>
+<volume>240</volume>
+<journal>Sci. Comput. Program.</journal>
+<ee>https://doi.org/10.1016/j.scico.2024.103215</ee>
+<url>db/journals/scp/scp240.html#GiallorenzoMPRU25</url>
+<stream>streams/journals/scp</stream>
+</article>
+</r>
+<r><inproceedings key="conf/esocc/MontesiPPZ25" mdate="2025-02-27">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0001-7713-1461" pid="287/9990">Valentino Picotti</author>
+<author pid="47/5013">Olaf Zimmermann</author>
+<title>A Conceptual Framework for API Refactoring in Service-Oriented Architectures.</title>
+<pages>181-196</pages>
+<year>2025</year>
+<booktitle>ESOCC</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-84617-5_15</ee>
+<crossref>conf/esocc/2025</crossref>
+<url>db/conf/esocc/esocc2025.html#MontesiPPZ25</url>
+<stream>streams/conf/esocc</stream>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/esop/AcclavioMM25" mdate="2025-11-15">
+<author orcid="0000-0002-0425-2825" pid="182/1948">Matteo Acclavio</author>
+<author orcid="0009-0003-9583-1017" pid="378/6497">Giulia Manara</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Formulas as Processes, Deadlock-Freedom as Choreographies.</title>
+<pages>23-55</pages>
+<year>2025</year>
+<booktitle>ESOP (1)</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-91118-7_2</ee>
+<crossref>conf/esop/2025-1</crossref>
+<url>db/conf/esop/esop2025-1.html#AcclavioMM25</url>
+<stream>streams/conf/esop</stream>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ictcs/GraversenMP25" mdate="2025-09-26">
+<author pid="199/2114">Eva Graversen</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Omission Failures in Choreographic Programming.</title>
+<pages>169-184</pages>
+<year>2025</year>
+<booktitle>ICTCS</booktitle>
+<ee type="oa">https://ceur-ws.org/Vol-4039/paper02.pdf</ee>
+<crossref>conf/ictcs/2025</crossref>
+<url>db/conf/ictcs/ictcs2025.html#GraversenMP25</url>
+</inproceedings>
+</r>
+<r><data publtype="version" key="data/11/PlyukhinAM25" mdate="2025-10-24">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0002-0580-4206" pid="a/GulAAgha">Gul Agha</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>CRGC: Fault-Recovering Actor Garbage Collection in Pekko (Artifact).</title>
+<year>2025</year>
+<month>March</month>
+<ee type="oa">https://doi.org/10.5281/zenodo.15049131</ee>
+<publisher>Zenodo</publisher>
+<stream>streams/repo/zenodo</stream>
+<rel sort="1" label="Version 1" uri="https://doi.org/10.5281/zenodo.15049130" type="versionOf">data/11/PlyukhinAM25b</rel>
+</data>
+</r>
+<r><data publtype="version" key="data/11/PlyukhinAM25a" mdate="2025-10-24">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0002-0580-4206" pid="a/GulAAgha">Gul Agha</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>CRGC: Fault-Recovering Actor Garbage Collection in Pekko (Artifact).</title>
+<year>2025</year>
+<month>March</month>
+<ee type="oa">https://doi.org/10.5281/zenodo.15052824</ee>
+<publisher>Zenodo</publisher>
+<stream>streams/repo/zenodo</stream>
+<rel sort="2" label="Version 2" uri="https://doi.org/10.5281/zenodo.15049130" type="versionOf">data/11/PlyukhinAM25b</rel>
+</data>
+</r>
+<r><data publtype="version" key="data/11/PlyukhinAM25c" mdate="2025-10-29">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0002-0580-4206" pid="a/GulAAgha">Gul Agha</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>CRGC: Fault-Recovering Actor Garbage Collection in Pekko (Artifact).</title>
+<year>2025</year>
+<month>April</month>
+<ee type="oa">https://doi.org/10.5281/zenodo.15256770</ee>
+<publisher>Zenodo</publisher>
+<stream>streams/repo/zenodo</stream>
+<rel sort="3" label="Version 3" uri="https://doi.org/10.5281/zenodo.15049130" type="versionOf">data/11/PlyukhinAM25b</rel>
+</data>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2501-08928" mdate="2026-06-03">
+<author orcid="0000-0002-0425-2825" pid="182/1948">Matteo Acclavio</author>
+<author pid="378/6497">Giulia Manara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Formulas as Processes, Deadlock-Freedom as Choreographies (Extended Version).</title>
+<year>2025</year>
+<month>January</month>
+<volume>abs/2501.08928</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2501.08928</ee>
+<url>db/journals/corr/corr2501.html#abs-2501-08928</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article key="journals/computing/CruzFilipeKMV24" mdate="2025-10-14">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0002-5557-1295" pid="358/3301">Sofia Kostopoulou</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0001-7704-3656" pid="358/3293">Jonas Vistrup</author>
+<title>&#956;XL: explainable lead generation with microservices and hypothetical answers.</title>
+<pages>3419-3445</pages>
+<year>2024</year>
+<month>November</month>
+<volume>106</volume>
+<journal>Computing</journal>
+<number>11</number>
+<ee>https://doi.org/10.1007/s00607-024-01321-x</ee>
+<url>db/journals/computing/computing106.html#CruzFilipeKMV24</url>
+<stream>streams/journals/computing</stream>
+</article>
+</r>
+<r><article key="journals/darts/PlyukhinPM24" mdate="2024-09-12">
+<author pid="232/0111">Dan Plyukhin</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Ozone: Fully Out-of-Order Choreographies (Artifact).</title>
+<pages>16:1-16:2</pages>
+<year>2024</year>
+<volume>10</volume>
+<journal>Dagstuhl Artifacts Ser.</journal>
+<number>2</number>
+<ee type="oa">https://doi.org/10.4230/DARTS.10.2.16</ee>
+<url>db/journals/darts/darts10.html#PlyukhinPM24</url>
+</article>
+</r>
+<r><article key="journals/jfp/GraversenHM24" mdate="2025-12-07">
+<author orcid="0000-0002-9430-4907" pid="199/2114">Eva Graversen</author>
+<author orcid="0000-0003-2518-614X" pid="122/2921">Andrew K. Hirsch</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Alice or Bob?: Process polymorphism in choreographies.</title>
+<year>2024</year>
+<volume>34</volume>
+<journal>J. Funct. Program.</journal>
+<ee>https://doi.org/10.1017/s0956796823000114</ee>
+<ee>https://www.wikidata.org/entity/Q129407134</ee>
+<url>db/journals/jfp/jfp34.html#GraversenHM24</url>
+</article>
+</r>
+<r><article key="journals/peerj-cs/GiallorenzoMG24" mdate="2025-03-03">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<title>A model for correlation-based choreographic programming.</title>
+<pages>e1907</pages>
+<year>2024</year>
+<volume>10</volume>
+<journal>PeerJ Comput. Sci.</journal>
+<ee type="oa">https://doi.org/10.7717/peerj-cs.1907</ee>
+<url>db/journals/peerj-cs/peerj-cs10.html#GiallorenzoMG24</url>
+<stream>streams/journals/peerj-cs</stream>
+</article>
+</r>
+<r><article key="journals/programming/LugovicM23" mdate="2025-03-03">
+<author orcid="0000-0001-9684-9567" pid="305/8036">Lovro Lugovic</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Real-World Choreographic Programming: Full-Duplex Asynchrony and Interoperability.</title>
+<year>2024</year>
+<volume>8</volume>
+<journal>Art Sci. Eng. Program.</journal>
+<number>2</number>
+<ee type="oa">https://doi.org/10.22152/programming-journal.org/2024/8/8</ee>
+<url>db/journals/programming/programming8.html#LugovicM23</url>
+</article>
+</r>
+<r><article key="journals/toplas/GiallorenzoMP24" mdate="2025-01-19">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Choral: Object-oriented Choreographic Programming.</title>
+<pages>1:1-1:59</pages>
+<year>2024</year>
+<month>March</month>
+<volume>46</volume>
+<journal>ACM Trans. Program. Lang. Syst.</journal>
+<number>1</number>
+<ee>https://doi.org/10.1145/3632398</ee>
+<ee>https://www.wikidata.org/entity/Q130810659</ee>
+<url>db/journals/toplas/toplas46.html#GiallorenzoMP24</url>
+</article>
+</r>
+<r><inproceedings key="conf/ecoop/PlyukhinPM24" mdate="2025-03-03">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Ozone: Fully Out-of-Order Choreographies.</title>
+<pages>31:1-31:28</pages>
+<year>2024</year>
+<booktitle>ECOOP</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.ECOOP.2024.31</ee>
+<crossref>conf/ecoop/2024</crossref>
+<url>db/conf/ecoop/ecoop2024.html#PlyukhinPM24</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/icsoc/GiallorenzoMPRSW24" mdate="2025-01-08">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</author>
+<author orcid="0000-0003-1343-3553" pid="19/669">Sabine Sachweh</author>
+<author orcid="0000-0002-3588-5174" pid="205/5807">Philip Wizenty</author>
+<title>A Toolchain for Checking Domain- and Model-Driven Properties of Jolie Microservices.</title>
+<pages>161-175</pages>
+<year>2024</year>
+<booktitle>ICSOC (2)</booktitle>
+<ee>https://doi.org/10.1007/978-981-96-0808-9_13</ee>
+<crossref>conf/icsoc/2024-2</crossref>
+<url>db/conf/icsoc/icsoc2024-2.html#GiallorenzoMPRSW24</url>
+<stream>streams/conf/icsoc</stream>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/icsoc/GiallorenzoMMMPP24" mdate="2025-01-08">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0002-0101-2551" pid="184/7813">Andrea Melis 0001</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0002-3962-5513" pid="53/4448">Marco Prandini</author>
+<title>Choreography-Defined Networks: A Case Study on DoS Mitigation.</title>
+<pages>243-259</pages>
+<year>2024</year>
+<booktitle>ICSOC (2)</booktitle>
+<ee>https://doi.org/10.1007/978-981-96-0808-9_18</ee>
+<crossref>conf/icsoc/2024-2</crossref>
+<url>db/conf/icsoc/icsoc2024-2.html#GiallorenzoMMMPP24</url>
+<stream>streams/conf/icsoc</stream>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2401-17403" mdate="2024-10-06">
+<author orcid="0009-0004-8712-7895" pid="232/0111">Dan Plyukhin</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Ozone: Fully Out-of-Order Choreographies.</title>
+<year>2024</year>
+<volume>abs/2401.17403</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2401.17403</ee>
+<url>db/journals/corr/corr2401.html#abs-2401-17403</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2403-18508" mdate="2024-08-04">
+<author orcid="0000-0002-0425-2825" pid="182/1948">Matteo Acclavio</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>On Propositional Dynamic Logic and Concurrency.</title>
+<year>2024</year>
+<volume>abs/2403.18508</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2403.18508</ee>
+<url>db/journals/corr/corr2403.html#abs-2403-18508</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2407-07428" mdate="2024-08-16">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="287/9990">Valentino Picotti</author>
+<author pid="47/5013">Olaf Zimmermann</author>
+<title>A Conceptual Framework for API Refactoring in Enterprise Application Architectures.</title>
+<year>2024</year>
+<volume>abs/2407.07428</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2407.07428</ee>
+<url>db/journals/corr/corr2407.html#abs-2407-07428</url>
+<stream>streams/journals/corr</stream>
+</article>
+</r>
+<r><article key="journals/jar/CruzFilipeMP23" mdate="2023-09-12">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>A Formal Theory of Choreographic Programming.</title>
+<pages>21</pages>
+<year>2023</year>
+<month>June</month>
+<volume>67</volume>
+<journal>J. Autom. Reason.</journal>
+<number>2</number>
+<ee type="oa">https://doi.org/10.1007/s10817-023-09665-3</ee>
+<url>db/journals/jar/jar67.html#CruzFilipeMP23</url>
+</article>
+</r>
+<r><article key="journals/scp/GiallorenzoMPR23" mdate="2023-08-06">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</author>
+<title>LEMMA2Jolie: A tool to generate microservice APIs from domain models.</title>
+<pages>102956</pages>
+<year>2023</year>
+<month>June</month>
+<volume>228</volume>
+<journal>Sci. Comput. Program.</journal>
+<ee>https://doi.org/10.1016/j.scico.2023.102956</ee>
+<url>db/journals/scp/scp228.html#GiallorenzoMPR23</url>
+</article>
+</r>
+<r><inproceedings key="conf/coordination/Cruz-FilipeGMP23" mdate="2023-07-07">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0002-9430-4907" pid="199/2114">Eva Graversen</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Reasoning About Choreographic Programs.</title>
+<pages>144-162</pages>
+<year>2023</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-35361-1_8</ee>
+<crossref>conf/coordination/2023</crossref>
+<url>db/conf/coordination/coordination2023.html#Cruz-FilipeGMP23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/coordination/GiallorenzoMPRU23" mdate="2026-09-12">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</author>
+<author orcid="0009-0001-4682-5548" pid="349/6040">Narongrit Unwerawattana</author>
+<title>JoT: A Jolie Framework for Testing Microservices.</title>
+<pages>172-191</pages>
+<year>2023</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-35361-1_10</ee>
+<crossref>conf/coordination/2023</crossref>
+<url>db/conf/coordination/coordination2023.html#GiallorenzoMPRU23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ecoop/Cruz-FilipeGLMP23" mdate="2025-03-03">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="199/2114">Eva Graversen</author>
+<author orcid="0000-0001-9684-9567" pid="305/8036">Lovro Lugovic</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Modular Compilation for Higher-Order Functional Choreographies.</title>
+<pages>7:1-7:37</pages>
+<year>2023</year>
+<booktitle>ECOOP</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.ECOOP.2023.7</ee>
+<crossref>conf/ecoop/2023</crossref>
+<url>db/conf/ecoop/ecoop2023.html#Cruz-FilipeGLMP23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/esocc/CruzFilipeKMV23" mdate="2023-11-09">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0002-5557-1295" pid="358/3301">Sofia Kostopoulou</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0001-7704-3656" pid="358/3293">Jonas Vistrup</author>
+<title>&#956;XL: Explainable Lead Generation with Microservices and Hypothetical Answers.</title>
+<pages>3-18</pages>
+<year>2023</year>
+<booktitle>ESOCC</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-46235-1_1</ee>
+<crossref>conf/esocc/2023</crossref>
+<url>db/conf/esocc/esocc2023.html#CruzFilipeKMV23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/forte/Cruz-FilipeLM23" mdate="2023-07-07">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0001-9684-9567" pid="305/8036">Lovro Lugovic</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Certified Compilation of Choreographies with hacc.</title>
+<pages>29-36</pages>
+<year>2023</year>
+<booktitle>FORTE</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-35355-0_3</ee>
+<crossref>conf/forte/2023</crossref>
+<url>db/conf/forte/forte2023.html#Cruz-FilipeLM23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/itp/Cruz-FilipeM23" mdate="2023-09-30">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Now It Compiles! Certified Automatic Repair of Uncompilable Protocols.</title>
+<pages>11:1-11:19</pages>
+<year>2023</year>
+<booktitle>ITP</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.ITP.2023.11</ee>
+<crossref>conf/itp/2023</crossref>
+<url>db/conf/itp/itp2023.html#Cruz-FilipeM23</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/lpar/Cruz-FilipeMR23" mdate="2025-03-03">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0009-0009-0714-0544" pid="351/3646">Robert R. Rasmussen</author>
+<title>Keep me out of the loop: a more flexible choreographic projection.</title>
+<pages>144-163</pages>
+<year>2023</year>
+<booktitle>LPAR</booktitle>
+<ee type="oa">https://doi.org/10.29007/wbw3</ee>
+<crossref>conf/lpar/2023</crossref>
+<url>db/conf/lpar/lpar2023.html#Cruz-FilipeMR23</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2302-14622" mdate="2023-03-02">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Now It Compiles! Certified Automatic Repair of Uncompilable Protocols.</title>
+<year>2023</year>
+<volume>abs/2302.14622</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2302.14622</ee>
+<url>db/journals/corr/corr2302.html#abs-2302-14622</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2303-03972" mdate="2023-03-15">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="305/8036">Lovro Lugovic</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Certified Compilation of Choreographies with hacc.</title>
+<year>2023</year>
+<volume>abs/2303.03972</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2303.03972</ee>
+<url>db/journals/corr/corr2303.html#abs-2303-03972</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2303-03983" mdate="2023-03-15">
+<author pid="305/8036">Lovro Lugovic</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Real-World Choreographic Programming: An Experience Report.</title>
+<year>2023</year>
+<volume>abs/2303.03983</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2303.03983</ee>
+<url>db/journals/corr/corr2303.html#abs-2303-03983</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2303-04678" mdate="2023-11-12">
+<author pid="199/2114">Eva Graversen</author>
+<author orcid="0000-0003-2518-614X" pid="122/2921">Andrew K. Hirsch</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Alice or Bob?: Process Polymorphism in Choreographies.</title>
+<year>2023</year>
+<volume>abs/2303.04678</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2303.04678</ee>
+<url>db/journals/corr/corr2303.html#abs-2303-04678</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2304-14539" mdate="2023-05-04">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="199/2114">Eva Graversen</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Reasoning about Choreographic Programs.</title>
+<year>2023</year>
+<volume>abs/2304.14539</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2304.14539</ee>
+<url>db/journals/corr/corr2304.html#abs-2304-14539</url>
+</article>
+</r>
+<r><article key="journals/peerj-cs/GiallorenzoMSZ22" mdate="2025-03-03">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-4490-7451" pid="172/1245">Larisa Safina</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>Ephemeral data handling in microservices with Tquery.</title>
+<pages>e1037</pages>
+<year>2022</year>
+<volume>8</volume>
+<journal>PeerJ Comput. Sci.</journal>
+<ee type="oa">https://doi.org/10.7717/peerj-cs.1037</ee>
+<url>db/journals/peerj-cs/peerj-cs8.html#GiallorenzoMSZ22</url>
+</article>
+</r>
+<r><article key="journals/peerj-cs/BerardiGMMMP22" mdate="2022-04-09">
+<author pid="233/5692">Davide Berardi</author>
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author pid="184/7813">Andrea Melis 0001</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="53/4448">Marco Prandini</author>
+<title>Microservice security: a systematic literature review.</title>
+<pages>e779</pages>
+<year>2022</year>
+<volume>8</volume>
+<journal>PeerJ Comput. Sci.</journal>
+<ee type="oa">https://doi.org/10.7717/peerj-cs.779</ee>
+<ee>https://www.wikidata.org/entity/Q110949567</ee>
+<url>db/journals/peerj-cs/peerj-cs8.html#BerardiGMMMP22</url>
+</article>
+</r>
+<r><inproceedings key="conf/coordination/GiallorenzoMPR22" mdate="2022-06-28">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</author>
+<title>Model-Driven Generation of Microservice Interfaces: From LEMMA Domain Models to Jolie APIs.</title>
+<pages>223-240</pages>
+<year>2022</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-08143-9_13</ee>
+<crossref>conf/coordination/2022</crossref>
+<url>db/conf/coordination/coordination2022.html#GiallorenzoMPR22</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ictac/Cruz-FilipeGLMP22" mdate="2022-12-05">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0002-9430-4907" pid="199/2114">Eva Graversen</author>
+<author orcid="0000-0001-9684-9567" pid="305/8036">Lovro Lugovic</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Functional Choreographic Programming.</title>
+<pages>212-237</pages>
+<year>2022</year>
+<booktitle>ICTAC</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-17715-6_15</ee>
+<crossref>conf/ictac/2022</crossref>
+<url>db/conf/ictac/ictac2022.html#Cruz-FilipeGLMP22</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/lopstr/KjaerCM22" mdate="2022-10-18">
+<author pid="324/7924">Bj&#248;rn Angel Kj&#230;r</author>
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>From Infinity to Choreographies - Extraction for Unbounded Systems.</title>
+<pages>103-120</pages>
+<year>2022</year>
+<booktitle>LOPSTR</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-16767-6_6</ee>
+<crossref>conf/lopstr/2022</crossref>
+<url>db/conf/lopstr/lopstr2022.html#KjaerCM22</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/microservices/Cruz-FilipeMMP22" mdate="2024-02-05">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="363/1566">Anne Madsen</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Modular Choreographies: Bridging Alice and Bob Notation to Java.</title>
+<pages>3:1-3:18</pages>
+<year>2022</year>
+<booktitle>Microservices</booktitle>
+<ee type="oa">https://doi.org/10.4230/OASIcs.Microservices.2020-2022.3</ee>
+<crossref>conf/microservices/2022</crossref>
+<url>db/conf/microservices/microservices2022.html#Cruz-FilipeMMP22</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/microservices/GiallorenzoMPR22" mdate="2024-02-05">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author pid="167/5000">Florian Rademacher</author>
+<title>Model-Driven Code Generation for Microservices: Service Models.</title>
+<pages>6:1-6:17</pages>
+<year>2022</year>
+<booktitle>Microservices</booktitle>
+<ee type="oa">https://doi.org/10.4230/OASIcs.Microservices.2020-2022.6</ee>
+<crossref>conf/microservices/2022</crossref>
+<url>db/conf/microservices/microservices2022.html#GiallorenzoMPR22</url>
+</inproceedings>
+</r>
+<r><proceedings key="conf/esocc/2022" mdate="2022-04-20">
+<editor orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</editor>
+<editor orcid="0000-0001-9250-4916" pid="p/GeorgeAngelosPapadopoulos">George Angelos Papadopoulos</editor>
+<editor pid="z/WolfZimmermann">Wolf Zimmermann</editor>
+<title>Service-Oriented and Cloud Computing - 9th IFIP WG 6.12 European Conference, ESOCC 2022, Wittenberg, Germany, March 22-24, 2022, Proceedings</title>
+<booktitle>ESOCC</booktitle>
+<publisher>Springer</publisher>
+<year>2022</year>
+<series href="db/series/lncs/index.html">Lecture Notes in Computer Science</series>
+<volume>13226</volume>
+<isbn>978-3-031-04717-6</isbn>
+<isbn>978-3-031-04718-3</isbn>
+<ee>https://doi.org/10.1007/978-3-031-04718-3</ee>
+<url>db/conf/esocc/esocc2022.html</url>
+</proceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2202-11397" mdate="2026-10-01">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="167/5000">Florian Rademacher</author>
+<title>Model-Driven Generation of Microservice Interfaces: From LEMMA Domain Models to Jolie APIs.</title>
+<year>2022</year>
+<volume>abs/2202.11397</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2202.11397</ee>
+<url>db/journals/corr/corr2202.html#abs-2202-11397</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2205-02636" mdate="2022-05-11">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="l/KimSLarsen">Kim S. Larsen</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="172/1245">Larisa Safina</author>
+<title>Implementing Choreography Extraction.</title>
+<year>2022</year>
+<volume>abs/2205.02636</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2205.02636</ee>
+<url>db/journals/corr/corr2205.html#abs-2205-02636</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2207-08884" mdate="2022-07-25">
+<author pid="324/7924">Bj&#248;rn Angel Kj&#230;r</author>
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>From Infinity to Choreographies: Extraction for Unbounded Systems.</title>
+<year>2022</year>
+<volume>abs/2207.08884</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2207.08884</ee>
+<url>db/journals/corr/corr2207.html#abs-2207-08884</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2209-01886" mdate="2022-09-26">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>A Formal Theory of Choreographic Programming.</title>
+<year>2022</year>
+<volume>abs/2209.01886</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2209.01886</ee>
+<url>db/journals/corr/corr2209.html#abs-2209-01886</url>
+</article>
+</r>
+<r><inproceedings key="conf/IEEEscc/MontesiPP21" mdate="2022-10-02">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0001-7713-1461" pid="287/9990">Valentino Picotti</author>
+<title>Sliceable Monolith: Monolith First, Microservices Later.</title>
+<pages>364-366</pages>
+<year>2021</year>
+<booktitle>SCC</booktitle>
+<ee>https://doi.org/10.1109/SCC53864.2021.00050</ee>
+<crossref>conf/IEEEscc/2021</crossref>
+<url>db/conf/IEEEscc/scc2021.html#MontesiPP21</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/coordination/GiallorenzoMPRS21" mdate="2021-06-15">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</author>
+<author pid="19/669">Sabine Sachweh</author>
+<title>Jolie and LEMMA: Model-Driven Engineering and Programming Languages Meet on Microservices.</title>
+<pages>276-284</pages>
+<year>2021</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-030-78142-2_17</ee>
+<crossref>conf/coordination/2021</crossref>
+<url>db/conf/coordination/coordination2021.html#GiallorenzoMPRS21</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ecoop/GiallorenzoMPRS21" mdate="2024-06-03">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0002-8672-0265" pid="66/3726-1">David Richter 0001</author>
+<author orcid="0000-0002-9324-8894" pid="14/7915">Guido Salvaneschi</author>
+<author orcid="0000-0003-1288-1485" pid="188/1945">Pascal Weisenburger</author>
+<title>Multiparty Languages: The Choreographic and Multitier Cases (Pearl).</title>
+<pages>22:1-22:27</pages>
+<year>2021</year>
+<booktitle>ECOOP</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.ECOOP.2021.22</ee>
+<crossref>conf/ecoop/2021</crossref>
+<url>db/conf/ecoop/ecoop2021.html#GiallorenzoMPRS21</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ictac/Cruz-FilipeMP21" mdate="2021-09-01">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Certifying Choreography Compilation.</title>
+<pages>115-133</pages>
+<year>2021</year>
+<booktitle>ICTAC</booktitle>
+<ee>https://doi.org/10.1007/978-3-030-85315-0_8</ee>
+<crossref>conf/ictac/2021</crossref>
+<url>db/conf/ictac/ictac2021.html#Cruz-FilipeMP21</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/itp/Cruz-FilipeMP21" mdate="2021-10-14">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Formalising a Turing-Complete Choreographic Language in Coq.</title>
+<pages>15:1-15:18</pages>
+<year>2021</year>
+<booktitle>ITP</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.ITP.2021.15</ee>
+<crossref>conf/itp/2021</crossref>
+<url>db/conf/itp/itp2021.html#Cruz-FilipeMP21</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2102-02627" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Formalising a Turing-Complete Choreographic Language in Coq.</title>
+<year>2021</year>
+<volume>abs/2102.02627</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2102.02627</ee>
+<url>db/journals/corr/corr2102.html#abs-2102-02627</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2102-10698" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Certifying Choreography Compilation.</title>
+<year>2021</year>
+<volume>abs/2102.10698</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2102.10698</ee>
+<url>db/journals/corr/corr2102.html#abs-2102-10698</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2103-09518" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="287/9990">Valentino Picotti</author>
+<title>Sliceable Monolith: Monolith First, Microservices Later.</title>
+<year>2021</year>
+<volume>abs/2103.09518</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2103.09518</ee>
+<url>db/journals/corr/corr2103.html#abs-2103-09518</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2104-02458" mdate="2026-10-01">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<author pid="167/5000">Florian Rademacher</author>
+<author pid="19/669">Sabine Sachweh</author>
+<title>Jolie &#38; LEMMA: Model-Driven Engineering and Programming Languages Meet on Microservices.</title>
+<year>2021</year>
+<volume>abs/2104.02458</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2104.02458</ee>
+<url>db/journals/corr/corr2104.html#abs-2104-02458</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2106-11818" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Linear Logic, the &#960;-calculus, and their Metatheory: A Recipe for Proofs as Processes.</title>
+<year>2021</year>
+<volume>abs/2106.11818</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2106.11818</ee>
+<url>db/journals/corr/corr2106.html#abs-2106-11818</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2111-03701" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="199/2114">Eva Graversen</author>
+<author pid="305/8036">Lovro Lugovic</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Choreographies as Functions.</title>
+<year>2021</year>
+<volume>abs/2111.03701</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2111.03701</ee>
+<url>db/journals/corr/corr2111.html#abs-2111-03701</url>
+</article>
+</r>
+<r><article key="journals/tcs/Cruz-FilipeM20" mdate="2025-01-19">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>A core model for choreographic programming.</title>
+<pages>38-66</pages>
+<year>2020</year>
+<volume>802</volume>
+<journal>Theor. Comput. Sci.</journal>
+<ee>https://doi.org/10.1016/j.tcs.2019.07.005</ee>
+<ee>https://www.wikidata.org/entity/Q127533993</ee>
+<url>db/journals/tcs/tcs802.html#Cruz-FilipeM20</url>
+</article>
+</r>
+<r><inproceedings key="conf/birthday/GiallorenzoLMSZ20" mdate="2023-09-30">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="s/DavideSangiorgi">Davide Sangiorgi</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>The Servers of Serverless Computing: A Formal Revisitation of Functions as a Service.</title>
+<pages>5:1-5:21</pages>
+<year>2020</year>
+<booktitle>Gabbrielli's Festschrift</booktitle>
+<ee type="oa">https://doi.org/10.4230/OASIcs.Gabbrielli.5</ee>
+<crossref>conf/birthday/2020gabbrielli</crossref>
+<url>db/conf/birthday/gabbrielli2020.html#GiallorenzoLMSZ20</url>
+</inproceedings>
+</r>
+<r><proceedings key="conf/microservices/2019" mdate="2025-11-28">
+<editor pid="21/4578">Lu&#237;s Cruz-Filipe</editor>
+<editor pid="146/2078">Saverio Giallorenzo</editor>
+<editor pid="65/3603">Fabrizio Montesi</editor>
+<editor pid="136/6159">Marco Peressotti</editor>
+<editor orcid="0000-0003-0784-9245" pid="167/5000">Florian Rademacher</editor>
+<editor pid="19/669">Sabine Sachweh</editor>
+<title>Joint Post-proceedings of the First and Second International Conference on Microservices, Microservices 2017/2019, Odense, Denmark, October 23-27, 2017 / Dortmund, Germany, February 19-21, 2019</title>
+<booktitle>Microservices</booktitle>
+<publisher>Schloss Dagstuhl - Leibniz-Zentrum f&#252;r Informatik</publisher>
+<year>2020</year>
+<series href="db/series/oasics/index.html">OASIcs</series>
+<volume>78</volume>
+<isbn>978-3-95977-137-5</isbn>
+<ee type="oa">https://www.dagstuhl.de/dagpub/978-3-95977-137-5</ee>
+<url>db/conf/microservices/microservices2019.html</url>
+</proceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-2005-09520" mdate="2026-10-01">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Choreographies as Objects.</title>
+<year>2020</year>
+<volume>abs/2005.09520</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2005.09520</ee>
+<url>db/journals/corr/corr2005.html#abs-2005-09520</url>
+</article>
+</r>
+<r><article key="journals/pacmpl/KokkeMP19" mdate="2021-02-17">
+<author pid="206/7258">Wen Kokke</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Better late than never: a fully-abstract semantics for classical processes.</title>
+<pages>24:1-24:29</pages>
+<year>2019</year>
+<volume>3</volume>
+<number>POPL</number>
+<journal>Proc. ACM Program. Lang.</journal>
+<ee type="oa">https://doi.org/10.1145/3290337</ee>
+<url>db/journals/pacmpl/pacmpl3.html#KokkeMP19</url>
+</article>
+</r>
+<r><inproceedings key="conf/IEEEscc/GiallorenzoMSZ19" mdate="2020-09-05">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-4490-7451" pid="172/1245">Larisa Safina</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>Ephemeral Data Handling in Microservices.</title>
+<pages>234-236</pages>
+<year>2019</year>
+<booktitle>SCC</booktitle>
+<ee>https://doi.org/10.1109/SCC.2019.00048</ee>
+<crossref>conf/IEEEscc/2019</crossref>
+<url>db/conf/IEEEscc/scc2019.html#GiallorenzoMSZ19</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/coordination/GabbrielliGLMPZ19" mdate="2022-04-09">
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>No More, No Less - A Formal Model for Serverless Computing.</title>
+<pages>148-157</pages>
+<year>2019</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-030-22397-7_9</ee>
+<crossref>conf/coordination/2019</crossref>
+<url>db/conf/coordination/coordination2019.html#GabbrielliGLMPZ19</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1903-07962" mdate="2026-10-01">
+<author pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>No more, no less - A formal model for serverless computing.</title>
+<year>2019</year>
+<volume>abs/1903.07962</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1903.07962</ee>
+<url>db/journals/corr/corr1903.html#abs-1903-07962</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1904-11327" mdate="2026-10-01">
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="172/1245">Larisa Safina</author>
+<author orcid="0000-0002-8462-5651" pid="220/4883">Stefano Pio Zingaro</author>
+<title>Ephemeral Data Handling in Microservices - Technical Report.</title>
+<year>2019</year>
+<volume>abs/1904.11327</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1904.11327</ee>
+<url>db/journals/corr/corr1904.html#abs-1904-11327</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1910-11741" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="172/1245">Larisa Safina</author>
+<title>Implementing choreography extraction.</title>
+<year>2019</year>
+<volume>abs/1910.11741</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1910.11741</ee>
+<url>db/journals/corr/corr1910.html#abs-1910-11741</url>
+</article>
+</r>
+<r><article key="journals/dc/CarboneMS18" mdate="2024-01-10">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="07/4034-1">Carsten Sch&#252;rmann 0001</author>
+<title>Choreographies, logically.</title>
+<pages>51-67</pages>
+<year>2018</year>
+<volume>31</volume>
+<journal>Distributed Comput.</journal>
+<number>1</number>
+<ee>https://doi.org/10.1007/s00446-017-0295-1</ee>
+<url>db/journals/dc/dc31.html#CarboneMS18</url>
+</article>
+</r>
+<r><inproceedings key="conf/forte/GiallorenzoMG18" mdate="2022-04-09">
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<title>Applied Choreographies.</title>
+<pages>21-40</pages>
+<year>2018</year>
+<booktitle>FORTE</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-92612-4_2</ee>
+<crossref>conf/forte/2018</crossref>
+<url>db/conf/forte/forte2018.html#GiallorenzoMG18</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/lopstr/CarboneCMM18" mdate="2019-09-25">
+<author pid="41/1366">Marco Carbone</author>
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="161/5948">Agata Murawska</author>
+<title>Multiparty Classical Choreographies.</title>
+<pages>59-76</pages>
+<year>2018</year>
+<booktitle>LOPSTR</booktitle>
+<ee>https://doi.org/10.1007/978-3-030-13838-7_4</ee>
+<crossref>conf/lopstr/2018</crossref>
+<url>db/conf/lopstr/lopstr2018.html#CarboneCMM18</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sac/Cruz-FilipeMP18" mdate="2019-09-25">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Communications in choreographies, revisited.</title>
+<pages>1248-1255</pages>
+<year>2018</year>
+<booktitle>SAC</booktitle>
+<ee>https://doi.org/10.1145/3167132.3167267</ee>
+<crossref>conf/sac/2018</crossref>
+<url>db/conf/sac/sac2018.html#Cruz-FilipeMP18</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sac/MontesiW18" mdate="2019-09-25">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="186/7899">Janine Weber</author>
+<title>From the decorator pattern to circuit breakers in microservices.</title>
+<pages>1733-1735</pages>
+<year>2018</year>
+<booktitle>SAC</booktitle>
+<ee>https://doi.org/10.1145/3167132.3167427</ee>
+<crossref>conf/sac/2018</crossref>
+<url>db/conf/sac/sac2018.html#MontesiW18</url>
+</inproceedings>
+</r>
+<r><inproceedings key="journals/corr/abs-1904-06848" mdate="2026-10-01">
+<author pid="206/7258">Wen Kokke</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Taking Linear Logic Apart.</title>
+<booktitle>Linearity-TLLA@FLoC</booktitle>
+<year>2018</year>
+<pages>90-103</pages>
+<crossref>journals/corr/abs-1904-06159</crossref>
+<ee type="oa">https://doi.org/10.4204/EPTCS.292.5</ee>
+<ee type="oa">https://doi.org/10.48550/arXiv.1904.06848</ee>
+<ee>https://www.wikidata.org/entity/Q128063812</ee>
+<url>db/series/eptcs/eptcs292.html#abs-1904-06848</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1801-08107" mdate="2026-10-01">
+<author pid="41/1366">Marco Carbone</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="48/6550">Hugo Torres Vieira</author>
+<title>Choreographies for Reactive Programming.</title>
+<year>2018</year>
+<volume>abs/1801.08107</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1801.08107</ee>
+<url>db/journals/corr/corr1801.html#abs-1801-08107</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1802-02917" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Classical Higher-Order Processes.</title>
+<year>2018</year>
+<volume>abs/1802.02917</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1802.02917</ee>
+<url>db/journals/corr/corr1802.html#abs-1802-02917</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1803-01049" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Classical Transitions.</title>
+<year>2018</year>
+<volume>abs/1803.01049</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1803.01049</ee>
+<url>db/journals/corr/corr1803.html#abs-1803-01049</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1804-08976" mdate="2026-10-01">
+<author pid="25/3518">Farhad Arbab</author>
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="91/8340">Sung-Shik Jongmans</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Connectors meet Choreographies.</title>
+<year>2018</year>
+<volume>abs/1804.08976</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1804.08976</ee>
+<url>db/journals/corr/corr1804.html#abs-1804-08976</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1808-05088" mdate="2026-10-01">
+<author pid="41/1366">Marco Carbone</author>
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="161/5948">Agata Murawska</author>
+<title>Multiparty Classical Choreographies.</title>
+<year>2018</year>
+<volume>abs/1808.05088</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1808.05088</ee>
+<url>db/journals/corr/corr1808.html#abs-1808-05088</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1811-02209" mdate="2026-10-01">
+<author pid="206/7258">Wen Kokke</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-0243-0480" pid="136/6159">Marco Peressotti</author>
+<title>Better Late Than Never: A Fully Abstract Semantics for Classical Processes.</title>
+<year>2018</year>
+<volume>abs/1811.02209</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1811.02209</ee>
+<url>db/journals/corr/corr1811.html#abs-1811-02209</url>
+</article>
+</r>
+<r><article key="journals/acta/CarboneMSY17" mdate="2024-01-10">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="07/4034-1">Carsten Sch&#252;rmann 0001</author>
+<author orcid="0000-0002-3925-8557" pid="29/3650">Nobuko Yoshida</author>
+<title>Multiparty session types as coherence proofs.</title>
+<pages>243-269</pages>
+<year>2017</year>
+<volume>54</volume>
+<journal>Acta Informatica</journal>
+<number>3</number>
+<ee type="oa">https://doi.org/10.1007/s00236-016-0285-y</ee>
+<ee>https://www.wikidata.org/entity/Q113905931</ee>
+<url>db/journals/acta/acta54.html#CarboneMSY17</url>
+</article>
+</r>
+<r><inproceedings key="conf/dais/MontesiT17" mdate="2019-09-25">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="200/9638">Dan Sebastian Thrane</author>
+<title>Packaging Microservices - (Work in Progress).</title>
+<pages>131-137</pages>
+<year>2017</year>
+<booktitle>DAIS</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-59665-5_9</ee>
+<crossref>conf/dais/2017</crossref>
+<url>db/conf/dais/dais2017.html#MontesiT17</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/forte/Cruz-FilipeM17" mdate="2019-09-25">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Procedural Choreographic Programming.</title>
+<pages>92-107</pages>
+<year>2017</year>
+<booktitle>FORTE</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-60225-7_7</ee>
+<crossref>conf/forte/2017</crossref>
+<url>db/conf/forte/forte2017.html#Cruz-FilipeM17</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/forte/Montesi17" mdate="2019-09-25">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Classical Higher-Order Processes - (Short Paper).</title>
+<pages>171-178</pages>
+<year>2017</year>
+<booktitle>FORTE</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-60225-7_12</ee>
+<crossref>conf/forte/2017</crossref>
+<url>db/conf/forte/forte2017.html#Montesi17</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/fossacs/Cruz-FilipeLM17" mdate="2019-09-25">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-0560-3794" pid="l/KimSLarsen">Kim S. Larsen</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>The Paths to Choreography Extraction.</title>
+<pages>424-440</pages>
+<year>2017</year>
+<booktitle>FoSSaCS</booktitle>
+<ee>https://doi.org/10.1007/978-3-662-54458-7_25</ee>
+<crossref>conf/fossacs/2017</crossref>
+<url>db/conf/fossacs/fossacs2017.html#Cruz-FilipeLM17</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sac/Cruz-FilipeM17" mdate="2019-09-25">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Encoding asynchrony in choreographies.</title>
+<pages>1175-1177</pages>
+<year>2017</year>
+<booktitle>SAC</booktitle>
+<ee>https://doi.org/10.1145/3019612.3019901</ee>
+<crossref>conf/sac/2017</crossref>
+<url>db/conf/sac/sac2017.html#Cruz-FilipeM17</url>
+</inproceedings>
+</r>
+<r><inproceedings key="journals/corr/abs-1711-11211" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>On Asynchrony and Choreographies.</title>
+<booktitle>ICE@DisCoTec</booktitle>
+<year>2017</year>
+<pages>76-90</pages>
+<crossref>journals/corr/abs-1711-10708</crossref>
+<ee type="oa">https://doi.org/10.4204/EPTCS.261.8</ee>
+<ee type="oa">https://doi.org/10.48550/arXiv.1711.11211</ee>
+<url>db/series/eptcs/eptcs261.html#abs-1711-11211</url>
+</inproceedings>
+</r>
+<r><incollection key="books/sp/17/DragoniGLMMMS17" mdate="2020-10-25">
+<author orcid="0000-0001-9575-2990" pid="85/3106">Nicola Dragoni</author>
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0001-7405-0818" pid="l/AlbertoLluchLafuente">Alberto Lluch-Lafuente</author>
+<author orcid="0000-0002-3860-4948" pid="45/2295">Manuel Mazzara</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="182/2521">Ruslan Mustafin</author>
+<author orcid="0000-0002-4490-7451" pid="172/1245">Larisa Safina</author>
+<title>Microservices: Yesterday, Today, and Tomorrow.</title>
+<pages>195-216</pages>
+<year>2017</year>
+<booktitle>Present and Ulterior Software Engineering</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-67425-4_12</ee>
+<ee>https://www.wikidata.org/entity/Q54479360</ee>
+<crossref>books/sp/MM2017</crossref>
+<url>db/books/collections/MM2017.html#DragoniGLMMMS17</url>
+</incollection>
+</r>
+<r><incollection key="books/sp/17/GuidiLMM17" mdate="2020-10-25">
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0002-3860-4948" pid="45/2295">Manuel Mazzara</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Microservices: A Language-Based Approach.</title>
+<pages>217-225</pages>
+<year>2017</year>
+<booktitle>Present and Ulterior Software Engineering</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-67425-4_13</ee>
+<crossref>books/sp/MM2017</crossref>
+<url>db/books/collections/MM2017.html#GuidiLMM17</url>
+</incollection>
+</r>
+<r><article publtype="informal" key="journals/corr/GuidiLMM17" mdate="2026-10-01">
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author pid="45/2295">Manuel Mazzara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Microservices: a Language-based Approach.</title>
+<year>2017</year>
+<volume>abs/1704.08073</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1704.08073</ee>
+<url>db/journals/corr/corr1704.html#GuidiLMM17</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1711-08700" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>That's Enough: Asynchrony with Standard Choreography Primitives.</title>
+<year>2017</year>
+<volume>abs/1711.08700</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1711.08700</ee>
+<url>db/journals/corr/corr1711.html#abs-1711-08700</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1711-10201" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Communications in Choreographies, Revisited.</title>
+<year>2017</year>
+<volume>abs/1711.10201</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1711.10201</ee>
+<url>db/journals/corr/corr1711.html#abs-1711-10201</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/abs-1712-05465" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="136/6159">Marco Peressotti</author>
+<title>Choreographies meet Communication Failures.</title>
+<year>2017</year>
+<volume>abs/1712.05465</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1712.05465</ee>
+<url>db/journals/corr/corr1712.html#abs-1712-05465</url>
+</article>
+</r>
+<r><article key="journals/ftpl/AnconaBB0CDGGGH16" mdate="2023-03-21">
+<author pid="a/DAncona">Davide Ancona</author>
+<author orcid="0000-0002-2533-0511" pid="27/3453">Viviana Bono</author>
+<author pid="08/5320">Mario Bravetti</author>
+<author pid="36/8434-2">Joana Campos 0002</author>
+<author orcid="0000-0003-0951-7535" pid="c/GiuseppeCastagna">Giuseppe Castagna</author>
+<author pid="86/6627">Pierre-Malo Deni&#233;lou</author>
+<author pid="30/4430">Simon J. Gay</author>
+<author pid="98/3900">Nils Gesbert</author>
+<author orcid="0000-0001-8884-044X" pid="16/1532">Elena Giachino</author>
+<author orcid="0000-0003-4361-6772" pid="32/3214">Raymond Hu</author>
+<author pid="j/EinarBrochJohnsen">Einar Broch Johnsen</author>
+<author orcid="0000-0002-2379-7257" pid="12/2993">Francisco Martins</author>
+<author pid="m/VMascardi">Viviana Mascardi</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="134/9526">Rumyana Neykova</author>
+<author pid="44/9716">Nicholas Ng</author>
+<author pid="22/6590">Luca Padovani</author>
+<author pid="97/1086">Vasco T. Vasconcelos</author>
+<author orcid="0000-0002-3925-8557" pid="29/3650">Nobuko Yoshida</author>
+<title>Behavioral Types in Programming Languages.</title>
+<pages>95-230</pages>
+<year>2016</year>
+<volume>3</volume>
+<journal>Found. Trends Program. Lang.</journal>
+<number>2-3</number>
+<ee>https://doi.org/10.1561/2500000031</ee>
+<url>db/journals/ftpl/ftpl3.html#AnconaBB0CDGGGH16</url>
+</article>
+</r>
+<r><article key="journals/scp/Montesi16" mdate="2021-02-17">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Process-aware web programming with Jolie.</title>
+<pages>69-96</pages>
+<year>2016</year>
+<volume>130</volume>
+<journal>Sci. Comput. Program.</journal>
+<ee type="oa">https://doi.org/10.1016/j.scico.2016.05.002</ee>
+<ee>https://www.wikidata.org/entity/Q59702053</ee>
+<url>db/journals/scp/scp130.html#Montesi16</url>
+</article>
+</r>
+<r><inproceedings key="conf/aina/SafinaMMR16" mdate="2023-03-24">
+<author orcid="0000-0002-4490-7451" pid="172/1245">Larisa Safina</author>
+<author orcid="0000-0002-3860-4948" pid="45/2295">Manuel Mazzara</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="40/11498">Victor Rivera</author>
+<title>Data-Driven Workflows for Microservices: Genericity in Jolie.</title>
+<pages>430-437</pages>
+<year>2016</year>
+<booktitle>AINA</booktitle>
+<ee>https://doi.org/10.1109/AINA.2016.95</ee>
+<ee>https://doi.ieeecomputersociety.org/10.1109/AINA.2016.95</ee>
+<ee>https://www.wikidata.org/entity/Q59255465</ee>
+<crossref>conf/aina/2016</crossref>
+<url>db/conf/aina/aina2016.html#SafinaMMR16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/birthday/GabbrielliGGMM16" mdate="2022-04-09">
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Self-Reconfiguring Microservices.</title>
+<pages>194-210</pages>
+<year>2016</year>
+<booktitle>Theory and Practice of Formal Methods</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-30734-3_14</ee>
+<ee>https://www.wikidata.org/entity/Q62043669</ee>
+<crossref>conf/birthday/2016deboer</crossref>
+<url>db/conf/birthday/deboer2016.html#GabbrielliGGMM16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/concur/CarboneLMSW16" mdate="2024-01-10">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0002-1360-4714" pid="97/4946">Sam Lindley</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="07/4034-1">Carsten Sch&#252;rmann 0001</author>
+<author pid="w/PhilipWadler">Philip Wadler</author>
+<title>Coherence Generalises Duality: A Logical Explanation of Multiparty Session Types.</title>
+<pages>33:1-33:15</pages>
+<year>2016</year>
+<booktitle>CONCUR</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.CONCUR.2016.33</ee>
+<crossref>conf/concur/2016</crossref>
+<url>db/conf/concur/concur2016.html#CarboneLMSW16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/facs2/Cruz-FilipeM16" mdate="2019-09-25">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>A Core Model for Choreographic Programming.</title>
+<pages>17-35</pages>
+<year>2016</year>
+<booktitle>FACS</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-57666-4_3</ee>
+<crossref>conf/facs2/2016</crossref>
+<url>db/conf/facs2/facs2016.html#Cruz-FilipeM16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/forte/Cruz-FilipeM16" mdate="2018-11-02">
+<author orcid="0000-0002-7866-7484" pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Choreographies in Practice.</title>
+<pages>114-123</pages>
+<year>2016</year>
+<booktitle>FORTE</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-39570-8_8</ee>
+<crossref>conf/forte/2016</crossref>
+<url>db/conf/forte/forte2016.html#Cruz-FilipeM16</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/Cruz-FilipeM16" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Choreographies, Divided and Conquered.</title>
+<year>2016</year>
+<volume>abs/1602.03729</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1602.03729</ee>
+<url>db/journals/corr/corr1602.html#Cruz-FilipeM16</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/TchitchiginSMEM16" mdate="2026-10-01">
+<author pid="176/5140">Alexander Tchitchigin</author>
+<author pid="172/1245">Larisa Safina</author>
+<author pid="45/2295">Manuel Mazzara</author>
+<author pid="83/8556">Mohamed Elwakil</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="40/11498">Victor Rivera</author>
+<title>Refinement types in Jolie.</title>
+<year>2016</year>
+<volume>abs/1602.06823</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1602.06823</ee>
+<url>db/journals/corr/corr1602.html#TchitchiginSMEM16</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/Cruz-FilipeM16a" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Choreographies in Practice.</title>
+<year>2016</year>
+<volume>abs/1602.08863</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1602.08863</ee>
+<url>db/journals/corr/corr1602.html#Cruz-FilipeM16a</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/DragoniGLMMMS16" mdate="2026-10-01">
+<author pid="85/3106">Nicola Dragoni</author>
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="l/AlbertoLluchLafuente">Alberto Lluch-Lafuente</author>
+<author pid="45/2295">Manuel Mazzara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="182/2521">Ruslan Mustafin</author>
+<author pid="172/1245">Larisa Safina</author>
+<title>Microservices: yesterday, today, and tomorrow.</title>
+<year>2016</year>
+<volume>abs/1606.04036</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1606.04036</ee>
+<url>db/journals/corr/corr1606.html#DragoniGLMMMS16</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/MontesiW16" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<author pid="186/7899">Janine Weber</author>
+<title>Circuit Breakers, Discovery, and API Gateways in Microservices.</title>
+<year>2016</year>
+<volume>abs/1609.05830</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1609.05830</ee>
+<url>db/journals/corr/corr1609.html#MontesiW16</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/Cruz-FilipeLM16" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="l/KimSLarsen">Kim S. Larsen</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>The Paths to Choreography Extraction.</title>
+<year>2016</year>
+<volume>abs/1610.10050</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1610.10050</ee>
+<url>db/journals/corr/corr1610.html#Cruz-FilipeLM16</url>
+</article>
+</r>
+<r><article key="journals/jisis/BravettiLMM15" mdate="2019-05-23">
+<author pid="08/5320">Mario Bravetti</author>
+<author pid="l/AlbertoLluchLafuente">Alberto Lluch-Lafuente</author>
+<author pid="45/2295">Manuel Mazzara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Guest Editorial: Special Issue on Service-Oriented Architectures and Programming.</title>
+<pages>1-2</pages>
+<year>2015</year>
+<volume>5</volume>
+<journal>J. Internet Serv. Inf. Secur.</journal>
+<number>1</number>
+<ee type="oa">https://doi.org/10.22667/JISIS.2015.02.31.001</ee>
+<url>db/journals/jisis/jisis5.html#BravettiLMM15</url>
+</article>
+</r>
+<r><article key="journals/scp/LaneseMM15" mdate="2021-02-17">
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0002-3860-4948" pid="45/2295">Manuel Mazzara</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Special issue on Service-Oriented Architecture and Programming (SOAP 2013).</title>
+<pages>181-182</pages>
+<year>2015</year>
+<volume>97</volume>
+<journal>Sci. Comput. Program.</journal>
+<ee type="oa">https://doi.org/10.1016/j.scico.2014.07.007</ee>
+<ee>https://www.wikidata.org/entity/Q59255508</ee>
+<url>db/journals/scp/scp97.html#LaneseMM15</url>
+</article>
+</r>
+<r><inproceedings key="conf/birthday/LaneseMZ15" mdate="2017-06-01">
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>The Evolution of Jolie - From Orchestrations to Adaptable Choreographies.</title>
+<pages>506-521</pages>
+<year>2015</year>
+<booktitle>Software, Services, and Systems</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-15545-6_29</ee>
+<crossref>conf/birthday/2015wirsing</crossref>
+<url>db/conf/birthday/wirsing2015.html#LaneseMZ15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/concur/CarboneMSY15" mdate="2024-01-10">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="07/4034-1">Carsten Sch&#252;rmann 0001</author>
+<author orcid="0000-0002-3925-8557" pid="29/3650">Nobuko Yoshida</author>
+<title>Multiparty Session Types as Coherence Proofs.</title>
+<pages>412-426</pages>
+<year>2015</year>
+<booktitle>CONCUR</booktitle>
+<ee type="oa">https://doi.org/10.4230/LIPIcs.CONCUR.2015.412</ee>
+<crossref>conf/concur/2015</crossref>
+<url>db/conf/concur/concur2015.html#CarboneMSY15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/wsfm/Montesi15" mdate="2017-06-05">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Kickstarting Choreographic Programming.</title>
+<pages>3-10</pages>
+<year>2015</year>
+<booktitle>WS-FM</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-33612-1_1</ee>
+<crossref>conf/wsfm/2015</crossref>
+<url>db/conf/wsfm/wsfm2015.html#Montesi15</url>
+</inproceedings>
+</r>
+<r><article publtype="informal" key="journals/corr/Montesi15" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Kickstarting Choreographic Programming.</title>
+<year>2015</year>
+<volume>abs/1502.02519</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1502.02519</ee>
+<url>db/journals/corr/corr1502.html#Montesi15</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/Cruz-FilipeM15" mdate="2026-10-01">
+<author pid="21/4578">Lu&#237;s Cruz-Filipe</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Choreographies, Computationally.</title>
+<year>2015</year>
+<volume>abs/1510.03271</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1510.03271</ee>
+<url>db/journals/corr/corr1510.html#Cruz-FilipeM15</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/GabbrielliGM15" mdate="2026-10-01">
+<author pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author pid="146/2078">Saverio Giallorenzo</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Applied Choreographies.</title>
+<year>2015</year>
+<volume>abs/1510.03637</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1510.03637</ee>
+<url>db/journals/corr/corr1510.html#GabbrielliGM15</url>
+</article>
+</r>
+<r><article publtype="informal" key="journals/corr/SafinaMM15" mdate="2026-10-01">
+<author pid="172/1245">Larisa Safina</author>
+<author pid="45/2295">Manuel Mazzara</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Data-driven Workflows for Microservices.</title>
+<year>2015</year>
+<volume>abs/1511.02597</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1511.02597</ee>
+<url>db/journals/corr/corr1511.html#SafinaMM15</url>
+</article>
+</r>
+<r><inproceedings key="conf/concur/CarboneMS14" mdate="2024-01-10">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="07/4034-1">Carsten Sch&#252;rmann 0001</author>
+<title>Choreographies, Logically.</title>
+<pages>47-62</pages>
+<year>2014</year>
+<booktitle>CONCUR</booktitle>
+<ee>https://doi.org/10.1007/978-3-662-44584-6_5</ee>
+<crossref>conf/concur/2014</crossref>
+<url>db/conf/concur/concur2014.html#CarboneMS14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/coordination/CarboneDM14" mdate="2018-11-14">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0001-9927-7875" pid="121/1410">Ornela Dardha</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Progress as Compositional Lock-Freedom.</title>
+<pages>49-64</pages>
+<year>2014</year>
+<booktitle>COORDINATION</booktitle>
+<ee type="oa">https://doi.org/10.1007/978-3-662-43376-8_4</ee>
+<ee>https://www.wikidata.org/entity/Q57599640</ee>
+<crossref>conf/coordination/2014</crossref>
+<url>db/conf/coordination/coordination2014.html#CarboneDM14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/dcai/GabbrielliGM14" mdate="2022-04-09">
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author orcid="0000-0002-3658-6395" pid="146/2078">Saverio Giallorenzo</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Service-Oriented Architectures: From Design to Production Exploiting Workflow Patterns.</title>
+<pages>131-139</pages>
+<year>2014</year>
+<booktitle>DCAI</booktitle>
+<ee>https://doi.org/10.1007/978-3-319-07593-8_17</ee>
+<crossref>conf/dcai/2014</crossref>
+<url>db/conf/dcai/dcai2014.html#GabbrielliGM14</url>
+</inproceedings>
+</r>
+<r><incollection key="books/sp/wsf14/MontesiGZ14" mdate="2019-06-02">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Service-Oriented Programming with Jolie.</title>
+<pages>81-107</pages>
+<year>2014</year>
+<booktitle>Web Services Foundations</booktitle>
+<ee>https://doi.org/10.1007/978-1-4614-7518-7_4</ee>
+<ee>https://www.wikidata.org/entity/Q59702047</ee>
+<crossref>books/sp/wsf2014</crossref>
+<url>db/books/collections/wsf2014.html#MontesiGZ14</url>
+</incollection>
+</r>
+<r><article publtype="informal" key="journals/corr/Montesi14" mdate="2026-10-01">
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Process-aware web programming with Jolie.</title>
+<year>2014</year>
+<volume>abs/1410.3712</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.1410.3712</ee>
+<url>db/journals/corr/corr1410.html#Montesi14</url>
+</article>
+</r>
+<r><inproceedings key="conf/concur/MontesiY13" mdate="2020-03-27">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author orcid="0000-0002-3925-8557" pid="29/3650">Nobuko Yoshida</author>
+<title>Compositional Choreographies.</title>
+<pages>425-439</pages>
+<year>2013</year>
+<booktitle>CONCUR</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-40184-8_30</ee>
+<crossref>conf/concur/2013</crossref>
+<url>db/conf/concur/concur2013.html#MontesiY13</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/popl/CarboneM13" mdate="2026-02-19">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Deadlock-freedom-by-design: multiparty asynchronous global programming.</title>
+<pages>263-274</pages>
+<year>2013</year>
+<booktitle>POPL</booktitle>
+<ee type="oa">https://doi.org/10.1145/2429069.2429101</ee>
+<ee type="oa">https://doi.org/10.1145/2480359.2429101</ee>
+<ee>https://www.wikidata.org/entity/Q59702062</ee>
+<crossref>conf/popl/2013</crossref>
+<url>db/conf/popl/popl2013.html#CarboneM13</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sac/Montesi13" mdate="2019-06-02">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Process-aware web programming with Jolie.</title>
+<pages>761-763</pages>
+<year>2013</year>
+<booktitle>SAC</booktitle>
+<ee>https://doi.org/10.1145/2480362.2480507</ee>
+<ee>https://www.wikidata.org/entity/Q59702050</ee>
+<crossref>conf/sac/2013</crossref>
+<url>db/conf/sac/sac2013.html#Montesi13</url>
+</inproceedings>
+</r>
+<r><inproceedings key="journals/corr/LaneseMZ13" mdate="2026-10-01">
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Amending Choreographies.</title>
+<booktitle>WWV</booktitle>
+<year>2013</year>
+<pages>34-48</pages>
+<ee type="oa">https://doi.org/10.4204/EPTCS.123.5</ee>
+<ee type="oa">https://doi.org/10.48550/arXiv.1308.0390</ee>
+<crossref>journals/corr/RavaraS13</crossref>
+<url>db/series/eptcs/eptcs123.html#LaneseMZ13</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/esocc/PredaGGMM12" mdate="2022-04-09">
+<author pid="72/6805">Mila Dalla Preda</author>
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Interface-Based Service Composition with Aggregation.</title>
+<pages>48-63</pages>
+<year>2012</year>
+<booktitle>ESOCC</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-33427-6_4</ee>
+<ee>https://www.wikidata.org/entity/Q62043700</ee>
+<crossref>conf/esocc/2012</crossref>
+<url>db/conf/esocc/esocc2012.html#PredaGGMM12</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/soca/PredaGGMM12" mdate="2023-03-24">
+<author pid="72/6805">Mila Dalla Preda</author>
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Service integration via target-transparent mediation.</title>
+<pages>1-5</pages>
+<year>2012</year>
+<booktitle>SOCA</booktitle>
+<ee>https://doi.org/10.1109/SOCA.2012.6449432</ee>
+<ee>https://doi.ieeecomputersociety.org/10.1109/SOCA.2012.6449432</ee>
+<ee>https://www.wikidata.org/entity/Q62043701</ee>
+<crossref>conf/soca/2012</crossref>
+<url>db/conf/soca/soca2012.html#PredaGGMM12</url>
+</inproceedings>
+</r>
+<r><inproceedings key="journals/corr/abs-1302-6331" mdate="2026-10-01">
+<author pid="41/1366">Marco Carbone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Merging Multiparty Protocols in Multiparty Choreographies</title>
+<booktitle>PLACES</booktitle>
+<year>2012</year>
+<pages>21-27</pages>
+<ee type="oa">https://doi.org/10.4204/EPTCS.109.4</ee>
+<ee type="oa">https://doi.org/10.48550/arXiv.1302.6331</ee>
+<crossref>journals/corr/abs-1302-5798</crossref>
+<url>db/series/eptcs/eptcs109.html#abs-1302-6331</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/coordination/MauroGGM11" mdate="2022-04-09">
+<author orcid="0000-0002-5285-2868" pid="53/1605">Jacopo Mauro</author>
+<author orcid="0000-0003-0609-8662" pid="g/MGabbrielli">Maurizio Gabbrielli</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>An Efficient Management of Correlation Sets with Broadcast.</title>
+<pages>80-94</pages>
+<year>2011</year>
+<booktitle>COORDINATION</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-21464-6_6</ee>
+<ee>https://www.wikidata.org/entity/Q62043703</ee>
+<crossref>conf/coordination/2011</crossref>
+<url>db/conf/coordination/coordination2011.html#MauroGGM11</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/icsoc/MontesiC11" mdate="2019-02-13">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="41/1366">Marco Carbone</author>
+<title>Programming Services with Correlation Sets.</title>
+<pages>125-141</pages>
+<year>2011</year>
+<booktitle>ICSOC</booktitle>
+<ee type="oa">https://doi.org/10.1007/978-3-642-25535-9_9</ee>
+<crossref>conf/icsoc/2011</crossref>
+<url>db/conf/icsoc/icsoc2011.html#MontesiC11</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/isola/LaneseM10" mdate="2017-06-04">
+<author orcid="0000-0003-2527-9995" pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>Error Handling: From Theory to Practice.</title>
+<pages>66-81</pages>
+<year>2010</year>
+<booktitle>ISoLA (2)</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-16561-0_13</ee>
+<crossref>conf/isola/2010-2</crossref>
+<url>db/conf/isola/isola2010-2.html#LaneseM10</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/tgc/MontesiS10" mdate="2017-06-05">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="s/DavideSangiorgi">Davide Sangiorgi</author>
+<title>A Model of Evolvable Components.</title>
+<pages>153-171</pages>
+<year>2010</year>
+<booktitle>TGC</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-15640-3_11</ee>
+<crossref>conf/tgc/2010</crossref>
+<url>db/conf/tgc/tgc2010.html#MontesiS10</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/tgc/LaneseBM10" mdate="2017-06-05">
+<author orcid="0000-0003-2527-9995" pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-1154-1382" pid="78/616">Antonio Bucchiarone</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<title>A Framework for Rule-Based Dynamic Adaptation.</title>
+<pages>284-300</pages>
+<year>2010</year>
+<booktitle>TGC</booktitle>
+<ee>https://doi.org/10.1007/978-3-642-15640-3_19</ee>
+<crossref>conf/tgc/2010</crossref>
+<url>db/conf/tgc/tgc2010.html#LaneseBM10</url>
+</inproceedings>
+</r>
+<r><article key="journals/fuin/GuidiLMZ09" mdate="2020-09-18">
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0003-2527-9995" pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Dynamic Error Handling in Service Oriented Applications.</title>
+<pages>73-102</pages>
+<year>2009</year>
+<volume>95</volume>
+<journal>Fundam. Informaticae</journal>
+<number>1</number>
+<ee>https://doi.org/10.3233/FI-2009-143</ee>
+<url>db/journals/fuin/fuin95.html#GuidiLMZ09</url>
+</article>
+</r>
+<r><inproceedings key="journals/corr/abs-0906-3920" mdate="2026-10-01">
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="65/3603">Fabrizio Montesi</author>
+<title>Reasoning About a Service-oriented Programming Paradigm</title>
+<ee type="oa">https://doi.org/10.48550/arXiv.0906.3920</ee>
+<year>2009</year>
+<booktitle>YR-SOC</booktitle>
+<url>db/series/eptcs/eptcs2.html#abs-0906-3920</url>
+<crossref>journals/corr/abs-0906-4900</crossref>
+<pages>67-81</pages>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/acsd/GuidiLMZ08" mdate="2017-05-29">
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="56/3713">Ivan Lanese</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>On the interplay between fault handling and request-response service invocations.</title>
+<pages>190-198</pages>
+<year>2008</year>
+<booktitle>ACSD</booktitle>
+<ee>https://doi.org/10.1109/ACSD.2008.4574611</ee>
+<crossref>conf/acsd/2008</crossref>
+<url>db/conf/acsd/acsd2008.html#GuidiLMZ08</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ecows/MontesiGLZ08" mdate="2023-03-23">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0003-2527-9995" pid="56/3713">Ivan Lanese</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Dynamic Fault Handling Mechanisms for Service-Oriented Applications.</title>
+<pages>225-234</pages>
+<year>2008</year>
+<booktitle>ECOWS</booktitle>
+<ee>https://doi.org/10.1109/ECOWS.2008.20</ee>
+<ee>https://doi.ieeecomputersociety.org/10.1109/ECOWS.2008.20</ee>
+<crossref>conf/ecows/2008</crossref>
+<url>db/conf/ecows/ecows2008.html#MontesiGLZ08</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sefm/LaneseGMZ08" mdate="2023-03-24">
+<author orcid="0000-0003-2527-9995" pid="56/3713">Ivan Lanese</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Bridging the Gap between Interaction- and Process-Oriented Choreographies.</title>
+<pages>323-332</pages>
+<year>2008</year>
+<booktitle>SEFM</booktitle>
+<ee>https://doi.org/10.1109/SEFM.2008.11</ee>
+<ee>https://doi.ieeecomputersociety.org/10.1109/SEFM.2008.11</ee>
+<crossref>conf/sefm/2008</crossref>
+<url>db/conf/sefm/sefm2008.html#LaneseGMZ08</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ecows/MontesiGZ07" mdate="2023-03-23">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>Composing Services with JOLIE.</title>
+<pages>13-22</pages>
+<year>2007</year>
+<booktitle>ECOWS</booktitle>
+<ee>https://doi.org/10.1109/ECOWS.2007.19</ee>
+<ee>https://doi.ieeecomputersociety.org/10.1109/ECOWS.2007.19</ee>
+<crossref>conf/ecows/2007</crossref>
+<url>db/conf/ecows/ecows2007.html#MontesiGZ07</url>
+</inproceedings>
+</r>
+<r><inproceedings key="journals/entcs/MontesiGLZ07" mdate="2023-01-24">
+<author orcid="0000-0003-4666-901X" pid="65/3603">Fabrizio Montesi</author>
+<author pid="33/2790">Claudio Guidi</author>
+<author pid="69/3593">Roberto Lucchi</author>
+<author pid="32/1979">Gianluigi Zavattaro</author>
+<title>JOLIE: a Java Orchestration Language Interpreter Engine.</title>
+<pages>19-33</pages>
+<year>2006</year>
+<crossref>conf/coordination/2006coorg</crossref>
+<booktitle>CoOrg/MTCoord@COORDINATION</booktitle>
+<ee type="oa">https://doi.org/10.1016/j.entcs.2007.01.051</ee>
+<ee>https://www.wikidata.org/entity/Q59702043</ee>
+<url>db/journals/entcs/entcs181.html#MontesiGLZ07</url>
+</inproceedings>
+</r>
+<coauthors n="90" nc="1">
+<co c="0"><na f="a/Acclavio:Matteo" pid="182/1948">Matteo Acclavio</na></co>
+<co c="0" n="2"><na f="a/Agha:Gul_A=" pid="a/GulAAgha">Gul A. Agha</na><na>Gul Agha</na></co>
+<co c="0"><na f="a/Ancona:Davide" pid="a/DAncona">Davide Ancona</na></co>
+<co c="0"><na f="a/Arbab:Farhad" pid="25/3518">Farhad Arbab</na></co>
+<co c="0"><na f="b/Barrett:Clark_W=" pid="b/ClarkWBarrett">Clark W. Barrett</na></co>
+<co c="0"><na f="b/Berardi:Davide" pid="233/5692">Davide Berardi</na></co>
+<co c="0"><na f="b/Bono:Viviana" pid="27/3453">Viviana Bono</na></co>
+<co c="0"><na f="b/Bravetti:Mario" pid="08/5320">Mario Bravetti</na></co>
+<co c="0"><na f="b/Bucchiarone:Antonio" pid="78/616">Antonio Bucchiarone</na></co>
+<co c="0"><na f="c/Campos_0002:Joana" pid="36/8434-2">Joana Campos 0002</na></co>
+<co c="0"><na f="c/Carbone:Marco" pid="41/1366">Marco Carbone</na></co>
+<co c="0"><na f="c/Castagna:Giuseppe" pid="c/GiuseppeCastagna">Giuseppe Castagna</na></co>
+<co c="0"><na f="c/Chaudhuri:Swarat" pid="37/6100">Swarat Chaudhuri</na></co>
+<co c="0"><na f="c/Cruz=Filipe:Lu=iacute=s" pid="21/4578">Lu&#237;s Cruz-Filipe</na></co>
+<co c="0"><na f="d/Dardha:Ornela" pid="121/1410">Ornela Dardha</na></co>
+<co c="0"><na f="d/Deni=eacute=lou:Pierre=Malo" pid="86/6627">Pierre-Malo Deni&#233;lou</na></co>
+<co c="0"><na f="d/Dragoni:Nicola" pid="85/3106">Nicola Dragoni</na></co>
+<co c="0"><na f="e/Elwakil:Mohamed" pid="83/8556">Mohamed Elwakil</na></co>
+<co c="0"><na f="g/Gabbrielli:Maurizio" pid="g/MGabbrielli">Maurizio Gabbrielli</na></co>
+<co c="0"><na f="g/Gay:Simon_J=" pid="30/4430">Simon J. Gay</na></co>
+<co c="0"><na f="g/Gesbert:Nils" pid="98/3900">Nils Gesbert</na></co>
+<co c="0"><na f="g/Giachino:Elena" pid="16/1532">Elena Giachino</na></co>
+<co c="0"><na f="g/Giallorenzo:Saverio" pid="146/2078">Saverio Giallorenzo</na></co>
+<co c="0"><na f="g/Graversen:Eva" pid="199/2114">Eva Graversen</na></co>
+<co c="0"><na f="g/Greiner_0001:Sandra" pid="183/9453">Sandra Greiner 0001</na></co>
+<co c="0"><na f="g/Grundy:Jim" pid="92/2259">Jim Grundy</na></co>
+<co c="0"><na f="g/Guidi:Claudio" pid="33/2790">Claudio Guidi</na></co>
+<co c="-1"><na f="h/Henson:Christopher" pid="430/9279">Christopher Henson</na></co>
+<co c="0"><na f="h/Hirsch:Andrew_K=" pid="122/2921">Andrew K. Hirsch</na></co>
+<co c="0"><na f="h/Hu:Raymond" pid="32/3214">Raymond Hu</na></co>
+<co c="0"><na f="j/Jepsen:Niels_Erik" pid="441/9249">Niels Erik Jepsen</na></co>
+<co c="0"><na f="j/Johnsen:Einar_Broch" pid="j/EinarBrochJohnsen">Einar Broch Johnsen</na></co>
+<co c="0"><na f="j/Jongmans:Sung=Shik" pid="91/8340">Sung-Shik Jongmans</na></co>
+<co c="0"><na f="k/Kj=aelig=r:Bj=oslash=rn_Angel" pid="324/7924">Bj&#248;rn Angel Kj&#230;r</na></co>
+<co c="0"><na f="k/Kl=oslash=vedal:Viktor_Strate" pid="432/8649">Viktor Strate Kl&#248;vedal</na></co>
+<co c="0"><na f="k/Kohli:Pushmeet" pid="94/248">Pushmeet Kohli</na></co>
+<co c="0"><na f="k/Kokke:Wen" pid="206/7258">Wen Kokke</na></co>
+<co c="0"><na f="k/Kostopoulou:Sofia" pid="358/3301">Sofia Kostopoulou</na></co>
+<co c="0"><na f="l/Lanese:Ivan" pid="56/3713">Ivan Lanese</na></co>
+<co c="0"><na f="l/Larsen:Kim_S=" pid="l/KimSLarsen">Kim S. Larsen</na></co>
+<co c="0"><na f="l/Lindley:Sam" pid="97/4946">Sam Lindley</na></co>
+<co c="0"><na f="l/Lluch=Lafuente:Alberto" pid="l/AlbertoLluchLafuente">Alberto Lluch-Lafuente</na></co>
+<co c="0"><na f="l/Lucchi:Roberto" pid="69/3593">Roberto Lucchi</na></co>
+<co c="0"><na f="l/Lugovic:Lovro" pid="305/8036">Lovro Lugovic</na></co>
+<co c="0"><na f="m/Madsen:Anne" pid="363/1566">Anne Madsen</na></co>
+<co c="0"><na f="m/Manara:Giulia" pid="378/6497">Giulia Manara</na></co>
+<co c="0"><na f="m/Martins:Francisco" pid="12/2993">Francisco Martins</na></co>
+<co c="0"><na f="m/Mascardi:Viviana" pid="m/VMascardi">Viviana Mascardi</na></co>
+<co c="0"><na f="m/Mauro:Jacopo" pid="53/1605">Jacopo Mauro</na></co>
+<co c="0"><na f="m/Mazzara:Manuel" pid="45/2295">Manuel Mazzara</na></co>
+<co c="0"><na f="m/Melis_0001:Andrea" pid="184/7813">Andrea Melis 0001</na></co>
+<co c="0"><na f="m/Moura_0001:Leonardo_de" pid="d/LeonardoMdeMoura">Leonardo de Moura 0001</na></co>
+<co c="0"><na f="m/Murawska:Agata" pid="161/5948">Agata Murawska</na></co>
+<co c="0"><na f="m/Mustafin:Ruslan" pid="182/2521">Ruslan Mustafin</na></co>
+<co c="0"><na f="n/Neykova:Rumyana" pid="134/9526">Rumyana Neykova</na></co>
+<co c="0"><na f="n/Ng:Nicholas" pid="44/9716">Nicholas Ng</na></co>
+<co c="0"><na f="p/Padovani:Luca" pid="22/6590">Luca Padovani</na></co>
+<co c="0"><na f="p/Papadopoulos:George_Angelos" pid="p/GeorgeAngelosPapadopoulos">George Angelos Papadopoulos</na></co>
+<co c="0"><na f="p/Peressotti:Marco" pid="136/6159">Marco Peressotti</na></co>
+<co c="0"><na f="p/Picotti:Valentino" pid="287/9990">Valentino Picotti</na></co>
+<co c="0"><na f="p/Plyukhin:Dan" pid="232/0111">Dan Plyukhin</na></co>
+<co c="0"><na f="p/Prandini:Marco" pid="53/4448">Marco Prandini</na></co>
+<co c="0"><na f="p/Preda:Mila_Dalla" pid="72/6805">Mila Dalla Preda</na></co>
+<co c="0"><na f="q/Qin:Xueying" pid="94/6767">Xueying Qin</na></co>
+<co c="0"><na f="r/Rademacher:Florian" pid="167/5000">Florian Rademacher</na></co>
+<co c="0"><na f="r/Rademaker:Alexandre" pid="59/2479">Alexandre Rademaker</na></co>
+<co c="0"><na f="r/Rasmussen:Robert_R=" pid="351/3646">Robert R. Rasmussen</na></co>
+<co c="0"><na f="r/Richter_0001:David" pid="66/3726-1">David Richter 0001</na></co>
+<co c="0"><na f="r/Rivera:Victor" pid="40/11498">Victor Rivera</na></co>
+<co c="0"><na f="s/Sachweh:Sabine" pid="19/669">Sabine Sachweh</na></co>
+<co c="0"><na f="s/Safina:Larisa" pid="172/1245">Larisa Safina</na></co>
+<co c="0"><na f="s/Salvaneschi:Guido" pid="14/7915">Guido Salvaneschi</na></co>
+<co c="0"><na f="s/Sangiorgi:Davide" pid="s/DavideSangiorgi">Davide Sangiorgi</na></co>
+<co c="0"><na f="s/Sch=uuml=rmann_0001:Carsten" pid="07/4034-1">Carsten Sch&#252;rmann 0001</na></co>
+<co c="0"><na f="t/Tchitchigin:Alexander" pid="176/5140">Alexander Tchitchigin</na></co>
+<co c="-1"><na f="t/Thrane:Dan_Sebastian" pid="200/9638">Dan Sebastian Thrane</na></co>
+<co c="0"><na f="u/Unwerawattana:Narongrit" pid="349/6040">Narongrit Unwerawattana</na></co>
+<co c="0" n="2"><na f="v/Vasconcelos:Vasco_Thudichum" pid="97/1086">Vasco Thudichum Vasconcelos</na><na>Vasco T. Vasconcelos</na></co>
+<co c="0"><na f="v/Vieira:Hugo_Torres" pid="48/6550">Hugo Torres Vieira</na></co>
+<co c="0"><na f="v/Vistrup:Jonas" pid="358/3293">Jonas Vistrup</na></co>
+<co c="0"><na f="w/Wadler:Philip" pid="w/PhilipWadler">Philip Wadler</na></co>
+<co c="-1"><na f="w/Weber:Janine" pid="186/7899">Janine Weber</na></co>
+<co c="0"><na f="w/Weisenburger:Pascal" pid="188/1945">Pascal Weisenburger</na></co>
+<co c="0"><na f="w/Wizenty:Philip" pid="205/5807">Philip Wizenty</na></co>
+<co c="0"><na f="y/Yingchareonthawornchai:Sorrachai" pid="140/9538">Sorrachai Yingchareonthawornchai</na></co>
+<co c="0"><na f="y/Yoshida:Nobuko" pid="29/3650">Nobuko Yoshida</na></co>
+<co c="0"><na f="z/Zavattaro:Gianluigi" pid="32/1979">Gianluigi Zavattaro</na></co>
+<co c="0"><na f="z/Zimmermann:Olaf" pid="47/5013">Olaf Zimmermann</na></co>
+<co c="0"><na f="z/Zimmermann:Wolf" pid="z/WolfZimmermann">Wolf Zimmermann</na></co>
+<co c="0"><na f="z/Zingaro:Stefano_Pio" pid="220/4883">Stefano Pio Zingaro</na></co>
+</coauthors>
+</dblpperson>
+
