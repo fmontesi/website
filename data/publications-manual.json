@@ -52,5 +52,18 @@
 			"where": "MSc Thesis, University of Bologna",
 			"bibtex": "@MastersThesis{M10,\r\n author = \"Fabrizio Montesi\",\r\n title = \"{J}{O}{L}{I}{E}: a {S}ervice-oriented {P}rogramming {L}anguage\",\r\n school = \"University of Bologna\",\r\n year = {2010},\r\n url = {\\url{https:\/\/www.fabriziomontesi.com\/files\/m10.pdf}}\r\n}"
 		} ]
+	}, {
+		"title": "Preprints",
+		"entries": [ {
+			"key": "journals/corr/abs-2610-04511",
+			"title": "Library-Grade Modal Logic",
+			"path": "library-grade-modal-logic-arxiv",
+			"year": "2026",
+			"type": "article",
+			"doi": "10.48550/arXiv.2610.04511",
+			"bibtex": "@misc{gm26-arxiv,\ntitle={Library-Grade Modal Logic},\nauthor={Marianna Girlando and Fabrizio Montesi},\nyear={2026},\neprint={2610.04511},\narchivePrefix={arXiv},\nprimaryClass={cs.LO},\nurl={https://arxiv.org/abs/2610.04511},\n}",
+			"where": "In CoRR abs/2610.04511",
+			"authors": [ { "name": "Marianna Girlando", "last": false }, { "name": "Fabrizio Montesi", "last": true } ]
+		} ]
 	} ]
 }
