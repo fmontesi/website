@@ -51,9 +51,9 @@ At this point we could reason about statements like the following, using separat
 
 <figure class="bliki-figure">
 
-<img src="/images/unimodal-axiom-dual.svg" class="img-fluid"/>
+<img src="/images/unimodal-axiom-dual.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
-<img src="/images/hml-axiom-dual.svg" class="img-fluid"/>
+<img src="/images/hml-axiom-dual.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
 <figcaption>
 
@@ -69,7 +69,7 @@ For example, both of the previous axioms about duality are direct consequences o
 
 <figure class="bliki-figure">
 
-<img src="/images/modal-axiom-dual.svg" class="img-fluid"/>
+<img src="/images/modal-axiom-dual.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
 <figcaption>
 
@@ -81,19 +81,11 @@ I particularly like the example of how Hennessy–Milner logic looks before and 
 
 <figure class="bliki-figure">
 
-| Metric | Before | After | Reduction |
-|---|---:|---:|---:|
-| Lines of code | 686 | 224 | 67.3% |
-| Theorems/lemmas | 43 | 12 | 72.1% |
-| Definitions | 14 | 1 | 92.9% |
-| Abbreviations | 2 | 1 | 50.0% |
-| Inductive types | 2 | 0 | 100.0% |
-| Structures | 2 | 1 | 50.0% |
-| Instances | 19 | 0 | 100.0% |
+<img src="/images/gm26-table.jpeg" class="img-fluid"/>
 
 <figcaption>
 
-Code statistics on the formalisation of Hennessy–Milner logic in CSLib, before and after the introduction of the generic modal framework. Data from [[Girlando and Montesi, 2026](#gm26)].
+Code statistics on the formalisation of Hennessy–Milner logic in CSLib, before and after the introduction of the generic modal framework. Source: [[Girlando and Montesi, 2026](#gm26)].
 </figcaption>
 </figure>
 
@@ -114,7 +106,7 @@ A straightforward example is using Hennessy-Milner Logic to prove that a concurr
 
 <figure class="bliki-figure">
 
-<img src="/images/hml-vending-coin-spec.svg" class="img-fluid"/>
+<img src="/images/hml-vending-coin-spec.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
 <figcaption>
 
@@ -126,11 +118,11 @@ Perhaps more surprising is the fact that we can use modal logic to reason about 
 
 <figure class="bliki-figure">
 
-<img src="/images/cslib-ideal-radical-denotation.svg" class="img-fluid"/>
+<img src="/images/cslib-ideal-radical-denotation.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
-<img src="/images/cslib-radical-idem.svg" class="img-fluid"/>
+<img src="/images/cslib-radical-idem.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
-<img src="/images/cslib-radical-idem-equiv-step.svg" class="img-fluid"/>
+<img src="/images/cslib-radical-idem-equiv-step.svg" class="img-fluid" style="width: min(100%, 32rem);"/>
 
 <figcaption>
 
@@ -179,7 +171,7 @@ In other words, to conclude:
 
 <a id="brv01"></a>Patrick Blackburn, Maarten de Rijke, Yde Venema [2001], ‘Modal Logic’, _Cambridge University Press_. DOI: 10.1017/CBO9781107050884.
 
-<a id="gm26"></a>Marianna Girlando, Fabrizio Montesi [2026], ‘Library-Grade Modal Logic’ ([preprint](/files/gm26-preprint.pdf)).
+{{#fn.citation}}gm26 library-grade-modal-logic-arxiv{{/fn.citation}}
 
 {{#fn.citation}}cslib-spine computer-science-as-infrastructure-arxiv{{/fn.citation}}
 
