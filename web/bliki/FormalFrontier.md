@@ -1,6 +1,4 @@
-<!-- --> {{< fm-bliki.html}}{{$title}}CSLib: Library-Grade Computer Science{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$content}}
-
-# The Formal Frontier and Formal-First Research
+<!-- --> {{< fm-bliki.html}}{{$title}}The Formal Frontier and Formal-First Research{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$content}}
 
 The **formal frontier** is the current extent of our shared, machine-verified knowledge, as embodied in [formal libraries](CSLibLibraryGradeComputerScience) such as [CSLib](https://cslib.io/) [[Barrett et al., 2026](#cslib); [Henson and Montesi, 2026](#cslib-spine)] and [Mathlib](https://mathlib.org/).[¹](#footnote-1)
 
@@ -30,11 +28,24 @@ The taxonomy admits a geometric interpretation: **Needles reach far, Foundations
 
 <figure class="bliki-figure">
 
-
-<img src="/images/formal-frontier/needle.svg" class="img-fluid"/>
-<img src="/images/formal-frontier/foundation.svg" class="img-fluid"/>
-<img src="/images/formal-frontier/amplification.svg" class="img-fluid"/>
-<img src="/images/formal-frontier/exploration.svg" class="img-fluid"/>
+<div class="row p-3">
+  <div class="col-12 col-sm-6">
+    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Needle</p>
+    <img src="/images/formal-frontier/needle.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
+  </div>
+  <div class="col-12 col-sm-6">
+    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Foundation</p>
+    <img src="/images/formal-frontier/foundation.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
+  </div>
+  <div class="col-12 col-sm-6">
+    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Amplification</p>
+    <img src="/images/formal-frontier/amplification.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
+  </div>
+  <div class="col-12 col-sm-6">
+    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Exploration</p>
+    <img src="/images/formal-frontier/exploration.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
+  </div>
+</div>
 
 <figcaption>
 
@@ -90,14 +101,6 @@ Formal-first research is not intended to replace other approaches. It is an incr
 
 {{#fn.citation}}cslib cslib-arxiv{{/fn.citation}}
 
-<a id="brv01"></a>Patrick Blackburn, Maarten de Rijke, Yde Venema [2001], ‘Modal Logic’, _Cambridge University Press_. DOI: 10.1017/CBO9781107050884.
-
-{{#fn.citation}}gm26 library-grade-modal-logic-arxiv{{/fn.citation}}
-
 {{#fn.citation}}cslib-spine computer-science-as-infrastructure-arxiv{{/fn.citation}}
-
-{{#fn.citation}}cslib-hml hennessy-milner-logic-in-cslib-the-lean-computer-science-library-arxiv{{/fn.citation}}
-
-<a id="pd93"></a>Rubén Prieto-Díaz [1993], ‘Status Report: Software Reusability’, _IEEE Software_ 10(3), pp. 61–66. DOI: 10.1109/52.210605.
 
 <!-- --> {{/content}}{{/fm-bliki.html}}
