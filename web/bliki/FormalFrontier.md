@@ -1,5 +1,9 @@
 <!-- --> {{< fm-bliki.html}}{{$title}}The Formal Frontier and Formal-First Research{{/title}}{{$author}}Fabrizio Montesi{{/author}}{{$content}}
 
+<figure class="bliki-figure">
+  <img src="/images/formal-frontier/formal-frontier-traits.svg" class="img-fluid" alt="The Formal Frontier: Needle projects reach far, Foundation projects extend outwards, Amplification projects strengthen within, and Exploration projects discover nearby."/>
+</figure>
+
 The **formal frontier** is the current extent of our shared, machine-verified knowledge, as embodied in [formal libraries](CSLibLibraryGradeComputerScience) such as [CSLib](https://cslib.io/) [[Barrett et al., 2026](#cslib); [Henson and Montesi, 2026](#cslib-spine)] and [Mathlib](https://mathlib.org/).[¹](#footnote-1)
 
 As these libraries grow, they open new research and innovation opportunities. Results that once required substantial preparatory work may become directly accessible through reusable definitions, theorems, and APIs. Together with increasingly capable tools, particularly AI, this makes **formal-first research** an increasingly accessible approach to formal sciences (like computer science and mathematics).
@@ -30,21 +34,33 @@ The taxonomy admits a geometric interpretation: **Needles reach far, Foundations
 
 <div class="row p-3">
   <div class="col-12 col-sm-6">
-    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Needle</p>
+    <p class="text-center text-dark mt-3 mb-0"><strong>Needle</strong></p>
     <img src="/images/formal-frontier/needle.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
   </div>
   <div class="col-12 col-sm-6">
-    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Foundation</p>
+    <p class="text-center text-dark mt-3 mb-0"><strong>Foundation</strong></p>
     <img src="/images/formal-frontier/foundation.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
   </div>
   <div class="col-12 col-sm-6">
-    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Amplification</p>
+    <p class="text-center text-dark mt-3 mb-0"><strong>Amplification</strong></p>
     <img src="/images/formal-frontier/amplification.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
   </div>
   <div class="col-12 col-sm-6">
-    <p class="text-center text-dark font-weight-bold mt-3 mb-0">Exploration</p>
+    <p class="text-center text-dark mt-3 mb-0"><strong>Exploration</strong></p>
     <img src="/images/formal-frontier/exploration.svg" style="background-color: #f7f8f5;" class="img-fluid"/>
   </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center p-2 mb-3" style="background-color: #f7f8f5; color: #343a40; flex-wrap: wrap; gap: 0.5rem 2rem;">
+  <strong>Legend:</strong>
+  <span class="d-flex align-items-center">
+    <span class="mr-2" style="width: 3rem; border-top: 3px dashed #5e7f78;" aria-hidden="true"></span>
+    Formal Frontier
+  </span>
+  <span class="d-flex align-items-center">
+    <span class="mr-2" style="width: 3rem; border-top: 3px dashed #745e7f;" aria-hidden="true"></span>
+    New Development
+  </span>
 </div>
 
 <figcaption>
