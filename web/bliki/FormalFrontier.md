@@ -6,7 +6,7 @@
 <figcaption>Working at the Formal Frontier: Needle projects reach far, Foundation projects extend outwards, Amplification projects strengthen within, and Exploration projects discover nearby.</figcaption>
 </figure>
 
-The **formal frontier** is the current extent of our shared, machine-verified knowledge, as embodied in formal libraries such as [CSLib](https://cslib.io/) [[Barrett et al., 2026](#cslib); [Henson and Montesi, 2026](#cslib-spine)] and [Mathlib](https://mathlib.org/).[¹](#footnote-1)
+The **formal frontier** is the current extent of our shared, machine-verified knowledge, as embodied in formal libraries such as [CSLib](https://cslib.io/) [[Barrett et al., 2026](#cslib); [Henson and Montesi, 2026](#cslib-spine)], [Mathlib](https://mathlib.org/), and [Physlib](https://physlib.io/).[¹](#footnote-1)
 
 As these libraries grow, they open new research and innovation opportunities. Results that once required substantial preparatory work may become directly accessible through reusable definitions, theorems, and APIs. Together with increasingly capable tools, particularly AI, this makes **formal-first research** an increasingly accessible approach to formal sciences (like computer science and mathematics).
 
