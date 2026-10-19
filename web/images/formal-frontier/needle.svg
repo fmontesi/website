@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="550"
+   height="550"
+   viewBox="0 0 549.99997 549.99997"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="needle.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0619048"
+     inkscape:cx="382.65589"
+     inkscape:cy="295.35797"
+     inkscape:window-width="2670"
+     inkscape:window-height="1111"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer-target" />
+  <title
+     id="title1">Needle project on the formal frontier</title>
+  <desc
+     id="desc1">A shaded knowledge region with a narrow arrow reaching towards a distant target.</desc>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrowhead-needle"
+       markerWidth="12"
+       markerHeight="12"
+       refX="10"
+       refY="6"
+       orient="auto"
+       markerUnits="userSpaceOnUse"
+       viewBox="0 0 12 12"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 12,6 0,12 Z"
+         fill="#c65d2e"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Background"
+     id="layer-background"
+     transform="translate(-67.409905,-30.946262)" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Formal frontier"
+     id="layer-frontier"
+     transform="translate(-67.409905,-30.946262)" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Knowledge network"
+     id="layer-network"
+     transform="translate(-67.409905,-30.946262)" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Needle"
+     id="layer-needle"
+     transform="translate(-67.409905,-30.946262)" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Target"
+     id="layer-target"
+     transform="translate(-67.409905,-30.946262)">
+    <g
+       id="g12"
+       transform="translate(24.878196,117.04706)">
+      <path
+         id="frontier-region"
+         d="M 120,270 C 25.011547,295.17321 81.420323,81.13164 136.42032,51.13164 c 92.64731,6.053892 50.48487,37.52752 59.42302,51.04934 C 247.65693,180.56562 298.35048,103.49576 340,130 c 50,32 85,75 80,120 -6,48 -43,80 -103,93 -65,15 -54.21709,-45.58891 -197,-73 z"
+         fill="#d9ece7"
+         stroke="#5e7f78"
+         stroke-width="3"
+         stroke-dasharray="8, 8"
+         sodipodi:nodetypes="ccscccc" />
+      <path
+         id="frontier-region-5"
+         d="m 366.31159,147.60359 c -26.32673,-29.59629 23.73435,-26.27843 84.86645,-62.19836 47.78162,-22.463884 99.01289,-60.534708 107.6686,-51.935488 23.13184,35.942774 -11.43849,40.713114 -46.90011,58.061069 -34.23685,6.608459 -54.19394,21.607749 -86.93697,41.900979 -36.35303,25.93367 -23.78309,46.334 -58.69797,14.1718 z"
+         fill="#d9ece7"
+         stroke="#5e7f78"
+         stroke-width="2.66022"
+         stroke-dasharray="8, 8"
+         sodipodi:nodetypes="cccccc"
+         style="fill:#715e7f;fill-opacity:0.326513;stroke:#745e7f;stroke-opacity:1" />
+      <circle
+         id="target-centre"
+         cx="551.08539"
+         cy="50.535793"
+         fill="#c65d2e"
+         r="8.9699774"
+         style="fill:#745e7f;fill-opacity:1;stroke-width:1.12125" />
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3.84528;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
+         d="M 369.65116,147.52297 538.94361,58.676549"
+         id="path11"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Needle project on the formal frontier</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

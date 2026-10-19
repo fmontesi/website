@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="550"
+   height="550"
+   viewBox="0 0 550 550"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="amplification.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0619048"
+     inkscape:cx="333.91454"
+     inkscape:cy="210"
+     inkscape:window-width="2670"
+     inkscape:window-height="1111"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer-frontier" />
+  <title
+     id="title1">Needle project on the formal frontier</title>
+  <desc
+     id="desc1">A shaded knowledge region with a narrow arrow reaching towards a distant target.</desc>
+  <defs
+     id="defs1">
+    <marker
+       id="arrowhead-needle"
+       markerWidth="12"
+       markerHeight="12"
+       refX="10"
+       refY="6"
+       orient="auto"
+       markerUnits="userSpaceOnUse"
+       viewBox="0 0 12 12"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 12,6 0,12 Z"
+         fill="#c65d2e"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Background"
+     id="layer-background" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Formal frontier"
+     id="layer-frontier">
+    <g
+       id="g13"
+       transform="translate(30.307488,76.7709)">
+      <path
+         id="frontier-region"
+         d="M 120,270 C 25.011547,295.17321 81.420323,81.13164 136.42032,51.13164 c 92.64731,6.053892 50.48487,37.52752 59.42302,51.04934 C 247.65693,180.56562 298.35048,103.49576 340,130 c 50,32 85,75 80,120 -6,48 -43,80 -103,93 -65,15 -54.21709,-45.58891 -197,-73 z"
+         fill="#d9ece7"
+         stroke="#5e7f78"
+         stroke-width="3"
+         stroke-dasharray="8, 8"
+         sodipodi:nodetypes="ccscccc" />
+      <path
+         style="fill:#715e7f;fill-opacity:0.32549;stroke:#745e7f;stroke-width:4"
+         d="m 279.83833,249.28406 -17.45958,-57.71362 v 0 l -51.89377,-25.2194 v 0 l -54.80369,49.46882 59.65358,33.4642 z"
+         id="path7" />
+      <circle
+         style="fill:#745e7f;fill-opacity:1;stroke:#745e7f;stroke-width:3.11919"
+         id="path8"
+         cx="210.24249"
+         cy="166.59352"
+         r="3.5928304" />
+      <circle
+         style="fill:#745e7f;fill-opacity:1;stroke:#745e7f;stroke-width:3.11919"
+         id="path8-9"
+         cx="261.77136"
+         cy="190.39722"
+         r="3.5928304" />
+      <circle
+         style="fill:#745e7f;fill-opacity:1;stroke:#745e7f;stroke-width:3.11919"
+         id="path8-9-0"
+         cx="280.06238"
+         cy="248.98152"
+         r="3.5928304" />
+      <circle
+         style="fill:#745e7f;fill-opacity:1;stroke:#745e7f;stroke-width:3.11919"
+         id="path8-9-6"
+         cx="214.65126"
+         cy="249.03233"
+         r="3.5928304" />
+      <circle
+         style="fill:#745e7f;fill-opacity:1;stroke:#745e7f;stroke-width:3.11919"
+         id="path8-9-7"
+         cx="157.3441"
+         cy="215.11316"
+         r="3.5928304" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 160.84032,214.28567 97.43482,-23.06096"
+         id="path9"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path8-9-7"
+         inkscape:connection-end="#path8-9" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 210.43436,170.18116 4.02504,75.26353"
+         id="path10"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path8"
+         inkscape:connection-end="#path8-9-6" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 160.80744,216.06899 115.7916,31.9567"
+         id="path11"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path8-9-7"
+         inkscape:connection-end="#path8-9-0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 259.52079,193.19777 -42.61896,53.03401"
+         id="path12"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path8-9"
+         inkscape:connection-end="#path8-9-6" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#745e7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 212.56529,169.33444 65.17429,76.90616"
+         id="path13"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path8"
+         inkscape:connection-end="#path8-9-0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Knowledge network"
+     id="layer-network" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Needle"
+     id="layer-needle" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Target"
+     id="layer-target" />
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Needle project on the formal frontier</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
