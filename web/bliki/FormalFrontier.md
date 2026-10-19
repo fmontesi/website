@@ -30,7 +30,7 @@ Here is a first taxonomy of traits of *formal frontier projects*, based on how t
 - An **Amplification Project** increases what can be accomplished with existing formal knowledge, for example by generalising theories, connecting APIs, or developing better automation.
 - An **Exploration Project** investigates new research questions made accessible by the existing formal frontier, building upon established foundations to discover new results.
 
-The taxonomy admits a geometric interpretation: **Needles reach far, Foundations extend outwards, Amplifications strengthen within, and Explorations discover nearby.** The next figure illustrates these four ways of relating to the frontier.
+The taxonomy lends itself to a geometric interpretation: **Needles reach far, Foundations extend outwards, Amplifications strengthen within, and Explorations discover nearby.** The next figure illustrates these four ways of relating to the frontier.
 
 <figure class="bliki-figure">
 
